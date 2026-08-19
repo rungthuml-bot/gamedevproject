@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://br6ifcy60qp5n"]
+
+[ext_resource type="Script" uid="uid://c0papwhqelkow" path="res://scripts/pause_menu.gd" id="1_jvnd5"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=1247517394]
+script = ExtResource("1_jvnd5")
+
+[node name="Control" type="Control" parent="." unique_id=626159108]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="Control" unique_id=1961123049]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=100528608]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -29.5
+offset_right = 20.0
+offset_bottom = 29.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer" unique_id=971857746]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="Control/MarginContainer/VBoxContainer" unique_id=2142386428]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "PAUSED"
+
+[node name="ResumeButton" type="Button" parent="Control/MarginContainer/VBoxContainer" unique_id=600438998]
+layout_mode = 2
+text = "Resume"
+
+[node name="SaveButton" type="Button" parent="Control/MarginContainer/VBoxContainer" unique_id=934574237]
+layout_mode = 2
+text = "Save Game"
+
+[node name="MainMenuButton" type="Button" parent="Control/MarginContainer/VBoxContainer" unique_id=1735035212]
+layout_mode = 2
+text = "Main Menu"
+
+[node name="ExitButton" type="Button" parent="Control/MarginContainer/VBoxContainer" unique_id=898189620]
+layout_mode = 2
+text = "Exit Game"
