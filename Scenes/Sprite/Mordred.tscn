@@ -220,7 +220,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4b18b")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Attack_1",
 "speed": 10.0
 }, {
@@ -237,7 +237,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_p3cti")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Attack_2",
 "speed": 6.0
 }, {
@@ -254,7 +254,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cw27m")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Attack_3",
 "speed": 6.0
 }, {
@@ -277,7 +277,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nn15e")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Attack_4",
 "speed": 8.0
 }, {
@@ -294,7 +294,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_f32h7")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Death",
 "speed": 3.0
 }, {
@@ -323,7 +323,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_e3usb")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Idle",
 "speed": 7.0
 }, {
@@ -352,7 +352,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_bj1f0")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Jump",
 "speed": 8.0
 }, {
@@ -381,7 +381,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fgfp2")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Run",
 "speed": 10.0
 }]
@@ -396,9 +396,10 @@ script = ExtResource("1_fuy0g")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=72610723]
 position = Vector2(0, -32)
 sprite_frames = SubResource("SpriteFrames_awhhx")
-animation = &"Jump"
-frame_progress = 0.8815788
+animation = &"Run"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1558068645]
 position = Vector2(0, -24)
 shape = SubResource("CapsuleShape2D_v5eft")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
