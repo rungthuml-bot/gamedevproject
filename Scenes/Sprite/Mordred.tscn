@@ -394,6 +394,7 @@ height = 48.0
 size = Vector2(26, 43)
 
 [node name="Mordred" type="CharacterBody2D" unique_id=2042576188]
+scale = Vector2(1.5, 1.5)
 script = ExtResource("1_fuy0g")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=72610723]
@@ -408,7 +409,8 @@ position = Vector2(0, -24)
 shape = SubResource("CapsuleShape2D_v5eft")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=256119951]
-zoom = Vector2(2, 2)
+position = Vector2(0, -56)
+zoom = Vector2(1.5, 1.5)
 
 [node name="AttackArea" type="Area2D" parent="." unique_id=743489757 groups=["player_attack"]]
 collision_layer = 2
