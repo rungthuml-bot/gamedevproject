@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ck1ovasxbifsy" path="res://Assets/TileSet_Test/Tileset.png" id="1_rv8wu"]
 [ext_resource type="PackedScene" uid="uid://dvj03a3fowopm" path="res://Scenes/Sprite/Mordred.tscn" id="2_x6006"]
+[ext_resource type="PackedScene" uid="uid://jxsqcu1c20x4" path="res://Scenes/enemy_test.tscn" id="3_68m0o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x6006"]
 texture = ExtResource("1_rv8wu")
@@ -390,3 +391,6 @@ tile_set = SubResource("TileSet_v5eft")
 
 [node name="Mordred" parent="." unique_id=2042576188 instance=ExtResource("2_x6006")]
 position = Vector2(571, 432)
+
+[node name="Enemy" parent="." unique_id=1383791009 instance=ExtResource("3_68m0o")]
+position = Vector2(643, 432)

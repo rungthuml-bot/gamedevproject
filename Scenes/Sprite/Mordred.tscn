@@ -323,7 +323,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_e3usb")
 }],
-"loop": 0,
+"loop": 1,
 "name": &"Idle",
 "speed": 7.0
 }, {
@@ -381,7 +381,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fgfp2")
 }],
-"loop": 0,
+"loop": 1,
 "name": &"Run",
 "speed": 10.0
 }]
@@ -390,16 +390,34 @@ animations = [{
 radius = 12.0
 height = 48.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v5eft"]
+size = Vector2(26, 43)
+
 [node name="Mordred" type="CharacterBody2D" unique_id=2042576188]
 script = ExtResource("1_fuy0g")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=72610723]
 position = Vector2(0, -32)
 sprite_frames = SubResource("SpriteFrames_awhhx")
-animation = &"Run"
+animation = &"Attack_4"
+frame = 2
+frame_progress = 0.98531955
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1558068645]
 position = Vector2(0, -24)
 shape = SubResource("CapsuleShape2D_v5eft")
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=256119951]
+zoom = Vector2(2, 2)
+
+[node name="AttackArea" type="Area2D" parent="." unique_id=743489757 groups=["player_attack"]]
+collision_layer = 2
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=474904858]
+position = Vector2(26, -21.5)
+shape = SubResource("RectangleShape2D_v5eft")
+
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
+[connection signal="area_entered" from="AttackArea" to="." method="_on_attack_area_area_entered"]
