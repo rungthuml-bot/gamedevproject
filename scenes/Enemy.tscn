@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://csfin0y1x3riw"]
+
+[ext_resource type="Script" uid="uid://ckx4nnsxt6v1g" path="res://scripts/enemy.gd" id="1_3gvst"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7n77a"]
+size = Vector2(32, 70)
+
+[node name="Enemy" type="CharacterBody2D" unique_id=1347562535]
+collision_layer = 2
+script = ExtResource("1_3gvst")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1021386963]
+shape = SubResource("RectangleShape2D_7n77a")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=531624965]
+color = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(-16, -35, 16, -35, 16, 35, -16, 35)
+
+[node name="HPBar" type="ProgressBar" parent="." unique_id=2037510769]
+offset_left = -29.0
+offset_top = -64.0
+offset_right = 31.0
+offset_bottom = -37.0
+value = 100.0
