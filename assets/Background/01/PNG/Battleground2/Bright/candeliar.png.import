@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bkasbbmc163q1"
-path="res://.godot/imported/candeliar.png-f2f7f661dc4befc414d0a1bfb69002f1.ctex"
+path="res://.godot/imported/candeliar.png-5a041f89f22e8d229498d5f7cd110abf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Background/01/PNG/Battleground2/Bright/candeliar.png"
-dest_files=["res://.godot/imported/candeliar.png-f2f7f661dc4befc414d0a1bfb69002f1.ctex"]
+source_file="res://assets/Background/01/PNG/Battleground2/Bright/candeliar.png"
+dest_files=["res://.godot/imported/candeliar.png-5a041f89f22e8d229498d5f7cd110abf.ctex"]
 
 [params]
 

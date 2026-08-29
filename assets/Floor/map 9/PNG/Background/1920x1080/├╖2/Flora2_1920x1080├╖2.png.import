@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://drnlxqgmwwk4g"
-path="res://.godot/imported/Flora2_1920x1080├╖2.png-3973b33d47bb4ff19a73122784373ee8.ctex"
+path="res://.godot/imported/Flora2_1920x1080├╖2.png-cf6b48fdedf83f14ab0863ab11b5ee33.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Floor/map 9/PNG/Background/1920x1080/├╖2/Flora2_1920x1080├╖2.png"
-dest_files=["res://.godot/imported/Flora2_1920x1080├╖2.png-3973b33d47bb4ff19a73122784373ee8.ctex"]
+source_file="res://assets/Floor/map 9/PNG/Background/1920x1080/├╖2/Flora2_1920x1080├╖2.png"
+dest_files=["res://.godot/imported/Flora2_1920x1080├╖2.png-cf6b48fdedf83f14ab0863ab11b5ee33.ctex"]
 
 [params]
 

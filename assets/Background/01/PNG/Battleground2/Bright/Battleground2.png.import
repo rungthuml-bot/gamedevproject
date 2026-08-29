@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfvh5yiarxv4o"
-path="res://.godot/imported/Battleground2.png-c16f21fee7397f9126443ab1744b86db.ctex"
+path="res://.godot/imported/Battleground2.png-f810f3df202d594e77551e048dbe5840.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Background/01/PNG/Battleground2/Bright/Battleground2.png"
-dest_files=["res://.godot/imported/Battleground2.png-c16f21fee7397f9126443ab1744b86db.ctex"]
+source_file="res://assets/Background/01/PNG/Battleground2/Bright/Battleground2.png"
+dest_files=["res://.godot/imported/Battleground2.png-f810f3df202d594e77551e048dbe5840.ctex"]
 
 [params]
 

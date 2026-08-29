@@ -1,15 +1,16 @@
 [gd_scene format=3 uid="uid://b0og3pil61cc1"]
 
-[ext_resource type="PackedScene" uid="uid://cejki0b7gdqte" path="res://scenes/ui/ui_test_player.tscn" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://dbcwe1i2j6slu" path="res://scripts/ui/ui_test_main.gd" id="1_sugp2"]
-[ext_resource type="PackedScene" uid="uid://tdjjdpv0vil6" path="res://scenes/enemies/Dummy.tscn" id="2_0wfyh"]
-[ext_resource type="PackedScene" uid="uid://x2frsprdyi68" path="res://scenes/ui/HUD.tscn" id="4_jyhfs"]
-[ext_resource type="PackedScene" uid="uid://csfin0y1x3riw" path="res://scenes/enemies/Enemy.tscn" id="4_tbgi4"]
-[ext_resource type="PackedScene" uid="uid://br6ifcy60qp5n" path="res://scenes/ui/PauseMenu.tscn" id="6_tefeu"]
-[ext_resource type="PackedScene" uid="uid://bxqwlxm7xh1w6" path="res://scenes/ui/GameOverMenu.tscn" id="7_o6xl0"]
-[ext_resource type="PackedScene" uid="uid://ddkbjitso8s1x" path="res://scenes/items/HealthPotion.tscn" id="8_tipki"]
-[ext_resource type="PackedScene" uid="uid://bpr3xb7q1kymd" path="res://scenes/systems/SavePoint.tscn" id="9_85g3d"]
-[ext_resource type="PackedScene" uid="uid://c6tlpu722uftu" path="res://scenes/ui/EquipmentMenu.tscn" id="10_choun"]
+[ext_resource type="PackedScene" uid="uid://tdjjdpv0vil6" path="res://Scenes/enemies/Dummy.tscn" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://dvj03a3fowopm" path="res://Scenes/characters/Mordred.tscn" id="2_sw6ty"]
+[ext_resource type="PackedScene" uid="uid://x2frsprdyi68" path="res://Scenes/ui/HUD.tscn" id="4_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://csfin0y1x3riw" path="res://Scenes/enemies/Enemy.tscn" id="4_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://br6ifcy60qp5n" path="res://Scenes/ui/PauseMenu.tscn" id="6_tefeu"]
+[ext_resource type="PackedScene" uid="uid://bxqwlxm7xh1w6" path="res://Scenes/ui/GameOverMenu.tscn" id="7_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://ddkbjitso8s1x" path="res://Scenes/items/HealthPotion.tscn" id="8_tipki"]
+[ext_resource type="PackedScene" uid="uid://bpr3xb7q1kymd" path="res://Scenes/systems/SavePoint.tscn" id="9_85g3d"]
+[ext_resource type="PackedScene" uid="uid://c6tlpu722uftu" path="res://Scenes/ui/EquipmentMenu.tscn" id="10_choun"]
+[ext_resource type="PackedScene" uid="uid://cx3gwn3y65861" path="res://Scenes/traps/trap_lava_pit.tscn" id="11_xa8v5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7n77a"]
 size = Vector2(3277, 50)
@@ -18,8 +19,8 @@ size = Vector2(3277, 50)
 position = Vector2(575, 625)
 script = ExtResource("1_sugp2")
 
-[node name="Player" parent="." unique_id=2065805251 instance=ExtResource("1_o5qli")]
-position = Vector2(-1470, -165)
+[node name="Mordred" parent="." unique_id=2042576188 instance=ExtResource("2_sw6ty")]
+position = Vector2(-1481, -26)
 
 [node name="Dummy" parent="." unique_id=2020060311 instance=ExtResource("2_0wfyh")]
 position = Vector2(-1168, -158)
@@ -50,3 +51,6 @@ position = Vector2(-1288, -48)
 position = Vector2(-1595, -50)
 
 [node name="EquipmentMenu" parent="." unique_id=871650129 instance=ExtResource("10_choun")]
+
+[node name="trap_lava_pit" parent="." unique_id=1801767826 instance=ExtResource("11_xa8v5")]
+position = Vector2(-1185, -44)

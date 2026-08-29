@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c6ydep0wed73"
-path="res://.godot/imported/mushrum7.png-42cfe4a81b89bc7a3f4d1ceebb3dc8e2.ctex"
+path="res://.godot/imported/mushrum7.png-536a78057ce9a183db00d14b9037db02.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Background/Lava/PNG/Details/mushrum7.png"
-dest_files=["res://.godot/imported/mushrum7.png-42cfe4a81b89bc7a3f4d1ceebb3dc8e2.ctex"]
+source_file="res://assets/Background/Lava/PNG/Details/mushrum7.png"
+dest_files=["res://.godot/imported/mushrum7.png-536a78057ce9a183db00d14b9037db02.ctex"]
 
 [params]
 

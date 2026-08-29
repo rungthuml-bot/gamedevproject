@@ -393,7 +393,7 @@ height = 48.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v5eft"]
 size = Vector2(26, 43)
 
-[node name="Mordred" type="CharacterBody2D" unique_id=2042576188]
+[node name="Mordred" type="CharacterBody2D" unique_id=2042576188 groups=["player"]]
 scale = Vector2(1.5, 1.5)
 script = ExtResource("1_fuy0g")
 
@@ -414,7 +414,7 @@ zoom = Vector2(1.5, 1.5)
 
 [node name="AttackArea" type="Area2D" parent="." unique_id=743489757 groups=["player_attack"]]
 collision_layer = 2
-collision_mask = 8
+collision_mask = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=474904858]
 position = Vector2(26, -21.5)
@@ -423,3 +423,4 @@ shape = SubResource("RectangleShape2D_v5eft")
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
 [connection signal="area_entered" from="AttackArea" to="." method="_on_attack_area_area_entered"]
+[connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
