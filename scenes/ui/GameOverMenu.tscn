@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://bxqwlxm7xh1w6"]
+
+[ext_resource type="Script" uid="uid://bab2hyej3bibk" path="res://scripts/ui/game_over_menu.gd" id="1_gstvf"]
+
+[node name="GameOverMenu" type="CanvasLayer" unique_id=235732575]
+script = ExtResource("1_gstvf")
+
+[node name="Control" type="Control" parent="." unique_id=2097113345]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="Control" unique_id=1538258959]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0, 0, 0.5019608)
+
+[node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=1677526600]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -23.5
+offset_right = 20.0
+offset_bottom = 23.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer" unique_id=1810681330]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="Control/MarginContainer/VBoxContainer" unique_id=1408823195]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8662156, 2.117753e-06, 1.347661e-06, 1)
+theme_override_font_sizes/font_size = 48
+text = "YOU DIED"
+
+[node name="RetryButton" type="Button" parent="Control/MarginContainer/VBoxContainer" unique_id=6757770]
+layout_mode = 2
+text = "Retry"
+
+[node name="MainMenuButton" type="Button" parent="Control/MarginContainer/VBoxContainer" unique_id=2075265215]
+layout_mode = 2
+text = "Main Menu"

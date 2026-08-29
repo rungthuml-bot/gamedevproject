@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b4ofgwfoeyob0"]
 
-[ext_resource type="Script" uid="uid://b7vb7c1mfqfs" path="res://scenes/traps/trap_stalactite.gd" id="1_o3xd5"]
+[ext_resource type="Script" uid="uid://b7vb7c1mfqfs" path="res://scripts/traps/trap_stalactite.gd" id="1_o3xd5"]
 [ext_resource type="Texture2D" uid="uid://ccj8r6m6nwe1r" path="res://trap_stalactite/PNG/Details/lava/lava_drop1_1.png" id="2_o3xd5"]
 [ext_resource type="Texture2D" uid="uid://dhh124uyrpv0e" path="res://trap_stalactite/PNG/Details/lava/lava_drop1_2.png" id="3_nsm64"]
 [ext_resource type="Texture2D" uid="uid://cjkc1ssogrpte" path="res://trap_stalactite/PNG/Details/lava/lava_drop1_3.png" id="4_pvvdr"]
