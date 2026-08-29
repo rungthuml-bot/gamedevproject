@@ -40,6 +40,7 @@ layout_mode = 2
 [node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=631585143]
 layout_mode = 2
 text = "SELECT PROFILE"
+horizontal_alignment = 1
 
 [node name="SlotContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=155861214]
 layout_mode = 2
