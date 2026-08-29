@@ -1,13 +1,13 @@
 [gd_scene format=4 uid="uid://b3jd0nsb4hgts"]
 
-[ext_resource type="Texture2D" uid="uid://b8r0k2ml2dihd" path="res://Assets/Background/01/PNG/Battleground3/Bright/sky.png" id="1_7j8ne"]
-[ext_resource type="Texture2D" uid="uid://dt3dj17pxq5xh" path="res://Assets/Background/01/PNG/Battleground3/Bright/jungle_bg.png" id="2_7dov7"]
-[ext_resource type="Texture2D" uid="uid://d225j5et22n52" path="res://Assets/Background/01/PNG/Battleground3/Bright/trees&bushes.png" id="3_ehv2h"]
-[ext_resource type="Texture2D" uid="uid://b0gptoiae8hps" path="res://Assets/Background/01/PNG/Battleground3/Bright/lianas.png" id="4_15wb7"]
-[ext_resource type="Texture2D" uid="uid://bayyfxlwm40w0" path="res://Assets/Background/01/PNG/Battleground3/Bright/fireflys.png" id="5_eoq84"]
-[ext_resource type="Texture2D" uid="uid://bgk3wghx14sv" path="res://Assets/Background/01/PNG/Battleground3/Bright/grasses.png" id="6_yl73a"]
-[ext_resource type="Texture2D" uid="uid://e7h82f1d2b4a" path="res://Assets/Background/01/PNG/Battleground3/Bright/grass&road.png" id="7_xbcdb"]
-[ext_resource type="Texture2D" uid="uid://ccxpgrg4qc84" path="res://Assets/Floor/map 9/PNG/Tileset.png" id="8_n0bsh"]
+[ext_resource type="Texture2D" uid="uid://b8r0k2ml2dihd" path="res://assets/Background/01/PNG/Battleground3/Bright/sky.png" id="1_7j8ne"]
+[ext_resource type="Texture2D" uid="uid://dt3dj17pxq5xh" path="res://assets/Background/01/PNG/Battleground3/Bright/jungle_bg.png" id="2_7dov7"]
+[ext_resource type="Texture2D" uid="uid://d225j5et22n52" path="res://assets/Background/01/PNG/Battleground3/Bright/trees&bushes.png" id="3_ehv2h"]
+[ext_resource type="Texture2D" uid="uid://b0gptoiae8hps" path="res://assets/Background/01/PNG/Battleground3/Bright/lianas.png" id="4_15wb7"]
+[ext_resource type="Texture2D" uid="uid://bayyfxlwm40w0" path="res://assets/Background/01/PNG/Battleground3/Bright/fireflys.png" id="5_eoq84"]
+[ext_resource type="Texture2D" uid="uid://bgk3wghx14sv" path="res://assets/Background/01/PNG/Battleground3/Bright/grasses.png" id="6_yl73a"]
+[ext_resource type="Texture2D" uid="uid://e7h82f1d2b4a" path="res://assets/Background/01/PNG/Battleground3/Bright/grass&road.png" id="7_xbcdb"]
+[ext_resource type="Texture2D" uid="uid://ccxpgrg4qc84" path="res://assets/Floor/map 9/PNG/Tileset.png" id="8_n0bsh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4eusg"]
 texture = ExtResource("8_n0bsh")

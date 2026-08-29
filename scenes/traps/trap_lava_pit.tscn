@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cx3gwn3y65861"]
 
-[ext_resource type="Script" uid="uid://c11yyrisc3qsm" path="res://Scenes/traps/trap_lava_pit.gd" id="1_1e2g2"]
+[ext_resource type="Script" uid="uid://c11yyrisc3qsm" path="res://scenes/traps/trap_lava_pit.gd" id="1_1e2g2"]
 [ext_resource type="Texture2D" uid="uid://c0cuk5m5le2yb" path="res://trap_stalactite/PNG/Tiles_lava/lava_tile11.png" id="2_0d465"]
 [ext_resource type="Texture2D" uid="uid://cg8nifa3t6hhq" path="res://trap_stalactite/PNG/Tiles_lava/lava_tile12.png" id="3_7uxr8"]
 

@@ -1,7 +1,7 @@
 extends Control
 
 # Export Variables
-@export_file("*.tscn") var save_select_scene: String = "res://Scenes/Main/SaveSelectMenu.tscn"
+@export_file("*.tscn") var save_select_scene: String = "res://scenes/Main/SaveSelectMenu.tscn"
 
 # Node References
 @onready var start_button: Button = $MarginContainer/VBoxContainer/StartButton

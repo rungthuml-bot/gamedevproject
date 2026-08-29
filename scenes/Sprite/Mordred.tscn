@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://dvj03a3fowopm"]
 
-[ext_resource type="Texture2D" uid="uid://b5jkovim4vmpm" path="res://Assets/Mordred_Knight/Attacks.png" id="1_0y7nr"]
-[ext_resource type="Script" uid="uid://c4v4bh0oxkuet" path="res://Scenes/Sprite/mordred.gd" id="1_fuy0g"]
-[ext_resource type="Texture2D" uid="uid://c1ml7mgs0twnb" path="res://Assets/Mordred_Knight/Death.png" id="2_br3p0"]
-[ext_resource type="Texture2D" uid="uid://dvmfpgflawipx" path="res://Assets/Mordred_Knight/Idle.png" id="3_dt6k8"]
-[ext_resource type="Texture2D" uid="uid://c0hvghmsph4pb" path="res://Assets/Mordred_Knight/Jump.png" id="4_0nshp"]
-[ext_resource type="Texture2D" uid="uid://bet8colukmhqt" path="res://Assets/Mordred_Knight/Run.png" id="5_f32h7"]
+[ext_resource type="Texture2D" uid="uid://b5jkovim4vmpm" path="res://assets/Mordred_Knight/Attacks.png" id="1_0y7nr"]
+[ext_resource type="Script" uid="uid://c4v4bh0oxkuet" path="res://scenes/Sprite/mordred.gd" id="1_fuy0g"]
+[ext_resource type="Texture2D" uid="uid://c1ml7mgs0twnb" path="res://assets/Mordred_Knight/Death.png" id="2_br3p0"]
+[ext_resource type="Texture2D" uid="uid://dvmfpgflawipx" path="res://assets/Mordred_Knight/Idle.png" id="3_dt6k8"]
+[ext_resource type="Texture2D" uid="uid://c0hvghmsph4pb" path="res://assets/Mordred_Knight/Jump.png" id="4_0nshp"]
+[ext_resource type="Texture2D" uid="uid://bet8colukmhqt" path="res://assets/Mordred_Knight/Run.png" id="5_f32h7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jo2ib"]
 atlas = ExtResource("1_0y7nr")

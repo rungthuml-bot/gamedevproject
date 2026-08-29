@@ -5,8 +5,8 @@ extends Control
 # Export Variables
 # =========================================================
 
-@export_file("*.tscn") var main_menu_scene: String = "res://Scenes/Main/MainMenu.tscn"
-@export_file("*.tscn") var story_intro_scene: String = "res://Scenes/Main/StoryIntro.tscn"
+@export_file("*.tscn") var main_menu_scene: String = "res://scenes/Main/MainMenu.tscn"
+@export_file("*.tscn") var story_intro_scene: String = "res://scenes/Main/StoryIntro.tscn"
 
 
 # =========================================================
