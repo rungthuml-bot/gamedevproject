@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dklt31mw8b8e7"]
 
 [ext_resource type="Script" uid="uid://dpmwwyypnlnd3" path="res://scripts/ui/main_menu.gd" id="1_yqorp"]
+[ext_resource type="Texture2D" uid="uid://cc6wfll70sj5n" path="res://assets/Background/main_menu_bg.png" id="2_4facs"]
 
 [node name="MainMenu" type="Control" unique_id=2060313768]
 layout_mode = 3
@@ -11,14 +12,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yqorp")
 
-[node name="Background" type="ColorRect" parent="." unique_id=1397236497]
+[node name="Background" type="TextureRect" parent="." unique_id=1276691652]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(2.5870278e-07, 0, 0.22171614, 1)
+texture = ExtResource("2_4facs")
+expand_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1980693517]
 layout_mode = 1
@@ -44,12 +46,16 @@ text = "Mordred: Path of the Tolerant"
 
 [node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1835324081]
 layout_mode = 2
-text = "Start Game"
+text = "START GAME"
 
 [node name="OptionsButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1656029297]
 layout_mode = 2
-text = "Settings"
+text = "SETTING"
+
+[node name="StartButton2" type="Button" parent="MarginContainer/VBoxContainer" unique_id=479621365]
+layout_mode = 2
+text = "CREDIT"
 
 [node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1850210987]
 layout_mode = 2
-text = "Exit Game"
+text = "EXIT GAME"
