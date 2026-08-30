@@ -15,6 +15,9 @@ var save_data: Dictionary = {
 	"current_scene": "res://scenes/ui/ui_test_main.tscn"
 }
 
+# ใช้สำหรับบอกให้ระบบรู้ว่าเป็นการตายแล้วเกิดใหม่
+var is_respawning: bool = false
+
 
 # =========================================================
 # Path Utilities

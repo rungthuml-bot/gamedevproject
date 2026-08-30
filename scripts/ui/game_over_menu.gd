@@ -67,9 +67,21 @@ func _on_player_died() -> void:
 
 func _on_retry_button_pressed() -> void:
 
-	# ปลด Pause ก่อน Reload Scene
+	# ปลด Pause ก่อน
 	get_tree().paused = false
-	get_tree().reload_current_scene()
+	
+	# เปิด Flag แจ้งระบบโหลดให้รู้ว่านี่คือการ Respawn
+	SaveManager.is_respawning = true
+	
+	# หาสถานที่ Checkpoint
+	var target_scene: String = SaveManager.save_data.get("checkpoint_scene", "")
+	if target_scene == "":
+		target_scene = SaveManager.save_data.get("current_scene", "")
+		
+	if target_scene != "" and ResourceLoader.exists(target_scene):
+		SceneTransition.change_scene(target_scene, 0.5)
+	else:
+		get_tree().reload_current_scene()
 
 
 func _on_main_menu_button_pressed() -> void:

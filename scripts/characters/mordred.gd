@@ -62,15 +62,46 @@ var air_attacks_used = 0
 func _ready():
 	attack_collision.disabled = true
 
-	# ดึงค่า HP และขวดยาที่เซฟไว้ใน SaveManager มาใช้งาน
-	if SaveManager.save_data.has("hp"):
-		hp = SaveManager.save_data["hp"]
+	# จัดการการ Load ข้อมูล
+	if SaveManager.is_respawning:
+		# การโหลดจาก Death Respawn
+		hp = MAX_HP
+		if SaveManager.save_data.has("checkpoint_potion"):
+			potion_count = SaveManager.save_data["checkpoint_potion"]
+		
+		# ปิด Flag Respawn ทิ้งหลังทำงานเสร็จ
+		SaveManager.is_respawning = false
+		
+		# แอบ Save ข้อมูลที่ Restore แล้วกลับลงไป เพื่อให้เป็นค่าปัจจุบันของ Save Slot ทันที
+		save_player_data()
+	else:
+		# การโหลดเกมปกติ
+		if SaveManager.save_data.has("hp"):
+			hp = SaveManager.save_data["hp"]
+		if SaveManager.save_data.has("potion_count"):
+			potion_count = SaveManager.save_data["potion_count"]
 
-	if SaveManager.save_data.has("potion_count"):
-		potion_count = SaveManager.save_data["potion_count"]
+	# คืนตำแหน่งผู้เล่นจาก Checkpoint ที่เซฟไว้ (ถ้ามี)
+	var spawn_pos: Vector2
+	var has_saved_pos := false
+	
+	if SaveManager.save_data.has("checkpoint_pos_x") and SaveManager.save_data.has("checkpoint_pos_y"):
+		spawn_pos = Vector2(SaveManager.save_data["checkpoint_pos_x"], SaveManager.save_data["checkpoint_pos_y"])
+		has_saved_pos = true
+	elif SaveManager.save_data.has("pos_x") and SaveManager.save_data.has("pos_y"):
+		# รองรับ Save เก่า
+		spawn_pos = Vector2(SaveManager.save_data["pos_x"], SaveManager.save_data["pos_y"])
+		has_saved_pos = true
+
+	if has_saved_pos:
+		# ใช้ call_deferred เพื่อให้ physics ตั้งค่าเสร็จก่อนย้ายตำแหน่ง
+		call_deferred("_apply_saved_position", spawn_pos)
 
 	# ส่งค่าให้ UI แสดงผล (ดีเลย์ 1 เฟรมเพื่อให้ HUD _ready() เสร็จก่อน)
 	call_deferred("emit_initial_ui_signals")
+
+func _apply_saved_position(saved_pos: Vector2) -> void:
+	global_position = saved_pos
 
 func emit_initial_ui_signals() -> void:
 	hp_changed.emit(hp, MAX_HP)
@@ -491,10 +522,22 @@ func apply_camera_shake(intensity: float = 5.0) -> void:
 # Save Helper Logic
 # =========================================================
 
+func update_checkpoint() -> void:
+	if get_tree().current_scene != null:
+		SaveManager.save_data["checkpoint_scene"] = get_tree().current_scene.scene_file_path
+		
+	SaveManager.save_data["checkpoint_pos_x"] = global_position.x
+	SaveManager.save_data["checkpoint_pos_y"] = global_position.y
+	SaveManager.save_data["checkpoint_potion"] = potion_count
+	
+	save_player_data()
+
 func save_player_data() -> void:
-	# บันทึกข้อมูลลง SaveManager
+	# บันทึกข้อมูลลง SaveManager (เฉพาะสถานะปัจจุบัน)
 	SaveManager.save_data["hp"] = hp
 	SaveManager.save_data["potion_count"] = potion_count
+	
+	# ไม่เขียนตำแหน่งทับที่นี่ ป้องกัน Auto-save ทำลาย Checkpoint
 	
 	if get_tree().current_scene != null:
 		SaveManager.save_data["current_scene"] = get_tree().current_scene.scene_file_path
