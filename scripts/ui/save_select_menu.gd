@@ -111,3 +111,9 @@ func _on_back_pressed() -> void:
 
 	if main_menu_scene != "" and ResourceLoader.exists(main_menu_scene):
 		SceneTransition.change_scene(main_menu_scene)
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_cancel"):
+		if back_button and not back_button.disabled:
+			get_viewport().set_input_as_handled()
+			back_button.pressed.emit()

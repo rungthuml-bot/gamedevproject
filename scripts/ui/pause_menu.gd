@@ -94,7 +94,7 @@ func _on_main_menu_button_pressed() -> void:
 	get_tree().paused = false
 
 	if main_menu_scene != "" and ResourceLoader.exists(main_menu_scene):
-		get_tree().change_scene_to_file(main_menu_scene)
+		SceneTransition.change_scene(main_menu_scene, 0.5)
 	else:
 		print("PAUSE MENU ERROR: Cannot find main_menu_scene")
 

@@ -45,5 +45,7 @@ func transition_to_main_menu() -> void:
 		return
 
 	transitioning = true
+	
+	AudioManager.play_transition_impact()
 
 	SceneTransition.change_scene("res://Scenes/ui/MainMenu.tscn", 0.5)

@@ -70,3 +70,15 @@ func _on_credits_button_pressed() -> void:
 func _on_exit_button_pressed() -> void:
 
 	get_tree().quit()
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_cancel"):
+		go_back()
+
+func go_back() -> void:
+	if SceneTransition.is_transitioning:
+		return
+	
+	get_viewport().set_input_as_handled()
+	AudioManager.play_ui_click()
+	SceneTransition.change_scene("res://Scenes/ui/TitleScreen.tscn", 0.5)

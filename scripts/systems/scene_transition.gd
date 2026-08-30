@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 @onready var color_rect: ColorRect = $ColorRect
+var is_transitioning: bool = false
 
 func _ready() -> void:
 	# ตั้งค่าเริ่มต้นให้จอมืดโปร่งแสงมองไม่เห็น และไม่ขัดขวางการกดปุ่ม
@@ -10,6 +11,10 @@ func _ready() -> void:
 
 # ฟังก์ชันสลับฉากแบบ Fade Out -> เปลี่ยนฉาก -> Fade In
 func change_scene(target_path: String, fade_duration: float = 0.5) -> void:
+	if is_transitioning:
+		return
+	is_transitioning = true
+	
 	# บล็อกการกดปุ่มระหว่างเปลี่ยนฉาก
 	color_rect.mouse_filter = Control.MOUSE_FILTER_STOP
 	
@@ -28,3 +33,4 @@ func change_scene(target_path: String, fade_duration: float = 0.5) -> void:
 	
 	# คืนค่าให้คลิกปุ่มต่างๆ ได้ตามปกติ
 	color_rect.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	is_transitioning = false
