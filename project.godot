@@ -10,8 +10,9 @@ config_version=5
 
 [application]
 
-config/name="Game2DProject"
-config/features=PackedStringArray("4.7", "GL Compatibility")
+config/name="Trap"
+run/main_scene="uid://2ioynf1rq34"
+config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
@@ -25,7 +26,4 @@ window/stretch/aspect="expand"
 
 [rendering]
 
-textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"
