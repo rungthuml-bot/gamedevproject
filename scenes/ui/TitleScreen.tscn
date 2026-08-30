@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://donlwlocle2ph"]
+
+[ext_resource type="Script" uid="uid://c5ium6g7eo1vs" path="res://Scripts/ui/title_screen.gd" id="1_fw4hi"]
+[ext_resource type="Texture2D" uid="uid://cc6wfll70sj5n" path="res://assets/Background/main_menu_bg.png" id="2_nld1m"]
+
+[node name="TitleScreen" type="Control" unique_id=1810672234]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fw4hi")
+
+[node name="Background" type="TextureRect" parent="." unique_id=108674649]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_nld1m")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="DarkOverlay" type="ColorRect" parent="." unique_id=357726945]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.15686275)
+
+[node name="Logo" type="TextureRect" parent="." unique_id=1294691297]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="VersionLabel" type="Label" parent="." unique_id=1810647567]
+layout_mode = 0
+offset_left = 1801.0
+offset_top = 1050.0
+offset_right = 1914.0
+offset_bottom = 1073.0
+text = "Prototype v0.1"
+
+[node name="PressAnyKeyLabel" type="Label" parent="." unique_id=303955026]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -153.0
+offset_bottom = -130.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "PRESS ANY BUTTON"
+horizontal_alignment = 1
+
+[node name="CopyrightLabel" type="Label" parent="." unique_id=1135622538]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
