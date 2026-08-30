@@ -1,7 +1,23 @@
-[gd_scene load_steps=7 format=3 uid="uid://donlwlocle2ph"]
+[gd_scene format=3 uid="uid://donlwlocle2ph"]
 
 [ext_resource type="Script" uid="uid://c5ium6g7eo1vs" path="res://Scripts/ui/title_screen.gd" id="1_fw4hi"]
 [ext_resource type="Texture2D" uid="uid://cc6wfll70sj5n" path="res://assets/Background/main_menu_bg.png" id="2_nld1m"]
+[ext_resource type="Texture2D" uid="uid://f71cvpntbja7" path="res://assets/Background/Logo.png" id="3_nld1m"]
+
+[sub_resource type="Animation" id="Animation_reset"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PressAnyKeyLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_pulse"]
 resource_name = "pulse"
@@ -20,25 +36,10 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.25), Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_reset"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("PressAnyKeyLabel:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_title"]
 _data = {
-"RESET": SubResource("Animation_reset"),
-"pulse": SubResource("Animation_pulse")
+&"RESET": SubResource("Animation_reset"),
+&"pulse": SubResource("Animation_pulse")
 }
 
 [node name="TitleScreen" type="Control" unique_id=1810672234]
@@ -80,6 +81,7 @@ offset_top = 120.0
 offset_right = 350.0
 offset_bottom = 370.0
 grow_horizontal = 2
+texture = ExtResource("3_nld1m")
 expand_mode = 1
 stretch_mode = 5
 
@@ -109,11 +111,9 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_title")
-}
-autoplay = "pulse"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1489335180]
+libraries/ = SubResource("AnimationLibrary_title")
+autoplay = &"pulse"
 
 [node name="VersionLabel" type="Label" parent="." unique_id=1810647567]
 layout_mode = 1
