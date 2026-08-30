@@ -217,7 +217,7 @@ func _physics_process(delta: float) -> void:
 		air_combo = 0
 
 	# JUMP
-	if Input.is_action_just_pressed("Jump") and is_on_floor() and not is_attacking:
+	if Input.is_action_just_pressed("Jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
 	var current_speed := WALK_SPEED
@@ -234,13 +234,7 @@ func _physics_process(delta: float) -> void:
 		# ปล่อยให้ลอยตามแรงกระเด็น และลดความเร็วลงช้าๆ
 		velocity.x = move_toward(velocity.x, 0, current_speed * 2.0 * delta)
 
-	# ถ้าโจมตีบนพื้น
-	# → หยุดนิ่ง
-	elif is_attacking and attack_type == "ground":
-
-		velocity.x = 0
-
-	# กรณีปกติ หรือโจมตีกลางอากาศ
+	# กรณีปกติ
 	else:
 
 		if direction != 0:
@@ -256,17 +250,13 @@ func _physics_process(delta: float) -> void:
 			)
 
 	# TURN LEFT / RIGHT
-	# ถ้าโจมตีบนพื้น
-	# → ล็อกทิศทาง ห้ามหัน
-	if not (is_attacking and attack_type == "ground"):
+	if direction > 0:
+		anim.flip_h = false
+		attack_area.scale.x = 1
 
-		if direction > 0:
-			anim.flip_h = false
-			attack_area.scale.x = 1
-
-		elif direction < 0:
-			anim.flip_h = true
-			attack_area.scale.x = -1
+	elif direction < 0:
+		anim.flip_h = true
+		attack_area.scale.x = -1
 
 	# ATTACK INPUT
 	if Input.is_action_just_pressed("Attack"):
@@ -301,7 +291,7 @@ func _physics_process(delta: float) -> void:
 				start_attack()
 
 	# DASH INPUT
-	if trigger_dash and dash_cooldown_timer <= 0.0 and not is_attacking and not is_knockbacked:
+	if trigger_dash and dash_cooldown_timer <= 0.0 and not is_knockbacked:
 		dash()
 		return
 
