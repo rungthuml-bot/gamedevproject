@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5p78glrrhdp5"
-path="res://.godot/imported/Hanging.png-f81a956eaf2ebd08833c97f5f08fc938.ctex"
+path="res://.godot/imported/Hanging.png-9370cdfe3459c697a094798abb3e4361.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Mordred_Knight/Hanging.png"
-dest_files=["res://.godot/imported/Hanging.png-f81a956eaf2ebd08833c97f5f08fc938.ctex"]
+source_file="res://assets/Mordred_Knight/Hanging.png"
+dest_files=["res://.godot/imported/Hanging.png-9370cdfe3459c697a094798abb3e4361.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bap52ll0nr1jp"
-path="res://.godot/imported/Flying_stone.png-9a4c71510ccbbc1ba12c8d45f6f5cf80.ctex"
+path="res://.godot/imported/Flying_stone.png-22c2b599a5fcfd055248effb6dde21cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Floor/map 9/TILED_files/Flying_stone.png"
-dest_files=["res://.godot/imported/Flying_stone.png-9a4c71510ccbbc1ba12c8d45f6f5cf80.ctex"]
+source_file="res://assets/Floor/map 9/TILED_files/Flying_stone.png"
+dest_files=["res://.godot/imported/Flying_stone.png-22c2b599a5fcfd055248effb6dde21cf.ctex"]
 
 [params]
 

@@ -1,0 +1,149 @@
+[gd_scene format=3 uid="uid://donlwlocle2ph"]
+
+[ext_resource type="Script" uid="uid://c5ium6g7eo1vs" path="res://scripts/ui/title_screen.gd" id="1_fw4hi"]
+[ext_resource type="Texture2D" uid="uid://cc6wfll70sj5n" path="res://assets/Background/main_menu_bg.png" id="2_nld1m"]
+[ext_resource type="Texture2D" uid="uid://f71cvpntbja7" path="res://assets/Background/Logo.png" id="3_nld1m"]
+
+[sub_resource type="Animation" id="Animation_reset"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PressAnyKeyLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_pulse"]
+resource_name = "pulse"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PressAnyKeyLabel:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.25), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_title"]
+_data = {
+&"RESET": SubResource("Animation_reset"),
+&"pulse": SubResource("Animation_pulse")
+}
+
+[node name="TitleScreen" type="Control" unique_id=1810672234]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fw4hi")
+
+[node name="Background" type="TextureRect" parent="." unique_id=108674649]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_nld1m")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="DarkOverlay" type="ColorRect" parent="." unique_id=357726945]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.15)
+
+[node name="Logo" type="TextureRect" parent="." unique_id=1294691297]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -350.0
+offset_top = 120.0
+offset_right = 350.0
+offset_bottom = 370.0
+grow_horizontal = 2
+texture = ExtResource("3_nld1m")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PressAnyKeyLabel" type="Label" parent="." unique_id=303955026]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -200.0
+offset_right = 300.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.921569, 0.901961, 0.862745, 1)
+theme_override_colors/font_shadow_color = Color(0.1, 0.05, 0.15, 0.9)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.8)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 5
+theme_override_font_sizes/font_size = 28
+text = "- PRESS ANY BUTTON -"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1489335180]
+libraries/ = SubResource("AnimationLibrary_title")
+autoplay = &"pulse"
+
+[node name="VersionLabel" type="Label" parent="." unique_id=1810647567]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -40.0
+offset_right = -20.0
+offset_bottom = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.6, 0.6, 0.6, 0.5)
+theme_override_font_sizes/font_size = 14
+text = "Prototype v0.1"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="CopyrightLabel" type="Label" parent="." unique_id=1135622538]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -40.0
+offset_right = 200.0
+offset_bottom = -10.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.6, 0.6, 0.6, 0.5)
+theme_override_font_sizes/font_size = 14
+vertical_alignment = 2

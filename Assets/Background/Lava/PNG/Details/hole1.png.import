@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bcnpc8bjkftx1"
-path="res://.godot/imported/hole1.png-28e4a77f4c91a2eb6bf04bf14e0793ab.ctex"
+path="res://.godot/imported/hole1.png-aca2076d7dab657a5ddecbde3a243847.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Background/Lava/PNG/Details/hole1.png"
-dest_files=["res://.godot/imported/hole1.png-28e4a77f4c91a2eb6bf04bf14e0793ab.ctex"]
+source_file="res://assets/Background/Lava/PNG/Details/hole1.png"
+dest_files=["res://.godot/imported/hole1.png-aca2076d7dab657a5ddecbde3a243847.ctex"]
 
 [params]
 

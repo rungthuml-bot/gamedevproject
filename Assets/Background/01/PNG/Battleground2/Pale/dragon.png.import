@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cgc21vyc0tok5"
-path="res://.godot/imported/dragon.png-f1e0689883d89cb33846c6d48f14d23f.ctex"
+path="res://.godot/imported/dragon.png-443dd03f1d1fc161525f0f2e925b8514.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Background/01/PNG/Battleground2/Pale/dragon.png"
-dest_files=["res://.godot/imported/dragon.png-f1e0689883d89cb33846c6d48f14d23f.ctex"]
+source_file="res://assets/Background/01/PNG/Battleground2/Pale/dragon.png"
+dest_files=["res://.godot/imported/dragon.png-443dd03f1d1fc161525f0f2e925b8514.ctex"]
 
 [params]
 

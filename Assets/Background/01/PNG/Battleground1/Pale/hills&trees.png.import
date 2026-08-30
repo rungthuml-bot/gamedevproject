@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0mw6f84qf4eg"
-path="res://.godot/imported/hills&trees.png-64eef3069ef10f733b61466cdf72f7b4.ctex"
+path="res://.godot/imported/hills&trees.png-c19f13aeb2c12b5ebe8539b09266caf5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Background/01/PNG/Battleground1/Pale/hills&trees.png"
-dest_files=["res://.godot/imported/hills&trees.png-64eef3069ef10f733b61466cdf72f7b4.ctex"]
+source_file="res://assets/Background/01/PNG/Battleground1/Pale/hills&trees.png"
+dest_files=["res://.godot/imported/hills&trees.png-c19f13aeb2c12b5ebe8539b09266caf5.ctex"]
 
 [params]
 

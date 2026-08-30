@@ -1,0 +1,239 @@
+[gd_scene load_steps=11 format=3 uid="uid://c6tlpu722uftu"]
+
+[ext_resource type="Script" uid="uid://bo1aw5m1ivdg7" path="res://scripts/ui/equipment_menu.gd" id="1_qqnu4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_focus"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_normal"]
+bg_color = Color(0.05, 0.05, 0.08, 0.8)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.3, 0.28, 0.35, 0.5)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_color = Color(0, 0, 0, 0.3)
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hover"]
+bg_color = Color(0.08, 0.08, 0.12, 0.95)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.65, 0.15, 0.15, 0.8)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_color = Color(0.65, 0.15, 0.15, 0.2)
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pressed"]
+bg_color = Color(0.02, 0.02, 0.04, 0.95)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.4, 0.1, 0.1, 0.8)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="Theme" id="Theme_slots"]
+Button/colors/font_color = Color(0.85, 0.85, 0.85, 1)
+Button/colors/font_focus_color = Color(0.95, 0.9, 0.8, 1)
+Button/colors/font_hover_color = Color(0.95, 0.9, 0.8, 1)
+Button/colors/font_pressed_color = Color(0.7, 0.65, 0.55, 1)
+Button/font_sizes/font_size = 16
+Button/styles/focus = SubResource("StyleBoxEmpty_focus")
+Button/styles/hover = SubResource("StyleBoxFlat_hover")
+Button/styles/normal = SubResource("StyleBoxFlat_normal")
+Button/styles/pressed = SubResource("StyleBoxFlat_pressed")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.04, 0.04, 0.06, 0.85)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2, 0.15, 0.25, 0.6)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_color = Color(0, 0, 0, 0.5)
+shadow_size = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_equipped"]
+bg_color = Color(0.03, 0.03, 0.05, 0.7)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.4, 0.3, 0.2, 0.5)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="EquipmentMenu" type="CanvasLayer" unique_id=871650129]
+script = ExtResource("1_qqnu4")
+
+[node name="Control" type="Control" parent="." unique_id=1820477199]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="Control" unique_id=1845217614]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02, 0.02, 0.04, 0.85)
+
+[node name="TitleLabel" type="Label" parent="Control/Background" unique_id=1128215780]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 40.0
+offset_right = 200.0
+offset_bottom = 120.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.92, 0.9, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0.15, 0.02, 0.05, 0.8)
+theme_override_colors/font_outline_color = Color(0.1, 0.05, 0.15, 0.9)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/font_size = 48
+text = "CHARMS"
+horizontal_alignment = 1
+vertical_alignment = 1
+letter_spacing = 6
+
+[node name="EquippedPanel" type="PanelContainer" parent="Control/Background"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250.0
+offset_top = 130.0
+offset_right = 250.0
+offset_bottom = 220.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_equipped")
+
+[node name="EquippedContainer" type="HBoxContainer" parent="Control/Background/EquippedPanel" unique_id=905696957]
+layout_mode = 2
+alignment = 1
+
+[node name="EquippedLabel" type="Label" parent="Control/Background/EquippedPanel/EquippedContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.65, 0.6, 1)
+text = "EQUIPPED CHARMS: "
+vertical_alignment = 1
+
+[node name="InventoryGrid" type="GridContainer" parent="Control/Background" unique_id=1544732421]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 200.0
+offset_top = -200.0
+offset_right = 800.0
+offset_bottom = 200.0
+grow_vertical = 2
+theme = SubResource("Theme_slots")
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 16
+columns = 6
+
+[node name="InfoPanel" type="Panel" parent="Control/Background" unique_id=2128938018]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -750.0
+offset_top = -200.0
+offset_right = -200.0
+offset_bottom = 250.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="CharmIcon" type="TextureRect" parent="Control/Background/InfoPanel" unique_id=416974351]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -60.0
+offset_top = 30.0
+offset_right = 60.0
+offset_bottom = 150.0
+grow_horizontal = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CharmName" type="Label" parent="Control/Background/InfoPanel" unique_id=1823490544]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 180.0
+offset_bottom = 220.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9, 0.85, 0.8, 1)
+theme_override_font_sizes/font_size = 24
+text = "Select a Charm"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CharmDescription" type="Label" parent="Control/Background/InfoPanel" unique_id=1713813772]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 240.0
+offset_right = -30.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7, 0.7, 0.7, 1)
+theme_override_constants/line_spacing = 4
+theme_override_font_sizes/font_size = 18
+text = "Hover or select a charm from your inventory to view its details and properties here."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="BackButton" type="Button" parent="Control/Background"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -120.0
+offset_right = 100.0
+offset_bottom = -70.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_slots")
+text = "BACK"
+
+[connection signal="pressed" from="Control/Background/BackButton" to="." method="toggle_menu"]

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bi4j8ommk4mnm"
-path="res://.godot/imported/Pray.png-017774c7b6db81cbb883f23b7199cbe6.ctex"
+path="res://.godot/imported/Pray.png-f45bfae0753cde1f7632e61dc291965e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Mordred_Knight/Pray.png"
-dest_files=["res://.godot/imported/Pray.png-017774c7b6db81cbb883f23b7199cbe6.ctex"]
+source_file="res://assets/Mordred_Knight/Pray.png"
+dest_files=["res://.godot/imported/Pray.png-f45bfae0753cde1f7632e61dc291965e.ctex"]
 
 [params]
 

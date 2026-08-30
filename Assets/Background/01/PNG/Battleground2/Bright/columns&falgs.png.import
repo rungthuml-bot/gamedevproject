@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvudq65w0wwfg"
-path="res://.godot/imported/columns&falgs.png-ffc6ef303e801b7c109bb02dd306239f.ctex"
+path="res://.godot/imported/columns&falgs.png-3a4bb62d88871c820440274841575e07.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Background/01/PNG/Battleground2/Bright/columns&falgs.png"
-dest_files=["res://.godot/imported/columns&falgs.png-ffc6ef303e801b7c109bb02dd306239f.ctex"]
+source_file="res://assets/Background/01/PNG/Battleground2/Bright/columns&falgs.png"
+dest_files=["res://.godot/imported/columns&falgs.png-3a4bb62d88871c820440274841575e07.ctex"]
 
 [params]
 
