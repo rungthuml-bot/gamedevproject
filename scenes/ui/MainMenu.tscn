@@ -1,27 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://dklt31mw8b8e7"]
+[gd_scene format=3 uid="uid://dklt31mw8b8e7"]
 
 [ext_resource type="Script" uid="uid://dpmwwyypnlnd3" path="res://scripts/ui/main_menu.gd" id="1_yqorp"]
 [ext_resource type="Texture2D" uid="uid://cc6wfll70sj5n" path="res://assets/Background/main_menu_bg.png" id="2_4facs"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_focus"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_normal"]
-bg_color = Color(0.05, 0.05, 0.08, 0.7)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.3, 0.28, 0.35, 0.5)
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
-expand_margin_left = 32.0
-expand_margin_right = 32.0
-expand_margin_top = 10.0
-expand_margin_bottom = 10.0
-shadow_color = Color(0, 0, 0, 0.2)
-shadow_size = 4
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hover"]
 bg_color = Color(0.1, 0.1, 0.14, 0.85)
@@ -35,11 +17,29 @@ corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
 expand_margin_left = 32.0
-expand_margin_right = 32.0
 expand_margin_top = 10.0
+expand_margin_right = 32.0
 expand_margin_bottom = 10.0
 shadow_color = Color(0.83, 0.68, 0.21, 0.1)
 shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_normal"]
+bg_color = Color(0.05, 0.05, 0.08, 0.7)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.3, 0.28, 0.35, 0.5)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 32.0
+expand_margin_top = 10.0
+expand_margin_right = 32.0
+expand_margin_bottom = 10.0
+shadow_color = Color(0, 0, 0, 0.2)
+shadow_size = 4
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pressed"]
 bg_color = Color(0.02, 0.02, 0.04, 0.9)
@@ -53,8 +53,8 @@ corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
 expand_margin_left = 32.0
-expand_margin_right = 32.0
 expand_margin_top = 10.0
+expand_margin_right = 32.0
 expand_margin_bottom = 10.0
 
 [sub_resource type="Theme" id="Theme_buttons"]
@@ -118,11 +118,11 @@ theme_override_constants/shadow_offset_y = 4
 theme_override_constants/outline_size = 4
 theme_override_constants/shadow_outline_size = 6
 theme_override_font_sizes/font_size = 52
-text = "MORDRED:
+text = "MORDRED
 PATH OF THE TOLERANT"
 horizontal_alignment = 1
 
-[node name="Spacer" type="Control" parent="MarginContainer/VBoxContainer"]
+[node name="Spacer" type="Control" parent="MarginContainer/VBoxContainer" unique_id=13864039]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 
