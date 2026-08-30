@@ -10,6 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://ddkbjitso8s1x" path="res://Scenes/items/HealthPotion.tscn" id="8_tipki"]
 [ext_resource type="PackedScene" uid="uid://bpr3xb7q1kymd" path="res://Scenes/systems/SavePoint.tscn" id="9_85g3d"]
 [ext_resource type="PackedScene" uid="uid://c6tlpu722uftu" path="res://Scenes/ui/EquipmentMenu.tscn" id="10_choun"]
+[ext_resource type="PackedScene" uid="uid://cx3gwn3y65861" path="res://Scenes/traps/lava_pit/trap_lava_pit.tscn" id="11_0s2ms"]
+[ext_resource type="PackedScene" uid="uid://c00hwfpaiksmp" path="res://Scenes/traps/spikes/trap_spikes.tscn" id="12_4snuj"]
+[ext_resource type="PackedScene" uid="uid://2ioynf1rq34" path="res://Scenes/traps/rail_saw/trap_rail_saw.tscn" id="13_a1quu"]
+[ext_resource type="PackedScene" uid="uid://b4ofgwfoeyob0" path="res://Scenes/traps/stalactite/trap_stalactite.tscn" id="14_lrqen"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7n77a"]
 size = Vector2(3277, 50)
@@ -50,3 +54,15 @@ position = Vector2(-1288, -48)
 position = Vector2(-1595, -50)
 
 [node name="EquipmentMenu" parent="." unique_id=871650129 instance=ExtResource("10_choun")]
+
+[node name="trap_lava_pit" parent="." unique_id=1801767826 instance=ExtResource("11_0s2ms")]
+position = Vector2(-1016, -50)
+
+[node name="trap_spikes" parent="." unique_id=2137479968 instance=ExtResource("12_4snuj")]
+position = Vector2(-933, -48)
+
+[node name="trap_rail_saw" parent="." unique_id=900145889 instance=ExtResource("13_a1quu")]
+position = Vector2(-797, -37)
+
+[node name="trap_stalactite" parent="." unique_id=444609197 instance=ExtResource("14_lrqen")]
+position = Vector2(-664, -66)
