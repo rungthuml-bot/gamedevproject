@@ -56,16 +56,16 @@ func _on_start_button_pressed() -> void:
 
 	# เปลี่ยนไปยังหน้าเลือก Save Profile (SaveSelectMenu)
 	if save_select_scene != "" and ResourceLoader.exists(save_select_scene):
-		get_tree().change_scene_to_file(save_select_scene)
+		SceneTransition.change_scene(save_select_scene, 0.5)
 	else:
 		print("MAIN MENU ERROR: Save select scene not found at path: ", save_select_scene)
 
 
 func _on_options_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/ui/Settings.tscn")
+	SceneTransition.change_scene("res://Scenes/ui/Settings.tscn", 0.5)
 
 func _on_credits_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/ui/Credits.tscn")
+	SceneTransition.change_scene("res://Scenes/ui/Credits.tscn", 0.5)
 
 func _on_exit_button_pressed() -> void:
 
