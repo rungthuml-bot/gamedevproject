@@ -56,6 +56,8 @@ func _on_player_died() -> void:
 
 	# แสดงหน้า Game Over
 	control.show()
+	if control.has_node("AnimationPlayer"):
+		control.get_node("AnimationPlayer").play("fade_in")
 	retry_button.grab_focus()
 
 
