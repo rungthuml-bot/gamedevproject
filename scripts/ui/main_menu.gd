@@ -7,6 +7,11 @@ extends Control
 
 @export_file("*.tscn") var save_select_scene: String = "res://scenes/ui/SaveSelectMenu.tscn"
 
+# =========================================================
+# BGM
+# =========================================================
+var title_music: AudioStream = preload("res://assets/audio/bgm/sound_main.mp3")
+
 
 # =========================================================
 # Node References
@@ -14,6 +19,7 @@ extends Control
 
 @onready var start_button: Button = $MarginContainer/VBoxContainer/StartButton
 @onready var options_button: Button = $MarginContainer/VBoxContainer/OptionsButton
+@onready var credits_button: Button = $MarginContainer/VBoxContainer/StartButton2
 @onready var exit_button: Button = $MarginContainer/VBoxContainer/ExitButton
 
 
@@ -22,6 +28,7 @@ extends Control
 # =========================================================
 
 func _ready() -> void:
+	AudioManager.play_music(title_music)
 
 	# เชื่อมต่อ Signal ของปุ่มกด
 	if start_button != null:
@@ -29,6 +36,9 @@ func _ready() -> void:
 
 	if options_button != null:
 		options_button.pressed.connect(_on_options_button_pressed)
+
+	if credits_button != null:
+		credits_button.pressed.connect(_on_credits_button_pressed)
 
 	if exit_button != null:
 		exit_button.pressed.connect(_on_exit_button_pressed)
@@ -52,9 +62,10 @@ func _on_start_button_pressed() -> void:
 
 
 func _on_options_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/ui/Settings.tscn")
 
-	print("Options Button Pressed")
-
+func _on_credits_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/ui/Credits.tscn")
 
 func _on_exit_button_pressed() -> void:
 

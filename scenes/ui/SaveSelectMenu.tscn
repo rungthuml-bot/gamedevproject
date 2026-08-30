@@ -1,7 +1,97 @@
-[gd_scene format=3 uid="uid://cew1v2whxdk7s"]
+[gd_scene load_steps=12 format=3 uid="uid://cew1v2whxdk7s"]
 
 [ext_resource type="Script" uid="uid://cfuxj40178vt6" path="res://scripts/ui/save_select_menu.gd" id="1_atpt8"]
 [ext_resource type="Texture2D" uid="uid://hqqtwfs3gjkp" path="res://assets/Background/save_select_bg.png" id="2_sluha"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_focus"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_normal"]
+bg_color = Color(0.05, 0.05, 0.08, 0.75)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.3, 0.28, 0.35, 0.5)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_color = Color(0, 0, 0, 0.3)
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hover"]
+bg_color = Color(0.08, 0.08, 0.12, 0.9)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.83, 0.68, 0.21, 0.8)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_color = Color(0.83, 0.68, 0.21, 0.15)
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pressed"]
+bg_color = Color(0.02, 0.02, 0.04, 0.95)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.6, 0.5, 0.15, 0.8)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="Theme" id="Theme_slots"]
+Button/colors/font_color = Color(0.85, 0.85, 0.85, 1)
+Button/colors/font_focus_color = Color(0.95, 0.9, 0.8, 1)
+Button/colors/font_hover_color = Color(0.95, 0.9, 0.8, 1)
+Button/colors/font_pressed_color = Color(0.7, 0.65, 0.55, 1)
+Button/font_sizes/font_size = 18
+Button/styles/focus = SubResource("StyleBoxEmpty_focus")
+Button/styles/hover = SubResource("StyleBoxFlat_hover")
+Button/styles/normal = SubResource("StyleBoxFlat_normal")
+Button/styles/pressed = SubResource("StyleBoxFlat_pressed")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_delete_normal"]
+bg_color = Color(0.1, 0.02, 0.02, 0.4)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.5, 0.2, 0.2, 0.5)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_delete_hover"]
+bg_color = Color(0.3, 0.05, 0.05, 0.8)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.8, 0.2, 0.2, 0.8)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+shadow_color = Color(0.8, 0.2, 0.2, 0.2)
+shadow_size = 4
+
+[sub_resource type="Theme" id="Theme_delete"]
+Button/colors/font_color = Color(0.8, 0.4, 0.4, 1)
+Button/colors/font_focus_color = Color(1, 0.5, 0.5, 1)
+Button/colors/font_hover_color = Color(1, 0.5, 0.5, 1)
+Button/colors/font_pressed_color = Color(0.6, 0.2, 0.2, 1)
+Button/font_sizes/font_size = 14
+Button/styles/focus = SubResource("StyleBoxEmpty_focus")
+Button/styles/hover = SubResource("StyleBoxFlat_delete_hover")
+Button/styles/normal = SubResource("StyleBoxFlat_delete_normal")
+Button/styles/pressed = SubResource("StyleBoxFlat_delete_normal")
 
 [node name="SaveSelectMenu" type="Control" unique_id=33738429]
 layout_mode = 3
@@ -21,6 +111,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_sluha")
 expand_mode = 1
+stretch_mode = 6
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1894159066]
 layout_mode = 1
@@ -29,63 +120,88 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 80
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1462797310]
 layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
 
 [node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=631585143]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.941176, 0.92549, 0.882353, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
+theme_override_colors/font_outline_color = Color(0.1, 0.05, 0.15, 0.8)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 4
+theme_override_font_sizes/font_size = 48
 text = "SELECT PROFILE"
 horizontal_alignment = 1
 
+[node name="Spacer1" type="Control" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
 [node name="SlotContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=155861214]
 layout_mode = 2
+theme = SubResource("Theme_slots")
+theme_override_constants/separation = 40
 alignment = 1
 
 [node name="Slot1Button" type="Button" parent="MarginContainer/VBoxContainer/SlotContainer" unique_id=766448086]
-custom_minimum_size = Vector2(150, 250)
+custom_minimum_size = Vector2(260, 360)
 layout_mode = 2
 
 [node name="Slot2Button" type="Button" parent="MarginContainer/VBoxContainer/SlotContainer" unique_id=1315195806]
-custom_minimum_size = Vector2(150, 250)
+custom_minimum_size = Vector2(260, 360)
 layout_mode = 2
 
 [node name="Slot3Button" type="Button" parent="MarginContainer/VBoxContainer/SlotContainer" unique_id=1085471974]
-custom_minimum_size = Vector2(150, 250)
+custom_minimum_size = Vector2(260, 360)
 layout_mode = 2
 
 [node name="Slot4Button" type="Button" parent="MarginContainer/VBoxContainer/SlotContainer" unique_id=1535469777]
-custom_minimum_size = Vector2(150, 250)
+custom_minimum_size = Vector2(260, 360)
 layout_mode = 2
 
 [node name="DeleteContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=616433461]
 layout_mode = 2
+theme = SubResource("Theme_delete")
+theme_override_constants/separation = 40
 alignment = 1
 
 [node name="Delete1Button" type="Button" parent="MarginContainer/VBoxContainer/DeleteContainer" unique_id=157990871]
-custom_minimum_size = Vector2(150, 0)
+custom_minimum_size = Vector2(260, 40)
 layout_mode = 2
 text = "DELETE"
 
 [node name="Delete2Button" type="Button" parent="MarginContainer/VBoxContainer/DeleteContainer" unique_id=47049397]
-custom_minimum_size = Vector2(150, 0)
+custom_minimum_size = Vector2(260, 40)
 layout_mode = 2
 text = "DELETE"
 
 [node name="Delete3Button" type="Button" parent="MarginContainer/VBoxContainer/DeleteContainer" unique_id=560606747]
-custom_minimum_size = Vector2(150, 0)
+custom_minimum_size = Vector2(260, 40)
 layout_mode = 2
 text = "DELETE"
 
 [node name="Delete4Button" type="Button" parent="MarginContainer/VBoxContainer/DeleteContainer" unique_id=1967505157]
-custom_minimum_size = Vector2(150, 0)
+custom_minimum_size = Vector2(260, 40)
 layout_mode = 2
 text = "DELETE"
 
-[node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=222004504]
+[node name="Spacer2" type="Control" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
+
+[node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=222004504]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_slots")
 text = "BACK"
