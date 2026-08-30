@@ -2,7 +2,19 @@ extends Control
 
 var transitioning := false
 
+# =========================================================
+# BGM
+# =========================================================
+var title_music: AudioStream = preload("res://assets/audio/bgm/sound_main.mp3")
 
+
+func _ready() -> void:
+	AudioManager.play_music(title_music)
+
+
+# =========================================================
+# INPUT
+# =========================================================
 func _unhandled_input(event: InputEvent) -> void:
 	if transitioning:
 		return
@@ -25,6 +37,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		transition_to_main_menu()
 
 
+# =========================================================
+# SCENE TRANSITION
+# =========================================================
 func transition_to_main_menu() -> void:
 	if transitioning:
 		return

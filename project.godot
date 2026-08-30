@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 SaveManager="*uid://dtnjfa2plofur"
 SceneTransition="*uid://um4ro0bix7p4"
+AudioManager="*uid://dvhh8xf5ix8e3"
 
 [display]
 
