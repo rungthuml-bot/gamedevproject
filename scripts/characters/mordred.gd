@@ -388,13 +388,13 @@ func process_facing(
 	if direction > 0:
 
 		anim.flip_h = false
-		attack_area.scale.x = 1
+		attack_collision.position.x = 26.0
 
 
 	elif direction < 0:
 
 		anim.flip_h = true
-		attack_area.scale.x = -1
+		attack_collision.position.x = -26.0
 
 
 # ==================================================
