@@ -8,13 +8,13 @@ extends Node
 signal equipped_charms_changed
 
 var current_slot: int = 1
-var default_start_scene: String = "res://scenes/levels/test_map01.tscn"
+var default_start_scene: String = "res://scenes/levels/level_1.tscn"
 
 # ข้อมูลเซฟปัจจุบัน
 var save_data: Dictionary = {
 	"hp": 100,
 	"potion_count": 1,
-	"current_scene": "res://scenes/levels/test_map01.tscn",
+	"current_scene": "res://scenes/levels/level_1.tscn",
 	"equipped_charms": []
 }
 

@@ -9,7 +9,7 @@ extends Control
 @onready var author_label: Label = $Background/CenterContainer/VBoxContainer/AuthorLabel
 
 # ฉากที่จะเล่นต่อหลังจากคัตซีนจบ
-@export_file("*.tscn") var next_scene_path: String = "res://scenes/levels/test_map01.tscn"
+@export_file("*.tscn") var next_scene_path: String = "res://scenes/levels/level_1.tscn"
 
 var tween: Tween
 var is_transitioning: bool = false
