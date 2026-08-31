@@ -146,7 +146,6 @@ func update_facing_direction() -> void:
 			anim.flip_h = (move_direction < 0)
 		
 		attack_hitbox.position.x = 16 * move_direction
-		attack_hitbox.scale.x = move_direction
 
 func update_animation() -> void:
 	if is_dying or is_attacking or not anim:

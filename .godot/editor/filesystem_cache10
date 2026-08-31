@@ -1,9 +1,11 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1788183651
+::res://::1788190463
 DEVELOPMENT_BASELINE.md::TextFile::-1::1788140685::0::1::::<><><>0<>0<><>::
+mordred_develop_backup.gd::GDScript::7542235397372216789::1788187090::0::1::::<>RefCounted<><>0<>0<><>::
+player_mordred.txt::TextFile::-1::1788188474::0::1::::<><><>0<>0<><>::
 readme.txt::TextFile::-1::1788110969::0::1::::<><><>0<>0<><>::
 TRAP_INTEGRATION.md::TextFile::-1::1788140685::0::1::::<><><>0<>0<><>::
-::res://assets/::1788140683
+::res://assets/::1788191544
 area_2d.gd::GDScript::5849509674596037594::1788111031::0::1::::<>Area2D<><>0<>0<><>::
 icon.svg::CompressedTexture2D::3011873169066792553::1788110968::1788111469::1::::<><><>0<>0<>0e81da66802f5699bd362c6cfc2dc453<>res://.godot/imported/icon.svg-56083ea2a1f1a4f1e49773bdc6d7826c.ctex::
 ::res://assets/audio/::1788048977
@@ -416,7 +418,7 @@ Skeleton_01_White_Hurt.png::CompressedTexture2D::2286170550436336095::1788181287
 Skeleton_01_White_Idle.png::CompressedTexture2D::1631809008022720649::1788181287::1788183653::1::::<><><>0<>0<>e67d1a25281e61bbfc25cb393311262e<>res://.godot/imported/Skeleton_01_White_Idle.png-8a87b10e333b092a9193ebfc47a869d4.ctex::
 Skeleton_01_White_Walk.png::CompressedTexture2D::2038718057038786365::1788181287::1788183653::1::::<><><>0<>0<>bd87f16fdddf545042a4556933448773<>res://.godot/imported/Skeleton_01_White_Walk.png-f6ea641fa3fa321951c43653cc945b94.ctex::
 ::res://assets/Enemy/Undead executioner puppet/::1788183659
-::res://assets/Enemy/Undead executioner puppet/png/::1788183659
+::res://assets/Enemy/Undead executioner puppet/png/::1788183660
 attacking.png::CompressedTexture2D::1423597268323613025::1788183659::1788183660::1::::<><><>0<>0<>74e7ecdfa56602e0cf7d69ee1d22a296<>res://.godot/imported/attacking.png-db1e3f11edf631e44eb009bc1ff176d7.ctex::
 death.png::CompressedTexture2D::7292546436435066208::1788183659::1788183660::1::::<><><>0<>0<>b45192302b5011286b4bc1a24d937406<>res://.godot/imported/death.png-4822a937ee03587510d3cf14818932ec.ctex::
 idle2.png::CompressedTexture2D::3807326501475118891::1788183659::1788183660::1::::<><><>0<>0<>5744e4c459581192eb3895668608954e<>res://.godot/imported/idle2.png-88d1cacd887ab1c192526b87ed4c104e.ctex::
@@ -568,6 +570,11 @@ Pray.png::CompressedTexture2D::3008404526223150974::1788110996::1788111348::1:::
 Roll.png::CompressedTexture2D::100470220500194906::1788110996::1788110996::1::::<><><>0<>0<>ac1adcd41b1fb0103cc379b7e3486edf<>res://.godot/imported/Roll.png-fc3c386155adfc0fbd0b1f8ee2788ba0.ctex::
 Run.png::CompressedTexture2D::2708407221163772175::1788110996::1788111348::1::::<><><>0<>0<>88550b3ddf3105851ec53247b6bec665<>res://.godot/imported/Run.png-b62b712949609e236ce86fe4053621f2.ctex::
 Slide.png::CompressedTexture2D::3008586817531895275::1788110996::1788110996::1::::<><><>0<>0<>622ad96cf540a8a8c64ca151cc7b6dfb<>res://.godot/imported/Slide.png-261d59ca9cbcf194a0457b25383b5840.ctex::
+::res://assets/Npc/::1788191549
+::res://assets/Npc/FREE - Blacksmith 2D Pixel Art/::1788191549
+License.txt::TextFile::-1::1788191549::0::1::::<><><>0<>0<><>::
+::res://assets/Npc/FREE - Blacksmith 2D Pixel Art/Sprites/::1788191549
+BLACKSMITH.png::CompressedTexture2D::3781955835137081569::1788191549::1788191550::1::::<><><>0<>0<>dda385744f4b8fa2cd26421aa2e7f812<>res://.godot/imported/BLACKSMITH.png-0e1f5da107f47411cc830bac3684b209.ctex::
 ::res://assets/source/::1788110968
 ::res://assets/source/craftpix/::1788110969
 License.txt::TextFile::-1::1788110968::0::1::::<><><>0<>0<><>::
@@ -1349,12 +1356,12 @@ tile36.png::CompressedTexture2D::2651613349653052142::1788110968::1788111469::1:
 ::res://assets/TileSet_Test/::1788039329
 Tileset.png::CompressedTexture2D::5529291193795964864::1788038634::1788039329::1::::<><><>0<>0<>e0492fcb746b303f8d9d2d6c0ed408f0<>res://.godot/imported/Tileset.png-4d77c384945864bb973187cfd0f956bf.ctex::
 ::res://scenes/::1788140685
-::res://scenes/characters/::1788183215
-Mordred.tscn::PackedScene::8653375137814310770::1788183215::0::1::::<><><>0<>0<><>::uid://b5jkovim4vmpm::::res://assets/Mordred_Knight/Attacks.png<>uid://c4v4bh0oxkuet::::res://scripts/characters/mordred.gd<>uid://c1ml7mgs0twnb::::res://assets/Mordred_Knight/Death.png<>uid://dvmfpgflawipx::::res://assets/Mordred_Knight/Idle.png<>uid://c0hvghmsph4pb::::res://assets/Mordred_Knight/Jump.png<>uid://bet8colukmhqt::::res://assets/Mordred_Knight/Run.png
+::res://scenes/characters/::1788187176
+Mordred.tscn::PackedScene::8653375137814310770::1788187176::0::1::::<><><>0<>0<><>::uid://b5jkovim4vmpm::::res://assets/Mordred_Knight/Attacks.png<>uid://c4v4bh0oxkuet::::res://scripts/characters/mordred.gd<>uid://c1ml7mgs0twnb::::res://assets/Mordred_Knight/Death.png<>uid://dvmfpgflawipx::::res://assets/Mordred_Knight/Idle.png<>uid://c0hvghmsph4pb::::res://assets/Mordred_Knight/Jump.png<>uid://bet8colukmhqt::::res://assets/Mordred_Knight/Run.png<>uid://cq42b7k0y5u61::::res://assets/Mordred_Knight/Health.png<>uid://bi4m8rbg5hg3d::::res://assets/Mordred_Knight/Slide.png
 NPC.tscn::PackedScene::-1::1788174678::0::1::::<><><>0<>0<><>::
-::res://scenes/enemies/::1788183651
+::res://scenes/enemies/::1788184120
 Arrow.tscn::PackedScene::-1::1788145111::0::1::::<><><>0<>0<><>::
-Boss.tscn::PackedScene::1202295577146398342::1788168098::0::1::::<><><>0<>0<><>::
+Boss.tscn::PackedScene::1202295577146398342::1788184120::0::1::::<><><>0<>0<><>::uid://dmjuwhao3vq0m::::res://scripts/enemies/boss.gd<>uid://ujuo6rhcetfl::::res://assets/Enemy/Undead executioner puppet/png/attacking.png<>uid://db5tf6s2fb8qe::::res://assets/Enemy/Undead executioner puppet/png/death.png<>uid://d4fp5pshhvyfv::::res://assets/Enemy/Undead executioner puppet/png/idle.png<>uid://buikd1tp4vmr8::::res://assets/Enemy/Undead executioner puppet/png/idle2.png
 EnemyArcher.tscn::PackedScene::2072426903475040396::1788168098::0::1::::<><><>0<>0<><>::
 EnemyAxe.tscn::PackedScene::1052662255280028867::1788168098::0::1::::<><><>0<>0<><>::
 EnemySword.tscn::PackedScene::6047072744276216058::1788183651::0::1::::<><><>0<>0<><>::uid://dgsq5y3drb4t7::::res://scripts/enemies/enemy_sword.gd<>uid://car800sx2vwm6::::res://assets/Enemy/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Attack1.png<>uid://17f8tgwbipye::::res://assets/Enemy/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Die.png<>uid://7to5otgtcqvv::::res://assets/Enemy/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Hurt.png<>uid://xipwkjscvn5r::::res://assets/Enemy/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Idle.png<>uid://4btnhfev5dqr::::res://assets/Enemy/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Walk.png
@@ -1404,20 +1411,20 @@ MainMenu.tscn::PackedScene::7885063653034697220::1788140685::0::1::::<><><>0<>0<
 PauseMenu.tscn::PackedScene::3644121544391720885::1788179110::0::1::::<><><>0<>0<><>::uid://c0papwhqelkow::::res://scripts/ui/pause_menu.gd
 SaveSelectMenu.tscn::PackedScene::5100630648476642914::1788140685::0::1::::<><><>0<>0<><>::uid://cfuxj40178vt6::::res://scripts/ui/save_select_menu.gd<>uid://hqqtwfs3gjkp::::res://assets/Background/save_select_bg.png
 Settings.tscn::PackedScene::-1::1788179110::0::1::::<><><>0<>0<><>::res://scripts/ui/settings.gd<>uid://cc6wfll70sj5n::::res://assets/Background/main_menu_bg.png
-TitleScreen.tscn::PackedScene::8169450546690745345::1788140685::0::1::::<><><>0<>0<><>::uid://c5ium6g7eo1vs::::res://Scripts/ui/title_screen.gd<>uid://cc6wfll70sj5n::::res://assets/Background/main_menu_bg.png<>uid://f71cvpntbja7::::res://assets/Background/Logo.png
+TitleScreen.tscn::PackedScene::8169450546690745345::1788183704::0::1::::<><><>0<>0<><>::uid://c5ium6g7eo1vs::::res://Scripts/ui/title_screen.gd<>uid://cc6wfll70sj5n::::res://assets/Background/main_menu_bg.png<>uid://f71cvpntbja7::::res://assets/Background/Logo.png
 ui_test_player.tscn::PackedScene::5072798914094420098::1788140685::0::1::::<><><>0<>0<><>::uid://dfv86gxautw1p::::res://scripts/ui/ui_test_player.gd
 ::res://scripts/::1788140683
 ::res://scripts/audio/::1788094724
 audio_manager.gd::GDScript::8648163579040399584::1788096946::0::1::::<>Node<><>0<>0<><>::
-::res://scripts/characters/::1788179110
-mordred.gd::GDScript::6853432751259338283::1788180569::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://scripts/characters/::1788187176
+mordred.gd::GDScript::6853432751259338283::1788189967::0::1::::<>CharacterBody2D<><>0<>0<><>::
 npc.gd::GDScript::4078425073958079878::1788183416::0::1::::<>StaticBody2D<><>0<>0<><>::
 ::res://scripts/enemies/::1788179110
 arrow.gd::GDScript::7714495628947397066::1788145100::0::1::::Arrow<>Area2D<><>0<>0<><>::
-boss.gd::GDScript::8021361570181275846::1788183407::0::1::::Boss<>CharacterBody2D<><>0<>0<><>::
-enemy_archer.gd::GDScript::804527526260589622::1788183397::0::1::::EnemyArcher<>CharacterBody2D<><>0<>0<><>::
-enemy_axe.gd::GDScript::7670769703870871042::1788183384::0::1::::EnemyAxe<>CharacterBody2D<><>0<>0<><>::
-enemy_sword.gd::GDScript::7618580262156008338::1788183375::0::1::::EnemySword<>CharacterBody2D<><>0<>0<><>::
+boss.gd::GDScript::8021361570181275846::1788186072::0::1::::Boss<>CharacterBody2D<><>0<>0<><>::
+enemy_archer.gd::GDScript::804527526260589622::1788186116::0::1::::EnemyArcher<>CharacterBody2D<><>0<>0<><>::
+enemy_axe.gd::GDScript::7670769703870871042::1788186093::0::1::::EnemyAxe<>CharacterBody2D<><>0<>0<><>::
+enemy_sword.gd::GDScript::7618580262156008338::1788186058::0::1::::EnemySword<>CharacterBody2D<><>0<>0<><>::
 ::res://scripts/items/::1788038854
 health_potion.gd::GDScript::5424399734226732555::1788036919::0::1::::<>Area2D<><>0<>0<><>::
 ::res://scripts/levels/::1788141798
