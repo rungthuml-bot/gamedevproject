@@ -13,3 +13,6 @@ res://scripts/enemies/enemy_archer.gd
 res://scripts/enemies/enemy_axe.gd
 res://scripts/enemies/enemy_sword.gd
 res://scripts/characters/npc.gd
+res://scripts/ui/title_screen.gd
+res://scripts/ui/equipment_menu.gd
+res://scripts/ui/settings.gd

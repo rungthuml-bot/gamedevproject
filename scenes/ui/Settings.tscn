@@ -47,21 +47,66 @@ HSlider/styles/slider = SubResource("StyleBoxFlat_slider_track")
 HSlider/styles/grabber_area = SubResource("StyleBoxFlat_slider_fill")
 HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_slider_fill")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_keycap"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_keybtn_normal"]
 bg_color = Color(0.08, 0.08, 0.12, 0.9)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
 border_color = Color(0.3, 0.26, 0.35, 0.55)
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
-content_margin_left = 10.0
-content_margin_top = 3.0
-content_margin_right = 10.0
-content_margin_bottom = 3.0
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+content_margin_left = 14.0
+content_margin_top = 4.0
+content_margin_right = 14.0
+content_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_keybtn_hover"]
+bg_color = Color(0.12, 0.11, 0.16, 1.0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.83, 0.68, 0.21, 0.8)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+content_margin_left = 14.0
+content_margin_top = 4.0
+content_margin_right = 14.0
+content_margin_bottom = 4.0
+shadow_color = Color(0.83, 0.68, 0.21, 0.08)
+shadow_size = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_keybtn_pressed"]
+bg_color = Color(0.04, 0.04, 0.06, 1.0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.6, 0.5, 0.15, 0.8)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+content_margin_left = 14.0
+content_margin_top = 4.0
+content_margin_right = 14.0
+content_margin_bottom = 4.0
+
+[sub_resource type="Theme" id="Theme_keybtn"]
+Button/colors/font_color = Color(0.85, 0.82, 0.76, 1)
+Button/colors/font_focus_color = Color(1, 0.96, 0.85, 1)
+Button/colors/font_hover_color = Color(1, 0.96, 0.85, 1)
+Button/colors/font_pressed_color = Color(0.7, 0.65, 0.55, 1)
+Button/font_sizes/font_size = 14
+Button/styles/focus = SubResource("StyleBoxEmpty_focus")
+Button/styles/hover = SubResource("StyleBoxFlat_keybtn_hover")
+Button/styles/normal = SubResource("StyleBoxFlat_keybtn_normal")
+Button/styles/pressed = SubResource("StyleBoxFlat_keybtn_pressed")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_normal"]
 bg_color = Color(0.05, 0.05, 0.08, 0.7)
@@ -159,10 +204,10 @@ anchor_left = 0.53
 anchor_top = 0.5
 anchor_right = 0.53
 anchor_bottom = 0.5
-offset_left = -270.0
-offset_top = -255.0
-offset_right = 270.0
-offset_bottom = 255.0
+offset_left = -300.0
+offset_top = -300.0
+offset_right = 300.0
+offset_bottom = 300.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -181,9 +226,9 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 40.0
-offset_top = 32.0
+offset_top = 28.0
 offset_right = -40.0
-offset_bottom = -32.0
+offset_bottom = -28.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 0
@@ -209,12 +254,52 @@ layout_mode = 2
 color = Color(0.4, 0.33, 0.15, 0.5)
 
 [node name="SpacerA" type="Control" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 22)
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="GeneralSection" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="GeneralTitle" type="Label" parent="MarginContainer/VBoxContainer/GeneralSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.62, 0.55, 0.3, 1)
+theme_override_font_sizes/font_size = 13
+text = "GENERAL"
+horizontal_alignment = 1
+letter_spacing = 4
+uppercase = true
+
+[node name="SpacerGen" type="Control" parent="MarginContainer/VBoxContainer/GeneralSection"]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+
+[node name="LangRow" type="HBoxContainer" parent="MarginContainer/VBoxContainer/GeneralSection"]
+layout_mode = 2
+
+[node name="LangAction" type="Label" parent="MarginContainer/VBoxContainer/GeneralSection/LangRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.75, 0.73, 0.68, 1)
+theme_override_font_sizes/font_size = 15
+text = "Language"
+vertical_alignment = 1
+
+[node name="LangKey" type="Button" parent="MarginContainer/VBoxContainer/GeneralSection/LangRow"]
+custom_minimum_size = Vector2(90, 28)
+layout_mode = 2
+size_flags_horizontal = 0
+theme = SubResource("Theme_keybtn")
+text = "ENGLISH"
+metadata/is_lang_btn = true
+
+[node name="SpacerB_Gen" type="Control" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 14)
 layout_mode = 2
 
 [node name="AudioSection" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 10
+theme_override_constants/separation = 8
 
 [node name="AudioSectionTitle" type="Label" parent="MarginContainer/VBoxContainer/AudioSection"]
 layout_mode = 2
@@ -233,7 +318,7 @@ layout_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(0.78, 0.76, 0.72, 1)
 theme_override_font_sizes/font_size = 15
-text = "Master Volume"
+text = "Master Volume: 100%"
 horizontal_alignment = 1
 
 [node name="SliderRow" type="HBoxContainer" parent="MarginContainer/VBoxContainer/AudioSection"]
@@ -250,14 +335,14 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
 theme = SubResource("Theme_slider")
-value = 50.0
+value = 100.0
 
 [node name="SliderPadRight" type="Control" parent="MarginContainer/VBoxContainer/AudioSection/SliderRow"]
 custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
 
 [node name="SpacerB" type="Control" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 18)
+custom_minimum_size = Vector2(0, 14)
 layout_mode = 2
 
 [node name="ControlsDivider" type="ColorRect" parent="MarginContainer/VBoxContainer"]
@@ -266,18 +351,18 @@ layout_mode = 2
 color = Color(0.25, 0.22, 0.3, 0.3)
 
 [node name="SpacerB2" type="Control" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 16)
+custom_minimum_size = Vector2(0, 12)
 layout_mode = 2
 
 [node name="ControlsSection" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 7
+theme_override_constants/separation = 5
 
 [node name="ControlsTitle" type="Label" parent="MarginContainer/VBoxContainer/ControlsSection"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.62, 0.55, 0.3, 1)
 theme_override_font_sizes/font_size = 13
-text = "CONTROLS"
+text = "CONTROLS (Click to rebind)"
 horizontal_alignment = 1
 letter_spacing = 4
 uppercase = true
@@ -286,31 +371,48 @@ uppercase = true
 custom_minimum_size = Vector2(0, 4)
 layout_mode = 2
 
-[node name="MovementLabel" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ControlsSection"]
+[node name="MoveLeftRow" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ControlsSection"]
 layout_mode = 2
 
-[node name="MoveAction" type="Label" parent="MarginContainer/VBoxContainer/ControlsSection/MovementLabel"]
+[node name="MoveLeftAction" type="Label" parent="MarginContainer/VBoxContainer/ControlsSection/MoveLeftRow"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.75, 0.73, 0.68, 1)
 theme_override_font_sizes/font_size = 15
-text = "Move"
+text = "Move Left"
 vertical_alignment = 1
 
-[node name="MoveKey" type="Label" parent="MarginContainer/VBoxContainer/ControlsSection/MovementLabel"]
+[node name="MoveLeftKey" type="Button" parent="MarginContainer/VBoxContainer/ControlsSection/MoveLeftRow"]
+custom_minimum_size = Vector2(90, 28)
 layout_mode = 2
 size_flags_horizontal = 0
-theme_override_colors/font_color = Color(0.85, 0.82, 0.76, 1)
-theme_override_font_sizes/font_size = 14
-theme_override_styles/normal = SubResource("StyleBoxFlat_keycap")
-text = "A / D"
-horizontal_alignment = 2
-vertical_alignment = 1
+theme = SubResource("Theme_keybtn")
+text = "A"
+metadata/action_name = "move_left"
 
-[node name="JumpLabel" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ControlsSection"]
+[node name="MoveRightRow" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ControlsSection"]
 layout_mode = 2
 
-[node name="JumpAction" type="Label" parent="MarginContainer/VBoxContainer/ControlsSection/JumpLabel"]
+[node name="MoveRightAction" type="Label" parent="MarginContainer/VBoxContainer/ControlsSection/MoveRightRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.75, 0.73, 0.68, 1)
+theme_override_font_sizes/font_size = 15
+text = "Move Right"
+vertical_alignment = 1
+
+[node name="MoveRightKey" type="Button" parent="MarginContainer/VBoxContainer/ControlsSection/MoveRightRow"]
+custom_minimum_size = Vector2(90, 28)
+layout_mode = 2
+size_flags_horizontal = 0
+theme = SubResource("Theme_keybtn")
+text = "D"
+metadata/action_name = "move_right"
+
+[node name="JumpRow" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ControlsSection"]
+layout_mode = 2
+
+[node name="JumpAction" type="Label" parent="MarginContainer/VBoxContainer/ControlsSection/JumpRow"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.75, 0.73, 0.68, 1)
@@ -318,41 +420,56 @@ theme_override_font_sizes/font_size = 15
 text = "Jump"
 vertical_alignment = 1
 
-[node name="JumpKey" type="Label" parent="MarginContainer/VBoxContainer/ControlsSection/JumpLabel"]
+[node name="JumpKey" type="Button" parent="MarginContainer/VBoxContainer/ControlsSection/JumpRow"]
+custom_minimum_size = Vector2(90, 28)
 layout_mode = 2
 size_flags_horizontal = 0
-theme_override_colors/font_color = Color(0.85, 0.82, 0.76, 1)
-theme_override_font_sizes/font_size = 14
-theme_override_styles/normal = SubResource("StyleBoxFlat_keycap")
+theme = SubResource("Theme_keybtn")
 text = "SPACE"
-horizontal_alignment = 2
-vertical_alignment = 1
+metadata/action_name = "jump"
 
-[node name="AttackLabel" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ControlsSection"]
+[node name="AttackRow" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ControlsSection"]
 layout_mode = 2
 
-[node name="AttackAction" type="Label" parent="MarginContainer/VBoxContainer/ControlsSection/AttackLabel"]
+[node name="AttackAction" type="Label" parent="MarginContainer/VBoxContainer/ControlsSection/AttackRow"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.75, 0.73, 0.68, 1)
 theme_override_font_sizes/font_size = 15
-text = "Attack"
+text = "Light Attack"
 vertical_alignment = 1
 
-[node name="AttackKey" type="Label" parent="MarginContainer/VBoxContainer/ControlsSection/AttackLabel"]
+[node name="AttackKey" type="Button" parent="MarginContainer/VBoxContainer/ControlsSection/AttackRow"]
+custom_minimum_size = Vector2(90, 28)
 layout_mode = 2
 size_flags_horizontal = 0
-theme_override_colors/font_color = Color(0.85, 0.82, 0.76, 1)
-theme_override_font_sizes/font_size = 14
-theme_override_styles/normal = SubResource("StyleBoxFlat_keycap")
+theme = SubResource("Theme_keybtn")
 text = "LMB"
-horizontal_alignment = 2
-vertical_alignment = 1
+metadata/action_name = "Attack"
 
-[node name="DashLabel" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ControlsSection"]
+[node name="HeavyAttackRow" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ControlsSection"]
 layout_mode = 2
 
-[node name="DashAction" type="Label" parent="MarginContainer/VBoxContainer/ControlsSection/DashLabel"]
+[node name="HeavyAttackAction" type="Label" parent="MarginContainer/VBoxContainer/ControlsSection/HeavyAttackRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.75, 0.73, 0.68, 1)
+theme_override_font_sizes/font_size = 15
+text = "Heavy Attack"
+vertical_alignment = 1
+
+[node name="HeavyAttackKey" type="Button" parent="MarginContainer/VBoxContainer/ControlsSection/HeavyAttackRow"]
+custom_minimum_size = Vector2(90, 28)
+layout_mode = 2
+size_flags_horizontal = 0
+theme = SubResource("Theme_keybtn")
+text = "RMB"
+metadata/action_name = "attack_heavy"
+
+[node name="DashRow" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ControlsSection"]
+layout_mode = 2
+
+[node name="DashAction" type="Label" parent="MarginContainer/VBoxContainer/ControlsSection/DashRow"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.75, 0.73, 0.68, 1)
@@ -360,60 +477,16 @@ theme_override_font_sizes/font_size = 15
 text = "Dash"
 vertical_alignment = 1
 
-[node name="DashKey" type="Label" parent="MarginContainer/VBoxContainer/ControlsSection/DashLabel"]
+[node name="DashKey" type="Button" parent="MarginContainer/VBoxContainer/ControlsSection/DashRow"]
+custom_minimum_size = Vector2(90, 28)
 layout_mode = 2
 size_flags_horizontal = 0
-theme_override_colors/font_color = Color(0.85, 0.82, 0.76, 1)
-theme_override_font_sizes/font_size = 14
-theme_override_styles/normal = SubResource("StyleBoxFlat_keycap")
-text = "SHIFT"
-horizontal_alignment = 2
-vertical_alignment = 1
-
-[node name="SprintLabel" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ControlsSection"]
-layout_mode = 2
-
-[node name="SprintAction" type="Label" parent="MarginContainer/VBoxContainer/ControlsSection/SprintLabel"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_colors/font_color = Color(0.75, 0.73, 0.68, 1)
-theme_override_font_sizes/font_size = 15
-text = "Sprint"
-vertical_alignment = 1
-
-[node name="SprintKey" type="Label" parent="MarginContainer/VBoxContainer/ControlsSection/SprintLabel"]
-layout_mode = 2
-size_flags_horizontal = 0
-theme_override_colors/font_color = Color(0.85, 0.82, 0.76, 1)
-theme_override_font_sizes/font_size = 14
-theme_override_styles/normal = SubResource("StyleBoxFlat_keycap")
-text = "HOLD SHIFT"
-horizontal_alignment = 2
-vertical_alignment = 1
-
-[node name="PotionLabel" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ControlsSection"]
-layout_mode = 2
-
-[node name="PotionAction" type="Label" parent="MarginContainer/VBoxContainer/ControlsSection/PotionLabel"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_colors/font_color = Color(0.75, 0.73, 0.68, 1)
-theme_override_font_sizes/font_size = 15
-text = "Use Potion"
-vertical_alignment = 1
-
-[node name="PotionKey" type="Label" parent="MarginContainer/VBoxContainer/ControlsSection/PotionLabel"]
-layout_mode = 2
-size_flags_horizontal = 0
-theme_override_colors/font_color = Color(0.85, 0.82, 0.76, 1)
-theme_override_font_sizes/font_size = 14
-theme_override_styles/normal = SubResource("StyleBoxFlat_keycap")
-text = "H"
-horizontal_alignment = 2
-vertical_alignment = 1
+theme = SubResource("Theme_keybtn")
+text = "C"
+metadata/action_name = "dash"
 
 [node name="SpacerC" type="Control" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 20)
+custom_minimum_size = Vector2(0, 16)
 layout_mode = 2
 
 [node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer"]

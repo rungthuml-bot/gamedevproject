@@ -26,6 +26,22 @@ var npc_portrait_emoji: String = "🧙"
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS # Run even when paused
 	dialog_box.visible = false
+	
+	# Translation
+	if has_node("/root/LocaleManager"):
+		var lm = get_node("/root/LocaleManager")
+		lm.language_changed.connect(_on_language_changed)
+		_apply_translation()
+
+func _apply_translation() -> void:
+	if not has_node("/root/LocaleManager"): return
+	var lm = get_node("/root/LocaleManager")
+	
+	if click_indicator:
+		click_indicator.text = lm.t("NEXT")
+
+func _on_language_changed(_lang: String) -> void:
+	_apply_translation()
 
 func start_dialog(data: Array) -> void:
 	if is_dialog_active or data.is_empty():

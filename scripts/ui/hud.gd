@@ -33,8 +33,18 @@ func _ready() -> void:
 			_on_potion_count_changed(player.get("potion_count"))
 
 	else:
-
 		print("HUD ERROR: Player not found!")
+
+	# Translation
+	if has_node("/root/LocaleManager"):
+		var lm = get_node("/root/LocaleManager")
+		lm.language_changed.connect(_on_language_changed)
+		
+func _on_language_changed(_lang: String) -> void:
+	# Trigger label update
+	var player := get_tree().get_first_node_in_group("player") as Node
+	if player != null:
+		_on_potion_count_changed(player.get("potion_count"))
 
 
 # =========================================================
@@ -50,7 +60,8 @@ func _on_player_hp_changed(current_hp: int, max_hp: int) -> void:
 
 
 func _on_potion_count_changed(count: int) -> void:
-
 	if potion_label != null:
-
-		potion_label.text = "Potions: " + str(count)
+		var prefix = "Potions: "
+		if has_node("/root/LocaleManager"):
+			prefix = get_node("/root/LocaleManager").t("POTIONS")
+		potion_label.text = prefix + str(count)

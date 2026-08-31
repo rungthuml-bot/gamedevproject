@@ -20,6 +20,8 @@ SaveManager="*uid://dtnjfa2plofur"
 SceneTransition="*uid://um4ro0bix7p4"
 AudioManager="*uid://dvhh8xf5ix8e3"
 DialogManager="res://scenes/systems/DialogManager.tscn"
+ConfigManager="*res://scripts/systems/config_manager.gd"
+LocaleManager="*res://scripts/systems/locale_manager.gd"
 
 [display]
 

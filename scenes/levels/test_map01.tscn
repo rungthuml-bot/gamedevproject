@@ -76,6 +76,6 @@ position = Vector2(800, 480)
 
 [node name="NPC" parent="." instance=ExtResource("6_npc")]
 position = Vector2(350, 515)
-npc_name = "โจรค่ายฝึก"
+npc_name = "Camp Thief"
 portrait_emoji = "🧙"
-dialog = [{"speaker": "NPC", "text": "หยุดก่อน นักเดินทาง! ผมชื่อโจร... เอ้ย ไม่ใช่ ผมเป็นแค่คนธรรมดาที่อยู่แถวนี้"}, {"speaker": "Player", "text": "แล้วทำไมถึงดูน่าสงสัยอย่างนี้?"}, {"speaker": "NPC", "text": "ฮ่าๆ ก็แค่ใบหน้าผมน่ะ เป็นแบบนี้มาตั้งแต่เกิดแล้ว โชคดีในการเดินทางนะ!"}]
+dialog = [{"speaker": "NPC", "text": "Halt, traveler! My name is Thief... wait, no, I'm just a normal guy around here."}, {"speaker": "Player", "text": "Then why do you look so suspicious?"}, {"speaker": "NPC", "text": "Haha, it's just my face. I was born this way. Good luck on your journey!"}]

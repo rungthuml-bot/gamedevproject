@@ -42,6 +42,25 @@ func _ready() -> void:
 	else:
 		print("GAME OVER MENU ERROR: Player not found!")
 
+	# Translation
+	if has_node("/root/LocaleManager"):
+		var lm = get_node("/root/LocaleManager")
+		lm.language_changed.connect(_on_language_changed)
+		_apply_translation()
+
+func _apply_translation() -> void:
+	if not has_node("/root/LocaleManager"): return
+	var lm = get_node("/root/LocaleManager")
+	
+	if $Control/MarginContainer/VBoxContainer/TitleLabel:
+		$Control/MarginContainer/VBoxContainer/TitleLabel.text = lm.t("YOU_DIED")
+	
+	if retry_button: retry_button.text = lm.t("RETRY")
+	if main_menu_button: main_menu_button.text = lm.t("MAIN_MENU")
+
+func _on_language_changed(_lang: String) -> void:
+	_apply_translation()
+
 
 # =========================================================
 # Player Died Event

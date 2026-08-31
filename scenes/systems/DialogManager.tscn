@@ -186,6 +186,6 @@ offset_top = -38.0
 offset_right = -20.0
 offset_bottom = -18.0
 theme_override_font_sizes/font_size = 18
-text = "▼ ต่อไป"
+text = "▼ NEXT"
 horizontal_alignment = 2
 visible = false

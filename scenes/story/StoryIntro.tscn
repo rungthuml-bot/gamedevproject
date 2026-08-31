@@ -144,8 +144,8 @@ theme_override_constants/outline_size = 1
 theme_override_constants/shadow_outline_size = 3
 theme_override_constants/line_spacing = 8
 theme_override_font_sizes/font_size = 22
-text = "ฉันหมดแรงเหลือเกินทำไมงานมันเยอะแบบนี้
-ทำไม่ถึงไหนด้วย อ้ากกกกกกกกกกกกกกกก"
+text = "I am so exhausted, why is there so much work...
+Why isn't it getting anywhere? Ahhhhhhhhhh"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
@@ -157,7 +157,7 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 2
 theme_override_font_sizes/font_size = 16
-text = "มอมแมม การสร้าง"
+text = "Mommamm Creation"
 horizontal_alignment = 2
 
 [node name="ContinueHint" type="Label" parent="Background"]

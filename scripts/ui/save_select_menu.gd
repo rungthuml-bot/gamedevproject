@@ -37,6 +37,32 @@ func _ready() -> void:
 
 	update_slot_buttons()
 
+	# Translation
+	if has_node("/root/LocaleManager"):
+		var lm = get_node("/root/LocaleManager")
+		lm.language_changed.connect(_on_language_changed)
+		_apply_translation()
+
+func _apply_translation() -> void:
+	if not has_node("/root/LocaleManager"): return
+	var lm = get_node("/root/LocaleManager")
+	
+	if $MarginContainer/VBoxContainer/TitleLabel:
+		$MarginContainer/VBoxContainer/TitleLabel.text = lm.t("SELECT_PROFILE")
+		
+	if back_button:
+		back_button.text = lm.t("BACK")
+		
+	if delete1_button: delete1_button.text = lm.t("DELETE")
+	if delete2_button: delete2_button.text = lm.t("DELETE")
+	if delete3_button: delete3_button.text = lm.t("DELETE")
+	if delete4_button: delete4_button.text = lm.t("DELETE")
+		
+	update_slot_buttons()
+
+func _on_language_changed(_lang: String) -> void:
+	_apply_translation()
+
 	# เชื่อมต่อปุ่มเลือก Profile
 	slot1_button.pressed.connect(func(): _on_slot_pressed(1))
 	slot2_button.pressed.connect(func(): _on_slot_pressed(2))
@@ -71,13 +97,27 @@ func update_slot_buttons() -> void:
 			var hp: int = data.get("hp", 100)
 			var potions: int = data.get("potion_count", 0)
 
-			btn.text = "PROFILE " + str(slot_number) + "\n\nCONTINUE\n\nHP: " + str(hp) + "\nPotions: " + str(potions)
+			var continue_text = "CONTINUE"
+			var hp_text = "HP: "
+			var potion_text = "Potions: "
+			
+			if has_node("/root/LocaleManager"):
+				var lm = get_node("/root/LocaleManager")
+				continue_text = lm.t("CONTINUE")
+				potion_text = lm.t("POTIONS")
+				
+			btn.text = "PROFILE " + str(slot_number) + "\n\n" + continue_text + "\n\n" + hp_text + str(hp) + "\n" + potion_text + str(potions)
 
 			if del_btn != null:
 				del_btn.modulate.a = 1.0
 				del_btn.disabled = false
 		else:
-			btn.text = "PROFILE " + str(slot_number) + "\n\nNEW GAME"
+			var new_game_text = "NEW GAME"
+			if has_node("/root/LocaleManager"):
+				var lm = get_node("/root/LocaleManager")
+				new_game_text = lm.t("NEW_GAME")
+				
+			btn.text = "PROFILE " + str(slot_number) + "\n\n" + new_game_text
 
 			if del_btn != null:
 				del_btn.modulate.a = 0.0
