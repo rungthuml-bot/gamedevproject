@@ -52,11 +52,16 @@ var is_enraged: bool = false
 # State Machine
 # =========================================================
 
-enum State { PATROL, CHASE, ATTACK }
+enum State { PATROL, CHASE, ATTACK, JUMP }
 var current_state: State = State.PATROL
 
 var start_position_x: float = 0.0
 var move_direction: float = 1.0
+
+# Leap Attack variables
+const JUMP_FORCE: float = 800.0
+var jump_cooldown: float = 5.0
+var jump_timer: float = 0.0
 
 # =========================================================
 # Node References
@@ -98,6 +103,9 @@ func _physics_process(delta: float) -> void:
 	if attack_timer > 0.0:
 		attack_timer -= delta
 
+	if jump_timer > 0.0:
+		jump_timer -= delta
+
 	if knockback_timer > 0.0:
 		knockback_timer -= delta
 	else:
@@ -119,7 +127,11 @@ func update_ai_behavior() -> void:
 		if distance_to_player <= ATTACK_RANGE and attack_timer <= 0.0:
 			current_state = State.ATTACK
 		elif distance_to_player <= DETECTION_RANGE:
-			current_state = State.CHASE
+			if jump_timer <= 0.0 and is_on_floor() and distance_to_player > 200.0:
+				current_state = State.JUMP
+				_start_jump(player)
+			else:
+				current_state = State.CHASE
 		else:
 			current_state = State.PATROL
 	elif player == null and not is_attacking:
@@ -134,6 +146,8 @@ func update_ai_behavior() -> void:
 		State.ATTACK:
 			if not is_attacking and player != null:
 				process_attack(player)
+		State.JUMP:
+			process_jump()
 
 func process_patrol() -> void:
 	if global_position.x >= start_position_x + PATROL_DISTANCE:
@@ -152,6 +166,40 @@ func process_chase(player_x: float) -> void:
 	velocity.x = move_direction * chase_speed
 	update_facing_direction()
 
+func _start_jump(player: Node2D) -> void:
+	var dir := signf(player.global_position.x - global_position.x)
+	var jump_target_x = player.global_position.x + (dir * 150.0)
+	
+	velocity.y = -JUMP_FORCE
+	
+	var distance_x = jump_target_x - global_position.x
+	var time_in_air = (2.0 * JUMP_FORCE) / GRAVITY
+	velocity.x = distance_x / time_in_air
+	
+	jump_cooldown = 3.0 if is_enraged else 6.0
+	jump_timer = jump_cooldown
+	
+	if anim:
+		anim.play("Idle")
+
+func process_jump() -> void:
+	move_direction = signf(velocity.x)
+	update_facing_direction()
+	
+	if is_on_floor() and velocity.y >= 0:
+		_deal_landing_damage()
+		current_state = State.CHASE
+		velocity.x = 0
+
+func _deal_landing_damage() -> void:
+	var player := get_tree().get_first_node_in_group("player") as Node2D
+	if player and player.has_method("apply_camera_shake"):
+		player.apply_camera_shake(15.0)
+		
+	if player and global_position.distance_to(player.global_position) <= 200.0:
+		if player.has_method("take_damage"):
+			player.take_damage(BOSS_DAMAGE, global_position.x)
+
 func update_facing_direction() -> void:
 	if move_direction != 0:
 		if anim:
@@ -162,6 +210,9 @@ func update_facing_direction() -> void:
 
 func update_animation() -> void:
 	if is_dying or is_attacking or not anim:
+		return
+		
+	if current_state == State.JUMP:
 		return
 		
 	if velocity.x != 0:
