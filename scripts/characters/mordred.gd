@@ -506,6 +506,13 @@ func dash() -> void:
 	is_dashing = true
 	dash_cooldown_timer = DASH_COOLDOWN
 	
+	# ยกเลิกการโจมตีถ้ากำลังโจมตีอยู่
+	is_attacking = false
+	attack_queued = false
+	attack_type = ""
+	combo = 0
+	attack_collision.set_deferred("disabled", true)
+	
 	# สถานะอมตะชั่วขณะระหว่าง Dash
 	is_invincible = true
 	invincibility_timer = max(invincibility_timer, DASH_DURATION)

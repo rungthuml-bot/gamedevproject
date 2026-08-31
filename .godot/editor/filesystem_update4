@@ -8,3 +8,7 @@ res://scenes/ui/GameOverMenu.tscn
 res://scenes/ui/PauseMenu.tscn
 res://scripts/systems/map_door.gd
 res://scripts/systems/scene_transition.gd
+res://scripts/systems/boss_arena.gd
+res://scripts/enemies/enemy_archer.gd
+res://scripts/enemies/enemy_axe.gd
+res://scripts/enemies/enemy_sword.gd

@@ -48,7 +48,6 @@ var move_direction: float = 1.0
 # Node References
 # =========================================================
 
-@onready var hp_bar: ProgressBar = $HPBar
 @onready var polygon: Polygon2D = $Polygon2D
 @onready var sword_visual: Polygon2D = $SwordVisual
 @onready var attack_hitbox: Area2D = $AttackHitbox
@@ -58,8 +57,7 @@ var move_direction: float = 1.0
 # =========================================================
 
 func _ready() -> void:
-	hp_bar.max_value = MAX_HP
-	hp_bar.value = hp
+	attack_hitbox.body_entered.connect(_on_attack_hitbox_body_entered)
 	start_position_x = global_position.x
 	sword_visual.visible = false
 
@@ -189,7 +187,6 @@ func take_damage(amount: int) -> void:
 
 	hp -= amount
 	hp = max(hp, 0)
-	hp_bar.value = hp
 
 	if polygon != null:
 		var tween := create_tween()
