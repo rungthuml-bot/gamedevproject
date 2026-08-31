@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://b4ofgwfoeyob0"]
+[gd_scene format=3 uid="uid://cnrefe4griw4r"]
 
 [ext_resource type="Script" uid="uid://b7vb7c1mfqfs" path="res://scripts/traps/trap_stalactite.gd" id="1_o3xd5"]
 [ext_resource type="Texture2D" uid="uid://ccj8r6m6nwe1r" path="res://assets/Background/Lava/PNG/Details/lava_drop1_1.png" id="2_o3xd5"]

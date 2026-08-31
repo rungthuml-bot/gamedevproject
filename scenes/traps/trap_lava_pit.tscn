@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cx3gwn3y65861"]
+[gd_scene format=3 uid="uid://btlh8qrr15ps6"]
 
 [ext_resource type="Script" uid="uid://c11yyrisc3qsm" path="res://scripts/traps/trap_lava_pit.gd" id="1_1e2g2"]
 [ext_resource type="Texture2D" uid="uid://c0cuk5m5le2yb" path="res://assets/Background/Lava/PNG/Tiles_lava/lava_tile11.png" id="2_0d465"]

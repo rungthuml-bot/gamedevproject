@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://2ioynf1rq34"]
+[gd_scene format=3 uid="uid://yh3qcbai3f6n"]
 
 [ext_resource type="Texture2D" uid="uid://bcj6etvg6v2lx" path="res://PNG/trap_saw.png" id="1_11ub5"]
 [ext_resource type="Script" uid="uid://ciag7m6xc1elw" path="res://scripts/traps/trap_rail_saw.gd" id="1_mw2ja"]

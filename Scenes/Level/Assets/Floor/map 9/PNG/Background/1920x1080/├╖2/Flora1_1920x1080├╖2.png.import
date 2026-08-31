@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bw1nubvuf7m76"
-path="res://.godot/imported/6.png-46ecc536b7480328661604757deb8515.ctex"
+uid="uid://bqnjnta23dmeh"
+path="res://.godot/imported/Flora1_1920x1080├╖2.png-5e01da3c4ede024de030c0a710ee0223.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/assets/source/craftpix/traps/3 Objects/Gems/6.png"
-dest_files=["res://.godot/imported/6.png-46ecc536b7480328661604757deb8515.ctex"]
+source_file="res://scenes/Level/Assets/Floor/map 9/PNG/Background/1920x1080/├╖2/Flora1_1920x1080├╖2.png"
+dest_files=["res://.godot/imported/Flora1_1920x1080├╖2.png-5e01da3c4ede024de030c0a710ee0223.ctex"]
 
 [params]
 

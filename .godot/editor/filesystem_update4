@@ -1,0 +1,8 @@
+res://assets/area_2d.gd
+res://scenes/characters/Mordred.tscn
+res://scenes/traps/base/trap_base.gd
+res://scripts/characters/mordred.gd
+res://scripts/enemies/boss.gd
+res://scripts/enemies/enemy_axe.gd
+res://scripts/enemies/enemy_sword.gd
+res://scenes/enemies/Dummy.tscn
