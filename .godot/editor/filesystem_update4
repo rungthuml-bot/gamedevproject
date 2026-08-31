@@ -5,3 +5,7 @@ res://scenes/enemies/Boss.tscn
 res://scenes/characters/NPC.tscn
 res://scenes/characters/NPCPrincess.tscn
 res://scenes/items/HealthPotion.tscn
+res://scripts/characters/mordred.gd
+res://scripts/systems/boss_arena.gd
+res://scenes/sandbox/Sandbox.tscn
+res://scripts/enemies/boss.gd
