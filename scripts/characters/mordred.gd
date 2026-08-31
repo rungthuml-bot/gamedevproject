@@ -13,11 +13,16 @@ const MAX_HP := 100
 const HEAL_AMOUNT := 35
 const INVINCIBILITY_DURATION := 1.0
 
-const WALK_SPEED := 250.0
-const RUN_SPEED := 420.0
+var base_max_hp := 100
+var max_hp := 100
+var attack_multiplier := 1.0
+@export var attack_frame: int = 1
+
+var walk_speed := 250.0
+var run_speed := 420.0
 const JUMP_VELOCITY := -450.0
 
-const DASH_SPEED := 700.0
+var dash_speed := 700.0
 const DASH_DURATION := 0.20
 const DASH_COOLDOWN := 0.60
 
@@ -47,11 +52,14 @@ var is_dashing := false
 var is_sliding := false
 var is_knockbacked := false
 var is_invincible := false
-
+var is_charging_heavy := false
 
 # ==================================================
-# ATTACK
+# HEAVY ATTACK CHARGE
 # ==================================================
+
+var heavy_charge_timer := 0.0
+const HEAVY_MAX_CHARGE := 2.0
 
 var combo := 0
 var attack_queued := false
@@ -99,6 +107,11 @@ func _ready() -> void:
 
 	attack_collision.disabled = true
 
+	if SaveManager.has_signal("equipped_charms_changed"):
+		if not SaveManager.equipped_charms_changed.is_connected(update_stats_from_charms):
+			SaveManager.equipped_charms_changed.connect(update_stats_from_charms)
+
+	update_stats_from_charms()
 	load_player_data()
 
 	call_deferred("emit_initial_ui_signals")
@@ -146,7 +159,7 @@ func _physics_process(delta: float) -> void:
 	process_movement(direction, delta)
 	process_facing(direction)
 	process_jump()
-	process_inputs()
+	process_inputs(delta)
 
 	update_animation()
 
@@ -205,7 +218,7 @@ func process_dead(delta: float) -> void:
 	velocity.x = move_toward(
 		velocity.x,
 		0.0,
-		WALK_SPEED * 10.0 * delta
+		walk_speed * 10.0 * delta
 	)
 
 	if not is_on_floor():
@@ -236,7 +249,7 @@ func process_dash() -> void:
 
 	var facing := -1.0 if anim.flip_h else 1.0
 
-	velocity.x = facing * DASH_SPEED
+	velocity.x = facing * dash_speed
 	velocity.y = 0.0
 
 	move_and_slide()
@@ -323,7 +336,7 @@ func process_movement(
 		velocity.x = move_toward(
 			velocity.x,
 			0.0,
-			WALK_SPEED * 2.0 * delta
+			walk_speed * 2.0 * delta
 		)
 
 		return
@@ -338,11 +351,11 @@ func process_movement(
 
 
 	# Speed
-	var speed := WALK_SPEED
+	var speed := walk_speed
 
 	if Input.is_key_pressed(KEY_SHIFT):
 
-		speed = RUN_SPEED
+		speed = run_speed
 
 
 	# Move
@@ -367,7 +380,7 @@ func process_facing(
 	direction: float
 ) -> void:
 
-	if is_attacking or is_sliding:
+	if is_attacking or is_sliding or is_charging_heavy:
 
 		return
 
@@ -410,7 +423,7 @@ func process_jump() -> void:
 # INPUT
 # ==================================================
 
-func process_inputs() -> void:
+func process_inputs(delta: float) -> void:
 
 	# Potion
 	if Input.is_key_pressed(KEY_H):
@@ -418,20 +431,58 @@ func process_inputs() -> void:
 		use_potion()
 
 
+	# Heavy Attack Charge
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
+		if not is_charging_heavy and is_on_floor() and not is_attacking and not is_sliding and not is_dashing and not is_using_potion and not is_knockbacked and not is_dead:
+			is_charging_heavy = true
+			heavy_charge_timer = 0.0
+			anim.play("Attack_4")
+			anim.pause()
+			anim.frame = 0 # เฟรมง้างดาบ
+		
+		if is_charging_heavy:
+			var old_timer = heavy_charge_timer
+			heavy_charge_timer = min(heavy_charge_timer + delta, HEAVY_MAX_CHARGE)
+			
+			# วนเฟรม 0 กับ 1
+			anim.frame = int(heavy_charge_timer * 10) % 2
+			
+			# พอเต็มแล้วมีแสงวิ้งขึ้นมาสั้นๆ
+			if old_timer < HEAVY_MAX_CHARGE and heavy_charge_timer >= HEAVY_MAX_CHARGE:
+				anim.modulate = Color(2.0, 2.0, 2.0) # วิ้งสว่าง
+				var tween = create_tween()
+				tween.tween_property(anim, "modulate", Color(1.0, 1.0, 1.0), 0.2)
+				
+			velocity.x = 0 # Cannot move while charging
+			return # Skip normal attack inputs while charging
+	elif is_charging_heavy:
+		# Released Right Click
+		is_charging_heavy = false
+		anim.modulate = Color(1.0, 1.0, 1.0)
+		start_heavy_attack()
+		return
+
 	# Attack
 	if Input.is_action_just_pressed("Attack"):
 
 		handle_attack_input()
 
 
-	# Slide = Z
-	if Input.is_action_just_pressed("Slide"):
+	# Shift: Tap for Slide, Hold for Run
+	var shift_pressed := Input.is_key_pressed(KEY_SHIFT)
+	
+	if shift_pressed:
+		shift_hold_timer += delta
+	else:
+		if shift_was_pressed and shift_hold_timer < 0.2 and not is_sliding:
+			start_slide()
+		shift_hold_timer = 0.0
 		
+	shift_was_pressed = shift_pressed
+	
+	# Slide = Z (Backup)
+	if Input.is_key_pressed(KEY_Z) and not is_sliding:
 		start_slide()
-
-
-	# Dash / Run
-	handle_dash_input()
 
 
 # ==================================================
@@ -512,6 +563,28 @@ func start_attack() -> void:
 
 
 # ==================================================
+# HEAVY ATTACK
+# ==================================================
+
+func start_heavy_attack() -> void:
+	if not is_on_floor(): return
+
+	is_attacking = true
+	combo = 1
+	attack_queued = false
+	
+	# Bonus multiplier based on charge time (up to 3x damage)
+	var bonus_mult = 1.0 + (heavy_charge_timer / HEAVY_MAX_CHARGE) * 2.0
+	attack_multiplier = bonus_mult
+	
+	if anim.animation == "Attack_4":
+		anim.play() # Resume playing from frame 0
+	else:
+		anim.play("Attack_4")
+	
+	heavy_charge_timer = 0.0
+
+# ==================================================
 # CANCEL ATTACK
 # ==================================================
 
@@ -522,6 +595,8 @@ func cancel_attack() -> void:
 	attack_queued = false
 
 	combo = 0
+	
+	update_stats_from_charms() # Reset attack_multiplier back to default from charms
 
 	attack_collision.set_deferred(
 		"disabled",
@@ -541,6 +616,7 @@ func update_animation() -> void:
 		or is_dashing
 		or is_sliding
 		or is_attacking
+		or is_charging_heavy
 	):
 		return
 
@@ -644,7 +720,8 @@ func _on_animated_sprite_2d_frame_changed() -> void:
 
 	if (
 		attacking
-		and anim.frame == 1
+		and not is_charging_heavy
+		and anim.frame == attack_frame
 	):
 
 		attack_collision.set_deferred(
@@ -691,7 +768,7 @@ func _deal_damage(
 
 	if enemy.has_method("take_damage"):
 
-		enemy.take_damage(10)
+		enemy.take_damage(int(10 * attack_multiplier))
 
 		apply_camera_shake(5.0)
 
@@ -834,6 +911,43 @@ func die() -> void:
 
 
 # ==================================================
+# SYSTEM INTEGRATIONS
+# ==================================================
+
+func update_stats_from_charms() -> void:
+	max_hp = base_max_hp
+	attack_multiplier = 1.0
+	walk_speed = 250.0
+	run_speed = 420.0
+	dash_speed = 700.0
+	
+	if SaveManager.is_charm_equipped("health_charm"):
+		max_hp += 50
+		
+	if SaveManager.is_charm_equipped("power_charm"):
+		attack_multiplier += 0.5
+		
+	if SaveManager.is_charm_equipped("speed_charm"):
+		walk_speed *= 1.2
+		run_speed *= 1.2
+		dash_speed *= 1.2
+		
+	hp = min(hp, max_hp)
+	hp_changed.emit(hp, max_hp)
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventKey and event.pressed and event.keycode == KEY_E:
+		_try_interact()
+
+func _try_interact() -> void:
+	var interactables = get_tree().get_nodes_in_group("interactable")
+	for node in interactables:
+		if node.has_method("interact") and global_position.distance_to(node.global_position) < 80.0:
+			node.interact()
+			return
+
+
+# ==================================================
 # POTION
 # ==================================================
 
@@ -854,7 +968,7 @@ func use_potion() -> void:
 		return
 
 
-	if hp >= MAX_HP:
+	if hp >= max_hp:
 
 		return
 
@@ -893,15 +1007,35 @@ func finish_potion() -> void:
 
 	hp = min(
 		hp + HEAL_AMOUNT,
-		MAX_HP
+		max_hp
 	)
+
+
+	# Effect
+	var heal_particles = CPUParticles2D.new()
+	heal_particles.emitting = false
+	heal_particles.one_shot = true
+	heal_particles.amount = 30
+	heal_particles.lifetime = 1.0
+	heal_particles.emission_shape = CPUParticles2D.EMISSION_SHAPE_RECTANGLE
+	heal_particles.emission_rect_extents = Vector2(15, 20)
+	heal_particles.direction = Vector2(0, -1)
+	heal_particles.gravity = Vector2(0, -50)
+	heal_particles.initial_velocity_min = 30.0
+	heal_particles.initial_velocity_max = 60.0
+	heal_particles.scale_amount_min = 2.0
+	heal_particles.scale_amount_max = 4.0
+	heal_particles.color = Color(0.2, 1.0, 0.4, 0.8) # Green
+	add_child(heal_particles)
+	heal_particles.emitting = true
+	get_tree().create_timer(1.5).timeout.connect(heal_particles.queue_free)
 
 
 	# Update UI
 
 	hp_changed.emit(
 		hp,
-		MAX_HP
+		max_hp
 	)
 
 	potion_count_changed.emit(
@@ -996,46 +1130,6 @@ func start_slide() -> void:
 	# เล่น Animation
 	anim.play("Slide")
 
-
-# ==================================================
-# DASH / RUN
-# ==================================================
-
-func handle_dash_input() -> void:
-
-	var shift_pressed := Input.is_key_pressed(
-		KEY_SHIFT
-	)
-
-
-	# Shift ค้าง
-	if shift_pressed:
-
-		shift_hold_timer += (
-			get_physics_process_delta_time()
-		)
-
-
-	# Shift ปล่อย
-	else:
-
-		# Dash ต้อง:
-		# - กด Shift เร็ว
-		# - อยู่บนพื้น
-
-		if (
-			shift_was_pressed
-			and shift_hold_timer < 0.2
-			and is_on_floor()
-		):
-
-			start_dash()
-
-
-		shift_hold_timer = 0.0
-
-
-	shift_was_pressed = shift_pressed
 
 
 # ==================================================
@@ -1145,7 +1239,7 @@ func load_player_data() -> void:
 
 	if SaveManager.is_respawning:
 
-		hp = MAX_HP
+		hp = max_hp
 
 
 		if SaveManager.save_data.has(
