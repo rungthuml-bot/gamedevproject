@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://2ioynf1rq34"]
 
 [ext_resource type="Texture2D" uid="uid://bcj6etvg6v2lx" path="res://assets/game/traps/rail_saw/trap_saw.png" id="1_11ub5"]
-[ext_resource type="Script" uid="uid://ciag7m6xc1elw" path="res://scenes/traps/rail_saw/trap_rail_saw.gd" id="1_mw2ja"]
+[ext_resource type="Script" uid="uid://ciag7m6xc1elw" path="res://scripts/traps/rail_saw/trap_rail_saw.gd" id="1_mw2ja"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c0nl8"]
 atlas = ExtResource("1_11ub5")

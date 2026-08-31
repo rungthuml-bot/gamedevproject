@@ -2,12 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0g6vbs03j2ed"
+uid="uid://cp642swydqpac"
 valid=false
 
 [deps]
 
-source_file="res://Background/background1/__MACOSX/PNG/background 2/._Plan 4.png"
+source_file="res://assets/Background/background1/__MACOSX/PNG/background 2/._Plan 4.png"
 
 [params]
 
