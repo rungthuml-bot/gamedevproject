@@ -1,1 +1,4 @@
-AnimatedSprite2D
+Area2D
+TileMapLayer
+Parallax2D
+Node2D

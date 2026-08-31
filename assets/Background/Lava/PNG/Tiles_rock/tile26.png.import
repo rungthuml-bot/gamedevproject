@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Tiles_rock/tile26.png.import
 uid="uid://du6ws2t1cyljn"
-path="res://.godot/imported/tile26.png-335a6f6df00dffd4a358ecdaaaaa98d3.ctex"
+path="res://.godot/imported/tile26.png-cf7cedd21a488d32acd28df036af2e9e.ctex"
+=======
+uid="uid://cbkf31d3jmtu7"
+path="res://.godot/imported/4.png-784e93f333811a3e4658153db9fe7129.ctex"
+>>>>>>> Stashed changes:assets/source/craftpix/traps/2 Locations/Backgrounds/4.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Background/Lava/PNG/Tiles_rock/tile26.png"
-dest_files=["res://.godot/imported/tile26.png-335a6f6df00dffd4a358ecdaaaaa98d3.ctex"]
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Tiles_rock/tile26.png.import
+source_file="res://Assets/Background/Lava/PNG/Tiles_rock/tile26.png"
+dest_files=["res://.godot/imported/tile26.png-cf7cedd21a488d32acd28df036af2e9e.ctex"]
+=======
+source_file="res://Assets/source/craftpix/traps/2 Locations/Backgrounds/4.png"
+dest_files=["res://.godot/imported/4.png-784e93f333811a3e4658153db9fe7129.ctex"]
+>>>>>>> Stashed changes:assets/source/craftpix/traps/2 Locations/Backgrounds/4.png.import
 
 [params]
 

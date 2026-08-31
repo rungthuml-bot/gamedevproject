@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Items/000_0003_crystal7.png.import
 uid="uid://h2oyp1evatuh"
-path="res://.godot/imported/000_0003_crystal7.png-daf2a209c6bfd23780113b2e59a63bb4.ctex"
+path="res://.godot/imported/000_0003_crystal7.png-b1f4edb12627573ce810984913288ce6.ctex"
+=======
+uid="uid://dnwc82alvasn6"
+path="res://.godot/imported/Button_03.png-d1a5998533dce16e8791d26a8acc4088.ctex"
+>>>>>>> Stashed changes:assets/source/craftpix/traps/5 GUI/Buttons/Button_03.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Background/Lava/PNG/Items/000_0003_crystal7.png"
-dest_files=["res://.godot/imported/000_0003_crystal7.png-daf2a209c6bfd23780113b2e59a63bb4.ctex"]
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Items/000_0003_crystal7.png.import
+source_file="res://Assets/Background/Lava/PNG/Items/000_0003_crystal7.png"
+dest_files=["res://.godot/imported/000_0003_crystal7.png-b1f4edb12627573ce810984913288ce6.ctex"]
+=======
+source_file="res://Assets/source/craftpix/traps/5 GUI/Buttons/Button_03.png"
+dest_files=["res://.godot/imported/Button_03.png-d1a5998533dce16e8791d26a8acc4088.ctex"]
+>>>>>>> Stashed changes:assets/source/craftpix/traps/5 GUI/Buttons/Button_03.png.import
 
 [params]
 

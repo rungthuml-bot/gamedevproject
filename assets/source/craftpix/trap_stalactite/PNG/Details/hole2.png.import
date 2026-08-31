@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://45j03jmgotaw"
-path="res://.godot/imported/hole2.png-8e2b8e44e61e00ecf1acea5cbb661d5e.ctex"
+path="res://.godot/imported/hole2.png-760b77d4612e3285f635471e9391c431.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/source/craftpix/trap_stalactite/PNG/Details/hole2.png"
-dest_files=["res://.godot/imported/hole2.png-8e2b8e44e61e00ecf1acea5cbb661d5e.ctex"]
+source_file="res://Assets/source/craftpix/trap_stalactite/PNG/Details/hole2.png"
+dest_files=["res://.godot/imported/hole2.png-760b77d4612e3285f635471e9391c431.ctex"]
 
 [params]
 

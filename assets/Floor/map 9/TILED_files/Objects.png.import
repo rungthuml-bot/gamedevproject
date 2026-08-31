@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/Floor/map 9/TILED_files/Objects.png.import
 uid="uid://cw2wdlt0e852w"
-path="res://.godot/imported/Objects.png-fae231c0eea53a55fdaec899586f0c3b.ctex"
+path="res://.godot/imported/Objects.png-56a244597f69d08cc983f638b7451222.ctex"
+=======
+uid="uid://dovl2cbmj3gjr"
+path="res://.godot/imported/Tile_54.png-ca5d069f8239989bd9fb6811dca3e9e6.ctex"
+>>>>>>> Stashed changes:assets/source/craftpix/traps/5 GUI/Interface/Tile_54.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Floor/map 9/TILED_files/Objects.png"
-dest_files=["res://.godot/imported/Objects.png-fae231c0eea53a55fdaec899586f0c3b.ctex"]
+<<<<<<< Updated upstream:Assets/Floor/map 9/TILED_files/Objects.png.import
+source_file="res://Assets/Floor/map 9/TILED_files/Objects.png"
+dest_files=["res://.godot/imported/Objects.png-56a244597f69d08cc983f638b7451222.ctex"]
+=======
+source_file="res://Assets/source/craftpix/traps/5 GUI/Interface/Tile_54.png"
+dest_files=["res://.godot/imported/Tile_54.png-ca5d069f8239989bd9fb6811dca3e9e6.ctex"]
+>>>>>>> Stashed changes:assets/source/craftpix/traps/5 GUI/Interface/Tile_54.png.import
 
 [params]
 

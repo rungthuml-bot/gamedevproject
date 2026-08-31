@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/Background/background1/PNG/background 4/background 4.png.import
 uid="uid://drx6dei6npol6"
-path="res://.godot/imported/background 4.png-66f76755a6c6137c05c70fdeee40a99b.ctex"
+path="res://.godot/imported/background 4.png-68ddac92264cd156732b7dcf9a422201.ctex"
+=======
+uid="uid://vfjujs8r2ctx"
+path="res://.godot/imported/000_0055_hit_point.png-58ad6506d625e94cc53c87898af42efd.ctex"
+>>>>>>> Stashed changes:assets/source/craftpix/trap_stalactite/PNG/Items/000_0055_hit_point.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Background/background1/PNG/background 4/background 4.png"
-dest_files=["res://.godot/imported/background 4.png-66f76755a6c6137c05c70fdeee40a99b.ctex"]
+<<<<<<< Updated upstream:Assets/Background/background1/PNG/background 4/background 4.png.import
+source_file="res://Assets/Background/background1/PNG/background 4/background 4.png"
+dest_files=["res://.godot/imported/background 4.png-68ddac92264cd156732b7dcf9a422201.ctex"]
+=======
+source_file="res://Assets/source/craftpix/trap_stalactite/PNG/Items/000_0055_hit_point.png"
+dest_files=["res://.godot/imported/000_0055_hit_point.png-58ad6506d625e94cc53c87898af42efd.ctex"]
+>>>>>>> Stashed changes:assets/source/craftpix/trap_stalactite/PNG/Items/000_0055_hit_point.png.import
 
 [params]
 

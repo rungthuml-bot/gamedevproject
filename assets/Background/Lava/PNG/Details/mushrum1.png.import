@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Details/mushrum1.png.import
 uid="uid://bjr2xteop88g6"
-path="res://.godot/imported/mushrum1.png-78470d43bec73b4596679490f95f0a2f.ctex"
+path="res://.godot/imported/mushrum1.png-f384af45c5df1790c640b1fa92310e41.ctex"
+=======
+uid="uid://br2cmhydemw78"
+path="res://.godot/imported/trap_saw.png-20766f9c9b661b89a3b97d091dfe2670.ctex"
+>>>>>>> Stashed changes:assets/source/craftpix/Tiled_files/trap_saw.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Background/Lava/PNG/Details/mushrum1.png"
-dest_files=["res://.godot/imported/mushrum1.png-78470d43bec73b4596679490f95f0a2f.ctex"]
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Details/mushrum1.png.import
+source_file="res://Assets/Background/Lava/PNG/Details/mushrum1.png"
+dest_files=["res://.godot/imported/mushrum1.png-f384af45c5df1790c640b1fa92310e41.ctex"]
+=======
+source_file="res://Assets/source/craftpix/Tiled_files/trap_saw.png"
+dest_files=["res://.godot/imported/trap_saw.png-20766f9c9b661b89a3b97d091dfe2670.ctex"]
+>>>>>>> Stashed changes:assets/source/craftpix/Tiled_files/trap_saw.png.import
 
 [params]
 

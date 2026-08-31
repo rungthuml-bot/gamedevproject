@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Tiles_rock/tile10.png.import
 uid="uid://b3plci4d8msqy"
-path="res://.godot/imported/tile10.png-4fe77c1559be203d6f89b3201536eb3e.ctex"
+path="res://.godot/imported/tile10.png-e46d165b46fc18ac217526e240002fd8.ctex"
+=======
+uid="uid://dtsonbfhjp2lm"
+path="res://.godot/imported/Run.png-682a9849f929784bc233fd8b80eadf75.ctex"
+>>>>>>> Stashed changes:assets/source/craftpix/traps/4 Enemies/2/Run.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Background/Lava/PNG/Tiles_rock/tile10.png"
-dest_files=["res://.godot/imported/tile10.png-4fe77c1559be203d6f89b3201536eb3e.ctex"]
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Tiles_rock/tile10.png.import
+source_file="res://Assets/Background/Lava/PNG/Tiles_rock/tile10.png"
+dest_files=["res://.godot/imported/tile10.png-e46d165b46fc18ac217526e240002fd8.ctex"]
+=======
+source_file="res://Assets/source/craftpix/traps/4 Enemies/2/Run.png"
+dest_files=["res://.godot/imported/Run.png-682a9849f929784bc233fd8b80eadf75.ctex"]
+>>>>>>> Stashed changes:assets/source/craftpix/traps/4 Enemies/2/Run.png.import
 
 [params]
 

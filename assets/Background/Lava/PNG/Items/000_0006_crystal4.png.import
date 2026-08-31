@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Items/000_0006_crystal4.png.import
 uid="uid://clc8hau5yepol"
-path="res://.godot/imported/000_0006_crystal4.png-7e767b3bd66dd244467a3cecb88a9999.ctex"
+path="res://.godot/imported/000_0006_crystal4.png-d3f5e713069ed8df38ed917b87209ac1.ctex"
+=======
+uid="uid://cbr6iu6vqs50t"
+path="res://.godot/imported/Idle.png-2a2aa54b0bca4d35d4d055b1d8614ca1.ctex"
+>>>>>>> Stashed changes:assets/source/craftpix/traps/1 Main Characters/2/Idle.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Background/Lava/PNG/Items/000_0006_crystal4.png"
-dest_files=["res://.godot/imported/000_0006_crystal4.png-7e767b3bd66dd244467a3cecb88a9999.ctex"]
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Items/000_0006_crystal4.png.import
+source_file="res://Assets/Background/Lava/PNG/Items/000_0006_crystal4.png"
+dest_files=["res://.godot/imported/000_0006_crystal4.png-d3f5e713069ed8df38ed917b87209ac1.ctex"]
+=======
+source_file="res://Assets/source/craftpix/traps/1 Main Characters/2/Idle.png"
+dest_files=["res://.godot/imported/Idle.png-2a2aa54b0bca4d35d4d055b1d8614ca1.ctex"]
+>>>>>>> Stashed changes:assets/source/craftpix/traps/1 Main Characters/2/Idle.png.import
 
 [params]
 

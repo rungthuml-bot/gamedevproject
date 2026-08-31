@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dqkoncumlut85"
-path="res://.godot/imported/Stun.png-16f37c48a015786150ecb84546dc64dd.ctex"
+path="res://.godot/imported/Stun.png-4ad34e4c5185b2a810c923c6e9223d59.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/source/craftpix/traps/4 Enemies/3/Stun.png"
-dest_files=["res://.godot/imported/Stun.png-16f37c48a015786150ecb84546dc64dd.ctex"]
+source_file="res://Assets/source/craftpix/traps/4 Enemies/3/Stun.png"
+dest_files=["res://.godot/imported/Stun.png-4ad34e4c5185b2a810c923c6e9223d59.ctex"]
 
 [params]
 

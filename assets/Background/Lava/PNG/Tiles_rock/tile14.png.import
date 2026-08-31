@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3o81kebxnak5"
-path="res://.godot/imported/tile14.png-667dfed7ad17e166e50509f011978558.ctex"
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Background/Bright/rock1.png.import
+uid="uid://b0nd2m1amjjgb"
+path="res://.godot/imported/rock1.png-f42d4b002ff27c05c978a9b3e5aedb02.ctex"
+=======
+uid="uid://bu0cyqnpv3vko"
+path="res://.godot/imported/lava_tile11.png-ce558e8ba0c13204b127099464e1cf13.ctex"
+>>>>>>> Stashed changes:assets/game/traps/lava_pit/lava_tile11.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Background/Lava/PNG/Tiles_rock/tile14.png"
-dest_files=["res://.godot/imported/tile14.png-667dfed7ad17e166e50509f011978558.ctex"]
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Background/Bright/rock1.png.import
+source_file="res://Assets/Background/Lava/PNG/Background/Bright/rock1.png"
+dest_files=["res://.godot/imported/rock1.png-f42d4b002ff27c05c978a9b3e5aedb02.ctex"]
+=======
+source_file="res://Assets/game/traps/lava_pit/lava_tile11.png"
+dest_files=["res://.godot/imported/lava_tile11.png-ce558e8ba0c13204b127099464e1cf13.ctex"]
+>>>>>>> Stashed changes:assets/game/traps/lava_pit/lava_tile11.png.import
 
 [params]
 

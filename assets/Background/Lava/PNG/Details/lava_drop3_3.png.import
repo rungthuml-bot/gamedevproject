@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Details/lava_drop3_3.png.import
 uid="uid://bi8s7whtb8034"
-path="res://.godot/imported/lava_drop3_3.png-ba944d43743c6edccffebc778f6b67c7.ctex"
+path="res://.godot/imported/lava_drop3_3.png-8491da800e88be89a5dcbea804afe50c.ctex"
+=======
+uid="uid://dfkocrosqeky6"
+path="res://.godot/imported/Tile_21.png-81bae40372629d14100c6b1cde282c11.ctex"
+>>>>>>> Stashed changes:assets/source/craftpix/traps/5 GUI/Interface/Tile_21.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Background/Lava/PNG/Details/lava_drop3_3.png"
-dest_files=["res://.godot/imported/lava_drop3_3.png-ba944d43743c6edccffebc778f6b67c7.ctex"]
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Details/lava_drop3_3.png.import
+source_file="res://Assets/Background/Lava/PNG/Details/lava_drop3_3.png"
+dest_files=["res://.godot/imported/lava_drop3_3.png-8491da800e88be89a5dcbea804afe50c.ctex"]
+=======
+source_file="res://Assets/source/craftpix/traps/5 GUI/Interface/Tile_21.png"
+dest_files=["res://.godot/imported/Tile_21.png-81bae40372629d14100c6b1cde282c11.ctex"]
+>>>>>>> Stashed changes:assets/source/craftpix/traps/5 GUI/Interface/Tile_21.png.import
 
 [params]
 

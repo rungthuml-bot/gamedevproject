@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Items/000_0002_crystal8.png.import
+uid="uid://bgklpsw6qpl0d"
+path="res://.godot/imported/000_0002_crystal8.png-1eee094c3c722f5f832bc82c2a47af1d.ctex"
+=======
 uid="uid://bbb8lcw3xmjbx"
-path="res://.godot/imported/000_0033_speed3.png-799bf99da49ad47ab4b55bfae56bc8ef.ctex"
+path="res://.godot/imported/000_0033_speed3.png-bb6125a7772bbfca1332f87794099703.ctex"
+>>>>>>> Stashed changes:assets/source/craftpix/trap_stalactite/PNG/Items/000_0033_speed3.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/source/craftpix/trap_stalactite/PNG/Items/000_0033_speed3.png"
-dest_files=["res://.godot/imported/000_0033_speed3.png-799bf99da49ad47ab4b55bfae56bc8ef.ctex"]
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Items/000_0002_crystal8.png.import
+source_file="res://Assets/Background/Lava/PNG/Items/000_0002_crystal8.png"
+dest_files=["res://.godot/imported/000_0002_crystal8.png-1eee094c3c722f5f832bc82c2a47af1d.ctex"]
+=======
+source_file="res://Assets/source/craftpix/trap_stalactite/PNG/Items/000_0033_speed3.png"
+dest_files=["res://.godot/imported/000_0033_speed3.png-bb6125a7772bbfca1332f87794099703.ctex"]
+>>>>>>> Stashed changes:assets/source/craftpix/trap_stalactite/PNG/Items/000_0033_speed3.png.import
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://re16n7q713gc"
-path="res://.godot/imported/2_29.png-c726e4bac10e8a0f8dfc773be44c1d20.ctex"
+path="res://.godot/imported/2_29.png-2414bd86e639907fb3042b004e9a8de1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/source/craftpix/traps/5 GUI/Levels/2/2_29.png"
-dest_files=["res://.godot/imported/2_29.png-c726e4bac10e8a0f8dfc773be44c1d20.ctex"]
+source_file="res://Assets/source/craftpix/traps/5 GUI/Levels/2/2_29.png"
+dest_files=["res://.godot/imported/2_29.png-2414bd86e639907fb3042b004e9a8de1.ctex"]
 
 [params]
 

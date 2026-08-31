@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Details/lava_drop1_3.png.import
 uid="uid://c45s30veh8tkm"
-path="res://.godot/imported/lava_drop1_3.png-45afabbe8f9e37e3c39656fb7740ade1.ctex"
+path="res://.godot/imported/lava_drop1_3.png-9bd43bb82d007b641cdc34675f72c0fb.ctex"
+=======
+uid="uid://cnd02bk5yvn2x"
+path="res://.godot/imported/lava_drop1_3.png-29f13a3fb63451af07347187853cd962.ctex"
+>>>>>>> Stashed changes:assets/game/traps/stalactite/lava_drop1_3.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Background/Lava/PNG/Details/lava_drop1_3.png"
-dest_files=["res://.godot/imported/lava_drop1_3.png-45afabbe8f9e37e3c39656fb7740ade1.ctex"]
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Details/lava_drop1_3.png.import
+source_file="res://Assets/Background/Lava/PNG/Details/lava_drop1_3.png"
+dest_files=["res://.godot/imported/lava_drop1_3.png-9bd43bb82d007b641cdc34675f72c0fb.ctex"]
+=======
+source_file="res://Assets/game/traps/stalactite/lava_drop1_3.png"
+dest_files=["res://.godot/imported/lava_drop1_3.png-29f13a3fb63451af07347187853cd962.ctex"]
+>>>>>>> Stashed changes:assets/game/traps/stalactite/lava_drop1_3.png.import
 
 [params]
 

@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/Floor/map 9/PNG/chest.png.import
 uid="uid://vbg758c8j6le"
-path="res://.godot/imported/chest.png-12be4cec6896b6c0e1d4d63706450db7.ctex"
+path="res://.godot/imported/chest.png-3771eda39cd6191b86f97e60c0c9fbdd.ctex"
+=======
+uid="uid://ba7a4ugpki6yv"
+path="res://.godot/imported/2.png-427faeb2de29062a28e30665641f9747.ctex"
+>>>>>>> Stashed changes:assets/source/craftpix/traps/6 Traps/2.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Floor/map 9/PNG/chest.png"
-dest_files=["res://.godot/imported/chest.png-12be4cec6896b6c0e1d4d63706450db7.ctex"]
+<<<<<<< Updated upstream:Assets/Floor/map 9/PNG/chest.png.import
+source_file="res://Assets/Floor/map 9/PNG/chest.png"
+dest_files=["res://.godot/imported/chest.png-3771eda39cd6191b86f97e60c0c9fbdd.ctex"]
+=======
+source_file="res://Assets/source/craftpix/traps/6 Traps/2.png"
+dest_files=["res://.godot/imported/2.png-427faeb2de29062a28e30665641f9747.ctex"]
+>>>>>>> Stashed changes:assets/source/craftpix/traps/6 Traps/2.png.import
 
 [params]
 

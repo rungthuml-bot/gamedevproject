@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/Floor/map 9/TILED_files/Details.png.import
 uid="uid://c5yajha8ma5s"
-path="res://.godot/imported/Details.png-0050cbcca99a86a27ef6e3838c319eb7.ctex"
+path="res://.godot/imported/Details.png-8841ceb75e24827cb6203e5909e96ad4.ctex"
+=======
+uid="uid://dcltb3gg3n8ga"
+path="res://.godot/imported/trap_saw.png-90606f14e3bf09643e7603fef69b555b.ctex"
+>>>>>>> Stashed changes:assets/game/traps/rail_saw/trap_saw.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Floor/map 9/TILED_files/Details.png"
-dest_files=["res://.godot/imported/Details.png-0050cbcca99a86a27ef6e3838c319eb7.ctex"]
+<<<<<<< Updated upstream:Assets/Floor/map 9/TILED_files/Details.png.import
+source_file="res://Assets/Floor/map 9/TILED_files/Details.png"
+dest_files=["res://.godot/imported/Details.png-8841ceb75e24827cb6203e5909e96ad4.ctex"]
+=======
+source_file="res://Assets/game/traps/rail_saw/trap_saw.png"
+dest_files=["res://.godot/imported/trap_saw.png-90606f14e3bf09643e7603fef69b555b.ctex"]
+>>>>>>> Stashed changes:assets/game/traps/rail_saw/trap_saw.png.import
 
 [params]
 

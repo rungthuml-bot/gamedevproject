@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/Mordred_Knight/Hanging.png.import
 uid="uid://b5p78glrrhdp5"
-path="res://.godot/imported/Hanging.png-9370cdfe3459c697a094798abb3e4361.ctex"
+path="res://.godot/imported/Hanging.png-f81a956eaf2ebd08833c97f5f08fc938.ctex"
+=======
+uid="uid://ck4uqi5masyu3"
+path="res://.godot/imported/Tile_52.png-2b26c836769e1571815f5789d92e3439.ctex"
+>>>>>>> Stashed changes:assets/source/craftpix/traps/2 Locations/Tiles/Tile_52.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Mordred_Knight/Hanging.png"
-dest_files=["res://.godot/imported/Hanging.png-9370cdfe3459c697a094798abb3e4361.ctex"]
+<<<<<<< Updated upstream:Assets/Mordred_Knight/Hanging.png.import
+source_file="res://Assets/Mordred_Knight/Hanging.png"
+dest_files=["res://.godot/imported/Hanging.png-f81a956eaf2ebd08833c97f5f08fc938.ctex"]
+=======
+source_file="res://Assets/source/craftpix/traps/2 Locations/Tiles/Tile_52.png"
+dest_files=["res://.godot/imported/Tile_52.png-2b26c836769e1571815f5789d92e3439.ctex"]
+>>>>>>> Stashed changes:assets/source/craftpix/traps/2 Locations/Tiles/Tile_52.png.import
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bxifgthirjrr"
-path="res://.godot/imported/Charge.png-a7b28595a129b65f985f5bbc96f8fad9.ctex"
+path="res://.godot/imported/Charge.png-d9db92888c4ed71b14fcfa96a75e25e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/source/craftpix/traps/4 Enemies/3/Charge.png"
-dest_files=["res://.godot/imported/Charge.png-a7b28595a129b65f985f5bbc96f8fad9.ctex"]
+source_file="res://Assets/source/craftpix/traps/4 Enemies/3/Charge.png"
+dest_files=["res://.godot/imported/Charge.png-d9db92888c4ed71b14fcfa96a75e25e4.ctex"]
 
 [params]
 

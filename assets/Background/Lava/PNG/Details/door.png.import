@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Details/door.png.import
 uid="uid://bqoy7nh6j25hh"
-path="res://.godot/imported/door.png-dacef7ba9fc478ad29df79f33a6c35f6.ctex"
+path="res://.godot/imported/door.png-541f1d33d3f5b671224de9c4eedd601f.ctex"
+=======
+uid="uid://btxq1xxu6xgl2"
+path="res://.godot/imported/4.png-e1a0e6baabc3eb5298ca0e86597c7054.ctex"
+>>>>>>> Stashed changes:assets/source/craftpix/traps/7 Levels/Tiled/Backgrounds/4.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Background/Lava/PNG/Details/door.png"
-dest_files=["res://.godot/imported/door.png-dacef7ba9fc478ad29df79f33a6c35f6.ctex"]
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Details/door.png.import
+source_file="res://Assets/Background/Lava/PNG/Details/door.png"
+dest_files=["res://.godot/imported/door.png-541f1d33d3f5b671224de9c4eedd601f.ctex"]
+=======
+source_file="res://Assets/source/craftpix/traps/7 Levels/Tiled/Backgrounds/4.png"
+dest_files=["res://.godot/imported/4.png-e1a0e6baabc3eb5298ca0e86597c7054.ctex"]
+>>>>>>> Stashed changes:assets/source/craftpix/traps/7 Levels/Tiled/Backgrounds/4.png.import
 
 [params]
 

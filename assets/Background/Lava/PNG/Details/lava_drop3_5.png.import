@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Details/lava_drop3_5.png.import
 uid="uid://mf74w5or8uyr"
-path="res://.godot/imported/lava_drop3_5.png-6168f642f6acf5f3195a7914ed64f567.ctex"
+path="res://.godot/imported/lava_drop3_5.png-c0fa7404fc8ad9608675a4e1e633bc43.ctex"
+=======
+uid="uid://yxgpyek5uy8a"
+path="res://.godot/imported/2_Hit.png-b06eb5241338663a25c16a0329056670.ctex"
+>>>>>>> Stashed changes:assets/source/craftpix/traps/3 Objects/Boxes/2_Hit.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Background/Lava/PNG/Details/lava_drop3_5.png"
-dest_files=["res://.godot/imported/lava_drop3_5.png-6168f642f6acf5f3195a7914ed64f567.ctex"]
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Details/lava_drop3_5.png.import
+source_file="res://Assets/Background/Lava/PNG/Details/lava_drop3_5.png"
+dest_files=["res://.godot/imported/lava_drop3_5.png-c0fa7404fc8ad9608675a4e1e633bc43.ctex"]
+=======
+source_file="res://Assets/source/craftpix/traps/3 Objects/Boxes/2_Hit.png"
+dest_files=["res://.godot/imported/2_Hit.png-b06eb5241338663a25c16a0329056670.ctex"]
+>>>>>>> Stashed changes:assets/source/craftpix/traps/3 Objects/Boxes/2_Hit.png.import
 
 [params]
 

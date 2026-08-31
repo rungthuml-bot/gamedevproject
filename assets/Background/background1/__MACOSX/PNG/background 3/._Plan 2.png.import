@@ -2,12 +2,25 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/Background/background1/__MACOSX/PNG/background 3/._Plan 2.png.import
 uid="uid://vtmjttf1f53f"
 valid=false
 
 [deps]
 
 source_file="res://Background/background1/__MACOSX/PNG/background 3/._Plan 2.png"
+=======
+uid="uid://cge53o41g6xeo"
+path="res://.godot/imported/Jump.png-257f55602d3dc0b9c53766b92fbd0107.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/source/craftpix/traps/4 Enemies/1/Jump.png"
+dest_files=["res://.godot/imported/Jump.png-257f55602d3dc0b9c53766b92fbd0107.ctex"]
+>>>>>>> Stashed changes:assets/source/craftpix/traps/4 Enemies/1/Jump.png.import
 
 [params]
 
