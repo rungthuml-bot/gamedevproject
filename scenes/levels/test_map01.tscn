@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" path="res://scripts/levels/base_level.gd" id="1_base"]
 [ext_resource type="PackedScene" path="res://scenes/systems/MapDoor.tscn" id="2_door"]
+[ext_resource type="PackedScene" uid="uid://ddkbjitso8s1x" path="res://scenes/items/HealthPotion.tscn" id="3_potion"]
+[ext_resource type="PackedScene" uid="uid://bpr3xb7q1kymd" path="res://scenes/systems/SavePoint.tscn" id="4_save"]
+[ext_resource type="PackedScene" uid="uid://csfin0y1x3riw" path="res://scenes/enemies/EnemySword.tscn" id="5_enemy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ground"]
 size = Vector2(1200, 100)
@@ -60,3 +63,12 @@ position = Vector2(1000, 500)
 position = Vector2(1150, 500)
 target_scene_path = "res://scenes/levels/test_map02.tscn"
 target_spawn_id = "DoorLeft"
+
+[node name="HealthPotion" parent="." instance=ExtResource("3_potion")]
+position = Vector2(400, 500)
+
+[node name="SavePoint" parent="." instance=ExtResource("4_save")]
+position = Vector2(600, 500)
+
+[node name="EnemySword" parent="." instance=ExtResource("5_enemy")]
+position = Vector2(800, 480)

@@ -6,13 +6,13 @@ extends Node
 # =========================================================
 
 var current_slot: int = 1
-var default_start_scene: String = "res://scenes/ui/ui_test_main.tscn"
+var default_start_scene: String = "res://scenes/levels/test_map01.tscn"
 
 # ข้อมูลเซฟปัจจุบัน
 var save_data: Dictionary = {
 	"hp": 100,
 	"potion_count": 1,
-	"current_scene": "res://scenes/ui/ui_test_main.tscn"
+	"current_scene": "res://scenes/levels/test_map01.tscn"
 }
 
 # ใช้สำหรับบอกให้ระบบรู้ว่าเป็นการตายแล้วเกิดใหม่

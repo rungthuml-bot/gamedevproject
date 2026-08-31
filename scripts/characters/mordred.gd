@@ -29,6 +29,7 @@ var is_dashing := false
 var dash_cooldown_timer := 0.0
 var shift_was_pressed := false
 var shift_hold_timer := 0.0
+var h_was_pressed := false
 
 # CAMERA SHAKE CONSTANTS
 const SHAKE_DECAY: float = 8.0
@@ -358,8 +359,10 @@ func _physics_process(delta: float) -> void:
 
 	# USE POTION
 	# เนื่องจากไม่มี Input Action สำหรับยา จึงใช้ KEY_H ตามต้นฉบับ
-	if Input.is_key_pressed(KEY_H):
+	var h_pressed = Input.is_key_pressed(KEY_H)
+	if h_pressed and not h_was_pressed:
 		use_potion()
+	h_was_pressed = h_pressed
 
 	move_and_slide()
 
