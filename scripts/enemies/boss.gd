@@ -39,6 +39,9 @@ var knockback_timer: float = 0.0
 var attack_timer: float = 0.0
 var is_dying: bool = false
 var is_attacking: bool = false
+var attack_dealt_damage: bool = false
+
+@export var attack_frame: int = 2
 
 # =========================================================
 # Boss Phases
@@ -72,6 +75,10 @@ func _ready() -> void:
 	if anim:
 		anim.play("Idle")
 		anim.modulate = Color(0.8, 0.5, 0.9, 1.0) # สีม่วงเข้มสำหรับบอส
+		if not anim.animation_finished.is_connected(_on_anim_animation_finished):
+			anim.animation_finished.connect(_on_anim_animation_finished)
+		if not anim.frame_changed.is_connected(_on_anim_frame_changed):
+			anim.frame_changed.connect(_on_anim_frame_changed)
 
 # =========================================================
 # Physics Process
@@ -162,6 +169,7 @@ func update_animation() -> void:
 
 func process_attack(player: Node2D) -> void:
 	is_attacking = true
+	attack_dealt_damage = false
 	velocity.x = 0 # Stop moving
 	
 	# Face the player before attacking
@@ -170,34 +178,42 @@ func process_attack(player: Node2D) -> void:
 		move_direction = dir
 		update_facing_direction()
 
-	# Telegraph (ง้าง)
 	if anim:
 		if is_enraged:
 			anim.play("Attack2")
 		else:
 			anim.play("Attack1")
+	else:
+		# Fallback if no animation node is present
+		var windup_time = 0.5 if not is_enraged else 0.2
+		await get_tree().create_timer(windup_time).timeout
+		_deal_damage()
+		var recovery = 0.4 if not is_enraged else 0.2
+		await get_tree().create_timer(recovery).timeout
+		_reset_attack()
+
+func _on_anim_frame_changed() -> void:
+	if not is_attacking or not anim: return
 	
-	# Wind-up (เร็วกว่าปกติถ้าเป็นร่าง 2)
-	var windup_time = 0.5 if not is_enraged else 0.2
-	await get_tree().create_timer(windup_time).timeout
+	var is_attack_anim = anim.animation.begins_with("Attack")
+	if is_attack_anim and anim.frame == attack_frame and not attack_dealt_damage:
+		_deal_damage()
+
+func _on_anim_animation_finished() -> void:
+	if is_attacking and anim and anim.animation.begins_with("Attack"):
+		_reset_attack()
+
+func _deal_damage() -> void:
+	if is_dying: return
+	attack_dealt_damage = true
 	
-	if is_dying:
-		return
-		
-	# Attack!
-	# Check if player is in hitbox
 	var bodies = attack_hitbox.get_overlapping_bodies()
 	for b in bodies:
 		if b.is_in_group("player") and b.has_method("take_damage"):
 			b.take_damage(BOSS_DAMAGE, global_position.x)
-			
-	# Cooldown
+
+func _reset_attack() -> void:
 	attack_timer = attack_cooldown
-	
-	# Wait for swing recovery
-	var recovery = 0.4 if not is_enraged else 0.2
-	await get_tree().create_timer(recovery).timeout
-	
 	is_attacking = false
 	current_state = State.CHASE
 

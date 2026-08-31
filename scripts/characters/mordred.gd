@@ -17,6 +17,8 @@ var is_knockbacked := false
 var knockback_timer := 0.0
 var potion_count := 1
 
+@export var attack_frame: int = 1
+
 var base_walk_speed := 250.0
 var walk_speed := 250.0
 var base_run_speed := 420.0
@@ -450,7 +452,7 @@ func _on_animated_sprite_2d_frame_changed():
 		or anim.animation.begins_with("AirAttack")
 	)
 
-	if is_attack_animation and anim.frame == 1:
+	if is_attack_animation and anim.frame == attack_frame:
 		attack_collision.set_deferred("disabled", false)
 
 	else:

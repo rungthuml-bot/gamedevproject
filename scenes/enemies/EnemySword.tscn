@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://csfin0y1x3riw"]
 
 [ext_resource type="Script" uid="uid://dgsq5y3drb4t7" path="res://scripts/enemies/enemy_sword.gd" id="1_3gvst"]
-[ext_resource type="Texture2D" uid="uid://car800sx2vwm6" path="res://scenes/enemies/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Attack1.png" id="2_mqu0k"]
-[ext_resource type="Texture2D" uid="uid://17f8tgwbipye" path="res://scenes/enemies/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Die.png" id="3_56nyn"]
-[ext_resource type="Texture2D" uid="uid://7to5otgtcqvv" path="res://scenes/enemies/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Hurt.png" id="4_76wy0"]
-[ext_resource type="Texture2D" uid="uid://xipwkjscvn5r" path="res://scenes/enemies/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Idle.png" id="5_8w3qn"]
-[ext_resource type="Texture2D" uid="uid://4btnhfev5dqr" path="res://scenes/enemies/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Walk.png" id="6_tf03t"]
+[ext_resource type="Texture2D" uid="uid://car800sx2vwm6" path="res://assets/Enemy/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Attack1.png" id="2_mqu0k"]
+[ext_resource type="Texture2D" uid="uid://17f8tgwbipye" path="res://assets/Enemy/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Die.png" id="3_56nyn"]
+[ext_resource type="Texture2D" uid="uid://7to5otgtcqvv" path="res://assets/Enemy/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Hurt.png" id="4_76wy0"]
+[ext_resource type="Texture2D" uid="uid://xipwkjscvn5r" path="res://assets/Enemy/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Idle.png" id="5_8w3qn"]
+[ext_resource type="Texture2D" uid="uid://4btnhfev5dqr" path="res://assets/Enemy/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Walk.png" id="6_tf03t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_enemy"]
 size = Vector2(32, 70)
@@ -383,6 +383,5 @@ shape = SubResource("RectangleShape2D_attack")
 position = Vector2(4, -13)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_7n77a")
-animation = &"Attack1"
-frame = 5
-frame_progress = 0.7222217
+animation = &"Hurt"
+frame_progress = 0.7826728
