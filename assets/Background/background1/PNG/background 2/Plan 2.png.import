@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< Updated upstream:Assets/Background/background1/PNG/background 2/Plan 2.png.import
 uid="uid://b8852478r5d68"
 path="res://.godot/imported/Plan 2.png-32ec97a84c7ca6af543c03df8d6d8d6e.ctex"
-=======
-uid="uid://dgsum05xsyjd"
-path="res://.godot/imported/2_34.png-40bd3afd4e08b82067afd249d540ec4c.ctex"
->>>>>>> Stashed changes:assets/source/craftpix/traps/5 GUI/Levels/2/2_34.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<< Updated upstream:Assets/Background/background1/PNG/background 2/Plan 2.png.import
 source_file="res://Assets/Background/background1/PNG/background 2/Plan 2.png"
 dest_files=["res://.godot/imported/Plan 2.png-32ec97a84c7ca6af543c03df8d6d8d6e.ctex"]
-=======
-source_file="res://Assets/source/craftpix/traps/5 GUI/Levels/2/2_34.png"
-dest_files=["res://.godot/imported/2_34.png-40bd3afd4e08b82067afd249d540ec4c.ctex"]
->>>>>>> Stashed changes:assets/source/craftpix/traps/5 GUI/Levels/2/2_34.png.import
 
 [params]
 

@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Details/stalagmite3.png.import
 uid="uid://bku1h6ynrjs1d"
 path="res://.godot/imported/stalagmite3.png-1b495cc8c3060b141b4708bfb3bc6772.ctex"
-=======
-uid="uid://j6po62wr0lke"
-path="res://.godot/imported/000_0045_coin.png-6fbad254ce65c27202cfd13b9a94c932.ctex"
->>>>>>> Stashed changes:assets/source/craftpix/trap_stalactite/PNG/Items/000_0045_coin.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Details/stalagmite3.png.import
 source_file="res://Assets/Background/Lava/PNG/Details/stalagmite3.png"
 dest_files=["res://.godot/imported/stalagmite3.png-1b495cc8c3060b141b4708bfb3bc6772.ctex"]
-=======
-source_file="res://Assets/source/craftpix/trap_stalactite/PNG/Items/000_0045_coin.png"
-dest_files=["res://.godot/imported/000_0045_coin.png-6fbad254ce65c27202cfd13b9a94c932.ctex"]
->>>>>>> Stashed changes:assets/source/craftpix/trap_stalactite/PNG/Items/000_0045_coin.png.import
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dekrdkokrf7n1"
-path="res://.godot/imported/Full_bgx32.png-ebc6d96d93e504a1353d6c95b57c400c.ctex"
+path="res://.godot/imported/Full_bgx32.png-5c83207419f38d3bf09c78af4d5c1c1b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Floor/map 9/PNG/Background/x32/Full_bgx32.png"
-dest_files=["res://.godot/imported/Full_bgx32.png-ebc6d96d93e504a1353d6c95b57c400c.ctex"]
+source_file="res://scenes/Level/Assets/Floor/map 9/PNG/Background/x32/Full_bgx32.png"
+dest_files=["res://.godot/imported/Full_bgx32.png-5c83207419f38d3bf09c78af4d5c1c1b.ctex"]
 
 [params]
 

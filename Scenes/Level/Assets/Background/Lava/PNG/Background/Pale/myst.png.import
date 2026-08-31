@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cmp5mjpcrggl5"
-path="res://.godot/imported/myst.png-6e9e794c26808e91ed1c4b86d87b5d10.ctex"
+path="res://.godot/imported/myst.png-76c71f91da5003ba1da1cab3fdc9adfe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Background/Lava/PNG/Background/Pale/myst.png"
-dest_files=["res://.godot/imported/myst.png-6e9e794c26808e91ed1c4b86d87b5d10.ctex"]
+source_file="res://scenes/Level/Assets/Background/Lava/PNG/Background/Pale/myst.png"
+dest_files=["res://.godot/imported/myst.png-76c71f91da5003ba1da1cab3fdc9adfe.ctex"]
 
 [params]
 

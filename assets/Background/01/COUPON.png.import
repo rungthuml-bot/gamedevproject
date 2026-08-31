@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< Updated upstream:Assets/Background/01/COUPON.png.import
 uid="uid://be8pucxschq3y"
 path="res://.godot/imported/COUPON.png-c508a979198e5d65c1f264c1465867ab.ctex"
-=======
-uid="uid://b0gupc6j6swm7"
-path="res://.godot/imported/1.png-a6160fe63d5fadd34c715941a86db55c.ctex"
->>>>>>> Stashed changes:assets/source/craftpix/traps/6 Traps/1.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<< Updated upstream:Assets/Background/01/COUPON.png.import
 source_file="res://Assets/Background/01/COUPON.png"
 dest_files=["res://.godot/imported/COUPON.png-c508a979198e5d65c1f264c1465867ab.ctex"]
-=======
-source_file="res://Assets/source/craftpix/traps/6 Traps/1.png"
-dest_files=["res://.godot/imported/1.png-a6160fe63d5fadd34c715941a86db55c.ctex"]
->>>>>>> Stashed changes:assets/source/craftpix/traps/6 Traps/1.png.import
 
 [params]
 

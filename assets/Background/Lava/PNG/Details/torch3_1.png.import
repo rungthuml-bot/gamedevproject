@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Details/stalagmite2.png.import
 uid="uid://8in42dnc6kw8"
 path="res://.godot/imported/stalagmite2.png-758183c27720e81cb95c406163c9173d.ctex"
-=======
-uid="uid://t35tsq1e1345"
-path="res://.godot/imported/lava_drop2_9.png-6718f26b6bdac57e9db20bea842278cc.ctex"
->>>>>>> Stashed changes:assets/source/craftpix/trap_stalactite/PNG/Details/lava_drop2_9.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Details/stalagmite2.png.import
 source_file="res://Assets/Background/Lava/PNG/Details/stalagmite2.png"
 dest_files=["res://.godot/imported/stalagmite2.png-758183c27720e81cb95c406163c9173d.ctex"]
-=======
-source_file="res://Assets/source/craftpix/trap_stalactite/PNG/Details/lava_drop2_9.png"
-dest_files=["res://.godot/imported/lava_drop2_9.png-6718f26b6bdac57e9db20bea842278cc.ctex"]
->>>>>>> Stashed changes:assets/source/craftpix/trap_stalactite/PNG/Details/lava_drop2_9.png.import
 
 [params]
 

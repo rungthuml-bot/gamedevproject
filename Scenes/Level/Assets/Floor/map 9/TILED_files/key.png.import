@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cl15ejtg1ipm3"
-path="res://.godot/imported/key.png-222395128401015f626d59822ab0ff44.ctex"
+path="res://.godot/imported/key.png-0d9685977fad2ac306069e83bc5b3163.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Floor/map 9/TILED_files/key.png"
-dest_files=["res://.godot/imported/key.png-222395128401015f626d59822ab0ff44.ctex"]
+source_file="res://scenes/Level/Assets/Floor/map 9/TILED_files/key.png"
+dest_files=["res://.godot/imported/key.png-0d9685977fad2ac306069e83bc5b3163.ctex"]
 
 [params]
 

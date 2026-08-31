@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< Updated upstream:Assets/Floor/map 9/PNG/Flying_stone.png.import
 uid="uid://bp2q22syn1vt3"
 path="res://.godot/imported/Flying_stone.png-147e955a1d02bbb37548ff4a47ab98f0.ctex"
-=======
-uid="uid://dg6s86sxph4l8"
-path="res://.godot/imported/tile8.png-5e610cc7de43da672d6f3160e1be3b21.ctex"
->>>>>>> Stashed changes:assets/source/craftpix/trap_stalactite/PNG/Tiles_rock/tile8.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<< Updated upstream:Assets/Floor/map 9/PNG/Flying_stone.png.import
 source_file="res://Assets/Floor/map 9/PNG/Flying_stone.png"
 dest_files=["res://.godot/imported/Flying_stone.png-147e955a1d02bbb37548ff4a47ab98f0.ctex"]
-=======
-source_file="res://Assets/source/craftpix/trap_stalactite/PNG/Tiles_rock/tile8.png"
-dest_files=["res://.godot/imported/tile8.png-5e610cc7de43da672d6f3160e1be3b21.ctex"]
->>>>>>> Stashed changes:assets/source/craftpix/trap_stalactite/PNG/Tiles_rock/tile8.png.import
 
 [params]
 

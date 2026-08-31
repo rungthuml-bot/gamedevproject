@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< Updated upstream:Assets/Background/01/PNG/Battleground1/Pale/sky.png.import
 uid="uid://oqw8uo0n3l87"
 path="res://.godot/imported/sky.png-740582955168dc2191d3156d82c4085b.ctex"
-=======
-uid="uid://u5bixe0mlfk7"
-path="res://.godot/imported/Tile_19.png-4f1d87475f4c05a8f56d09ea5f5088a2.ctex"
->>>>>>> Stashed changes:assets/source/craftpix/traps/5 GUI/Interface/Tile_19.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<< Updated upstream:Assets/Background/01/PNG/Battleground1/Pale/sky.png.import
 source_file="res://Assets/Background/01/PNG/Battleground1/Pale/sky.png"
 dest_files=["res://.godot/imported/sky.png-740582955168dc2191d3156d82c4085b.ctex"]
-=======
-source_file="res://Assets/source/craftpix/traps/5 GUI/Interface/Tile_19.png"
-dest_files=["res://.godot/imported/Tile_19.png-4f1d87475f4c05a8f56d09ea5f5088a2.ctex"]
->>>>>>> Stashed changes:assets/source/craftpix/traps/5 GUI/Interface/Tile_19.png.import
 
 [params]
 

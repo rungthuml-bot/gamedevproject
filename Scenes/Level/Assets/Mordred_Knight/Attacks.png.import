@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5jkovim4vmpm"
-path="res://.godot/imported/Attacks.png-1a329601723f65d3980629ea1f474cc9.ctex"
+path="res://.godot/imported/Attacks.png-d71fa0369c02eadf23a45bce4a8d81fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Mordred_Knight/Attacks.png"
-dest_files=["res://.godot/imported/Attacks.png-1a329601723f65d3980629ea1f474cc9.ctex"]
+source_file="res://scenes/Level/Assets/Mordred_Knight/Attacks.png"
+dest_files=["res://.godot/imported/Attacks.png-d71fa0369c02eadf23a45bce4a8d81fa.ctex"]
 
 [params]
 

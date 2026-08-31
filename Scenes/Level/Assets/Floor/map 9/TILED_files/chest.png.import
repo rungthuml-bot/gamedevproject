@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qt45u843whjn"
-path="res://.godot/imported/chest.png-db0a41481a16d4d79683e31cbea1f93e.ctex"
+path="res://.godot/imported/chest.png-71dfa4bcb15881bf191a16260e659fbb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Floor/map 9/TILED_files/chest.png"
-dest_files=["res://.godot/imported/chest.png-db0a41481a16d4d79683e31cbea1f93e.ctex"]
+source_file="res://scenes/Level/Assets/Floor/map 9/TILED_files/chest.png"
+dest_files=["res://.godot/imported/chest.png-71dfa4bcb15881bf191a16260e659fbb.ctex"]
 
 [params]
 

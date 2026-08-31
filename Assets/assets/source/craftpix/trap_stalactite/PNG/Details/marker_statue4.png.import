@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bb47ehojixe4b"
-path="res://.godot/imported/marker_statue4.png-ea32e497b56f6e7ff591bcf51a0357fc.ctex"
+path="res://.godot/imported/marker_statue4.png-d3570ae2c4e32c2c658ed21459d9c7e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/source/craftpix/trap_stalactite/PNG/Details/marker_statue4.png"
-dest_files=["res://.godot/imported/marker_statue4.png-ea32e497b56f6e7ff591bcf51a0357fc.ctex"]
+source_file="res://assets/assets/source/craftpix/trap_stalactite/PNG/Details/marker_statue4.png"
+dest_files=["res://.godot/imported/marker_statue4.png-d3570ae2c4e32c2c658ed21459d9c7e5.ctex"]
 
 [params]
 

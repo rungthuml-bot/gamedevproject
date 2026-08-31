@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bi4j8ommk4mnm"
-path="res://.godot/imported/Pray.png-aead8df6107f672aca6cc02361ca6329.ctex"
+path="res://.godot/imported/Pray.png-3061c04c2650108e123147124e9814de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Mordred_Knight/Pray.png"
-dest_files=["res://.godot/imported/Pray.png-aead8df6107f672aca6cc02361ca6329.ctex"]
+source_file="res://scenes/Level/Assets/Mordred_Knight/Pray.png"
+dest_files=["res://.godot/imported/Pray.png-3061c04c2650108e123147124e9814de.ctex"]
 
 [params]
 

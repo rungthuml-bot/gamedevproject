@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqiqaxp1ivogf"
-path="res://.godot/imported/bridge2.png-6185089be4c71f7c09b97b2eeeb7a581.ctex"
+path="res://.godot/imported/bridge2.png-3283e2c17442b1d2b596d67b4a3c506b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/source/craftpix/trap_stalactite/PNG/Details/bridge2.png"
-dest_files=["res://.godot/imported/bridge2.png-6185089be4c71f7c09b97b2eeeb7a581.ctex"]
+source_file="res://assets/assets/source/craftpix/trap_stalactite/PNG/Details/bridge2.png"
+dest_files=["res://.godot/imported/bridge2.png-3283e2c17442b1d2b596d67b4a3c506b.ctex"]
 
 [params]
 

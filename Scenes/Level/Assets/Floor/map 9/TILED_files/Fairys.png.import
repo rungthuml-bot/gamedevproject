@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dedxdsvkqbfyd"
-path="res://.godot/imported/Fairys.png-b69f419cc9e17879c4a083ba69df2efd.ctex"
+path="res://.godot/imported/Fairys.png-dd97dbc2fc8cb6396982d1b0dbe517e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Floor/map 9/TILED_files/Fairys.png"
-dest_files=["res://.godot/imported/Fairys.png-b69f419cc9e17879c4a083ba69df2efd.ctex"]
+source_file="res://scenes/Level/Assets/Floor/map 9/TILED_files/Fairys.png"
+dest_files=["res://.godot/imported/Fairys.png-dd97dbc2fc8cb6396982d1b0dbe517e2.ctex"]
 
 [params]
 

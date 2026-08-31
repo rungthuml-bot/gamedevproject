@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://corx83qij3dmw"
-path="res://.godot/imported/Full_bg_1920x1080.png-730a3c6476c444e1572683f6a7acf2d2.ctex"
+path="res://.godot/imported/Full_bg_1920x1080.png-1743c0b11c4af3c23727269da0250169.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Floor/map 9/PNG/Background/1920x1080/Full_bg_1920x1080.png"
-dest_files=["res://.godot/imported/Full_bg_1920x1080.png-730a3c6476c444e1572683f6a7acf2d2.ctex"]
+source_file="res://scenes/Level/Assets/Floor/map 9/PNG/Background/1920x1080/Full_bg_1920x1080.png"
+dest_files=["res://.godot/imported/Full_bg_1920x1080.png-1743c0b11c4af3c23727269da0250169.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bh5ekydg057nc"
-path="res://.godot/imported/Appearing.png-07d181a701d431b955b7208db137d1b6.ctex"
+path="res://.godot/imported/Appearing.png-cb5ce093ac5bf275413712c47fdb4681.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/source/craftpix/traps/1 Main Characters/Appearing.png"
-dest_files=["res://.godot/imported/Appearing.png-07d181a701d431b955b7208db137d1b6.ctex"]
+source_file="res://assets/assets/source/craftpix/traps/1 Main Characters/Appearing.png"
+dest_files=["res://.godot/imported/Appearing.png-cb5ce093ac5bf275413712c47fdb4681.ctex"]
 
 [params]
 

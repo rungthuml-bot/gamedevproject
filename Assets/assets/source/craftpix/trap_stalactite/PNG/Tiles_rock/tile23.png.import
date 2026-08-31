@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dkli2l6t5lej4"
-path="res://.godot/imported/tile23.png-3de5f62ba15d9a1ce3b2552652b7802e.ctex"
+path="res://.godot/imported/tile23.png-4f2ee40e3d656bd8fb49246eb403b283.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/source/craftpix/trap_stalactite/PNG/Tiles_rock/tile23.png"
-dest_files=["res://.godot/imported/tile23.png-3de5f62ba15d9a1ce3b2552652b7802e.ctex"]
+source_file="res://assets/assets/source/craftpix/trap_stalactite/PNG/Tiles_rock/tile23.png"
+dest_files=["res://.godot/imported/tile23.png-4f2ee40e3d656bd8fb49246eb403b283.ctex"]
 
 [params]
 

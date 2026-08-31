@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bw1nubvuf7m76"
-path="res://.godot/imported/000_0047_hit_point9.png-441f5e921d15154cc3a365cb1cbb2b3d.ctex"
+path="res://.godot/imported/000_0047_hit_point9.png-db1341f2782d65892fdb989ba5db61dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Background/Lava/PNG/Items/000_0047_hit_point9.png"
-dest_files=["res://.godot/imported/000_0047_hit_point9.png-441f5e921d15154cc3a365cb1cbb2b3d.ctex"]
+source_file="res://scenes/Level/Assets/Background/Lava/PNG/Items/000_0047_hit_point9.png"
+dest_files=["res://.godot/imported/000_0047_hit_point9.png-db1341f2782d65892fdb989ba5db61dc.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ba65gox6yjtr5"
-path="res://.godot/imported/Predator_plant.png-daa05daeb1a9bbf683a69c981ae3b341.ctex"
+path="res://.godot/imported/Predator_plant.png-bd41064a789e176d4879738f94edda22.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Floor/map 9/TILED_files/Predator_plant.png"
-dest_files=["res://.godot/imported/Predator_plant.png-daa05daeb1a9bbf683a69c981ae3b341.ctex"]
+source_file="res://scenes/Level/Assets/Floor/map 9/TILED_files/Predator_plant.png"
+dest_files=["res://.godot/imported/Predator_plant.png-bd41064a789e176d4879738f94edda22.ctex"]
 
 [params]
 

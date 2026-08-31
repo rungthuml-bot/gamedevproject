@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cq42b7k0y5u61"
-path="res://.godot/imported/Health.png-b4df311b6bcd0a540840be0e8bca340c.ctex"
+path="res://.godot/imported/Health.png-0723829d5ee59467cace994065d60e3d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Mordred_Knight/Health.png"
-dest_files=["res://.godot/imported/Health.png-b4df311b6bcd0a540840be0e8bca340c.ctex"]
+source_file="res://scenes/Level/Assets/Mordred_Knight/Health.png"
+dest_files=["res://.godot/imported/Health.png-0723829d5ee59467cace994065d60e3d.ctex"]
 
 [params]
 

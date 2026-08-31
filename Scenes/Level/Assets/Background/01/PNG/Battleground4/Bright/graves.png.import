@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dx3us7go4w7go"
-path="res://.godot/imported/graves.png-769079178d61de36c7711eb75ab10b70.ctex"
+path="res://.godot/imported/graves.png-c6b4b6ea536b81539ad9209a1f915d1b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Background/01/PNG/Battleground4/Bright/graves.png"
-dest_files=["res://.godot/imported/graves.png-769079178d61de36c7711eb75ab10b70.ctex"]
+source_file="res://scenes/Level/Assets/Background/01/PNG/Battleground4/Bright/graves.png"
+dest_files=["res://.godot/imported/graves.png-c6b4b6ea536b81539ad9209a1f915d1b.ctex"]
 
 [params]
 

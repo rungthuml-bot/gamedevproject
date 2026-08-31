@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://74326li5xju"
-path="res://.godot/imported/stair1.png-28981b656ff3fa13c442ba058bc37c59.ctex"
+path="res://.godot/imported/stair1.png-a76d5c6b9e104ff2ed026fc16fb16f53.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/source/craftpix/trap_stalactite/PNG/Details/stair1.png"
-dest_files=["res://.godot/imported/stair1.png-28981b656ff3fa13c442ba058bc37c59.ctex"]
+source_file="res://assets/assets/source/craftpix/trap_stalactite/PNG/Details/stair1.png"
+dest_files=["res://.godot/imported/stair1.png-a76d5c6b9e104ff2ed026fc16fb16f53.ctex"]
 
 [params]
 

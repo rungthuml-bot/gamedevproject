@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dd8ee5lm3801i"
-path="res://.godot/imported/chest.png-503da1b51b7880be9cd3c16947f1eec0.ctex"
+path="res://.godot/imported/chest.png-777b1ad6520da022974b5af58938a092.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/source/craftpix/trap_stalactite/PNG/Details/chest.png"
-dest_files=["res://.godot/imported/chest.png-503da1b51b7880be9cd3c16947f1eec0.ctex"]
+source_file="res://assets/assets/source/craftpix/trap_stalactite/PNG/Details/chest.png"
+dest_files=["res://.godot/imported/chest.png-777b1ad6520da022974b5af58938a092.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bmjf3mbhvedl6"
-path="res://.godot/imported/grasses.png-8d49991a02f0c7b1bc935883e5f5e4da.ctex"
+path="res://.godot/imported/grasses.png-57e97b1229e089edca0dd5f440b4522f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Background/01/PNG/Battleground3/Pale/grasses.png"
-dest_files=["res://.godot/imported/grasses.png-8d49991a02f0c7b1bc935883e5f5e4da.ctex"]
+source_file="res://scenes/Level/Assets/Background/01/PNG/Battleground3/Pale/grasses.png"
+dest_files=["res://.godot/imported/grasses.png-57e97b1229e089edca0dd5f440b4522f.ctex"]
 
 [params]
 

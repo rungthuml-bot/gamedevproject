@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bi8s7whtb8034"
-path="res://.godot/imported/lava_drop3_3.png-f5c721c31b126eef5422636c79801ef9.ctex"
+path="res://.godot/imported/lava_drop3_3.png-b85e2c87fe85af4e1885d3c71658f007.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Background/Lava/PNG/Details/lava_drop3_3.png"
-dest_files=["res://.godot/imported/lava_drop3_3.png-f5c721c31b126eef5422636c79801ef9.ctex"]
+source_file="res://scenes/Level/Assets/Background/Lava/PNG/Details/lava_drop3_3.png"
+dest_files=["res://.godot/imported/lava_drop3_3.png-b85e2c87fe85af4e1885d3c71658f007.ctex"]
 
 [params]
 

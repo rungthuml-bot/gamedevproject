@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< Updated upstream:Assets/Background/01/PNG/Battleground1/Bright/statue.png.import
 uid="uid://brui7sp1d42o5"
 path="res://.godot/imported/statue.png-313aecfbc5684acb183afab6754063a9.ctex"
-=======
-uid="uid://dhljdc7h4p7rd"
-path="res://.godot/imported/Tile_29.png-e0e3b8f9f83daeef46770080d26c8c27.ctex"
->>>>>>> Stashed changes:assets/source/craftpix/traps/5 GUI/Interface/Tile_29.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<< Updated upstream:Assets/Background/01/PNG/Battleground1/Bright/statue.png.import
 source_file="res://Assets/Background/01/PNG/Battleground1/Bright/statue.png"
 dest_files=["res://.godot/imported/statue.png-313aecfbc5684acb183afab6754063a9.ctex"]
-=======
-source_file="res://Assets/source/craftpix/traps/5 GUI/Interface/Tile_29.png"
-dest_files=["res://.godot/imported/Tile_29.png-e0e3b8f9f83daeef46770080d26c8c27.ctex"]
->>>>>>> Stashed changes:assets/source/craftpix/traps/5 GUI/Interface/Tile_29.png.import
 
 [params]
 

@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< Updated upstream:Assets/Background/01/PNG/Battleground4/Pale/sky.png.import
 uid="uid://byrknjmi1anps"
 path="res://.godot/imported/sky.png-037c70661817f90e8442b084185135a0.ctex"
-=======
-uid="uid://wfrfbd2amhjc"
-path="res://.godot/imported/pedestals.png-3223958261ef46b7fcae32c246550d88.ctex"
->>>>>>> Stashed changes:assets/source/craftpix/PNG/pedestals.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<< Updated upstream:Assets/Background/01/PNG/Battleground4/Pale/sky.png.import
 source_file="res://Assets/Background/01/PNG/Battleground4/Pale/sky.png"
 dest_files=["res://.godot/imported/sky.png-037c70661817f90e8442b084185135a0.ctex"]
-=======
-source_file="res://Assets/source/craftpix/PNG/pedestals.png"
-dest_files=["res://.godot/imported/pedestals.png-3223958261ef46b7fcae32c246550d88.ctex"]
->>>>>>> Stashed changes:assets/source/craftpix/PNG/pedestals.png.import
 
 [params]
 

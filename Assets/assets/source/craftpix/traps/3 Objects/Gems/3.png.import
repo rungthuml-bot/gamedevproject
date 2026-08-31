@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bgyy3kng7l1gb"
-path="res://.godot/imported/3.png-a53c13e609c8e9ddd1e795828759e9cc.ctex"
+path="res://.godot/imported/3.png-f0ce8cb1b0ff2eee70ed19e62bd74b94.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/source/craftpix/traps/3 Objects/Gems/3.png"
-dest_files=["res://.godot/imported/3.png-a53c13e609c8e9ddd1e795828759e9cc.ctex"]
+source_file="res://assets/assets/source/craftpix/traps/3 Objects/Gems/3.png"
+dest_files=["res://.godot/imported/3.png-f0ce8cb1b0ff2eee70ed19e62bd74b94.ctex"]
 
 [params]
 

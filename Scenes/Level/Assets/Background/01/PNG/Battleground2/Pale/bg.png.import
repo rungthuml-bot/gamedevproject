@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxyxfync40dy1"
-path="res://.godot/imported/bg.png-c146ac3824f48291945b74a129e81090.ctex"
+path="res://.godot/imported/bg.png-ef811da0c4133ecc7336fa58b67dd5d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Background/01/PNG/Battleground2/Pale/bg.png"
-dest_files=["res://.godot/imported/bg.png-c146ac3824f48291945b74a129e81090.ctex"]
+source_file="res://scenes/Level/Assets/Background/01/PNG/Battleground2/Pale/bg.png"
+dest_files=["res://.godot/imported/bg.png-ef811da0c4133ecc7336fa58b67dd5d8.ctex"]
 
 [params]
 

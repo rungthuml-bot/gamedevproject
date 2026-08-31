@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3qlsuy1sdq2o"
-path="res://.godot/imported/marker_statue4.png-e70bc76aaf7bc3ae4991daa482dd5309.ctex"
+path="res://.godot/imported/marker_statue4.png-566f7f6374b2ab0cc23119f167732df8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Background/Lava/PNG/Details/marker_statue4.png"
-dest_files=["res://.godot/imported/marker_statue4.png-e70bc76aaf7bc3ae4991daa482dd5309.ctex"]
+source_file="res://scenes/Level/Assets/Background/Lava/PNG/Details/marker_statue4.png"
+dest_files=["res://.godot/imported/marker_statue4.png-566f7f6374b2ab0cc23119f167732df8.ctex"]
 
 [params]
 

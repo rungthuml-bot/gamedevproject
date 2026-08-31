@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ds2pjalj0c7fu"
-path="res://.godot/imported/000_0024_speed12.png-3e250c01a67025c7d119fe91aa246232.ctex"
+path="res://.godot/imported/000_0024_speed12.png-8857e3b340616b9ef8bf639d59b1fe18.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Background/Lava/PNG/Items/000_0024_speed12.png"
-dest_files=["res://.godot/imported/000_0024_speed12.png-3e250c01a67025c7d119fe91aa246232.ctex"]
+source_file="res://scenes/Level/Assets/Background/Lava/PNG/Items/000_0024_speed12.png"
+dest_files=["res://.godot/imported/000_0024_speed12.png-8857e3b340616b9ef8bf639d59b1fe18.ctex"]
 
 [params]
 

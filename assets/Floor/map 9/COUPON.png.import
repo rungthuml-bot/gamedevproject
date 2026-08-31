@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< Updated upstream:Assets/Floor/map 9/COUPON.png.import
 uid="uid://nxf60qxqccdk"
 path="res://.godot/imported/COUPON.png-5b2a98b3e308fbc1ad92ff9d5d4ef0c5.ctex"
-=======
-uid="uid://r0j31eqpyf4o"
-path="res://.godot/imported/full.png-a1ec544917d2927e72945427d220fc84.ctex"
->>>>>>> Stashed changes:assets/source/craftpix/PNG/full.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<< Updated upstream:Assets/Floor/map 9/COUPON.png.import
 source_file="res://Assets/Floor/map 9/COUPON.png"
 dest_files=["res://.godot/imported/COUPON.png-5b2a98b3e308fbc1ad92ff9d5d4ef0c5.ctex"]
-=======
-source_file="res://Assets/source/craftpix/PNG/full.png"
-dest_files=["res://.godot/imported/full.png-a1ec544917d2927e72945427d220fc84.ctex"]
->>>>>>> Stashed changes:assets/source/craftpix/PNG/full.png.import
 
 [params]
 

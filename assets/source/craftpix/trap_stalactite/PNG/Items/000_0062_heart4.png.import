@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://drm5xd1wi0aer"
-path="res://.godot/imported/000_0062_heart4.png-87c274b6512928eeb73dcfb8a2f90e32.ctex"
+path="res://.godot/imported/000_0062_heart4.png-41dd5f4ab0baa07be5155e95ec8d59b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/source/craftpix/trap_stalactite/PNG/Items/000_0062_heart4.png"
-dest_files=["res://.godot/imported/000_0062_heart4.png-87c274b6512928eeb73dcfb8a2f90e32.ctex"]
+source_file="res://assets/source/craftpix/trap_stalactite/PNG/Items/000_0062_heart4.png"
+dest_files=["res://.godot/imported/000_0062_heart4.png-41dd5f4ab0baa07be5155e95ec8d59b4.ctex"]
 
 [params]
 

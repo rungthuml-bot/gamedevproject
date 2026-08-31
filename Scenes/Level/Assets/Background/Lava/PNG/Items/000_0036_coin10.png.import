@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://py6blrqy7ihc"
-path="res://.godot/imported/000_0036_coin10.png-04a5901e64f5aa07a479d1a0991dddc1.ctex"
+path="res://.godot/imported/000_0036_coin10.png-6171cbb2df335c3687e40663f2d98014.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Background/Lava/PNG/Items/000_0036_coin10.png"
-dest_files=["res://.godot/imported/000_0036_coin10.png-04a5901e64f5aa07a479d1a0991dddc1.ctex"]
+source_file="res://scenes/Level/Assets/Background/Lava/PNG/Items/000_0036_coin10.png"
+dest_files=["res://.godot/imported/000_0036_coin10.png-6171cbb2df335c3687e40663f2d98014.ctex"]
 
 [params]
 

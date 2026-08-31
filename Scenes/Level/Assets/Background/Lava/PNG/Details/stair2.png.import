@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c8umkvprjnxw1"
-path="res://.godot/imported/stair2.png-ea594ed42e6606a54d65f9f9e224ad1f.ctex"
+path="res://.godot/imported/stair2.png-aa4fffb5e390c74db6d531a099b3c448.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Background/Lava/PNG/Details/stair2.png"
-dest_files=["res://.godot/imported/stair2.png-ea594ed42e6606a54d65f9f9e224ad1f.ctex"]
+source_file="res://scenes/Level/Assets/Background/Lava/PNG/Details/stair2.png"
+dest_files=["res://.godot/imported/stair2.png-aa4fffb5e390c74db6d531a099b3c448.ctex"]
 
 [params]
 

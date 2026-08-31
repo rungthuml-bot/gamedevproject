@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Tiles_lava/lava_tile6.png.import
 uid="uid://bk5d5oku47184"
 path="res://.godot/imported/lava_tile6.png-10c3caba78e397d16b082467859829b8.ctex"
-=======
-uid="uid://cmxiqbcxq2vov"
-path="res://.godot/imported/Wall_Jump.png-d901a2ff40986b63780aa79c250e2baa.ctex"
->>>>>>> Stashed changes:assets/source/craftpix/traps/1 Main Characters/3/Wall_Jump.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Tiles_lava/lava_tile6.png.import
 source_file="res://Assets/Background/Lava/PNG/Tiles_lava/lava_tile6.png"
 dest_files=["res://.godot/imported/lava_tile6.png-10c3caba78e397d16b082467859829b8.ctex"]
-=======
-source_file="res://Assets/source/craftpix/traps/1 Main Characters/3/Wall_Jump.png"
-dest_files=["res://.godot/imported/Wall_Jump.png-d901a2ff40986b63780aa79c250e2baa.ctex"]
->>>>>>> Stashed changes:assets/source/craftpix/traps/1 Main Characters/3/Wall_Jump.png.import
 
 [params]
 

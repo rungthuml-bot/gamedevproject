@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cnxwyoxsh31k8"
-path="res://.godot/imported/Skyx32.png-35bfb5e92cb6f9d058d46f20dca9f1c3.ctex"
+path="res://.godot/imported/Skyx32.png-7f74318bdeea0d12c7000e1326d48b69.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Floor/map 9/PNG/Background/x32/Skyx32.png"
-dest_files=["res://.godot/imported/Skyx32.png-35bfb5e92cb6f9d058d46f20dca9f1c3.ctex"]
+source_file="res://scenes/Level/Assets/Floor/map 9/PNG/Background/x32/Skyx32.png"
+dest_files=["res://.godot/imported/Skyx32.png-7f74318bdeea0d12c7000e1326d48b69.ctex"]
 
 [params]
 

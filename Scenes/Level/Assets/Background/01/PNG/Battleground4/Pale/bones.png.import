@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b40b4l5rcm6b1"
-path="res://.godot/imported/bones.png-d5ab295fe6491f672a5d72560d1ecc80.ctex"
+path="res://.godot/imported/bones.png-00947bf502b90428f55bb6ad4bcaa95f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Background/01/PNG/Battleground4/Pale/bones.png"
-dest_files=["res://.godot/imported/bones.png-d5ab295fe6491f672a5d72560d1ecc80.ctex"]
+source_file="res://scenes/Level/Assets/Background/01/PNG/Battleground4/Pale/bones.png"
+dest_files=["res://.godot/imported/bones.png-00947bf502b90428f55bb6ad4bcaa95f.ctex"]
 
 [params]
 

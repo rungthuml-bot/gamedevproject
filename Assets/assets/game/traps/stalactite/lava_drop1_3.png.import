@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cnd02bk5yvn2x"
-path="res://.godot/imported/lava_drop1_3.png-0ecf92661c8470b2ff0ff2e4c5dc26ee.ctex"
+path="res://.godot/imported/lava_drop1_3.png-e12f99b04ae89142b924f14053f5169b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/game/traps/stalactite/lava_drop1_3.png"
-dest_files=["res://.godot/imported/lava_drop1_3.png-0ecf92661c8470b2ff0ff2e4c5dc26ee.ctex"]
+source_file="res://assets/assets/game/traps/stalactite/lava_drop1_3.png"
+dest_files=["res://.godot/imported/lava_drop1_3.png-e12f99b04ae89142b924f14053f5169b.ctex"]
 
 [params]
 

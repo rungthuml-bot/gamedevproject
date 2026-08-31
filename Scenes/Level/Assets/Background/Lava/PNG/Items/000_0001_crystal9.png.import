@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://5kuf1i2lyrv7"
-path="res://.godot/imported/000_0001_crystal9.png-85e226b701f771e6ffe8492732faa374.ctex"
+path="res://.godot/imported/000_0001_crystal9.png-0500b2d89bd497e0cb5f1aa7c2fcb6ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Background/Lava/PNG/Items/000_0001_crystal9.png"
-dest_files=["res://.godot/imported/000_0001_crystal9.png-85e226b701f771e6ffe8492732faa374.ctex"]
+source_file="res://scenes/Level/Assets/Background/Lava/PNG/Items/000_0001_crystal9.png"
+dest_files=["res://.godot/imported/000_0001_crystal9.png-0500b2d89bd497e0cb5f1aa7c2fcb6ed.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bn10ujnvgyain"
-path="res://.godot/imported/crypt.png-7b9c5345f4ee6b8de1a4bebf2fda3b2f.ctex"
+path="res://.godot/imported/crypt.png-e1ca2ab31fe1904dde9fc40b266f20a0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Background/01/PNG/Battleground4/Pale/crypt.png"
-dest_files=["res://.godot/imported/crypt.png-7b9c5345f4ee6b8de1a4bebf2fda3b2f.ctex"]
+source_file="res://scenes/Level/Assets/Background/01/PNG/Battleground4/Pale/crypt.png"
+dest_files=["res://.godot/imported/crypt.png-e1ca2ab31fe1904dde9fc40b266f20a0.ctex"]
 
 [params]
 

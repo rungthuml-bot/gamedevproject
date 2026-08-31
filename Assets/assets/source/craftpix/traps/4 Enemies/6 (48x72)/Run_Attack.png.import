@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bqgg2hux6yul3"
-path="res://.godot/imported/Run_Attack.png-6f189ba486ee21d2799d510741e1a44f.ctex"
+path="res://.godot/imported/Run_Attack.png-6a54fc74e228b942a17f657c8923b663.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/source/craftpix/traps/4 Enemies/6 (48x72)/Run_Attack.png"
-dest_files=["res://.godot/imported/Run_Attack.png-6f189ba486ee21d2799d510741e1a44f.ctex"]
+source_file="res://assets/assets/source/craftpix/traps/4 Enemies/6 (48x72)/Run_Attack.png"
+dest_files=["res://.godot/imported/Run_Attack.png-6a54fc74e228b942a17f657c8923b663.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://burryy4mscklc"
-path="res://.godot/imported/Tile_66.png-202f23c8c5530b2ba7f8c5b7ec8d3f6a.ctex"
+path="res://.godot/imported/Tile_66.png-c5efe0b2d5e8a529b7ddfbff63c5dc30.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/source/craftpix/traps/2 Locations/Tiles/Tile_66.png"
-dest_files=["res://.godot/imported/Tile_66.png-202f23c8c5530b2ba7f8c5b7ec8d3f6a.ctex"]
+source_file="res://assets/source/craftpix/traps/2 Locations/Tiles/Tile_66.png"
+dest_files=["res://.godot/imported/Tile_66.png-c5efe0b2d5e8a529b7ddfbff63c5dc30.ctex"]
 
 [params]
 

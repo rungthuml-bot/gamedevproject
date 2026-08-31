@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Details/trap3.png.import
 uid="uid://culwljxynqqdb"
 path="res://.godot/imported/trap3.png-c4b5e4d5ea4b0a2a4377e0c4dc23d2ff.ctex"
-=======
-uid="uid://da65ncrkxp8uc"
-path="res://.godot/imported/Number_09.png-be3dc2f2f83dc8a43e4e992a6c039d06.ctex"
->>>>>>> Stashed changes:assets/source/craftpix/traps/5 GUI/Numbers/Number_09.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Details/trap3.png.import
 source_file="res://Assets/Background/Lava/PNG/Details/trap3.png"
 dest_files=["res://.godot/imported/trap3.png-c4b5e4d5ea4b0a2a4377e0c4dc23d2ff.ctex"]
-=======
-source_file="res://Assets/source/craftpix/traps/5 GUI/Numbers/Number_09.png"
-dest_files=["res://.godot/imported/Number_09.png-be3dc2f2f83dc8a43e4e992a6c039d06.ctex"]
->>>>>>> Stashed changes:assets/source/craftpix/traps/5 GUI/Numbers/Number_09.png.import
 
 [params]
 

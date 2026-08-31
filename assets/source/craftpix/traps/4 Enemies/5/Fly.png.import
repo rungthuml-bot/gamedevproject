@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://f7asxhillena"
-path="res://.godot/imported/Fly.png-5614856b6366f109c732ecedad834329.ctex"
+path="res://.godot/imported/Fly.png-da1340143f1fd600a4f98a039cd3a991.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/source/craftpix/traps/4 Enemies/5/Fly.png"
-dest_files=["res://.godot/imported/Fly.png-5614856b6366f109c732ecedad834329.ctex"]
+source_file="res://assets/source/craftpix/traps/4 Enemies/5/Fly.png"
+dest_files=["res://.godot/imported/Fly.png-da1340143f1fd600a4f98a039cd3a991.ctex"]
 
 [params]
 

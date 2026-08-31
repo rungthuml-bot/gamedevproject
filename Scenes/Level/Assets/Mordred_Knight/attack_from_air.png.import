@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbhrruottlbnm"
-path="res://.godot/imported/attack_from_air.png-c8711763a56c3c798ce3d90ff9bf3745.ctex"
+path="res://.godot/imported/attack_from_air.png-e1fed493ea966d6ab523624075663a4c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Mordred_Knight/attack_from_air.png"
-dest_files=["res://.godot/imported/attack_from_air.png-c8711763a56c3c798ce3d90ff9bf3745.ctex"]
+source_file="res://scenes/Level/Assets/Mordred_Knight/attack_from_air.png"
+dest_files=["res://.godot/imported/attack_from_air.png-e1fed493ea966d6ab523624075663a4c.ctex"]
 
 [params]
 

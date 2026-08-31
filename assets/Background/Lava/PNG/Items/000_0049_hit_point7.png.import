@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Items/000_0049_hit_point7.png.import
 uid="uid://7hraxkiewy56"
 path="res://.godot/imported/000_0049_hit_point7.png-06005b436fafdcd718e50d1f19731cc7.ctex"
-=======
-uid="uid://dsrm2mcbedq1j"
-path="res://.godot/imported/1_45.png-24d2091aeb9e23608dc09b9d94167aeb.ctex"
->>>>>>> Stashed changes:assets/source/craftpix/traps/5 GUI/Levels/1/1_45.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Items/000_0049_hit_point7.png.import
 source_file="res://Assets/Background/Lava/PNG/Items/000_0049_hit_point7.png"
 dest_files=["res://.godot/imported/000_0049_hit_point7.png-06005b436fafdcd718e50d1f19731cc7.ctex"]
-=======
-source_file="res://Assets/source/craftpix/traps/5 GUI/Levels/1/1_45.png"
-dest_files=["res://.godot/imported/1_45.png-24d2091aeb9e23608dc09b9d94167aeb.ctex"]
->>>>>>> Stashed changes:assets/source/craftpix/traps/5 GUI/Levels/1/1_45.png.import
 
 [params]
 

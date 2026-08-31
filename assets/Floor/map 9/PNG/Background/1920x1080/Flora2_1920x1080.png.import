@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< Updated upstream:Assets/Floor/map 9/PNG/Background/1920x1080/Flora2_1920x1080.png.import
 uid="uid://2hymxtiu3jq6"
 path="res://.godot/imported/Flora2_1920x1080.png-aa03197b988989fea3e269bc87f78bb1.ctex"
-=======
-uid="uid://dbjhqiboq6tfw"
-path="res://.godot/imported/000_0006_crystal4.png-cb7200e05f0155cbfa571e7fe7462666.ctex"
->>>>>>> Stashed changes:assets/source/craftpix/trap_stalactite/PNG/Items/000_0006_crystal4.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<< Updated upstream:Assets/Floor/map 9/PNG/Background/1920x1080/Flora2_1920x1080.png.import
 source_file="res://Assets/Floor/map 9/PNG/Background/1920x1080/Flora2_1920x1080.png"
 dest_files=["res://.godot/imported/Flora2_1920x1080.png-aa03197b988989fea3e269bc87f78bb1.ctex"]
-=======
-source_file="res://Assets/source/craftpix/trap_stalactite/PNG/Items/000_0006_crystal4.png"
-dest_files=["res://.godot/imported/000_0006_crystal4.png-cb7200e05f0155cbfa571e7fe7462666.ctex"]
->>>>>>> Stashed changes:assets/source/craftpix/trap_stalactite/PNG/Items/000_0006_crystal4.png.import
 
 [params]
 

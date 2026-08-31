@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bet8colukmhqt"
-path="res://.godot/imported/Run.png-a7242ac9563815ddc8b69393d6e2db25.ctex"
+path="res://.godot/imported/Run.png-0f914dfdaa0f13fb622981ff56104190.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Mordred_Knight/Run.png"
-dest_files=["res://.godot/imported/Run.png-a7242ac9563815ddc8b69393d6e2db25.ctex"]
+source_file="res://scenes/Level/Assets/Mordred_Knight/Run.png"
+dest_files=["res://.godot/imported/Run.png-0f914dfdaa0f13fb622981ff56104190.ctex"]
 
 [params]
 

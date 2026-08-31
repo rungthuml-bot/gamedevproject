@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cg7tomkio66tp"
-path="res://.godot/imported/Wall_Jump.png-aa53e3ec430e144b8d77e98e54a66a1f.ctex"
+path="res://.godot/imported/Wall_Jump.png-6398f11ae294ebb4c4a37eca857aeaa8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/source/craftpix/traps/1 Main Characters/2/Wall_Jump.png"
-dest_files=["res://.godot/imported/Wall_Jump.png-aa53e3ec430e144b8d77e98e54a66a1f.ctex"]
+source_file="res://assets/assets/source/craftpix/traps/1 Main Characters/2/Wall_Jump.png"
+dest_files=["res://.godot/imported/Wall_Jump.png-6398f11ae294ebb4c4a37eca857aeaa8.ctex"]
 
 [params]
 

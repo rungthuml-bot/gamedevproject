@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bqjrcj5hx6v4j"
-path="res://.godot/imported/stalagnate3.png-91265a42052521c7b7efb9456fdb170e.ctex"
+path="res://.godot/imported/stalagnate3.png-19cfa807c1c301faf4c8f95b1c80f9e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/source/craftpix/trap_stalactite/PNG/Details/stalagnate3.png"
-dest_files=["res://.godot/imported/stalagnate3.png-91265a42052521c7b7efb9456fdb170e.ctex"]
+source_file="res://assets/assets/source/craftpix/trap_stalactite/PNG/Details/stalagnate3.png"
+dest_files=["res://.godot/imported/stalagnate3.png-19cfa807c1c301faf4c8f95b1c80f9e6.ctex"]
 
 [params]
 

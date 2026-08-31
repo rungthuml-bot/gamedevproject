@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://crq6sk2lfdx7c"
-path="res://.godot/imported/stalagmite1.png-303686bd23b61e051a5ae1432ba67f5a.ctex"
+path="res://.godot/imported/stalagmite1.png-80ba780b8bc5cd291bb0506c495e5ecf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Background/Lava/PNG/Details/stalagmite1.png"
-dest_files=["res://.godot/imported/stalagmite1.png-303686bd23b61e051a5ae1432ba67f5a.ctex"]
+source_file="res://scenes/Level/Assets/Background/Lava/PNG/Details/stalagmite1.png"
+dest_files=["res://.godot/imported/stalagmite1.png-80ba780b8bc5cd291bb0506c495e5ecf.ctex"]
 
 [params]
 

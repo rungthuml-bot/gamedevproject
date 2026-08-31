@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bq57pnvnjsv7t"
-path="res://.godot/imported/2.jpg-e4466d0e3ff646bf608d3085a6274878.ctex"
+path="res://.godot/imported/2.jpg-79a91b1cca51b0b2d8982cc01c6671a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Door/2.jpg"
-dest_files=["res://.godot/imported/2.jpg-e4466d0e3ff646bf608d3085a6274878.ctex"]
+source_file="res://scenes/Level/Assets/Door/2.jpg"
+dest_files=["res://.godot/imported/2.jpg-79a91b1cca51b0b2d8982cc01c6671a4.ctex"]
 
 [params]
 

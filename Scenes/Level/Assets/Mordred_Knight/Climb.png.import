@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bo6t6tuj5kmu4"
-path="res://.godot/imported/Climb.png-5f810566fa9b8444be1e3efb6f1e0680.ctex"
+path="res://.godot/imported/Climb.png-77752709456c5af441c90c937dd991f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Mordred_Knight/Climb.png"
-dest_files=["res://.godot/imported/Climb.png-5f810566fa9b8444be1e3efb6f1e0680.ctex"]
+source_file="res://scenes/Level/Assets/Mordred_Knight/Climb.png"
+dest_files=["res://.godot/imported/Climb.png-77752709456c5af441c90c937dd991f0.ctex"]
 
 [params]
 

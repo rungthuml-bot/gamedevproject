@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bxwsau5i3tl66"
-path="res://.godot/imported/shinies.png-7087b0295a655335e13b69a7956fdc3a.ctex"
+path="res://.godot/imported/shinies.png-e874a16e670216c57687f58e7945f07b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Floor/map 9/PNG/shinies.png"
-dest_files=["res://.godot/imported/shinies.png-7087b0295a655335e13b69a7956fdc3a.ctex"]
+source_file="res://scenes/Level/Assets/Floor/map 9/PNG/shinies.png"
+dest_files=["res://.godot/imported/shinies.png-e874a16e670216c57687f58e7945f07b.ctex"]
 
 [params]
 

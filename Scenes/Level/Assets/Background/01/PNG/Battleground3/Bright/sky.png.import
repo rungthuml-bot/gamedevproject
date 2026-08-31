@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b8r0k2ml2dihd"
-path="res://.godot/imported/sky.png-f0bf82f5c72bddf1384e551fc70a458b.ctex"
+path="res://.godot/imported/sky.png-6206aedd458ede130b4d7f343f0a0508.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Background/01/PNG/Battleground3/Bright/sky.png"
-dest_files=["res://.godot/imported/sky.png-f0bf82f5c72bddf1384e551fc70a458b.ctex"]
+source_file="res://scenes/Level/Assets/Background/01/PNG/Battleground3/Bright/sky.png"
+dest_files=["res://.godot/imported/sky.png-6206aedd458ede130b4d7f343f0a0508.ctex"]
 
 [params]
 

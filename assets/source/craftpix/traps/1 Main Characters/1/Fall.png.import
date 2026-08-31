@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://xpbfqn3876em"
-path="res://.godot/imported/Fall.png-6d679ad9ed5cd3064a410eb7eec2d616.ctex"
+path="res://.godot/imported/Fall.png-76eb15086dedeedf567c68d78908868d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/source/craftpix/traps/1 Main Characters/1/Fall.png"
-dest_files=["res://.godot/imported/Fall.png-6d679ad9ed5cd3064a410eb7eec2d616.ctex"]
+source_file="res://assets/source/craftpix/traps/1 Main Characters/1/Fall.png"
+dest_files=["res://.godot/imported/Fall.png-76eb15086dedeedf567c68d78908868d.ctex"]
 
 [params]
 

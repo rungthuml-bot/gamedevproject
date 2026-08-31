@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bc3bmqbpndyxp"
-path="res://.godot/imported/pedestals.png-177651c4f824f6acfa1269cc22fb791d.ctex"
+path="res://.godot/imported/pedestals.png-31d4ee6ea36efafeeff4e0dac4574dfd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/assets/source/craftpix/Tiled_files/pedestals.png"
-dest_files=["res://.godot/imported/pedestals.png-177651c4f824f6acfa1269cc22fb791d.ctex"]
+source_file="res://assets/assets/source/craftpix/Tiled_files/pedestals.png"
+dest_files=["res://.godot/imported/pedestals.png-31d4ee6ea36efafeeff4e0dac4574dfd.ctex"]
 
 [params]
 

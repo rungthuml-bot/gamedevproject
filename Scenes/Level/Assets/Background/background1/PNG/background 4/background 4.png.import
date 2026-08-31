@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://drx6dei6npol6"
-path="res://.godot/imported/background 4.png-ae7c06f6d757c25a666b06092f9709d4.ctex"
+path="res://.godot/imported/background 4.png-6b47288e247c72321788e8b949da34e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Background/background1/PNG/background 4/background 4.png"
-dest_files=["res://.godot/imported/background 4.png-ae7c06f6d757c25a666b06092f9709d4.ctex"]
+source_file="res://scenes/Level/Assets/Background/background1/PNG/background 4/background 4.png"
+dest_files=["res://.godot/imported/background 4.png-6b47288e247c72321788e8b949da34e2.ctex"]
 
 [params]
 

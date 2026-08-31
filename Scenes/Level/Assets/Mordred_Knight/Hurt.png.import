@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://4ahh15200b33"
-path="res://.godot/imported/Hurt.png-48315f0cd374033f311ceb7f119252de.ctex"
+path="res://.godot/imported/Hurt.png-a771f385746f72563f81aac3965440c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Mordred_Knight/Hurt.png"
-dest_files=["res://.godot/imported/Hurt.png-48315f0cd374033f311ceb7f119252de.ctex"]
+source_file="res://scenes/Level/Assets/Mordred_Knight/Hurt.png"
+dest_files=["res://.godot/imported/Hurt.png-a771f385746f72563f81aac3965440c7.ctex"]
 
 [params]
 

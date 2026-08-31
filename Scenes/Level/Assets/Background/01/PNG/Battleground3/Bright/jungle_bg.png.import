@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dt3dj17pxq5xh"
-path="res://.godot/imported/jungle_bg.png-2e3908dbe929c9a19d190d305fa5bc30.ctex"
+path="res://.godot/imported/jungle_bg.png-e07048b5237c0239e5b445e579c7776a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Background/01/PNG/Battleground3/Bright/jungle_bg.png"
-dest_files=["res://.godot/imported/jungle_bg.png-2e3908dbe929c9a19d190d305fa5bc30.ctex"]
+source_file="res://scenes/Level/Assets/Background/01/PNG/Battleground3/Bright/jungle_bg.png"
+dest_files=["res://.godot/imported/jungle_bg.png-e07048b5237c0239e5b445e579c7776a.ctex"]
 
 [params]
 

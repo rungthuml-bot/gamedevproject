@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwj8v5nvlbcxh"
-path="res://.godot/imported/000_0057_heart9.png-c240d6895cfa8ff7248df5d7a2c2ef14.ctex"
+path="res://.godot/imported/000_0057_heart9.png-fa127606e82048874a5980ca127a868a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Background/Lava/PNG/Items/000_0057_heart9.png"
-dest_files=["res://.godot/imported/000_0057_heart9.png-c240d6895cfa8ff7248df5d7a2c2ef14.ctex"]
+source_file="res://scenes/Level/Assets/Background/Lava/PNG/Items/000_0057_heart9.png"
+dest_files=["res://.godot/imported/000_0057_heart9.png-fa127606e82048874a5980ca127a868a.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://caaabsptl8sdx"
-path="res://.godot/imported/statue.png-9599aa3272feccac16b8209cf4243fa8.ctex"
+path="res://.godot/imported/statue.png-cca3b4a970bd1b52ba724508011a6397.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Background/01/PNG/Battleground1/Pale/statue.png"
-dest_files=["res://.godot/imported/statue.png-9599aa3272feccac16b8209cf4243fa8.ctex"]
+source_file="res://scenes/Level/Assets/Background/01/PNG/Battleground1/Pale/statue.png"
+dest_files=["res://.godot/imported/statue.png-cca3b4a970bd1b52ba724508011a6397.ctex"]
 
 [params]
 

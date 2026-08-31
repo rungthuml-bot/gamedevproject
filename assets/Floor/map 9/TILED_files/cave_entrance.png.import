@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< Updated upstream:Assets/Floor/map 9/TILED_files/cave_entrance.png.import
 uid="uid://cauqtwa7vqu1u"
 path="res://.godot/imported/cave_entrance.png-5eba8a24027ea1f293369ce89dd5e2cc.ctex"
-=======
-uid="uid://bc3bmqbpndyxp"
-path="res://.godot/imported/pedestals.png-b17dcc8918fbe2df41637f8420b83fa0.ctex"
->>>>>>> Stashed changes:assets/source/craftpix/Tiled_files/pedestals.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<< Updated upstream:Assets/Floor/map 9/TILED_files/cave_entrance.png.import
 source_file="res://Assets/Floor/map 9/TILED_files/cave_entrance.png"
 dest_files=["res://.godot/imported/cave_entrance.png-5eba8a24027ea1f293369ce89dd5e2cc.ctex"]
-=======
-source_file="res://Assets/source/craftpix/Tiled_files/pedestals.png"
-dest_files=["res://.godot/imported/pedestals.png-b17dcc8918fbe2df41637f8420b83fa0.ctex"]
->>>>>>> Stashed changes:assets/source/craftpix/Tiled_files/pedestals.png.import
 
 [params]
 

@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Details/trap4.png.import
 uid="uid://cq8mi2kko82ql"
 path="res://.godot/imported/trap4.png-1d89f870499a0dfeb26f0af1b28592d1.ctex"
-=======
-uid="uid://ce5w0ci0kbvus"
-path="res://.godot/imported/000_0049_hit_point7.png-9b69f65420c91d00bfdc422003432433.ctex"
->>>>>>> Stashed changes:assets/source/craftpix/trap_stalactite/PNG/Items/000_0049_hit_point7.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Details/trap4.png.import
 source_file="res://Assets/Background/Lava/PNG/Details/trap4.png"
 dest_files=["res://.godot/imported/trap4.png-1d89f870499a0dfeb26f0af1b28592d1.ctex"]
-=======
-source_file="res://Assets/source/craftpix/trap_stalactite/PNG/Items/000_0049_hit_point7.png"
-dest_files=["res://.godot/imported/000_0049_hit_point7.png-9b69f65420c91d00bfdc422003432433.ctex"]
->>>>>>> Stashed changes:assets/source/craftpix/trap_stalactite/PNG/Items/000_0049_hit_point7.png.import
 
 [params]
 

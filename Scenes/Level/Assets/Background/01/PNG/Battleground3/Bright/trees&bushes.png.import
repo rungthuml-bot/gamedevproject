@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d225j5et22n52"
-path="res://.godot/imported/trees&bushes.png-56a63f64fa406ec01436ddf49b0f134b.ctex"
+path="res://.godot/imported/trees&bushes.png-e19a7a395bcaa93ce2c5e398d545a005.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Background/01/PNG/Battleground3/Bright/trees&bushes.png"
-dest_files=["res://.godot/imported/trees&bushes.png-56a63f64fa406ec01436ddf49b0f134b.ctex"]
+source_file="res://scenes/Level/Assets/Background/01/PNG/Battleground3/Bright/trees&bushes.png"
+dest_files=["res://.godot/imported/trees&bushes.png-e19a7a395bcaa93ce2c5e398d545a005.ctex"]
 
 [params]
 

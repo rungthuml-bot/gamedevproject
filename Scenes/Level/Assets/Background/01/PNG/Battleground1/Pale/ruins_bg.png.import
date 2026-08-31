@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cve082ytqwbrj"
-path="res://.godot/imported/ruins_bg.png-bc3741c0f45895b690c6dd00b914cf83.ctex"
+path="res://.godot/imported/ruins_bg.png-43e800b3c2839396c5df5c4ac038725f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Background/01/PNG/Battleground1/Pale/ruins_bg.png"
-dest_files=["res://.godot/imported/ruins_bg.png-bc3741c0f45895b690c6dd00b914cf83.ctex"]
+source_file="res://scenes/Level/Assets/Background/01/PNG/Battleground1/Pale/ruins_bg.png"
+dest_files=["res://.godot/imported/ruins_bg.png-43e800b3c2839396c5df5c4ac038725f.ctex"]
 
 [params]
 

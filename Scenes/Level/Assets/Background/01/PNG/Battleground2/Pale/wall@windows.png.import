@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxyy2dun5p3mr"
-path="res://.godot/imported/wall@windows.png-2a1c5417ad5ea90bf3e02c9552af6c3e.ctex"
+path="res://.godot/imported/wall@windows.png-d308a8b0fc618fdebe3199bdb079e2a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level/Assets/Background/01/PNG/Battleground2/Pale/wall@windows.png"
-dest_files=["res://.godot/imported/wall@windows.png-2a1c5417ad5ea90bf3e02c9552af6c3e.ctex"]
+source_file="res://scenes/Level/Assets/Background/01/PNG/Battleground2/Pale/wall@windows.png"
+dest_files=["res://.godot/imported/wall@windows.png-d308a8b0fc618fdebe3199bdb079e2a2.ctex"]
 
 [params]
 
