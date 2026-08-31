@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bpr3xb7q1kymd" path="res://scenes/systems/SavePoint.tscn" id="4_save"]
 [ext_resource type="PackedScene" uid="uid://csfin0y1x3riw" path="res://scenes/enemies/EnemySword.tscn" id="5_enemy"]
 [ext_resource type="PackedScene" path="res://scenes/characters/NPC.tscn" id="6_npc"]
+[ext_resource type="PackedScene" path="res://scenes/characters/NPCPrincess.tscn" id="7_npc_princess"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ground"]
 size = Vector2(1200, 100)
@@ -79,3 +80,6 @@ position = Vector2(350, 515)
 npc_name = "Camp Thief"
 portrait_emoji = "🧙"
 dialog = [{"speaker": "NPC", "text": "Halt, traveler! My name is Thief... wait, no, I'm just a normal guy around here."}, {"speaker": "Player", "text": "Then why do you look so suspicious?"}, {"speaker": "NPC", "text": "Haha, it's just my face. I was born this way. Good luck on your journey!"}]
+
+[node name="NPCPrincess" parent="." instance=ExtResource("7_npc_princess")]
+position = Vector2(700, 515)
