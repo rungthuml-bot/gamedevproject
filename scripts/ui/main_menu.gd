@@ -62,10 +62,10 @@ func _on_start_button_pressed() -> void:
 
 
 func _on_options_button_pressed() -> void:
-	SceneTransition.change_scene("res://Scenes/ui/Settings.tscn", 0.5)
+	SceneTransition.change_scene("res://scenes/ui/Settings.tscn", 0.5)
 
 func _on_credits_button_pressed() -> void:
-	SceneTransition.change_scene("res://Scenes/ui/Credits.tscn", 0.5)
+	SceneTransition.change_scene("res://scenes/ui/Credits.tscn", 0.5)
 
 func _on_exit_button_pressed() -> void:
 
@@ -81,4 +81,4 @@ func go_back() -> void:
 	
 	get_viewport().set_input_as_handled()
 	AudioManager.play_ui_click()
-	SceneTransition.change_scene("res://Scenes/ui/TitleScreen.tscn", 0.5)
+	SceneTransition.change_scene("res://scenes/ui/TitleScreen.tscn", 0.5)

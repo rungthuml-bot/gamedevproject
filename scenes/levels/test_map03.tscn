@@ -1,0 +1,67 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/levels/base_level.gd" id="1_base"]
+[ext_resource type="PackedScene" path="res://scenes/systems/MapDoor.tscn" id="2_door"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ground"]
+size = Vector2(1200, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wall"]
+size = Vector2(100, 800)
+
+[node name="TestMap03" type="Node2D"]
+script = ExtResource("1_base")
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(600, 600)
+collision_layer = 1
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+shape = SubResource("RectangleShape2D_ground")
+
+[node name="ColorRect" type="ColorRect" parent="Ground"]
+offset_left = -600.0
+offset_top = -50.0
+offset_right = 600.0
+offset_bottom = 50.0
+color = Color(0.2, 0.2, 0.8, 1)
+
+[node name="LeftWall" type="StaticBody2D" parent="."]
+position = Vector2(-50, 200)
+collision_layer = 1
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall"]
+shape = SubResource("RectangleShape2D_wall")
+
+[node name="RightWall" type="StaticBody2D" parent="."]
+position = Vector2(1250, 200)
+collision_layer = 1
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
+shape = SubResource("RectangleShape2D_wall")
+
+[node name="Spawns" type="Node2D" parent="."]
+
+[node name="Default" type="Marker2D" parent="Spawns"]
+position = Vector2(600, 500)
+
+[node name="DoorLeft" type="Marker2D" parent="Spawns"]
+position = Vector2(100, 500)
+
+[node name="DoorRight" type="Marker2D" parent="Spawns"]
+position = Vector2(1100, 500)
+
+[node name="Doors" type="Node2D" parent="."]
+
+[node name="DoorLeft" parent="Doors" instance=ExtResource("2_door")]
+position = Vector2(50, 500)
+target_scene_path = "res://scenes/levels/test_map02.tscn"
+target_spawn_id = "DoorRight"
+
+[node name="DoorRight" parent="Doors" instance=ExtResource("2_door")]
+position = Vector2(1150, 500)
+target_scene_path = "res://scenes/levels/test_map04.tscn"
+target_spawn_id = "DoorLeft"

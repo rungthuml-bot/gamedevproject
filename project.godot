@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="Game2DProject"
-run/main_scene="uid://6larbte3yono"
+run/main_scene="res://scenes/levels/test_map01.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://icon.svg"
+
 
 [autoload]
 

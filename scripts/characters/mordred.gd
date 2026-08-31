@@ -59,6 +59,11 @@ var attack_type = ""
 # จำนวนครั้งที่โจมตีกลางอากาศ
 var air_attacks_used = 0
 
+var current_attack_damage := 10
+var current_attack_shake := 5.0
+var max_jumps := 2
+var jumps_left := 2
+
 func _ready():
 	attack_collision.disabled = true
 
@@ -108,12 +113,21 @@ func emit_initial_ui_signals() -> void:
 	potion_count_changed.emit(potion_count)
 
 # START ATTACK
-func start_attack():
+func start_attack(is_heavy: bool = false):
 
 	# เริ่มโจมตีครั้งแรก
 	if not is_attacking:
 
 		attack_queued = false
+		
+		# HEAVY ATTACK
+		if is_heavy and is_on_floor():
+			is_attacking = true
+			attack_type = "heavy"
+			current_attack_damage = 25
+			current_attack_shake = 10.0
+			anim.play("Attack_4")
+			return
 		
 		# GROUND ATTACK
 		if is_on_floor():
@@ -122,6 +136,8 @@ func start_attack():
 			attack_type = "ground"
 
 			combo = 1
+			current_attack_damage = 10
+			current_attack_shake = 5.0
 
 			anim.play("Attack_1")
 
@@ -137,6 +153,8 @@ func start_attack():
 
 			air_combo += 1
 			air_attacks_used += 1
+			current_attack_damage = 10
+			current_attack_shake = 5.0
 
 			anim.play("Attack_" + str(air_combo))
 
@@ -246,10 +264,12 @@ func _physics_process(delta: float) -> void:
 
 		air_attacks_used = 0
 		air_combo = 0
+		jumps_left = max_jumps
 
 	# JUMP
-	if Input.is_action_just_pressed("Jump") and is_on_floor():
+	if Input.is_action_just_pressed("Jump") and jumps_left > 0:
 		velocity.y = JUMP_VELOCITY
+		jumps_left -= 1
 
 	var current_speed := WALK_SPEED
 	if shift_pressed and shift_hold_timer >= 0.2:
@@ -319,7 +339,12 @@ func _physics_process(delta: float) -> void:
 
 			else:
 
-				start_attack()
+				start_attack(false)
+
+	# HEAVY ATTACK INPUT
+	if Input.is_action_just_pressed("attack_heavy"):
+		if not is_attacking and is_on_floor():
+			start_attack(true)
 
 	# DASH INPUT
 	if trigger_dash and dash_cooldown_timer <= 0.0 and not is_knockbacked:
@@ -349,7 +374,7 @@ func _on_animated_sprite_2d_animation_finished():
 
 			attack_queued = false
 
-			start_attack()
+			start_attack(false)
 
 		# ไม่มีการโจมตีต่อ
 		else:
@@ -362,6 +387,12 @@ func _on_animated_sprite_2d_animation_finished():
 
 			update_animation()
 
+	# HEAVY ATTACK FINISHED
+	elif attack_type == "heavy":
+		is_attacking = false
+		attack_type = ""
+		update_animation()
+
 	# AIR ATTACK FINISHED
 	elif attack_type == "air":
 
@@ -370,7 +401,7 @@ func _on_animated_sprite_2d_animation_finished():
 
 			attack_queued = false
 
-			start_attack()
+			start_attack(false)
 
 		# ไม่มีการโจมตีต่อ
 		else:
@@ -407,8 +438,8 @@ func _on_attack_area_body_entered(body):
 
 func _deal_damage(enemy: Node) -> void:
 	if enemy.has_method("take_damage"):
-		enemy.take_damage(10)
-		apply_camera_shake(5.0)
+		enemy.take_damage(current_attack_damage)
+		apply_camera_shake(current_attack_shake)
 
 # =========================================================
 # Health & Damage
