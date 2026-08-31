@@ -59,8 +59,7 @@ var move_direction: float = 1.0
 # Node References
 # =========================================================
 
-@onready var polygon: Polygon2D = $Polygon2D
-@onready var sword_visual: Polygon2D = $SwordVisual
+@onready var anim: AnimatedSprite2D = get_node_or_null("AnimatedSprite2D")
 @onready var attack_hitbox: Area2D = $AttackHitbox
 
 # =========================================================
@@ -69,9 +68,10 @@ var move_direction: float = 1.0
 
 func _ready() -> void:
 	start_position_x = global_position.x
-	sword_visual.visible = false
 	scale = Vector2(2.0, 2.0) # ทำให้ตัวใหญ่เป็น 2 เท่า
-	polygon.color = Color(0.3, 0.0, 0.4, 1.0) # สีม่วงเข้ม
+	if anim:
+		anim.play("Idle")
+		anim.modulate = Color(0.8, 0.5, 0.9, 1.0) # สีม่วงเข้มสำหรับบอส
 
 # =========================================================
 # Physics Process
@@ -95,6 +95,7 @@ func _physics_process(delta: float) -> void:
 		update_ai_behavior()
 
 	move_and_slide()
+	update_animation()
 
 # =========================================================
 # AI Logic
@@ -144,11 +145,20 @@ func process_chase(player_x: float) -> void:
 
 func update_facing_direction() -> void:
 	if move_direction != 0:
-		polygon.scale.x = move_direction
-		sword_visual.position.x = 16 * move_direction
-		sword_visual.scale.x = move_direction
+		if anim:
+			anim.flip_h = (move_direction < 0)
+			
 		attack_hitbox.position.x = 16 * move_direction
 		attack_hitbox.scale.x = move_direction
+
+func update_animation() -> void:
+	if is_dying or is_attacking or not anim:
+		return
+		
+	if velocity.x != 0:
+		anim.play("Walk")
+	else:
+		anim.play("Idle")
 
 func process_attack(player: Node2D) -> void:
 	is_attacking = true
@@ -161,8 +171,11 @@ func process_attack(player: Node2D) -> void:
 		update_facing_direction()
 
 	# Telegraph (ง้าง)
-	sword_visual.visible = true
-	sword_visual.color = Color.YELLOW if not is_enraged else Color.ORANGE
+	if anim:
+		if is_enraged:
+			anim.play("Attack2")
+		else:
+			anim.play("Attack1")
 	
 	# Wind-up (เร็วกว่าปกติถ้าเป็นร่าง 2)
 	var windup_time = 0.5 if not is_enraged else 0.2
@@ -172,8 +185,6 @@ func process_attack(player: Node2D) -> void:
 		return
 		
 	# Attack!
-	sword_visual.color = Color.WHITE
-	
 	# Check if player is in hitbox
 	var bodies = attack_hitbox.get_overlapping_bodies()
 	for b in bodies:
@@ -187,7 +198,6 @@ func process_attack(player: Node2D) -> void:
 	var recovery = 0.4 if not is_enraged else 0.2
 	await get_tree().create_timer(recovery).timeout
 	
-	sword_visual.visible = false
 	is_attacking = false
 	current_state = State.CHASE
 
@@ -207,10 +217,11 @@ func take_damage(amount: int) -> void:
 	if hp <= (MAX_HP * 0.5) and not is_enraged:
 		trigger_enrage()
 
-	if polygon != null:
+	if anim != null:
 		var tween := create_tween()
-		polygon.modulate = Color.RED
-		tween.tween_property(polygon, "modulate", Color.WHITE, 0.1)
+		var base_color = Color(1.0, 0.4, 0.4, 1.0) if is_enraged else Color(0.8, 0.5, 0.9, 1.0)
+		anim.modulate = Color.RED
+		tween.tween_property(anim, "modulate", base_color, 0.1)
 
 	apply_knockback()
 
@@ -224,7 +235,8 @@ func trigger_enrage() -> void:
 	attack_cooldown = 1.0
 	
 	# เปลี่ยนสีเป็นแดง
-	polygon.color = Color(0.8, 0.0, 0.1, 1.0)
+	if anim:
+		anim.modulate = Color(1.0, 0.4, 0.4, 1.0)
 	
 	# เอฟเฟกต์สะเทือนนิดหน่อยตอนเปลี่ยนร่าง
 	var player = get_tree().get_first_node_in_group("player")
@@ -243,10 +255,12 @@ func die() -> void:
 	is_dying = true
 	velocity = Vector2.ZERO
 
+	if anim:
+		anim.play("Die")
+
 	var tween := create_tween()
 	tween.set_parallel(true)
 	tween.tween_property(self, "modulate:a", 0.0, 1.5)
-	tween.tween_property(self, "scale", Vector2(0.1, 0.1), 1.5)
 
-	await tween.finished
+	await get_tree().create_timer(1.5).timeout
 	queue_free()

@@ -10,6 +10,7 @@ extends StaticBody2D
 
 @onready var prompt_label: Label = $PromptLabel
 @onready var interaction_area: Area2D = $InteractionArea
+@onready var anim: AnimatedSprite2D = get_node_or_null("AnimatedSprite2D")
 
 var player_nearby: bool = false
 
@@ -17,6 +18,9 @@ func _ready() -> void:
 	prompt_label.visible = false
 	interaction_area.body_entered.connect(_on_interaction_area_body_entered)
 	interaction_area.body_exited.connect(_on_interaction_area_body_exited)
+	
+	if anim:
+		anim.play("Idle")
 	
 	if has_node("/root/LocaleManager"):
 		get_node("/root/LocaleManager").language_changed.connect(_on_language_changed)

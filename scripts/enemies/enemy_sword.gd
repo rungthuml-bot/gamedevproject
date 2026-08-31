@@ -48,8 +48,7 @@ var move_direction: float = 1.0
 # Node References
 # =========================================================
 
-@onready var polygon: Polygon2D = $Polygon2D
-@onready var sword_visual: Polygon2D = $SwordVisual
+@onready var anim: AnimatedSprite2D = get_node_or_null("AnimatedSprite2D")
 @onready var attack_hitbox: Area2D = $AttackHitbox
 
 # =========================================================
@@ -58,7 +57,8 @@ var move_direction: float = 1.0
 
 func _ready() -> void:
 	start_position_x = global_position.x
-	sword_visual.visible = false
+	if anim:
+		anim.play("Idle")
 
 # =========================================================
 # Physics Process
@@ -82,6 +82,7 @@ func _physics_process(delta: float) -> void:
 		update_ai_behavior()
 
 	move_and_slide()
+	update_animation()
 
 # =========================================================
 # AI Logic
@@ -132,11 +133,20 @@ func process_chase(player_x: float) -> void:
 func update_facing_direction() -> void:
 	if move_direction != 0:
 		# Flip visuals and hitboxes depending on direction
-		polygon.scale.x = move_direction
-		sword_visual.position.x = 16 * move_direction
-		sword_visual.scale.x = move_direction
+		if anim:
+			anim.flip_h = (move_direction < 0)
+		
 		attack_hitbox.position.x = 16 * move_direction
 		attack_hitbox.scale.x = move_direction
+
+func update_animation() -> void:
+	if is_dying or is_attacking or not anim:
+		return
+		
+	if velocity.x != 0:
+		anim.play("Walk")
+	else:
+		anim.play("Idle")
 
 func process_attack(player: Node2D) -> void:
 	is_attacking = true
@@ -149,8 +159,8 @@ func process_attack(player: Node2D) -> void:
 		update_facing_direction()
 
 	# Telegraph (ง้างดาบ)
-	sword_visual.visible = true
-	sword_visual.color = Color.YELLOW
+	if anim:
+		anim.play("Attack1")
 	
 	# Wait for wind-up
 	await get_tree().create_timer(0.3).timeout
@@ -159,8 +169,6 @@ func process_attack(player: Node2D) -> void:
 		return
 		
 	# Attack!
-	sword_visual.color = Color.WHITE
-	
 	# Check if player is in hitbox
 	var bodies = attack_hitbox.get_overlapping_bodies()
 	for b in bodies:
@@ -172,7 +180,6 @@ func process_attack(player: Node2D) -> void:
 	
 	# Wait for swing recovery
 	await get_tree().create_timer(0.2).timeout
-	sword_visual.visible = false
 	is_attacking = false
 	current_state = State.CHASE
 
@@ -187,10 +194,10 @@ func take_damage(amount: int) -> void:
 	hp -= amount
 	hp = max(hp, 0)
 
-	if polygon != null:
+	if anim != null:
 		var tween := create_tween()
-		polygon.modulate = Color.RED
-		tween.tween_property(polygon, "modulate", Color.WHITE, 0.1)
+		anim.modulate = Color.RED
+		tween.tween_property(anim, "modulate", Color.WHITE, 0.1)
 
 	apply_knockback()
 
@@ -208,10 +215,12 @@ func die() -> void:
 	is_dying = true
 	velocity = Vector2.ZERO
 
+	if anim:
+		anim.play("Die")
+
 	var tween := create_tween()
 	tween.set_parallel(true)
-	tween.tween_property(self, "modulate:a", 0.0, 0.3)
-	tween.tween_property(self, "scale", Vector2(0.1, 0.1), 0.3)
+	tween.tween_property(self, "modulate:a", 0.0, 0.5)
 
-	await tween.finished
+	await get_tree().create_timer(0.5).timeout
 	queue_free()

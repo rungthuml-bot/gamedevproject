@@ -34,3 +34,4 @@ res://scenes/traps/stalactite/trap_stalactite.gd
 res://scenes/ui/HUD.tscn
 res://scripts/ui/credits.gd
 res://scenes/enemies/Dummy.tscn
+res://scenes/enemies/EnemySword.tscn
