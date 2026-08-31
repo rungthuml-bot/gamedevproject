@@ -204,7 +204,7 @@ func take_damage(amount: int) -> void:
 	hp_bar.value = hp
 
 	# Phase Check
-	if hp <= (MAX_HP / 2) and not is_enraged:
+	if hp <= (MAX_HP * 0.5) and not is_enraged:
 		trigger_enrage()
 
 	if polygon != null:
