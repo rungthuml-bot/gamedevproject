@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://csfin0y1x3riw"]
 
 [ext_resource type="Script" uid="uid://dgsq5y3drb4t7" path="res://scripts/enemies/enemy_sword.gd" id="1_3gvst"]
-[ext_resource type="Texture2D" uid="uid://car800sx2vwm6" path="res://assets/Enemy/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Attack1.png" id="2_mqu0k"]
-[ext_resource type="Texture2D" uid="uid://17f8tgwbipye" path="res://assets/Enemy/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Die.png" id="3_56nyn"]
-[ext_resource type="Texture2D" uid="uid://7to5otgtcqvv" path="res://assets/Enemy/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Hurt.png" id="4_76wy0"]
-[ext_resource type="Texture2D" uid="uid://xipwkjscvn5r" path="res://assets/Enemy/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Idle.png" id="5_8w3qn"]
-[ext_resource type="Texture2D" uid="uid://4btnhfev5dqr" path="res://assets/Enemy/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Walk.png" id="6_tf03t"]
+[ext_resource type="Texture2D" uid="uid://cm5naa8rok8i2" path="res://assets/Enemy/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Attack1.png" id="2_mqu0k"]
+[ext_resource type="Texture2D" uid="uid://c4otywwr6xcpa" path="res://assets/Enemy/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Die.png" id="3_56nyn"]
+[ext_resource type="Texture2D" uid="uid://dve0kppo1mnf5" path="res://assets/Enemy/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Hurt.png" id="4_76wy0"]
+[ext_resource type="Texture2D" uid="uid://ctppxwiaskdr5" path="res://assets/Enemy/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Idle.png" id="5_8w3qn"]
+[ext_resource type="Texture2D" uid="uid://dksw5fm8yyr7n" path="res://assets/Enemy/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Walk.png" id="6_tf03t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_enemy"]
 size = Vector2(32, 70)

@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://o86gt0h6457t"]
 
 [ext_resource type="Script" uid="uid://dhj1prq1rlgra" path="res://scripts/enemies/enemy_axe.gd" id="1_3gvst"]
-[ext_resource type="Texture2D" uid="uid://bu8xjm0waujgr" path="res://assets/Enemy/Skeleton_Yellow/Skeleton_With_VFX/Skeleton_01_Yellow_Attack1.png" id="2_7eb17"]
-[ext_resource type="Texture2D" uid="uid://cvyws2l54bd4y" path="res://assets/Enemy/Skeleton_Yellow/Skeleton_With_VFX/Skeleton_01_Yellow_Die.png" id="3_kaqef"]
-[ext_resource type="Texture2D" uid="uid://dxe8uesde0h2q" path="res://assets/Enemy/Skeleton_Yellow/Skeleton_With_VFX/Skeleton_01_Yellow_Hurt.png" id="4_ndor6"]
-[ext_resource type="Texture2D" uid="uid://7rxrafu4catv" path="res://assets/Enemy/Skeleton_Yellow/Skeleton_With_VFX/Skeleton_01_Yellow_Idle.png" id="5_7gb5t"]
-[ext_resource type="Texture2D" uid="uid://c1tcrh7eyq7j4" path="res://assets/Enemy/Skeleton_Yellow/Skeleton_With_VFX/Skeleton_01_Yellow_Walk.png" id="6_lflgx"]
+[ext_resource type="Texture2D" uid="uid://c4rgncrxqp0ny" path="res://assets/Enemy/Skeleton_Yellow/Skeleton_With_VFX/Skeleton_01_Yellow_Attack1.png" id="2_7eb17"]
+[ext_resource type="Texture2D" uid="uid://mk0fkd1nrvvi" path="res://assets/Enemy/Skeleton_Yellow/Skeleton_With_VFX/Skeleton_01_Yellow_Die.png" id="3_kaqef"]
+[ext_resource type="Texture2D" uid="uid://dc1dnt6b88awx" path="res://assets/Enemy/Skeleton_Yellow/Skeleton_With_VFX/Skeleton_01_Yellow_Hurt.png" id="4_ndor6"]
+[ext_resource type="Texture2D" uid="uid://dvnpi0lcw887o" path="res://assets/Enemy/Skeleton_Yellow/Skeleton_With_VFX/Skeleton_01_Yellow_Idle.png" id="5_7gb5t"]
+[ext_resource type="Texture2D" uid="uid://4usghb1i143i" path="res://assets/Enemy/Skeleton_Yellow/Skeleton_With_VFX/Skeleton_01_Yellow_Walk.png" id="6_lflgx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_enemy"]
 size = Vector2(32, 70)

@@ -1,9 +1,9 @@
 ﻿[gd_scene format=4 uid="uid://d5xh3gubycbr"]
 
 [ext_resource type="Script" path="res://scripts/levels/base_level.gd" id="99_base"]
-[ext_resource type="Texture2D" uid="uid://bkjnm17l7sxj7" path="res://assets/Background/background1/PNG/background 4/Plan 3.png" id="1_xcfcc"]
-[ext_resource type="Texture2D" uid="uid://cbg20e6afl5rg" path="res://assets/Background/background1/PNG/background 4/Plan 2.png" id="2_48hld"]
-[ext_resource type="Texture2D" uid="uid://jfuki3f005nj" path="res://assets/Background/background1/PNG/background 4/Plan 1.png" id="3_l45re"]
+[ext_resource type="Texture2D" uid="uid://8e83hlavtklv" path="res://assets/Background/background1/PNG/background 4/Plan 3.png" id="1_xcfcc"]
+[ext_resource type="Texture2D" uid="uid://c5g2opxo23ecp" path="res://assets/Background/background1/PNG/background 4/Plan 2.png" id="2_48hld"]
+[ext_resource type="Texture2D" uid="uid://df266ftkhgmdn" path="res://assets/Background/background1/PNG/background 4/Plan 1.png" id="3_l45re"]
 [ext_resource type="PackedScene" uid="uid://dvj03a3fowopm" path="res://scenes/characters/Mordred.tscn" id="100_player"]
 [ext_resource type="PackedScene" path="res://scenes/systems/MapDoor.tscn" id="101_door"]
 

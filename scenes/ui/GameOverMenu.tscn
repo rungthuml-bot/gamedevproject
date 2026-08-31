@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://bxqwlxm7xh1w6"]
 
 [ext_resource type="Script" uid="uid://bab2hyej3bibk" path="res://scripts/ui/game_over_menu.gd" id="1_gstvf"]
-[ext_resource type="Texture2D" uid="uid://bl2i2twquup0" path="res://assets/Background/game_over_bg.png" id="2_e1qlq"]
+[ext_resource type="Texture2D" uid="uid://bgq87hcoyhy67" path="res://assets/Background/game_over_bg.png" id="2_e1qlq"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_focus"]
 

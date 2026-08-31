@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://b4ofgwfoeyob0"]
 
-[ext_resource type="Script" uid="uid://b7vb7c1mfqfs" path="res://scripts/traps/stalactite/trap_stalactite.gd" id="1_o3xd5"]
-[ext_resource type="Texture2D" uid="uid://ccj8r6m6nwe1r" path="res://assets/game/traps/stalactite/lava_drop1_1.png" id="2_o3xd5"]
-[ext_resource type="Texture2D" uid="uid://dhh124uyrpv0e" path="res://assets/game/traps/stalactite/lava_drop1_2.png" id="3_nsm64"]
-[ext_resource type="Texture2D" uid="uid://cjkc1ssogrpte" path="res://assets/game/traps/stalactite/lava_drop1_3.png" id="4_pvvdr"]
-[ext_resource type="Texture2D" uid="uid://7p4k337gs702" path="res://assets/game/traps/stalactite/lava_drop1_4.png" id="5_ylqt8"]
+[ext_resource type="Script" uid="uid://cci6lkkgs6ral" path="res://scripts/traps/stalactite/trap_stalactite.gd" id="1_o3xd5"]
+[ext_resource type="Texture2D" uid="uid://cnhtbbduhkk1h" path="res://assets/game/traps/stalactite/lava_drop1_1.png" id="2_o3xd5"]
+[ext_resource type="Texture2D" uid="uid://4l42p0xnj456" path="res://assets/game/traps/stalactite/lava_drop1_2.png" id="3_nsm64"]
+[ext_resource type="Texture2D" uid="uid://cml2ki4p3pkrc" path="res://assets/game/traps/stalactite/lava_drop1_3.png" id="4_pvvdr"]
+[ext_resource type="Texture2D" uid="uid://b8bh5x5vla6w1" path="res://assets/game/traps/stalactite/lava_drop1_4.png" id="5_ylqt8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_j2vdu"]
 animations = [{

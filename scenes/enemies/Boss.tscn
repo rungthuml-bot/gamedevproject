@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://renvrfx4w4so"]
 
 [ext_resource type="Script" uid="uid://dmjuwhao3vq0m" path="res://scripts/enemies/boss.gd" id="1_3gvst"]
-[ext_resource type="Texture2D" uid="uid://ujuo6rhcetfl" path="res://assets/Enemy/Undead executioner puppet/png/attacking.png" id="2_q58yd"]
-[ext_resource type="Texture2D" uid="uid://db5tf6s2fb8qe" path="res://assets/Enemy/Undead executioner puppet/png/death.png" id="3_qe33a"]
-[ext_resource type="Texture2D" uid="uid://d4fp5pshhvyfv" path="res://assets/Enemy/Undead executioner puppet/png/idle.png" id="4_mvl2t"]
-[ext_resource type="Texture2D" uid="uid://buikd1tp4vmr8" path="res://assets/Enemy/Undead executioner puppet/png/idle2.png" id="5_7fs2j"]
+[ext_resource type="Texture2D" uid="uid://dsoh6bp2kxa7y" path="res://assets/Enemy/Undead executioner puppet/png/attacking.png" id="2_q58yd"]
+[ext_resource type="Texture2D" uid="uid://bjdj42b4mf4me" path="res://assets/Enemy/Undead executioner puppet/png/death.png" id="3_qe33a"]
+[ext_resource type="Texture2D" uid="uid://c2cmsgoqyjgqu" path="res://assets/Enemy/Undead executioner puppet/png/idle.png" id="4_mvl2t"]
+[ext_resource type="Texture2D" uid="uid://c1rudll4g6ro6" path="res://assets/Enemy/Undead executioner puppet/png/idle2.png" id="5_7fs2j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_enemy"]
 size = Vector2(32, 70)

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://do0cvqktdnlcq"]
 
 [ext_resource type="Script" uid="uid://bydvchi2edji1" path="res://scripts/characters/npc.gd" id="1_npc"]
-[ext_resource type="Texture2D" uid="uid://bt5ai3vft2gkn" path="res://assets/Npc/FREE - Blacksmith 2D Pixel Art/Sprites/BLACKSMITH.png" id="2_hnoa0"]
+[ext_resource type="Texture2D" uid="uid://b23b21w3e6tox" path="res://assets/Npc/FREE - Blacksmith 2D Pixel Art/Sprites/BLACKSMITH.png" id="2_hnoa0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_body"]
 size = Vector2(32, 70)
