@@ -51,7 +51,7 @@ func start_boss_fight() -> void:
 	if boss and boss.current_state == Boss.State.PATROL:
 		boss.current_state = Boss.State.CHASE
 
-func _on_boss_hp_changed(current_hp: int, max_hp: int) -> void:
+func _on_boss_hp_changed(current_hp: int, _max_hp: int) -> void:
 	# ทำ Animate หลอดเลือดลดลงได้ถ้าต้องการ ตอนนี้ตั้งค่าตรงๆ ไปก่อน
 	var tween = create_tween()
 	tween.tween_property(hp_bar, "value", current_hp, 0.2).set_trans(Tween.TRANS_CUBIC)
