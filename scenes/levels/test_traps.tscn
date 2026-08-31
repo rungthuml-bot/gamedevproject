@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://d4e5f6g7h8i9j"]
+
+[ext_resource type="PackedScene" uid="uid://dvj03a3fowopm" path="res://scenes/characters/Mordred.tscn" id="1_player"]
+[ext_resource type="PackedScene" uid="uid://cx3gwn3y65861" path="res://scenes/traps/lava_pit/trap_lava_pit.tscn" id="2_lava"]
+[ext_resource type="PackedScene" uid="uid://2ioynf1rq34" path="res://scenes/traps/rail_saw/trap_rail_saw.tscn" id="3_saw"]
+[ext_resource type="PackedScene" uid="uid://c00hwfpaiksmp" path="res://scenes/traps/spikes/trap_spikes.tscn" id="4_spikes"]
+[ext_resource type="PackedScene" uid="uid://b4ofgwfoeyob0" path="res://scenes/traps/stalactite/trap_stalactite.tscn" id="5_stalactite"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ground"]
+size = Vector2(2000, 40)
+
+[node name="TestTraps" type="Node2D"]
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(0, 300)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+shape = SubResource("RectangleShape2D_ground")
+
+[node name="Player" parent="." instance=ExtResource("1_player")]
+position = Vector2(-400, 200)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(1.5, 1.5)
+
+[node name="LavaPit" parent="." instance=ExtResource("2_lava")]
+position = Vector2(-200, 280)
+
+[node name="RailSaw" parent="." instance=ExtResource("3_saw")]
+position = Vector2(0, 280)
+
+[node name="Spikes" parent="." instance=ExtResource("4_spikes")]
+position = Vector2(200, 280)
+
+[node name="Stalactite" parent="." instance=ExtResource("5_stalactite")]
+position = Vector2(400, 240)

@@ -70,6 +70,7 @@ shadow_color = Color(0, 0, 0, 0.5)
 shadow_size = 12
 
 [node name="PauseMenu" type="CanvasLayer" unique_id=1247517394]
+layer = 50
 script = ExtResource("1_jvnd5")
 
 [node name="Control" type="Control" parent="." unique_id=626159108]

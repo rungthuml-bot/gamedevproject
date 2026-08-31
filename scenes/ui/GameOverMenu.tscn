@@ -127,6 +127,7 @@ _data = {
 
 [node name="GameOverMenu" type="CanvasLayer" unique_id=235732575]
 process_mode = 3
+layer = 50
 script = ExtResource("1_gstvf")
 
 [node name="Control" type="Control" parent="." unique_id=2097113345]

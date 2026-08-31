@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://c00hwfpaiksmp"]
+
+[ext_resource type="Script" uid="uid://beedifyvcctgj" path="res://scenes/traps/spikes/trap_spikes.gd" id="1_lsp6c"]
+[ext_resource type="Texture2D" uid="uid://ch7vlbaljiq5h" path="res://assets/game/traps/spikes/4.png" id="2_jbaou"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ravnh"]
+atlas = ExtResource("2_jbaou")
+region = Rect2(16, 36, 16, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gken6"]
+atlas = ExtResource("2_jbaou")
+region = Rect2(64, 36, 16, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4s7qa"]
+atlas = ExtResource("2_jbaou")
+region = Rect2(112, 36, 16, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dh3r5"]
+atlas = ExtResource("2_jbaou")
+region = Rect2(160, 36, 16, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbydp"]
+atlas = ExtResource("2_jbaou")
+region = Rect2(208, 36, 16, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1eesg"]
+atlas = ExtResource("2_jbaou")
+region = Rect2(256, 36, 16, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cw8qs"]
+atlas = ExtResource("2_jbaou")
+region = Rect2(304, 36, 16, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j2vdu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ravnh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gken6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4s7qa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dh3r5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pbydp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1eesg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cw8qs")
+}],
+"loop": 1,
+"name": &"spikes",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ras4n"]
+radius = 17.0
+height = 40.0
+
+[node name="trap_spikes" type="Area2D" unique_id=2137479968]
+script = ExtResource("1_lsp6c")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1669475144]
+scale = Vector2(2.429392, 3.467987)
+sprite_frames = SubResource("SpriteFrames_j2vdu")
+animation = &"spikes"
+frame = 5
+frame_progress = 0.48771012
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1166086688]
+shape = SubResource("CapsuleShape2D_ras4n")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

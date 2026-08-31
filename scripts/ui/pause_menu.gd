@@ -44,6 +44,27 @@ func _ready() -> void:
 	if exit_button != null:
 		exit_button.pressed.connect(_on_exit_button_pressed)
 
+	# Translation
+	if has_node("/root/LocaleManager"):
+		var lm = get_node("/root/LocaleManager")
+		lm.language_changed.connect(_on_language_changed)
+		_apply_translation()
+
+func _apply_translation() -> void:
+	if not has_node("/root/LocaleManager"): return
+	var lm = get_node("/root/LocaleManager")
+	
+	if $Control/MarginContainer/VBoxContainer/TitleLabel:
+		$Control/MarginContainer/VBoxContainer/TitleLabel.text = lm.t("PAUSED")
+	
+	if resume_button: resume_button.text = lm.t("RESUME")
+	if save_button: save_button.text = lm.t("SAVE_GAME")
+	if main_menu_button: main_menu_button.text = lm.t("MAIN_MENU")
+	if exit_button: exit_button.text = lm.t("EXIT_GAME")
+
+func _on_language_changed(_lang: String) -> void:
+	_apply_translation()
+
 
 # =========================================================
 # Input Management

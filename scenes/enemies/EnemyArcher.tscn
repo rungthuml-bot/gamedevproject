@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://4r5tk8bvi757"]
+
+[ext_resource type="Script" path="res://scripts/enemies/enemy_archer.gd" id="1_3gvst"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_enemy"]
+size = Vector2(32, 70)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_attack"]
+size = Vector2(39, 64)
+
+[node name="EnemyArcher" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_3gvst")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_enemy")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.2, 0.8, 0.2, 1)
+polygon = PackedVector2Array(-16, -35, 16, -35, 16, 35, -16, 35)
+
+[node name="SwordVisual" type="Polygon2D" parent="."]
+visible = false
+position = Vector2(16, -10)
+color = Color(0.4, 0.2, 0, 1)
+polygon = PackedVector2Array(0, -15, 5, -20, 10, -10, 10, 10, 5, 20, 0, 15)
+
+[node name="AttackHitbox" type="Area2D" parent="."]
+position = Vector2(16, -10)
+collision_layer = 0
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackHitbox"]
+position = Vector2(30, 0)
+shape = SubResource("RectangleShape2D_attack")

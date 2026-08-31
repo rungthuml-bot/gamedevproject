@@ -8,7 +8,7 @@ extends CanvasLayer
 @onready var control: Control = $Control
 @onready var inventory_grid: GridContainer = $Control/Background/InventoryGrid
 @onready var charm_name_label: Label = $Control/Background/InfoPanel/CharmName
-@onready var charm_desc_label: Label = $Control/Background/InfoPanel/CharmDescription
+@onready var charm_desc_label: Label = $Control/Background/InfoPanel/DescMargin/CharmDescription
 
 
 # =========================================================
@@ -18,17 +18,17 @@ extends CanvasLayer
 var charms_database: Dictionary = {
 	"speed_charm": {
 		"name": "Wayward Compass",
-		"description": "เพิ่มความเร็วการเคลื่อนที่และการพุ่งหลบ 20%",
+		"description": "Increases movement and dash speed by 20%",
 		"equipped": false
 	},
 	"power_charm": {
 		"name": "Unbreakable Strength",
-		"description": "เพิ่มพลังการโจมตีฟันดาบแรงขึ้นอย่างมาก",
+		"description": "Significantly increases sword attack power",
 		"equipped": false
 	},
 	"health_charm": {
 		"name": "Heart Container",
-		"description": "เพิ่มพลังชีวิตสูงสุดของตัวละคร",
+		"description": "Increases maximum health",
 		"equipped": false
 	}
 }
@@ -45,6 +45,32 @@ func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	control.hide()
 	setup_charm_buttons()
+	
+	# Translation
+	if has_node("/root/LocaleManager"):
+		var lm = get_node("/root/LocaleManager")
+		lm.language_changed.connect(_on_language_changed)
+		_apply_translation()
+
+func _apply_translation() -> void:
+	if not has_node("/root/LocaleManager"): return
+	var lm = get_node("/root/LocaleManager")
+	
+	if get_node_or_null("Control/Background/TitleLabel"):
+		get_node("Control/Background/TitleLabel").text = lm.t("CHARMS")
+	if get_node_or_null("Control/Background/EquippedPanel/EquippedContainer/EquippedLabel"):
+		get_node("Control/Background/EquippedPanel/EquippedContainer/EquippedLabel").text = lm.t("EQUIPPED_CHARMS")
+	if $Control/Background/BackButton: $Control/Background/BackButton.text = lm.t("BACK")
+	
+	if charm_name_label.text == "Select a Charm" or charm_name_label.text == "เลือกเครื่องราง":
+		charm_name_label.text = lm.t("SELECT_A_CHARM")
+		charm_desc_label.text = lm.t("HOVER_CHARM_DESC")
+	else:
+		# Need to update the currently selected charm
+		_update_selected_charm_text()
+
+func _on_language_changed(_lang: String) -> void:
+	_apply_translation()
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -68,10 +94,13 @@ func toggle_menu() -> void:
 # Charm Selection Systems
 # =========================================================
 
+var charm_buttons: Dictionary = {}
+
 func setup_charm_buttons() -> void:
 
 	for charm_id in charms_database.keys():
 		var charm_info: Dictionary = charms_database[charm_id]
+		charm_info["equipped"] = SaveManager.is_charm_equipped(charm_id)
 		var btn := Button.new()
 		
 		btn.custom_minimum_size = Vector2(64, 64)
@@ -80,13 +109,62 @@ func setup_charm_buttons() -> void:
 		btn.pressed.connect(func(): _on_charm_selected(charm_id))
 		
 		inventory_grid.add_child(btn)
+		charm_buttons[charm_id] = btn
 
+	_refresh_all_buttons()
+
+func _refresh_all_buttons() -> void:
+	for charm_id in charm_buttons.keys():
+		var btn: Button = charm_buttons[charm_id]
+		if SaveManager.is_charm_equipped(charm_id):
+			var style = StyleBoxFlat.new()
+			style.bg_color = Color(0.15, 0.15, 0.15, 1.0)
+			style.border_width_left = 3
+			style.border_width_top = 3
+			style.border_width_right = 3
+			style.border_width_bottom = 3
+			style.border_color = Color(1.0, 0.9, 0.4, 1.0) # Yellow glow border
+			style.shadow_color = Color(1.0, 0.8, 0.2, 0.6)
+			style.shadow_size = 15
+			btn.add_theme_stylebox_override("normal", style)
+			btn.add_theme_stylebox_override("hover", style)
+			btn.add_theme_stylebox_override("pressed", style)
+			btn.add_theme_stylebox_override("focus", style)
+		else:
+			btn.remove_theme_stylebox_override("normal")
+			btn.remove_theme_stylebox_override("hover")
+			btn.remove_theme_stylebox_override("pressed")
+			btn.remove_theme_stylebox_override("focus")
+
+var current_selected_charm: String = ""
 
 func _on_charm_selected(charm_id: String) -> void:
-
-	var charm: Dictionary = charms_database[charm_id]
-	charm["equipped"] = not charm["equipped"]
+	SaveManager.toggle_charm(charm_id)
 	
-	var status_text := "\n\n[ EQUIPPED ]" if charm["equipped"] else "\n\n[ NOT EQUIPPED ]"
-	charm_name_label.text = charm["name"]
-	charm_desc_label.text = charm["description"] + status_text
+	var charm: Dictionary = charms_database[charm_id]
+	charm["equipped"] = SaveManager.is_charm_equipped(charm_id)
+	current_selected_charm = charm_id
+	_refresh_all_buttons()
+	_update_selected_charm_text()
+
+func _update_selected_charm_text() -> void:
+	if current_selected_charm == "": return
+	
+	var charm: Dictionary = charms_database[current_selected_charm]
+	
+	var charm_name = charm["name"]
+	var charm_desc = charm["description"]
+	if has_node("/root/LocaleManager"):
+		var lm = get_node("/root/LocaleManager")
+		if current_selected_charm == "speed_charm":
+			charm_name = lm.t("CHARM_SPEED_NAME")
+			charm_desc = lm.t("CHARM_SPEED_DESC")
+		elif current_selected_charm == "power_charm":
+			charm_name = lm.t("CHARM_POWER_NAME")
+			charm_desc = lm.t("CHARM_POWER_DESC")
+		elif current_selected_charm == "health_charm":
+			charm_name = lm.t("CHARM_HEALTH_NAME")
+			charm_desc = lm.t("CHARM_HEALTH_DESC")
+	
+	charm_name_label.text = charm_name
+	charm_desc_label.text = charm_desc

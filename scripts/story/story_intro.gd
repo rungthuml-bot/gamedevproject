@@ -9,7 +9,7 @@ extends Control
 @onready var author_label: Label = $Background/CenterContainer/VBoxContainer/AuthorLabel
 
 # ฉากที่จะเล่นต่อหลังจากคัตซีนจบ
-@export_file("*.tscn") var next_scene_path: String = "res://scenes/ui/ui_test_main.tscn"
+@export_file("*.tscn") var next_scene_path: String = "res://scenes/levels/test_map01.tscn"
 
 var tween: Tween
 var is_transitioning: bool = false
@@ -24,6 +24,13 @@ func _ready() -> void:
 	# ตั้งค่าเริ่มต้นให้ข้อความโปร่งแสงซ่อนอยู่
 	story_label.modulate.a = 0.0
 	author_label.modulate.a = 0.0
+	
+	if has_node("/root/LocaleManager"):
+		var lm = get_node("/root/LocaleManager")
+		var lines = lm.get_dynamic_text("story_intro")
+		if lines and lines.size() >= 4:
+			story_label.text = lines[0] + "\n" + lines[1] + "\n" + lines[2]
+			author_label.text = "- " + lines[3] + " -"
 	
 	play_story_sequence()
 
@@ -57,7 +64,7 @@ func play_story_sequence() -> void:
 # Input Handler (กดข้าม)
 # =========================================================
 
-func _unhandled_input(event: InputEvent) -> void:
+func _input(event: InputEvent) -> void:
 
 	# กดปุ่มใดก็ได้ (Space, Enter, Esc, คลิกเมาส์) เพื่อข้ามทันที
 	if event.is_action_pressed("ui_accept") or event.is_action_pressed("ui_cancel") or (event is InputEventMouseButton and event.pressed):

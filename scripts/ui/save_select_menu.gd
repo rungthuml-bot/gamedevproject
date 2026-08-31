@@ -37,19 +37,49 @@ func _ready() -> void:
 
 	update_slot_buttons()
 
-	# เชื่อมต่อปุ่มเลือก Profile
-	slot1_button.pressed.connect(func(): _on_slot_pressed(1))
-	slot2_button.pressed.connect(func(): _on_slot_pressed(2))
-	slot3_button.pressed.connect(func(): _on_slot_pressed(3))
-	slot4_button.pressed.connect(func(): _on_slot_pressed(4))
+	# Translation
+	if has_node("/root/LocaleManager"):
+		var lm = get_node("/root/LocaleManager")
+		if not lm.language_changed.is_connected(_on_language_changed):
+			lm.language_changed.connect(_on_language_changed)
+		_apply_translation()
+		
+	# Connect Profile buttons
+	if not slot1_button.pressed.is_connected(_on_slot_pressed):
+		slot1_button.pressed.connect(func(): _on_slot_pressed(1))
+		slot2_button.pressed.connect(func(): _on_slot_pressed(2))
+		slot3_button.pressed.connect(func(): _on_slot_pressed(3))
+		slot4_button.pressed.connect(func(): _on_slot_pressed(4))
 
-	# เชื่อมต่อปุ่มลบ Delete
-	if delete1_button != null: delete1_button.pressed.connect(func(): _on_delete_pressed(1))
-	if delete2_button != null: delete2_button.pressed.connect(func(): _on_delete_pressed(2))
-	if delete3_button != null: delete3_button.pressed.connect(func(): _on_delete_pressed(3))
-	if delete4_button != null: delete4_button.pressed.connect(func(): _on_delete_pressed(4))
+	# Connect Delete buttons
+	if delete1_button != null and not delete1_button.pressed.is_connected(_on_delete_pressed):
+		delete1_button.pressed.connect(func(): _on_delete_pressed(1))
+		delete2_button.pressed.connect(func(): _on_delete_pressed(2))
+		delete3_button.pressed.connect(func(): _on_delete_pressed(3))
+		delete4_button.pressed.connect(func(): _on_delete_pressed(4))
 
-	back_button.pressed.connect(_on_back_pressed)
+	if back_button and not back_button.pressed.is_connected(_on_back_pressed):
+		back_button.pressed.connect(_on_back_pressed)
+
+func _apply_translation() -> void:
+	if not has_node("/root/LocaleManager"): return
+	var lm = get_node("/root/LocaleManager")
+	
+	if $MarginContainer/VBoxContainer/TitleLabel:
+		$MarginContainer/VBoxContainer/TitleLabel.text = lm.t("SELECT_PROFILE")
+		
+	if back_button:
+		back_button.text = lm.t("BACK")
+		
+	if delete1_button: delete1_button.text = lm.t("DELETE")
+	if delete2_button: delete2_button.text = lm.t("DELETE")
+	if delete3_button: delete3_button.text = lm.t("DELETE")
+	if delete4_button: delete4_button.text = lm.t("DELETE")
+		
+	update_slot_buttons()
+
+func _on_language_changed(_lang: String) -> void:
+	_apply_translation()
 
 
 # =========================================================
@@ -71,13 +101,27 @@ func update_slot_buttons() -> void:
 			var hp: int = data.get("hp", 100)
 			var potions: int = data.get("potion_count", 0)
 
-			btn.text = "PROFILE " + str(slot_number) + "\n\nCONTINUE\n\nHP: " + str(hp) + "\nPotions: " + str(potions)
+			var continue_text = "CONTINUE"
+			var hp_text = "HP: "
+			var potion_text = "Potions: "
+			
+			if has_node("/root/LocaleManager"):
+				var lm = get_node("/root/LocaleManager")
+				continue_text = lm.t("CONTINUE")
+				potion_text = lm.t("POTIONS")
+				
+			btn.text = "PROFILE " + str(slot_number) + "\n\n" + continue_text + "\n\n" + hp_text + str(hp) + "\n" + potion_text + str(potions)
 
 			if del_btn != null:
 				del_btn.modulate.a = 1.0
 				del_btn.disabled = false
 		else:
-			btn.text = "PROFILE " + str(slot_number) + "\n\nNEW GAME"
+			var new_game_text = "NEW GAME"
+			if has_node("/root/LocaleManager"):
+				var lm = get_node("/root/LocaleManager")
+				new_game_text = lm.t("NEW_GAME")
+				
+			btn.text = "PROFILE " + str(slot_number) + "\n\n" + new_game_text
 
 			if del_btn != null:
 				del_btn.modulate.a = 0.0

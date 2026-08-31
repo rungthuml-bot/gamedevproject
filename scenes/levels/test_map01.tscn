@@ -1,0 +1,81 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/levels/base_level.gd" id="1_base"]
+[ext_resource type="PackedScene" path="res://scenes/systems/MapDoor.tscn" id="2_door"]
+[ext_resource type="PackedScene" uid="uid://ddkbjitso8s1x" path="res://scenes/items/HealthPotion.tscn" id="3_potion"]
+[ext_resource type="PackedScene" uid="uid://bpr3xb7q1kymd" path="res://scenes/systems/SavePoint.tscn" id="4_save"]
+[ext_resource type="PackedScene" uid="uid://csfin0y1x3riw" path="res://scenes/enemies/EnemySword.tscn" id="5_enemy"]
+[ext_resource type="PackedScene" path="res://scenes/characters/NPC.tscn" id="6_npc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ground"]
+size = Vector2(1200, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wall"]
+size = Vector2(100, 800)
+
+[node name="TestMap01" type="Node2D"]
+script = ExtResource("1_base")
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(600, 600)
+collision_layer = 1
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+shape = SubResource("RectangleShape2D_ground")
+
+[node name="ColorRect" type="ColorRect" parent="Ground"]
+offset_left = -600.0
+offset_top = -50.0
+offset_right = 600.0
+offset_bottom = 50.0
+color = Color(0.25, 0.4, 0.28, 1)
+
+[node name="LeftWall" type="StaticBody2D" parent="."]
+position = Vector2(-50, 200)
+collision_layer = 1
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall"]
+shape = SubResource("RectangleShape2D_wall")
+
+[node name="RightWall" type="StaticBody2D" parent="."]
+position = Vector2(1250, 200)
+collision_layer = 1
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
+shape = SubResource("RectangleShape2D_wall")
+
+[node name="Spawns" type="Node2D" parent="."]
+
+[node name="Default" type="Marker2D" parent="Spawns"]
+position = Vector2(200, 500)
+
+[node name="DoorLeft" type="Marker2D" parent="Spawns"]
+position = Vector2(200, 500)
+
+[node name="DoorRight" type="Marker2D" parent="Spawns"]
+position = Vector2(1000, 500)
+
+[node name="Doors" type="Node2D" parent="."]
+
+[node name="DoorRight" parent="Doors" instance=ExtResource("2_door")]
+position = Vector2(1150, 500)
+target_scene_path = "res://scenes/levels/test_map02.tscn"
+target_spawn_id = "DoorLeft"
+
+[node name="HealthPotion" parent="." instance=ExtResource("3_potion")]
+position = Vector2(400, 500)
+
+[node name="SavePoint" parent="." instance=ExtResource("4_save")]
+position = Vector2(600, 500)
+
+[node name="EnemySword" parent="." instance=ExtResource("5_enemy")]
+position = Vector2(800, 480)
+
+[node name="NPC" parent="." instance=ExtResource("6_npc")]
+position = Vector2(350, 515)
+npc_name = "Camp Thief"
+portrait_emoji = "🧙"
+dialog = [{"speaker": "NPC", "text": "Halt, traveler! My name is Thief... wait, no, I'm just a normal guy around here."}, {"speaker": "Player", "text": "Then why do you look so suspicious?"}, {"speaker": "NPC", "text": "Haha, it's just my face. I was born this way. Good luck on your journey!"}]

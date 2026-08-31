@@ -2,6 +2,10 @@ extends CanvasLayer
 
 @onready var color_rect: ColorRect = $ColorRect
 var is_transitioning: bool = false
+var target_spawn_id: String = ""
+
+# ข้อมูลตัวละครสำหรับส่งข้ามด่านเพื่อให้เดินต่อเนื่อง
+var player_velocity: Vector2 = Vector2.ZERO
 
 func _ready() -> void:
 	# ตั้งค่าเริ่มต้นให้จอมืดโปร่งแสงมองไม่เห็น และไม่ขัดขวางการกดปุ่ม
@@ -10,10 +14,11 @@ func _ready() -> void:
 
 
 # ฟังก์ชันสลับฉากแบบ Fade Out -> เปลี่ยนฉาก -> Fade In
-func change_scene(target_path: String, fade_duration: float = 0.5) -> void:
+func change_scene(target_path: String, fade_duration: float = 0.5, spawn_id: String = "") -> void:
 	if is_transitioning:
 		return
 	is_transitioning = true
+	target_spawn_id = spawn_id
 	
 	# บล็อกการกดปุ่มระหว่างเปลี่ยนฉาก
 	color_rect.mouse_filter = Control.MOUSE_FILTER_STOP
