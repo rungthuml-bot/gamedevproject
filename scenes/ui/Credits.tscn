@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene format=3 uid="uid://o5weoucfkoob"]
 
-[ext_resource type="Script" path="res://scripts/ui/credits.gd" id="1_script"]
-[ext_resource type="Texture2D" uid="uid://cc6wfll70sj5n" path="res://assets/Background/main_menu_bg.png" id="2_bg"]
+[ext_resource type="Script" uid="uid://bui1mq2qc85ya" path="res://scripts/ui/credits.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://471535tyc8em" path="res://assets/Background/main_menu_bg.png" id="2_bg"]
 
-[node name="Credits" type="Control"]
+[node name="Credits" type="Control" unique_id=1290900840]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,7 +12,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_script")
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="." unique_id=1673713925]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -23,7 +23,7 @@ texture = ExtResource("2_bg")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1926623013]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -37,63 +37,63 @@ offset_bottom = 250.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=401219210]
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=766193671]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "CREDITS"
 horizontal_alignment = 1
 
-[node name="GameTitleLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="GameTitleLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=951228885]
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Mordred: Path of the Tolerant"
 horizontal_alignment = 1
 
-[node name="TeamSection" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="TeamSection" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1647114302]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="TeamLabel" type="Label" parent="MarginContainer/VBoxContainer/TeamSection"]
+[node name="TeamLabel" type="Label" parent="MarginContainer/VBoxContainer/TeamSection" unique_id=1206593918]
 layout_mode = 2
 text = "TEAM MEMBERS"
 horizontal_alignment = 1
 
-[node name="MemberList" type="Label" parent="MarginContainer/VBoxContainer/TeamSection"]
+[node name="MemberList" type="Label" parent="MarginContainer/VBoxContainer/TeamSection" unique_id=245086862]
 layout_mode = 2
-text = "Member 1
-Member 2
-Member 3
-Member 4"
+text = "643020651-7 สุชานาฏ แก้วมุงคุณ
+663380639-0 รุ่งธรรม ล้อมในเมือง
+683380448-1 อรจิรา วงศ์ประดิษฐ์
+683380659-8 ธราเทพ ภาคโพธิ์"
 horizontal_alignment = 1
 
-[node name="DevelopmentSection" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="DevelopmentSection" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1680395266]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="GameDesign" type="Label" parent="MarginContainer/VBoxContainer/DevelopmentSection"]
+[node name="GameDesign" type="Label" parent="MarginContainer/VBoxContainer/DevelopmentSection" unique_id=1314958676]
 layout_mode = 2
 text = "Game Design: Member 1"
 horizontal_alignment = 1
 
-[node name="Programming" type="Label" parent="MarginContainer/VBoxContainer/DevelopmentSection"]
+[node name="Programming" type="Label" parent="MarginContainer/VBoxContainer/DevelopmentSection" unique_id=1053828745]
 layout_mode = 2
 text = "Programming: Member 2"
 horizontal_alignment = 1
 
-[node name="Art" type="Label" parent="MarginContainer/VBoxContainer/DevelopmentSection"]
+[node name="Art" type="Label" parent="MarginContainer/VBoxContainer/DevelopmentSection" unique_id=996029200]
 layout_mode = 2
 text = "Art: Member 3"
 horizontal_alignment = 1
 
-[node name="UIAudio" type="Label" parent="MarginContainer/VBoxContainer/DevelopmentSection"]
+[node name="UIAudio" type="Label" parent="MarginContainer/VBoxContainer/DevelopmentSection" unique_id=79503229]
 layout_mode = 2
 text = "UI / Audio: Member 4"
 horizontal_alignment = 1
 
-[node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1992420644]
 layout_mode = 2
 text = "BACK"

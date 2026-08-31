@@ -2,12 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://eka1juwfjh3w"
+uid="uid://dkwtwbnjjia0d"
 valid=false
 
 [deps]
 
-source_file="res://Floor/map 9/__MACOSX/TILED_files/._cave_entrance.png"
+source_file="res://assets/Floor/map 9/__MACOSX/TILED_files/._cave_entrance.png"
 
 [params]
 

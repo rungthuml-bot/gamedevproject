@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://cew1v2whxdk7s"]
 
 [ext_resource type="Script" uid="uid://cfuxj40178vt6" path="res://scripts/ui/save_select_menu.gd" id="1_atpt8"]
-[ext_resource type="Texture2D" uid="uid://hqqtwfs3gjkp" path="res://assets/Background/save_select_bg.png" id="2_sluha"]
+[ext_resource type="Texture2D" uid="uid://ptdl03ds06p1" path="res://assets/Background/save_select_bg.png" id="2_sluha"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_focus"]
 

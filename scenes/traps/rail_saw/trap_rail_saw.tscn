@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://2ioynf1rq34"]
 
-[ext_resource type="Texture2D" uid="uid://bcj6etvg6v2lx" path="res://assets/game/traps/rail_saw/trap_saw.png" id="1_11ub5"]
-[ext_resource type="Script" uid="uid://ciag7m6xc1elw" path="res://scenes/traps/rail_saw/trap_rail_saw.gd" id="1_mw2ja"]
+[ext_resource type="Texture2D" uid="uid://cuwar8ktgt3fs" path="res://assets/game/traps/rail_saw/trap_saw.png" id="1_11ub5"]
+[ext_resource type="Script" uid="uid://mq13cym3ywp3" path="res://scripts/traps/rail_saw/trap_rail_saw.gd" id="1_mw2ja"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c0nl8"]
 atlas = ExtResource("1_11ub5")
@@ -65,8 +65,8 @@ position = Vector2(0, -9.536743e-07)
 scale = Vector2(1.5526316, 1.59375)
 sprite_frames = SubResource("SpriteFrames_j2vdu")
 animation = &"trap_1"
-frame = 4
-frame_progress = 0.12778799
+autoplay = "trap_1"
+frame_progress = 0.2173553
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1138467317]
 position = Vector2(-1.5, -5.5)

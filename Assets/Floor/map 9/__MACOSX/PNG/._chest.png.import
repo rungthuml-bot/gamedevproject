@@ -2,12 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfulv01ase7x5"
+uid="uid://bvsu0tx0btw7f"
 valid=false
 
 [deps]
 
-source_file="res://Floor/map 9/__MACOSX/PNG/._chest.png"
+source_file="res://assets/Floor/map 9/__MACOSX/PNG/._chest.png"
 
 [params]
 

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Game2DProject"
-run/main_scene="uid://donlwlocle2ph"
+run/main_scene="res://scenes/ui/TitleScreen.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 
 [autoload]

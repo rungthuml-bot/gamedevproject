@@ -2,12 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bflw0wp1v7ydf"
+uid="uid://bp16u84at5mot"
 valid=false
 
 [deps]
 
-source_file="res://Floor/map 9/__MACOSX/TILED_files/._Spikes.png"
+source_file="res://assets/Floor/map 9/__MACOSX/TILED_files/._Spikes.png"
 
 [params]
 

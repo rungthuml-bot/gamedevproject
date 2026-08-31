@@ -2,12 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://def5ihgqq6ir5"
+uid="uid://dob2b00u2k62u"
 valid=false
 
 [deps]
 
-source_file="res://Floor/map 9/__MACOSX/TILED_files/._Clouds_in_tiles.png"
+source_file="res://assets/Floor/map 9/__MACOSX/TILED_files/._Clouds_in_tiles.png"
 
 [params]
 

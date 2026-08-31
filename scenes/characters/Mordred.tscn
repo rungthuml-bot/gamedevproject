@@ -1,19 +1,23 @@
 [gd_scene format=3 uid="uid://dvj03a3fowopm"]
 
-[ext_resource type="Texture2D" uid="uid://b5jkovim4vmpm" path="res://assets/Mordred_Knight/Attacks.png" id="1_0y7nr"]
+[ext_resource type="Texture2D" uid="uid://bjy4cgvjsqdqs" path="res://assets/Mordred_Knight/Attacks.png" id="1_0y7nr"]
 [ext_resource type="Script" uid="uid://c4v4bh0oxkuet" path="res://scripts/characters/mordred.gd" id="1_fuy0g"]
-[ext_resource type="Texture2D" uid="uid://c1ml7mgs0twnb" path="res://assets/Mordred_Knight/Death.png" id="2_br3p0"]
-[ext_resource type="Texture2D" uid="uid://dvmfpgflawipx" path="res://assets/Mordred_Knight/Idle.png" id="3_dt6k8"]
-[ext_resource type="Texture2D" uid="uid://c0hvghmsph4pb" path="res://assets/Mordred_Knight/Jump.png" id="4_0nshp"]
-[ext_resource type="Texture2D" uid="uid://bet8colukmhqt" path="res://assets/Mordred_Knight/Run.png" id="5_f32h7"]
-[ext_resource type="Texture2D" uid="uid://cq42b7k0y5u61" path="res://assets/Mordred_Knight/Health.png" id="7_cuuh1"]
-[ext_resource type="Texture2D" uid="uid://bi4m8rbg5hg3d" path="res://assets/Mordred_Knight/Slide.png" id="8_0we4p"]
-[ext_resource type="AudioStream" uid="uid://bb5i1oi618rsn" path="res://assets/audio/sfx/Heavy_Attack_Sound.mp3" id="9_tt6kt"]
-[ext_resource type="AudioStream" uid="uid://v5yiykynfxer" path="res://assets/audio/sfx/Light_Attack.mp3" id="10_qu3d0"]
-[ext_resource type="AudioStream" uid="uid://msm3mjqsoylm" path="res://assets/audio/sfx/Health_Potion.mp3" id="11_nljx2"]
-[ext_resource type="AudioStream" uid="uid://c0yh3sxnwtmee" path="res://assets/audio/sfx/Slide.mp3" id="12_4dnns"]
-[ext_resource type="AudioStream" uid="uid://bj244pytkklgc" path="res://assets/audio/sfx/Charge.mp3" id="13_4dnns"]
-[ext_resource type="AudioStream" uid="uid://c070a8vo6hjrs" path="res://assets/audio/sfx/Full_Charge.mp3" id="14_bp524"]
+[ext_resource type="Texture2D" uid="uid://bphvxu8hmlmtc" path="res://assets/Mordred_Knight/Death.png" id="2_br3p0"]
+[ext_resource type="Texture2D" uid="uid://rdfjeyqrr6ns" path="res://assets/Mordred_Knight/Idle.png" id="3_dt6k8"]
+[ext_resource type="Texture2D" uid="uid://dv72mdh3ehbha" path="res://assets/Mordred_Knight/Jump.png" id="4_0nshp"]
+[ext_resource type="Texture2D" uid="uid://bot4dp3e4tkt8" path="res://assets/Mordred_Knight/Run.png" id="5_f32h7"]
+[ext_resource type="Texture2D" uid="uid://ddtxbvxkni6tj" path="res://assets/Mordred_Knight/Health.png" id="7_cuuh1"]
+[ext_resource type="Texture2D" uid="uid://cwkgquxrf87q1" path="res://assets/Mordred_Knight/Slide.png" id="8_0we4p"]
+[ext_resource type="AudioStream" uid="uid://dtotu4mvtlxru" path="res://assets/audio/sfx/Heavy_Attack_Sound.mp3" id="9_tt6kt"]
+[ext_resource type="AudioStream" uid="uid://bmbn4mmyf6lcq" path="res://assets/audio/sfx/Light_Attack.mp3" id="10_qu3d0"]
+[ext_resource type="AudioStream" uid="uid://bdcq45w5oktw1" path="res://assets/audio/sfx/Health_Potion.mp3" id="11_nljx2"]
+[ext_resource type="AudioStream" uid="uid://cbroqqppdsasf" path="res://assets/audio/sfx/Slide.mp3" id="12_4dnns"]
+[ext_resource type="AudioStream" uid="uid://d4cjefkho4mu3" path="res://assets/audio/sfx/Charge.mp3" id="13_4dnns"]
+[ext_resource type="AudioStream" uid="uid://d1wdifvr1uff3" path="res://assets/audio/sfx/Full_Charge.mp3" id="14_bp524"]
+[ext_resource type="PackedScene" uid="uid://x2frsprdyi68" path="res://scenes/ui/HUD.tscn" id="101_hud"]
+[ext_resource type="PackedScene" uid="uid://br6ifcy60qp5n" path="res://scenes/ui/PauseMenu.tscn" id="102_pause"]
+[ext_resource type="PackedScene" uid="uid://c6tlpu722uftu" path="res://scenes/ui/EquipmentMenu.tscn" id="103_equip"]
+[ext_resource type="PackedScene" uid="uid://bxqwlxm7xh1w6" path="res://scenes/ui/GameOverMenu.tscn" id="104_gameover"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jo2ib"]
 atlas = ExtResource("1_0y7nr")
@@ -553,7 +557,7 @@ shape = SubResource("CapsuleShape2D_v5eft")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=256119951]
 position = Vector2(0, -56)
-zoom = Vector2(1.5, 1.5)
+zoom = Vector2(2, 2)
 
 [node name="AttackArea" type="Area2D" parent="." unique_id=743489757 groups=["player_attack"]]
 collision_layer = 2
@@ -580,6 +584,18 @@ stream = ExtResource("13_4dnns")
 
 [node name="Full_Charge" type="AudioStreamPlayer2D" parent="." unique_id=647535222]
 stream = ExtResource("14_bp524")
+
+[node name="HUD" parent="." unique_id=578558811 instance=ExtResource("101_hud")]
+visible = false
+
+[node name="PauseMenu" parent="." unique_id=26823365 instance=ExtResource("102_pause")]
+visible = false
+
+[node name="EquipmentMenu" parent="." unique_id=1585586045 instance=ExtResource("103_equip")]
+visible = false
+
+[node name="GameOverMenu" parent="." unique_id=1544170389 instance=ExtResource("104_gameover")]
+visible = false
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]

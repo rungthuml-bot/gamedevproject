@@ -2,12 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clec1j1x12vl7"
+uid="uid://kyl2k16lgxxn"
 valid=false
 
 [deps]
 
-source_file="res://Floor/map 9/__MACOSX/PNG/._Predator_plant.png"
+source_file="res://assets/Floor/map 9/__MACOSX/PNG/._Predator_plant.png"
 
 [params]
 

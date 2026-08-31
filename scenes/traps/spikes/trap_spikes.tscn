@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c00hwfpaiksmp"]
 
-[ext_resource type="Script" uid="uid://beedifyvcctgj" path="res://scripts/traps/trap_spikes.gd" id="1_lsp6c"]
-[ext_resource type="Texture2D" uid="uid://ch7vlbaljiq5h" path="res://assets/source/craftpix/traps/6 Traps/4.png" id="2_jbaou"]
+[ext_resource type="Script" uid="uid://ijooaulmj3h0" path="res://scripts/traps/spikes/trap_spikes.gd" id="1_lsp6c"]
+[ext_resource type="Texture2D" uid="uid://yvq6ciq7qq37" path="res://assets/game/traps/spikes/4.png" id="2_jbaou"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ravnh"]
 atlas = ExtResource("2_jbaou")
@@ -57,7 +57,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"spikes",
-"speed": 5.0
+"speed": 6.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ras4n"]
@@ -68,11 +68,12 @@ height = 40.0
 script = ExtResource("1_lsp6c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1669475144]
+texture_filter = 1
 scale = Vector2(2.429392, 3.467987)
 sprite_frames = SubResource("SpriteFrames_j2vdu")
 animation = &"spikes"
-frame = 5
-frame_progress = 0.48771012
+autoplay = "spikes"
+frame_progress = 0.5929976
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1166086688]
 shape = SubResource("CapsuleShape2D_ras4n")

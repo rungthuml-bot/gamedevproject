@@ -2,12 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cv7q0n1udooo5"
+uid="uid://bxq5j1xlylost"
 valid=false
 
 [deps]
 
-source_file="res://Floor/map 9/__MACOSX/TILED_files/._Flying_stone.png"
+source_file="res://assets/Floor/map 9/__MACOSX/TILED_files/._Flying_stone.png"
 
 [params]
 

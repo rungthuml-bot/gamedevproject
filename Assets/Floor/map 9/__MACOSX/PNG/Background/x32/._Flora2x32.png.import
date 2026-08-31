@@ -2,12 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0jf70qfmbqur"
+uid="uid://ba3u720lhu06d"
 valid=false
 
 [deps]
 
-source_file="res://Floor/map 9/__MACOSX/PNG/Background/x32/._Flora2x32.png"
+source_file="res://assets/Floor/map 9/__MACOSX/PNG/Background/x32/._Flora2x32.png"
 
 [params]
 

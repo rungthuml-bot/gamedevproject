@@ -2,12 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmu2rbent5ffg"
+uid="uid://drnpffexupr1t"
 valid=false
 
 [deps]
 
-source_file="res://Floor/map 9/__MACOSX/TILED_files/._Objects.png"
+source_file="res://assets/Floor/map 9/__MACOSX/TILED_files/._Objects.png"
 
 [params]
 

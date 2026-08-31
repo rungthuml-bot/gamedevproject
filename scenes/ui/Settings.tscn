@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3]
 
 [ext_resource type="Script" path="res://scripts/ui/settings.gd" id="1_script"]
-[ext_resource type="Texture2D" uid="uid://cc6wfll70sj5n" path="res://assets/Background/main_menu_bg.png" id="2_bg"]
+[ext_resource type="Texture2D" uid="uid://471535tyc8em" path="res://assets/Background/main_menu_bg.png" id="2_bg"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_focus"]
 

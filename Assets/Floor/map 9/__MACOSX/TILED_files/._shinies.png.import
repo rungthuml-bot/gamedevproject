@@ -2,12 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vtd0dk3d7v7t"
+uid="uid://dol5c66d1eu0v"
 valid=false
 
 [deps]
 
-source_file="res://Floor/map 9/__MACOSX/TILED_files/._shinies.png"
+source_file="res://assets/Floor/map 9/__MACOSX/TILED_files/._shinies.png"
 
 [params]
 
