@@ -53,7 +53,6 @@ var move_direction: float = 1.0
 
 @onready var anim: AnimatedSprite2D = get_node_or_null("AnimatedSprite2D")
 @onready var attack_hitbox: Area2D = $AttackHitbox
-@onready var attack_collision: CollisionShape2D = $AttackHitbox/CollisionShape2D
 
 # =========================================================
 # Ready
@@ -147,15 +146,14 @@ func update_facing_direction() -> void:
 			anim.flip_h = (move_direction < 0)
 		
 		attack_hitbox.position.x = 16 * move_direction
-		if attack_collision:
-			attack_collision.position.x = 30 * move_direction
+		attack_hitbox.scale.x = move_direction
 
 func update_animation() -> void:
 	if is_dying or is_attacking or not anim:
 		return
 		
 	if velocity.x != 0:
-		anim.play("walk")
+		anim.play("Walk")
 	else:
 		anim.play("Idle")
 

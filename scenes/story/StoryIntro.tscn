@@ -1,6 +1,18 @@
-[gd_scene load_steps=9 format=3 uid="uid://dine05vqtpnvs"]
+[gd_scene format=3 uid="uid://dine05vqtpnvs"]
 
 [ext_resource type="Script" uid="uid://dj0xj83djrkcy" path="res://scripts/story/story_intro.gd" id="1_pl06e"]
+
+[sub_resource type="Gradient" id="Gradient_glow"]
+offsets = PackedFloat32Array(0, 0.5, 1)
+colors = PackedColorArray(0.12, 0.08, 0.2, 0.12, 0.06, 0.04, 0.1, 0.04, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_glow"]
+gradient = SubResource("Gradient_glow")
+width = 512
+height = 512
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 1)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dust"]
 lifetime_randomness = 0.6
@@ -9,15 +21,14 @@ emission_shape = 3
 emission_box_extents = Vector3(960, 540, 0)
 direction = Vector3(0, -1, 0)
 spread = 60.0
-gravity = Vector3(0, -3, 0)
 initial_velocity_min = 1.5
 initial_velocity_max = 6.0
 angular_velocity_min = -8.0
 angular_velocity_max = 8.0
+gravity = Vector3(0, -3, 0)
 scale_min = 0.6
 scale_max = 2.2
 color = Color(0.62, 0.55, 0.78, 0.18)
-color_ramp = null
 hue_variation_min = -0.04
 hue_variation_max = 0.04
 
@@ -26,38 +37,25 @@ lifetime_randomness = 0.4
 particle_flag_disable_z = true
 emission_shape = 3
 emission_box_extents = Vector3(960, 80, 0)
-direction = Vector3(1, 0, 0)
 spread = 8.0
-gravity = Vector3(0, 0, 0)
 initial_velocity_min = 4.0
 initial_velocity_max = 14.0
+gravity = Vector3(0, 0, 0)
 scale_min = 60.0
 scale_max = 140.0
 color = Color(0.08, 0.06, 0.14, 0.06)
 
 [sub_resource type="Gradient" id="Gradient_vignette"]
 offsets = PackedFloat32Array(0, 0.5, 1)
-colors = PackedColorArray(0, 0, 0, 0.85, 0, 0, 0.02, 0.1, 0, 0, 0, 0.0)
+colors = PackedColorArray(0, 0, 0, 0.85, 0, 0, 0.02, 0.1, 0, 0, 0, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_vignette"]
 gradient = SubResource("Gradient_vignette")
+width = 512
+height = 512
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(1, 1)
-width = 512
-height = 512
-
-[sub_resource type="Gradient" id="Gradient_glow"]
-offsets = PackedFloat32Array(0, 0.5, 1)
-colors = PackedColorArray(0.12, 0.08, 0.2, 0.12, 0.06, 0.04, 0.1, 0.04, 0, 0, 0, 0)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_glow"]
-gradient = SubResource("Gradient_glow")
-fill = 1
-fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(1, 1)
-width = 512
-height = 512
 
 [node name="StoryIntro" type="Control" unique_id=191419916]
 layout_mode = 3
@@ -77,39 +75,37 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.02, 0.02, 0.04, 1)
 
-[node name="AtmosphericGlow" type="TextureRect" parent="Background"]
+[node name="AtmosphericGlow" type="TextureRect" parent="Background" unique_id=239475094]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-modulate = Color(1, 1, 1, 1)
 texture = SubResource("GradientTexture2D_glow")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="DustParticles" type="GPUParticles2D" parent="Background"]
+[node name="DustParticles" type="GPUParticles2D" parent="Background" unique_id=1363580801]
 position = Vector2(960, 540)
 amount = 55
 lifetime = 12.0
 preprocess = 8.0
 randomness = 1.0
+fixed_fps = 0
 visibility_rect = Rect2(-960, -540, 1920, 1080)
 process_material = SubResource("ParticleProcessMaterial_dust")
-fixed_fps = 0
 
-[node name="MistParticles" type="GPUParticles2D" parent="Background"]
+[node name="MistParticles" type="GPUParticles2D" parent="Background" unique_id=1037528917]
 position = Vector2(960, 600)
-amount = 8
 lifetime = 20.0
 preprocess = 10.0
 randomness = 1.0
+fixed_fps = 0
 visibility_rect = Rect2(-960, -200, 1920, 400)
 process_material = SubResource("ParticleProcessMaterial_mist")
-fixed_fps = 0
 
-[node name="Vignette" type="TextureRect" parent="Background"]
+[node name="Vignette" type="TextureRect" parent="Background" unique_id=1551717704]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -129,8 +125,8 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Background/CenterContainer" unique_id=1671036487]
-layout_mode = 2
 custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
 theme_override_constants/separation = 36
 
 [node name="StoryLabel" type="Label" parent="Background/CenterContainer/VBoxContainer" unique_id=1252016451]
@@ -138,11 +134,11 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.93, 0.9, 0.84, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9)
 theme_override_colors/font_outline_color = Color(0.02, 0.01, 0.05, 0.85)
+theme_override_constants/line_spacing = 8
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 2
 theme_override_constants/outline_size = 1
 theme_override_constants/shadow_outline_size = 3
-theme_override_constants/line_spacing = 8
 theme_override_font_sizes/font_size = 22
 text = "I am so exhausted, why is there so much work...
 Why isn't it getting anywhere? Ahhhhhhhhhh"
@@ -160,7 +156,8 @@ theme_override_font_sizes/font_size = 16
 text = "Mommamm Creation"
 horizontal_alignment = 2
 
-[node name="ContinueHint" type="Label" parent="Background"]
+[node name="ContinueHint" type="Label" parent="Background" unique_id=2059393953]
+modulate = Color(1, 1, 1, 0.4)
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -173,10 +170,8 @@ offset_right = 150.0
 offset_bottom = -50.0
 grow_horizontal = 2
 grow_vertical = 0
-modulate = Color(1, 1, 1, 0.4)
 theme_override_colors/font_color = Color(0.55, 0.5, 0.4, 1)
 theme_override_font_sizes/font_size = 14
 text = "— PRESS ANY KEY TO SKIP —"
 horizontal_alignment = 1
 vertical_alignment = 1
-letter_spacing = 2

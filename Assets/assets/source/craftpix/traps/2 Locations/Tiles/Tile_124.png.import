@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brr7ddnrcuwj8"
-path="res://.godot/imported/Tile_124.png-78e28c44c4d8ed6db52e2a7353f9022a.ctex"
+uid="uid://cre0oncvkfgjd"
+path="res://.godot/imported/000_0056_heart10.png-d359f9908dfee7460fcd025e41fccb47.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/assets/source/craftpix/traps/2 Locations/Tiles/Tile_124.png"
-dest_files=["res://.godot/imported/Tile_124.png-78e28c44c4d8ed6db52e2a7353f9022a.ctex"]
+source_file="res://assets/Background/Lava/PNG/Items/000_0056_heart10.png"
+dest_files=["res://.godot/imported/000_0056_heart10.png-d359f9908dfee7460fcd025e41fccb47.ctex"]
 
 [params]
 

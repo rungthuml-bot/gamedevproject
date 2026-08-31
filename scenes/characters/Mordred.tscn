@@ -8,6 +8,12 @@
 [ext_resource type="Texture2D" uid="uid://bet8colukmhqt" path="res://assets/Mordred_Knight/Run.png" id="5_f32h7"]
 [ext_resource type="Texture2D" uid="uid://cq42b7k0y5u61" path="res://assets/Mordred_Knight/Health.png" id="7_cuuh1"]
 [ext_resource type="Texture2D" uid="uid://bi4m8rbg5hg3d" path="res://assets/Mordred_Knight/Slide.png" id="8_0we4p"]
+[ext_resource type="AudioStream" uid="uid://bb5i1oi618rsn" path="res://assets/audio/sfx/Heavy_Attack_Sound.mp3" id="9_tt6kt"]
+[ext_resource type="AudioStream" uid="uid://v5yiykynfxer" path="res://assets/audio/sfx/Light_Attack.mp3" id="10_qu3d0"]
+[ext_resource type="AudioStream" uid="uid://msm3mjqsoylm" path="res://assets/audio/sfx/Health_Potion.mp3" id="11_nljx2"]
+[ext_resource type="AudioStream" uid="uid://c0yh3sxnwtmee" path="res://assets/audio/sfx/Slide.mp3" id="12_4dnns"]
+[ext_resource type="AudioStream" uid="uid://bj244pytkklgc" path="res://assets/audio/sfx/Charge.mp3" id="13_4dnns"]
+[ext_resource type="AudioStream" uid="uid://c070a8vo6hjrs" path="res://assets/audio/sfx/Full_Charge.mp3" id="14_bp524"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jo2ib"]
 atlas = ExtResource("1_0y7nr")
@@ -536,11 +542,10 @@ scale = Vector2(1.5, 1.5)
 script = ExtResource("1_fuy0g")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=72610723]
+texture_filter = 1
 position = Vector2(0, -32)
 sprite_frames = SubResource("SpriteFrames_awhhx")
-animation = &"Slide"
-frame = 9
-frame_progress = 1.0
+animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1558068645]
 position = Vector2(0, -24)
@@ -557,6 +562,24 @@ collision_mask = 10
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=474904858]
 position = Vector2(26, -21.5)
 shape = SubResource("RectangleShape2D_v5eft")
+
+[node name="Heavy_Attack" type="AudioStreamPlayer2D" parent="." unique_id=2138292173]
+stream = ExtResource("9_tt6kt")
+
+[node name="Light_Attack" type="AudioStreamPlayer2D" parent="." unique_id=167372153]
+stream = ExtResource("10_qu3d0")
+
+[node name="Health_Potion" type="AudioStreamPlayer2D" parent="." unique_id=1384707757]
+stream = ExtResource("11_nljx2")
+
+[node name="Slide" type="AudioStreamPlayer2D" parent="." unique_id=1018993060]
+stream = ExtResource("12_4dnns")
+
+[node name="Charge" type="AudioStreamPlayer2D" parent="." unique_id=21859828]
+stream = ExtResource("13_4dnns")
+
+[node name="Full_Charge" type="AudioStreamPlayer2D" parent="." unique_id=647535222]
+stream = ExtResource("14_bp524")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
