@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ch7ksorcopqw0"
-path="res://.godot/imported/bridge1.png-f33d00789b5c5f9940a7143d698c3a45.ctex"
+path="res://.godot/imported/bridge1.png-93f0ff9f3f4298c255ff379916abfae0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Background/Lava/PNG/Details/bridge1.png"
-dest_files=["res://.godot/imported/bridge1.png-f33d00789b5c5f9940a7143d698c3a45.ctex"]
+source_file="res://assets/Background/Lava/PNG/Details/bridge1.png"
+dest_files=["res://.godot/imported/bridge1.png-93f0ff9f3f4298c255ff379916abfae0.ctex"]
 
 [params]
 
