@@ -538,9 +538,7 @@ script = ExtResource("1_fuy0g")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=72610723]
 position = Vector2(0, -32)
 sprite_frames = SubResource("SpriteFrames_awhhx")
-animation = &"Slide"
-frame = 9
-frame_progress = 1.0
+animation = &"Attack_4"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1558068645]
 position = Vector2(0, -24)

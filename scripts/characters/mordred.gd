@@ -5,9 +5,9 @@ signal hp_changed(current_hp: int, max_hp: int)
 signal potion_count_changed(count: int)
 
 
-# ==================================================
+# =========================================================
 # CONSTANTS
-# ==================================================
+# =========================================================
 
 const MAX_HP := 100
 const HEAL_AMOUNT := 35
@@ -17,28 +17,45 @@ const WALK_SPEED := 250.0
 const RUN_SPEED := 420.0
 const JUMP_VELOCITY := -450.0
 
+# Dash
 const DASH_SPEED := 700.0
 const DASH_DURATION := 0.20
 const DASH_COOLDOWN := 0.60
 
+# Slide
 const SLIDE_SPEED := 550.0
 const SLIDE_DURATION := 0.35
 const SLIDE_COOLDOWN := 0.50
 
+# Camera Shake
 const SHAKE_DECAY := 8.0
 
+# Normal Attack
+const NORMAL_ATTACK_DAMAGE := 10
 
-# ==================================================
-# PLAYER
-# ==================================================
+# Charge Attack
+const CHARGED_MIN_DAMAGE := 10
+const CHARGED_MAX_DAMAGE := 40
+const CHARGE_MAX_TIME := 1.5
+
+# เวลาสลับ Frame 0 <-> 1
+const CHARGE_FRAME_TIME := 0.10
+
+# ความเร็ว Flash ตอน Charge เต็ม
+const CHARGE_FLASH_TIME := 0.08
+
+
+# =========================================================
+# PLAYER DATA
+# =========================================================
 
 var hp := MAX_HP
 var potion_count := 1
 
 
-# ==================================================
-# STATES
-# ==================================================
+# =========================================================
+# PLAYER STATE
+# =========================================================
 
 var is_dead := false
 var is_attacking := false
@@ -49,17 +66,43 @@ var is_knockbacked := false
 var is_invincible := false
 
 
-# ==================================================
+# =========================================================
+# CHARGE STATE
+# =========================================================
+
+var is_charging := false
+var is_charge_full := false
+var is_charge_releasing := false
+
+
+# =========================================================
 # ATTACK
-# ==================================================
+# =========================================================
 
 var combo := 0
 var attack_queued := false
+var current_attack_damage := NORMAL_ATTACK_DAMAGE
 
 
-# ==================================================
+# =========================================================
+# CHARGE DATA
+# =========================================================
+
+var charge_time := 0.0
+var charge_frame_timer := 0.0
+var charge_flash_timer := 0.0
+
+# Frame ที่กำลังชาร์จ
+# ใช้ 0 และ 1
+var charge_frame := 0
+
+# Damage ปัจจุบันของ Charge
+var charged_damage := CHARGED_MIN_DAMAGE
+
+
+# =========================================================
 # TIMERS
-# ==================================================
+# =========================================================
 
 var knockback_timer := 0.0
 var invincibility_timer := 0.0
@@ -74,16 +117,16 @@ var shift_hold_timer := 0.0
 var shift_was_pressed := false
 
 
-# ==================================================
-# CAMERA SHAKE
-# ==================================================
+# =========================================================
+# CAMERA
+# =========================================================
 
 var shake_intensity := 0.0
 
 
-# ==================================================
-# NODES
-# ==================================================
+# =========================================================
+# NODE REFERENCES
+# =========================================================
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var attack_area = $AttackArea
@@ -91,9 +134,9 @@ var shake_intensity := 0.0
 @onready var camera: Camera2D = $Camera2D
 
 
-# ==================================================
+# =========================================================
 # READY
-# ==================================================
+# =========================================================
 
 func _ready() -> void:
 
@@ -104,9 +147,9 @@ func _ready() -> void:
 	call_deferred("emit_initial_ui_signals")
 
 
-# ==================================================
-# PHYSICS
-# ==================================================
+# =========================================================
+# PHYSICS PROCESS
+# =========================================================
 
 func _physics_process(delta: float) -> void:
 
@@ -114,34 +157,66 @@ func _physics_process(delta: float) -> void:
 	process_timers(delta)
 
 
-	# DEAD
+	# -----------------------------------------
+	# Dead
+	# -----------------------------------------
+
 	if is_dead:
+
 		process_dead(delta)
 		return
 
 
-	# POTION
+	# -----------------------------------------
+	# Potion
+	# -----------------------------------------
+
 	if is_using_potion:
+
 		process_potion(delta)
 		return
 
 
-	# DASH
-	if is_dashing:
-		process_dash()
+	# -----------------------------------------
+	# Charge
+	# -----------------------------------------
+
+	if is_charging:
+
+		process_charge(delta)
 		return
 
 
-	# SLIDE
+	# -----------------------------------------
+	# Dash
+	# -----------------------------------------
+
+	if is_dashing:
+
+		process_dash(delta)
+		return
+
+
+	# -----------------------------------------
+	# Slide
+	# -----------------------------------------
+
 	if is_sliding:
+
 		process_slide(delta)
 		return
 
 
-	# NORMAL
+	# -----------------------------------------
+	# Normal
+	# -----------------------------------------
+
 	apply_gravity(delta)
 
-	var direction := Input.get_axis("Left", "Right")
+	var direction := Input.get_axis(
+		"Left",
+		"Right"
+	)
 
 	process_movement(direction, delta)
 	process_facing(direction)
@@ -153,9 +228,9 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 
-# ==================================================
+# =========================================================
 # TIMERS
-# ==================================================
+# =========================================================
 
 func process_timers(delta: float) -> void:
 
@@ -163,9 +238,11 @@ func process_timers(delta: float) -> void:
 	if dash_cooldown_timer > 0.0:
 		dash_cooldown_timer -= delta
 
+
 	# Slide cooldown
 	if slide_cooldown_timer > 0.0:
 		slide_cooldown_timer -= delta
+
 
 	# Invincibility
 	if is_invincible:
@@ -185,6 +262,7 @@ func process_timers(delta: float) -> void:
 				else 0.8
 			)
 
+
 	# Knockback
 	if is_knockbacked:
 
@@ -196,9 +274,9 @@ func process_timers(delta: float) -> void:
 			update_animation()
 
 
-# ==================================================
-# DEAD STATE
-# ==================================================
+# =========================================================
+# DEAD
+# =========================================================
 
 func process_dead(delta: float) -> void:
 
@@ -208,40 +286,56 @@ func process_dead(delta: float) -> void:
 		WALK_SPEED * 10.0 * delta
 	)
 
+
 	if not is_on_floor():
+
 		velocity += get_gravity() * delta
+
 
 	move_and_slide()
 
 
-# ==================================================
-# POTION STATE
-# ==================================================
+# =========================================================
+# POTION
+# =========================================================
 
 func process_potion(delta: float) -> void:
 
+	# หยุดแนวนอน
 	velocity.x = 0.0
 
+
+	# ถ้าลอยอยู่ให้ตกตาม Gravity
 	if not is_on_floor():
+
 		velocity += get_gravity() * delta
+
 
 	move_and_slide()
 
 
-# ==================================================
-# DASH STATE
-# ==================================================
+# =========================================================
+# DASH
+# =========================================================
 
-func process_dash() -> void:
+func process_dash(delta: float) -> void:
 
-	var facing := -1.0 if anim.flip_h else 1.0
+	var facing := (
+		-1.0
+		if anim.flip_h
+		else 1.0
+	)
+
 
 	velocity.x = facing * DASH_SPEED
 	velocity.y = 0.0
 
+
 	move_and_slide()
 
-	dash_timer -= get_physics_process_delta_time()
+
+	dash_timer -= delta
+
 
 	if dash_timer <= 0.0:
 
@@ -250,9 +344,9 @@ func process_dash() -> void:
 		update_animation()
 
 
-# ==================================================
-# SLIDE STATE
-# ==================================================
+# =========================================================
+# SLIDE
+# =========================================================
 
 func process_slide(delta: float) -> void:
 
@@ -270,12 +364,15 @@ func process_slide(delta: float) -> void:
 		return
 
 
-	# ลดเวลา Slide
 	slide_timer -= delta
 
 
-	# ทิศทาง
-	var facing := -1.0 if anim.flip_h else 1.0
+	var facing := (
+		-1.0
+		if anim.flip_h
+		else 1.0
+	)
+
 
 	velocity.x = facing * SLIDE_SPEED
 
@@ -297,9 +394,276 @@ func process_slide(delta: float) -> void:
 		update_animation()
 
 
-# ==================================================
+# =========================================================
+# CHARGE
+# =========================================================
+
+func process_charge(delta: float) -> void:
+
+	# -----------------------------------------
+	# ห้ามอยู่กลางอากาศ
+	# -----------------------------------------
+
+	if not is_on_floor():
+
+		cancel_charge()
+
+		apply_gravity(delta)
+
+		anim.play("Jump")
+
+		move_and_slide()
+
+		return
+
+
+	# -----------------------------------------
+	# หยุดเคลื่อนที่
+	# -----------------------------------------
+
+	velocity.x = 0.0
+
+
+	# -----------------------------------------
+	# เพิ่มเวลา Charge
+	# -----------------------------------------
+
+	charge_time += delta
+	charge_frame_timer += delta
+
+
+	# -----------------------------------------
+	# Frame 0 <-> 1
+	# -----------------------------------------
+
+	if not is_charge_full:
+
+		if charge_frame_timer >= CHARGE_FRAME_TIME:
+
+			charge_frame_timer = 0.0
+
+
+			if charge_frame == 0:
+
+				charge_frame = 1
+
+			else:
+
+				charge_frame = 0
+
+
+			anim.frame = charge_frame
+
+
+	# -----------------------------------------
+	# Charge เต็ม
+	# -----------------------------------------
+
+	if charge_time >= CHARGE_MAX_TIME:
+
+		if not is_charge_full:
+
+			is_charge_full = true
+
+			charge_time = CHARGE_MAX_TIME
+
+			charged_damage = CHARGED_MAX_DAMAGE
+
+			current_attack_damage = CHARGED_MAX_DAMAGE
+
+			# ค้างที่ Frame 1
+			anim.frame = 1
+
+
+	# -----------------------------------------
+	# Flash เมื่อเต็ม
+	# -----------------------------------------
+
+	if is_charge_full:
+
+		charge_flash_timer += delta
+
+
+		if charge_flash_timer >= CHARGE_FLASH_TIME:
+
+			charge_flash_timer = 0.0
+
+			anim.visible = not anim.visible
+
+
+	# -----------------------------------------
+	# ปล่อยคลิกขวา
+	# -----------------------------------------
+
+	if not Input.is_mouse_button_pressed(
+		MOUSE_BUTTON_RIGHT
+	):
+
+		release_charge()
+
+
+# =========================================================
+# START CHARGE
+# =========================================================
+
+func start_charge() -> void:
+
+	if is_dead:
+		return
+
+
+	# ห้าม Charge กลางอากาศ
+	if not is_on_floor():
+		return
+
+
+	# ห้าม Charge ใน State อื่น
+	if (
+		is_charging
+		or is_attacking
+		or is_using_potion
+		or is_dashing
+		or is_sliding
+		or is_knockbacked
+	):
+		return
+
+
+	# -----------------------------------------
+	# Reset Charge
+	# -----------------------------------------
+
+	is_charging = true
+	is_charge_full = false
+	is_charge_releasing = false
+
+	charge_time = 0.0
+	charge_frame_timer = 0.0
+	charge_flash_timer = 0.0
+
+	charge_frame = 0
+
+	charged_damage = CHARGED_MIN_DAMAGE
+	current_attack_damage = CHARGED_MIN_DAMAGE
+
+
+	# -----------------------------------------
+	# Attack State
+	# -----------------------------------------
+
+	is_attacking = true
+	combo = 4
+	attack_queued = false
+
+
+	attack_collision.set_deferred(
+		"disabled",
+		true
+	)
+
+
+	# -----------------------------------------
+	# Attack_4 Frame 0
+	# -----------------------------------------
+
+	anim.visible = true
+	anim.modulate.a = 1.0
+
+	anim.stop()
+
+	anim.animation = "Attack_4"
+
+	anim.frame = 0
+
+
+# =========================================================
+# RELEASE CHARGE
+# =========================================================
+
+func release_charge() -> void:
+
+	if not is_charging:
+		return
+
+
+	is_charging = false
+	is_charge_releasing = true
+
+
+	anim.visible = true
+	anim.modulate.a = 1.0
+
+
+	# -----------------------------------------
+	# Calculate Damage
+	# -----------------------------------------
+
+	var charge_ratio := (
+		charge_time / CHARGE_MAX_TIME
+	)
+
+	charge_ratio = clamp(
+		charge_ratio,
+		0.0,
+		1.0
+	)
+
+
+	charged_damage = int(
+		lerp(
+			float(CHARGED_MIN_DAMAGE),
+			float(CHARGED_MAX_DAMAGE),
+			charge_ratio
+		)
+	)
+
+
+	current_attack_damage = charged_damage
+
+
+	# -----------------------------------------
+	# เล่น Attack_4 ต่อจาก Frame 2
+	# -----------------------------------------
+
+	anim.stop()
+
+	anim.animation = "Attack_4"
+
+	anim.frame = 2
+
+	anim.play()
+
+
+# =========================================================
+# CANCEL CHARGE
+# =========================================================
+
+func cancel_charge() -> void:
+
+	is_charging = false
+	is_charge_releasing = false
+	is_charge_full = false
+
+	charge_time = 0.0
+	charge_frame_timer = 0.0
+	charge_flash_timer = 0.0
+
+	anim.visible = true
+	anim.modulate.a = 1.0
+
+
+	attack_collision.set_deferred(
+		"disabled",
+		true
+	)
+
+
+	current_attack_damage = NORMAL_ATTACK_DAMAGE
+
+
+# =========================================================
 # GRAVITY
-# ==================================================
+# =========================================================
 
 func apply_gravity(delta: float) -> void:
 
@@ -308,9 +672,9 @@ func apply_gravity(delta: float) -> void:
 		velocity += get_gravity() * delta
 
 
-# ==================================================
+# =========================================================
 # MOVEMENT
-# ==================================================
+# =========================================================
 
 func process_movement(
 	direction: float,
@@ -340,15 +704,17 @@ func process_movement(
 	# Speed
 	var speed := WALK_SPEED
 
+
 	if Input.is_key_pressed(KEY_SHIFT):
 
 		speed = RUN_SPEED
 
 
-	# Move
+	# Movement
 	if direction != 0:
 
 		velocity.x = direction * speed
+
 
 	else:
 
@@ -359,15 +725,19 @@ func process_movement(
 		)
 
 
-# ==================================================
+# =========================================================
 # FACING
-# ==================================================
+# =========================================================
 
 func process_facing(
 	direction: float
 ) -> void:
 
-	if is_attacking or is_sliding:
+	if (
+		is_attacking
+		or is_sliding
+		or is_charging
+	):
 
 		return
 
@@ -375,18 +745,20 @@ func process_facing(
 	if direction > 0:
 
 		anim.flip_h = false
+
 		attack_area.scale.x = 1
 
 
 	elif direction < 0:
 
 		anim.flip_h = true
+
 		attack_area.scale.x = -1
 
 
-# ==================================================
+# =========================================================
 # JUMP
-# ==================================================
+# =========================================================
 
 func process_jump() -> void:
 
@@ -394,7 +766,9 @@ func process_jump() -> void:
 		is_attacking
 		or is_sliding
 		or is_dashing
+		or is_charging
 	):
+
 		return
 
 
@@ -406,9 +780,9 @@ func process_jump() -> void:
 		velocity.y = JUMP_VELOCITY
 
 
-# ==================================================
+# =========================================================
 # INPUT
-# ==================================================
+# =========================================================
 
 func process_inputs() -> void:
 
@@ -418,7 +792,17 @@ func process_inputs() -> void:
 		use_potion()
 
 
-	# Attack
+	# Charge - Right Mouse
+	if Input.is_mouse_button_pressed(
+		MOUSE_BUTTON_RIGHT
+	):
+
+		if not is_charging:
+
+			start_charge()
+
+
+	# Normal Attack
 	if Input.is_action_just_pressed("Attack"):
 
 		handle_attack_input()
@@ -426,7 +810,7 @@ func process_inputs() -> void:
 
 	# Slide = Z
 	if Input.is_action_just_pressed("Slide"):
-		
+
 		start_slide()
 
 
@@ -434,13 +818,13 @@ func process_inputs() -> void:
 	handle_dash_input()
 
 
-# ==================================================
-# ATTACK INPUT
-# ==================================================
+# =========================================================
+# NORMAL ATTACK INPUT
+# =========================================================
 
 func handle_attack_input() -> void:
 
-	# ห้ามโจมตีกลางอากาศ
+	# ห้ามตีตอนกลางอากาศ
 	if not is_on_floor():
 
 		return
@@ -451,8 +835,10 @@ func handle_attack_input() -> void:
 		or is_using_potion
 		or is_dashing
 		or is_sliding
+		or is_charging
 		or is_knockbacked
 	):
+
 		return
 
 
@@ -463,14 +849,15 @@ func handle_attack_input() -> void:
 
 			attack_queued = true
 
+
 	else:
 
 		start_attack()
 
 
-# ==================================================
-# START ATTACK
-# ==================================================
+# =========================================================
+# NORMAL ATTACK
+# =========================================================
 
 func start_attack() -> void:
 
@@ -479,8 +866,10 @@ func start_attack() -> void:
 		or is_using_potion
 		or is_dashing
 		or is_sliding
+		or is_charging
 		or is_knockbacked
 	):
+
 		return
 
 
@@ -489,19 +878,22 @@ func start_attack() -> void:
 		return
 
 
+	# Attack 1
 	if not is_attacking:
 
-		# Attack แรก
 		is_attacking = true
 
 		combo = 1
 
 		attack_queued = false
 
+
 	else:
 
-		# Combo ต่อ
 		combo += 1
+
+
+	current_attack_damage = NORMAL_ATTACK_DAMAGE
 
 
 	if combo <= 4:
@@ -511,9 +903,9 @@ func start_attack() -> void:
 		)
 
 
-# ==================================================
+# =========================================================
 # CANCEL ATTACK
-# ==================================================
+# =========================================================
 
 func cancel_attack() -> void:
 
@@ -523,15 +915,18 @@ func cancel_attack() -> void:
 
 	combo = 0
 
+	current_attack_damage = NORMAL_ATTACK_DAMAGE
+
+
 	attack_collision.set_deferred(
 		"disabled",
 		true
 	)
 
 
-# ==================================================
+# =========================================================
 # NORMAL ANIMATION
-# ==================================================
+# =========================================================
 
 func update_animation() -> void:
 
@@ -541,7 +936,9 @@ func update_animation() -> void:
 		or is_dashing
 		or is_sliding
 		or is_attacking
+		or is_charging
 	):
+
 		return
 
 
@@ -571,27 +968,26 @@ func update_animation() -> void:
 		anim.play("Idle")
 
 
-# ==================================================
+# =========================================================
 # ANIMATION FINISHED
-# ==================================================
+# =========================================================
 
 func _on_animated_sprite_2d_animation_finished() -> void:
 
-	# -------------------------
-	# DEATH
-	# -------------------------
+	# -----------------------------------------
+	# Death
+	# -----------------------------------------
 
 	if anim.animation == "Death":
 
-		# Death จบแล้วค่อยไป Game Over
 		died.emit()
 
 		return
 
 
-	# -------------------------
-	# HEALTH
-	# -------------------------
+	# -----------------------------------------
+	# Health
+	# -----------------------------------------
 
 	if (
 		anim.animation == "Health"
@@ -603,16 +999,33 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 		return
 
 
-	# -------------------------
-	# ATTACK
-	# -------------------------
+	# -----------------------------------------
+	# Charged Attack
+	# -----------------------------------------
+
+	if (
+		anim.animation == "Attack_4"
+		and is_charge_releasing
+	):
+
+		is_charge_releasing = false
+
+		cancel_attack()
+
+		update_animation()
+
+		return
+
+
+	# -----------------------------------------
+	# Normal Attack
+	# -----------------------------------------
 
 	if (
 		is_attacking
 		and anim.animation.begins_with("Attack")
 	):
 
-		# Combo ต่อ
 		if (
 			attack_queued
 			and combo < 4
@@ -625,25 +1038,31 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 			return
 
 
-		# Attack จบ
 		cancel_attack()
 
 		update_animation()
 
 
-# ==================================================
-# ANIMATION FRAME
-# ==================================================
+# =========================================================
+# ANIMATION FRAME CHANGED
+# =========================================================
 
 func _on_animated_sprite_2d_frame_changed() -> void:
 
-	var attacking := anim.animation.begins_with(
-		"Attack"
+	var is_attack_animation := (
+		anim.animation.begins_with("Attack")
 	)
 
 
+	# -----------------------------------------
+	# Normal Attack
+	# -----------------------------------------
+
 	if (
-		attacking
+		is_attack_animation
+		and not is_charging
+		and not is_charge_releasing
+		and anim.animation != "Attack_4"
 		and anim.frame == 1
 	):
 
@@ -660,9 +1079,25 @@ func _on_animated_sprite_2d_frame_changed() -> void:
 		)
 
 
-# ==================================================
+	# -----------------------------------------
+	# Charge Attack
+	# -----------------------------------------
+
+	if (
+		is_charge_releasing
+		and anim.animation == "Attack_4"
+		and anim.frame == 4
+	):
+
+		attack_collision.set_deferred(
+			"disabled",
+			false
+		)
+
+
+# =========================================================
 # ATTACK AREA
-# ==================================================
+# =========================================================
 
 func _on_attack_area_area_entered(
 	area
@@ -680,6 +1115,10 @@ func _on_attack_area_body_entered(
 	_deal_damage(body)
 
 
+# =========================================================
+# DEAL DAMAGE
+# =========================================================
+
 func _deal_damage(
 	enemy: Node
 ) -> void:
@@ -689,16 +1128,20 @@ func _deal_damage(
 		return
 
 
-	if enemy.has_method("take_damage"):
+	if enemy.has_method(
+		"take_damage"
+	):
 
-		enemy.take_damage(10)
+		enemy.take_damage(
+			current_attack_damage
+		)
 
 		apply_camera_shake(5.0)
 
 
-# ==================================================
+# =========================================================
 # PLAYER DAMAGE
-# ==================================================
+# =========================================================
 
 func hit() -> void:
 
@@ -710,14 +1153,19 @@ func take_damage(
 	source_position_x: float = 0.0
 ) -> void:
 
-	if is_dead or is_invincible:
+	if (
+		is_dead
+		or is_invincible
+	):
 
 		return
 
 
-	# -------------------------
-	# CANCEL CURRENT STATE
-	# -------------------------
+	# -----------------------------------------
+	# โดน Enemy ระหว่าง Attack / Charge
+	# -----------------------------------------
+
+	cancel_charge()
 
 	cancel_attack()
 
@@ -726,9 +1174,9 @@ func take_damage(
 	is_dashing = false
 
 
-	# -------------------------
-	# DAMAGE
-	# -------------------------
+	# -----------------------------------------
+	# HP
+	# -----------------------------------------
 
 	hp = max(
 		hp - amount,
@@ -745,9 +1193,9 @@ func take_damage(
 	apply_camera_shake(10.0)
 
 
-	# -------------------------
-	# DEATH
-	# -------------------------
+	# -----------------------------------------
+	# Death
+	# -----------------------------------------
 
 	if hp <= 0:
 
@@ -756,9 +1204,9 @@ func take_damage(
 		return
 
 
-	# -------------------------
-	# INVINCIBILITY
-	# -------------------------
+	# -----------------------------------------
+	# Invincibility
+	# -----------------------------------------
 
 	is_invincible = true
 
@@ -767,9 +1215,9 @@ func take_damage(
 	)
 
 
-	# -------------------------
-	# KNOCKBACK
-	# -------------------------
+	# -----------------------------------------
+	# Knockback
+	# -----------------------------------------
 
 	if source_position_x != 0.0:
 
@@ -784,16 +1232,18 @@ func take_damage(
 			knockback_direction * 200.0
 		)
 
+
 		velocity.y = -150.0
+
 
 		is_knockbacked = true
 
 		knockback_timer = 0.2
 
 
-# ==================================================
+# =========================================================
 # DEATH
-# ==================================================
+# =========================================================
 
 func die() -> void:
 
@@ -810,6 +1260,10 @@ func die() -> void:
 	is_sliding = false
 	is_knockbacked = false
 
+	is_charging = false
+	is_charge_releasing = false
+	is_charge_full = false
+
 	attack_queued = false
 	combo = 0
 
@@ -822,20 +1276,20 @@ func die() -> void:
 
 	velocity.x = 0.0
 
+	anim.visible = true
 	anim.modulate.a = 1.0
 
 
-	# เล่น Death
+	# Death
 	anim.play("Death")
 
 
-	# ไม่ emit died ตรงนี้
-	# จะ emit หลัง Animation Death จบ
+	# died.emit() จะเกิดเมื่อ Death จบ
 
 
-# ==================================================
+# =========================================================
 # POTION
-# ==================================================
+# =========================================================
 
 func use_potion() -> void:
 
@@ -845,7 +1299,9 @@ func use_potion() -> void:
 		or is_attacking
 		or is_dashing
 		or is_sliding
+		or is_charging
 	):
+
 		return
 
 
@@ -863,12 +1319,16 @@ func use_potion() -> void:
 
 	velocity.x = 0.0
 
+
+	anim.visible = true
+	anim.modulate.a = 1.0
+
 	anim.play("Health")
 
 
-# ==================================================
+# =========================================================
 # FINISH POTION
-# ==================================================
+# =========================================================
 
 func finish_potion() -> void:
 
@@ -884,12 +1344,8 @@ func finish_potion() -> void:
 		return
 
 
-	# ลด Potion
-
 	potion_count -= 1
 
-
-	# Heal
 
 	hp = min(
 		hp + HEAL_AMOUNT,
@@ -897,33 +1353,28 @@ func finish_potion() -> void:
 	)
 
 
-	# Update UI
-
 	hp_changed.emit(
 		hp,
 		MAX_HP
 	)
+
 
 	potion_count_changed.emit(
 		potion_count
 	)
 
 
-	# Save
-
 	save_player_data()
 
-
-	# Unlock
 
 	is_using_potion = false
 
 	update_animation()
 
 
-# ==================================================
+# =========================================================
 # ADD POTION
-# ==================================================
+# =========================================================
 
 func add_potion(
 	amount: int
@@ -938,53 +1389,39 @@ func add_potion(
 	save_player_data()
 
 
-# ==================================================
+# =========================================================
 # SLIDE
-# ==================================================
+# =========================================================
 
 func start_slide() -> void:
 
-	# ตาย
 	if is_dead:
 
 		return
 
 
-	# --------------------------------
 	# ห้าม Slide กลางอากาศ
-	# --------------------------------
-
 	if not is_on_floor():
 
 		return
 
-
-	# --------------------------------
-	# State อื่น
-	# --------------------------------
 
 	if (
 		is_attacking
 		or is_using_potion
 		or is_dashing
 		or is_sliding
+		or is_charging
 		or is_knockbacked
 	):
+
 		return
 
-
-	# --------------------------------
-	# Cooldown
-	# --------------------------------
 
 	if slide_cooldown_timer > 0.0:
 
 		return
 
-
-	# --------------------------------
-	# Start
-	# --------------------------------
 
 	is_sliding = true
 
@@ -993,13 +1430,15 @@ func start_slide() -> void:
 	slide_cooldown_timer = SLIDE_COOLDOWN
 
 
-	# เล่น Animation
+	anim.visible = true
+	anim.modulate.a = 1.0
+
 	anim.play("Slide")
 
 
-# ==================================================
-# DASH / RUN
-# ==================================================
+# =========================================================
+# DASH INPUT
+# =========================================================
 
 func handle_dash_input() -> void:
 
@@ -1008,7 +1447,6 @@ func handle_dash_input() -> void:
 	)
 
 
-	# Shift ค้าง
 	if shift_pressed:
 
 		shift_hold_timer += (
@@ -1016,12 +1454,7 @@ func handle_dash_input() -> void:
 		)
 
 
-	# Shift ปล่อย
 	else:
-
-		# Dash ต้อง:
-		# - กด Shift เร็ว
-		# - อยู่บนพื้น
 
 		if (
 			shift_was_pressed
@@ -1038,9 +1471,9 @@ func handle_dash_input() -> void:
 	shift_was_pressed = shift_pressed
 
 
-# ==================================================
-# START DASH
-# ==================================================
+# =========================================================
+# DASH
+# =========================================================
 
 func start_dash() -> void:
 
@@ -1050,25 +1483,24 @@ func start_dash() -> void:
 		return
 
 
-	# State
 	if (
 		is_dead
 		or is_attacking
 		or is_using_potion
 		or is_sliding
+		or is_charging
 		or is_knockbacked
 		or is_dashing
 	):
+
 		return
 
 
-	# Cooldown
 	if dash_cooldown_timer > 0.0:
 
 		return
 
 
-	# Start
 	is_dashing = true
 
 	dash_timer = DASH_DURATION
@@ -1076,7 +1508,6 @@ func start_dash() -> void:
 	dash_cooldown_timer = DASH_COOLDOWN
 
 
-	# Invincibility
 	is_invincible = true
 
 	invincibility_timer = max(
@@ -1088,9 +1519,9 @@ func start_dash() -> void:
 	apply_camera_shake(3.0)
 
 
-# ==================================================
+# =========================================================
 # CAMERA SHAKE
-# ==================================================
+# =========================================================
 
 func process_camera_shake(
 	delta: float
@@ -1137,9 +1568,9 @@ func apply_camera_shake(
 	shake_intensity = intensity
 
 
-# ==================================================
+# =========================================================
 # LOAD PLAYER DATA
-# ==================================================
+# =========================================================
 
 func load_player_data() -> void:
 
@@ -1161,6 +1592,8 @@ func load_player_data() -> void:
 
 		SaveManager.is_respawning = false
 
+		save_player_data()
+
 
 	else:
 
@@ -1180,9 +1613,7 @@ func load_player_data() -> void:
 			)
 
 
-	# Position
 	var has_position := false
-
 	var spawn_position := Vector2.ZERO
 
 
@@ -1240,9 +1671,9 @@ func load_player_data() -> void:
 		)
 
 
-# ==================================================
-# APPLY POSITION
-# ==================================================
+# =========================================================
+# APPLY SAVED POSITION
+# =========================================================
 
 func _apply_saved_position(
 	saved_position: Vector2
@@ -1251,9 +1682,9 @@ func _apply_saved_position(
 	global_position = saved_position
 
 
-# ==================================================
+# =========================================================
 # INITIAL UI
-# ==================================================
+# =========================================================
 
 func emit_initial_ui_signals() -> void:
 
@@ -1262,14 +1693,15 @@ func emit_initial_ui_signals() -> void:
 		MAX_HP
 	)
 
+
 	potion_count_changed.emit(
 		potion_count
 	)
 
 
-# ==================================================
+# =========================================================
 # CHECKPOINT
-# ==================================================
+# =========================================================
 
 func update_checkpoint() -> void:
 
@@ -1300,9 +1732,9 @@ func update_checkpoint() -> void:
 	save_player_data()
 
 
-# ==================================================
+# =========================================================
 # SAVE
-# ==================================================
+# =========================================================
 
 func save_player_data() -> void:
 
