@@ -37,6 +37,7 @@ var attack_cooldown: float = 2.0
 var hp: int = MAX_HP
 var knockback_timer: float = 0.0
 var attack_timer: float = 0.0
+var enrage_stun_timer: float = 0.0
 var is_dying: bool = false
 var is_attacking: bool = false
 var attack_dealt_damage: bool = false
@@ -98,6 +99,13 @@ func _physics_process(delta: float) -> void:
 	# Gravity
 	if not is_on_floor():
 		velocity.y += GRAVITY * delta
+
+	if enrage_stun_timer > 0.0:
+		enrage_stun_timer -= delta
+		velocity.x = 0
+		if anim: anim.play("Idle")
+		move_and_slide()
+		return
 
 	# Timers
 	if attack_timer > 0.0:
@@ -301,6 +309,7 @@ func take_damage(amount: int) -> void:
 
 func trigger_enrage() -> void:
 	is_enraged = true
+	enrage_stun_timer = 2.0 # สตั้นตอนโกรธ 2 วินาที
 	# เพิ่มสเตตัสความบ้าคลั่ง
 	chase_speed = 130.0
 	attack_cooldown = 1.0
