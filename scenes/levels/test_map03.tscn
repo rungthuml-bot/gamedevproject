@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/levels/base_level.gd" id="1_base"]
 [ext_resource type="PackedScene" path="res://scenes/systems/MapDoor.tscn" id="2_door"]
+[ext_resource type="PackedScene" path="res://scenes/enemies/EnemyArcher.tscn" id="3_archer"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ground"]
 size = Vector2(1200, 100)
@@ -65,3 +66,6 @@ target_spawn_id = "DoorRight"
 position = Vector2(1150, 500)
 target_scene_path = "res://scenes/levels/test_map04.tscn"
 target_spawn_id = "DoorLeft"
+
+[node name="EnemyArcher" parent="." instance=ExtResource("3_archer")]
+position = Vector2(800, 480)

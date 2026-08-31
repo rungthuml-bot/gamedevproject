@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemies/arrow.gd" id="1_arrow"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_arrow"]
+size = Vector2(20, 4)
+
+[node name="Arrow" type="Area2D"]
+collision_layer = 0
+collision_mask = 3
+script = ExtResource("1_arrow")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_arrow")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.8, 0.8, 0.2, 1)
+polygon = PackedVector2Array(-10, -2, 6, -2, 10, 0, 6, 2, -10, 2)

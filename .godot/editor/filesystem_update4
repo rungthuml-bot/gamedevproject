@@ -1,3 +1,4 @@
 res://scripts/levels/base_level.gd
 res://scripts/story/story_intro.gd
 res://scripts/systems/SaveManager.gd
+res://scripts/characters/mordred.gd

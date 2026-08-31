@@ -167,7 +167,13 @@ func start_attack(is_heavy: bool = false):
 		combo += 1
 
 		if combo <= 4:
-
+			if combo == 4:
+				current_attack_damage = 25
+				current_attack_shake = 10.0
+			else:
+				current_attack_damage = 10
+				current_attack_shake = 5.0
+				
 			anim.play("Attack_" + str(combo))
 
 	# AIR COMBO
