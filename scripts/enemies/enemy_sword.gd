@@ -57,7 +57,6 @@ var move_direction: float = 1.0
 # =========================================================
 
 func _ready() -> void:
-	attack_hitbox.body_entered.connect(_on_attack_hitbox_body_entered)
 	start_position_x = global_position.x
 	sword_visual.visible = false
 
