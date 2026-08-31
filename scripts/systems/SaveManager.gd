@@ -5,6 +5,8 @@ extends Node
 # Variables
 # =========================================================
 
+signal equipped_charms_changed
+
 var current_slot: int = 1
 var default_start_scene: String = "res://scenes/levels/test_map01.tscn"
 
@@ -12,7 +14,8 @@ var default_start_scene: String = "res://scenes/levels/test_map01.tscn"
 var save_data: Dictionary = {
 	"hp": 100,
 	"potion_count": 1,
-	"current_scene": "res://scenes/levels/test_map01.tscn"
+	"current_scene": "res://scenes/levels/test_map01.tscn",
+	"equipped_charms": []
 }
 
 # ใช้สำหรับบอกให้ระบบรู้ว่าเป็นการตายแล้วเกิดใหม่
@@ -43,7 +46,8 @@ func create_new_save(slot: int) -> void:
 	save_data = {
 		"hp": 100,
 		"potion_count": 1,
-		"current_scene": default_start_scene
+		"current_scene": default_start_scene,
+		"equipped_charms": []
 	}
 	save_game()
 
@@ -109,3 +113,26 @@ func get_slot_info(slot: int) -> Dictionary:
 				return json.data
 
 	return {}
+
+# =========================================================
+# Charm Management
+# =========================================================
+
+func is_charm_equipped(charm_id: String) -> bool:
+	if save_data.has("equipped_charms") and save_data["equipped_charms"] is Array:
+		return save_data["equipped_charms"].has(charm_id)
+	return false
+
+func toggle_charm(charm_id: String) -> void:
+	if not save_data.has("equipped_charms") or not (save_data["equipped_charms"] is Array):
+		save_data["equipped_charms"] = []
+		
+	var charms: Array = save_data["equipped_charms"]
+	
+	if charms.has(charm_id):
+		charms.erase(charm_id)
+	else:
+		charms.append(charm_id)
+		
+	save_game()
+	equipped_charms_changed.emit()

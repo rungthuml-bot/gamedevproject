@@ -24,7 +24,8 @@ func _ready() -> void:
 		if player.has_signal("hp_changed"):
 
 			player.hp_changed.connect(_on_player_hp_changed)
-			_on_player_hp_changed(player.get("hp"), player.get("MAX_HP"))
+			var max_hp_val = player.get("max_hp") if player.get("max_hp") != null else player.get("MAX_HP")
+			_on_player_hp_changed(player.get("hp"), max_hp_val)
 
 		# เชื่อมต่อ Signal ขวดยา
 		if player.has_signal("potion_count_changed"):

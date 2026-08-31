@@ -94,10 +94,13 @@ func toggle_menu() -> void:
 # Charm Selection Systems
 # =========================================================
 
+var charm_buttons: Dictionary = {}
+
 func setup_charm_buttons() -> void:
 
 	for charm_id in charms_database.keys():
 		var charm_info: Dictionary = charms_database[charm_id]
+		charm_info["equipped"] = SaveManager.is_charm_equipped(charm_id)
 		var btn := Button.new()
 		
 		btn.custom_minimum_size = Vector2(64, 64)
@@ -106,14 +109,42 @@ func setup_charm_buttons() -> void:
 		btn.pressed.connect(func(): _on_charm_selected(charm_id))
 		
 		inventory_grid.add_child(btn)
+		charm_buttons[charm_id] = btn
 
+	_refresh_all_buttons()
+
+func _refresh_all_buttons() -> void:
+	for charm_id in charm_buttons.keys():
+		var btn: Button = charm_buttons[charm_id]
+		if SaveManager.is_charm_equipped(charm_id):
+			var style = StyleBoxFlat.new()
+			style.bg_color = Color(0.15, 0.15, 0.15, 1.0)
+			style.border_width_left = 3
+			style.border_width_top = 3
+			style.border_width_right = 3
+			style.border_width_bottom = 3
+			style.border_color = Color(1.0, 0.9, 0.4, 1.0) # Yellow glow border
+			style.shadow_color = Color(1.0, 0.8, 0.2, 0.6)
+			style.shadow_size = 15
+			btn.add_theme_stylebox_override("normal", style)
+			btn.add_theme_stylebox_override("hover", style)
+			btn.add_theme_stylebox_override("pressed", style)
+			btn.add_theme_stylebox_override("focus", style)
+		else:
+			btn.remove_theme_stylebox_override("normal")
+			btn.remove_theme_stylebox_override("hover")
+			btn.remove_theme_stylebox_override("pressed")
+			btn.remove_theme_stylebox_override("focus")
 
 var current_selected_charm: String = ""
 
 func _on_charm_selected(charm_id: String) -> void:
+	SaveManager.toggle_charm(charm_id)
+	
 	var charm: Dictionary = charms_database[charm_id]
-	charm["equipped"] = not charm["equipped"]
+	charm["equipped"] = SaveManager.is_charm_equipped(charm_id)
 	current_selected_charm = charm_id
+	_refresh_all_buttons()
 	_update_selected_charm_text()
 
 func _update_selected_charm_text() -> void:
@@ -123,8 +154,6 @@ func _update_selected_charm_text() -> void:
 	
 	var charm_name = charm["name"]
 	var charm_desc = charm["description"]
-	var equipped_text = "\n\n[ EQUIPPED ]" if charm["equipped"] else "\n\n[ NOT EQUIPPED ]"
-	
 	if has_node("/root/LocaleManager"):
 		var lm = get_node("/root/LocaleManager")
 		if current_selected_charm == "speed_charm":
@@ -136,8 +165,6 @@ func _update_selected_charm_text() -> void:
 		elif current_selected_charm == "health_charm":
 			charm_name = lm.t("CHARM_HEALTH_NAME")
 			charm_desc = lm.t("CHARM_HEALTH_DESC")
-			
-		# Optional: Translate EQUIPPED/NOT EQUIPPED but skip for now to save time
 	
 	charm_name_label.text = charm_name
-	charm_desc_label.text = charm_desc + equipped_text
+	charm_desc_label.text = charm_desc

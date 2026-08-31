@@ -4,11 +4,12 @@ signal died
 signal hp_changed(current_hp: int, max_hp: int)
 signal potion_count_changed(count: int)
 
-const MAX_HP := 100
+var base_max_hp := 100
+var max_hp := 100
 const INVINCIBILITY_DURATION := 1.0
 const HEAL_AMOUNT := 35
 
-var hp := MAX_HP
+var hp := 100
 var is_invincible := false
 var invincibility_timer := 0.0
 var is_dead := false
@@ -16,12 +17,15 @@ var is_knockbacked := false
 var knockback_timer := 0.0
 var potion_count := 1
 
-const WALK_SPEED = 250.0
-const RUN_SPEED = 420.0
+var base_walk_speed := 250.0
+var walk_speed := 250.0
+var base_run_speed := 420.0
+var run_speed := 420.0
 const JUMP_VELOCITY = -450.0
 
 # DASH CONSTANTS
-const DASH_SPEED := 700.0
+var base_dash_speed := 700.0
+var dash_speed := 700.0
 const DASH_DURATION := 0.20
 const DASH_COOLDOWN := 0.60
 
@@ -62,6 +66,7 @@ var air_attacks_used = 0
 
 var current_attack_damage := 10
 var current_attack_shake := 5.0
+var attack_multiplier := 1.0
 var max_jumps := 2
 var jumps_left := 2
 
@@ -71,7 +76,7 @@ func _ready():
 	# จัดการการ Load ข้อมูล
 	if SaveManager.is_respawning:
 		# การโหลดจาก Death Respawn
-		hp = MAX_HP
+		hp = max_hp
 		if SaveManager.save_data.has("checkpoint_potion"):
 			potion_count = SaveManager.save_data["checkpoint_potion"]
 		
@@ -87,11 +92,42 @@ func _ready():
 		if SaveManager.save_data.has("potion_count"):
 			potion_count = SaveManager.save_data["potion_count"]
 
+	# เชื่อมต่อกับ SaveManager เพื่ออัพเดทค่าพลังแบบเรียลไทม์
+	if SaveManager.has_signal("equipped_charms_changed"):
+		if not SaveManager.equipped_charms_changed.is_connected(_update_stats_from_charms):
+			SaveManager.equipped_charms_changed.connect(_update_stats_from_charms)
+	
+	_update_stats_from_charms()
+
 	# ส่งค่าให้ UI แสดงผล (ดีเลย์ 1 เฟรมเพื่อให้ HUD _ready() เสร็จก่อน)
 	call_deferred("emit_initial_ui_signals")
 
+func _update_stats_from_charms() -> void:
+	# คืนค่าพื้นฐานก่อน
+	walk_speed = base_walk_speed
+	run_speed = base_run_speed
+	dash_speed = base_dash_speed
+	max_hp = base_max_hp
+	attack_multiplier = 1.0
+	
+	if SaveManager.is_charm_equipped("speed_charm"):
+		walk_speed *= 1.2
+		run_speed *= 1.2
+		dash_speed *= 1.2
+		
+	if SaveManager.is_charm_equipped("power_charm"):
+		attack_multiplier = 1.5
+		
+	if SaveManager.is_charm_equipped("health_charm"):
+		max_hp += 50
+		
+	if hp > max_hp:
+		hp = max_hp
+		
+	hp_changed.emit(hp, max_hp)
+
 func emit_initial_ui_signals() -> void:
-	hp_changed.emit(hp, MAX_HP)
+	hp_changed.emit(hp, max_hp)
 	potion_count_changed.emit(potion_count)
 
 # START ATTACK
@@ -209,7 +245,7 @@ func _physics_process(delta: float) -> void:
 	shift_was_pressed = shift_pressed
 
 	if is_dead:
-		velocity.x = move_toward(velocity.x, 0, WALK_SPEED)
+		velocity.x = move_toward(velocity.x, 0, walk_speed)
 		if not is_on_floor():
 			velocity += get_gravity() * delta
 		move_and_slide()
@@ -223,7 +259,7 @@ func _physics_process(delta: float) -> void:
 
 	if is_dashing:
 		var facing := -1.0 if anim.flip_h else 1.0
-		velocity.x = facing * DASH_SPEED
+		velocity.x = facing * dash_speed
 		velocity.y = 0.0
 		move_and_slide()
 		return
@@ -259,9 +295,9 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 		jumps_left -= 1
 
-	var current_speed := WALK_SPEED
+	var current_speed := walk_speed
 	if shift_pressed and shift_hold_timer >= 0.2:
-		current_speed = RUN_SPEED
+		current_speed = run_speed
 
 	# MOVEMENT INPUT
 	var direction = Input.get_axis("Left", "Right")
@@ -428,7 +464,7 @@ func _on_attack_area_body_entered(body):
 
 func _deal_damage(enemy: Node) -> void:
 	if enemy.has_method("take_damage"):
-		enemy.take_damage(current_attack_damage)
+		enemy.take_damage(int(current_attack_damage * attack_multiplier))
 		apply_camera_shake(current_attack_shake)
 
 # =========================================================
@@ -445,7 +481,7 @@ func take_damage(amount: int, source_position_x: float = 0.0) -> void:
 
 	hp -= amount
 	hp = max(hp, 0)
-	hp_changed.emit(hp, MAX_HP)
+	hp_changed.emit(hp, max_hp)
 	apply_camera_shake(10.0)
 
 	if hp <= 0:
@@ -486,10 +522,13 @@ func add_potion(amount: int) -> void:
 
 func use_potion() -> void:
 	# ป้องกันการกินยารัวๆ ในเฟรมเดียวด้วยการเช็คเลือดว่าเต็มหรือยัง
-	if potion_count > 0 and hp < MAX_HP:
+	if potion_count > 0 and hp < max_hp:
+		
+		# รักษายังไงก็ไม่เกิน MAX_HP
+		hp = min(hp + HEAL_AMOUNT, max_hp)
+		
 		potion_count -= 1
-		hp = min(hp + HEAL_AMOUNT, MAX_HP)
-		hp_changed.emit(hp, MAX_HP)
+		hp_changed.emit(hp, max_hp)
 		potion_count_changed.emit(potion_count)
 		
 		# เซฟเกมอัตโนมัติเมื่อดื่มยา
