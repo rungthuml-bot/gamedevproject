@@ -232,10 +232,12 @@ func process_attack(player: Node2D) -> void:
 		update_facing_direction()
 
 	if anim:
-		if is_enraged:
+		if is_enraged and anim.sprite_frames.has_animation("Attack2"):
 			anim.play("Attack2")
-		else:
+		elif anim.sprite_frames.has_animation("Attack1"):
 			anim.play("Attack1")
+		elif anim.sprite_frames.has_animation("Attack"):
+			anim.play("Attack")
 	else:
 		# Fallback if no animation node is present
 		var windup_time = 0.5 if not is_enraged else 0.2
