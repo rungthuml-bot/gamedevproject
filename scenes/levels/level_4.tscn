@@ -393,8 +393,8 @@ scale = Vector2(2.172, 2.2)
 texture = ExtResource("3_l45re")
 
 [node name="Player" parent="." instance=ExtResource("100_player")]
-position = Vector2(100, 300)
+position = Vector2(100, 100)
 
 [node name="MapDoor_Prev" parent="." instance=ExtResource("101_door")]
-position = Vector2(0, 300)
+position = Vector2(100, 100)
 target_scene_path = "res://scenes/levels/level_3.tscn"

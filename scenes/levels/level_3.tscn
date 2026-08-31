@@ -558,12 +558,12 @@ position = Vector2(2463, 216)
 position = Vector2(2716, 220)
 
 [node name="Player" parent="." instance=ExtResource("100_player")]
-position = Vector2(100, 300)
+position = Vector2(100, 100)
 
 [node name="MapDoor_Prev" parent="." instance=ExtResource("101_door")]
-position = Vector2(0, 300)
+position = Vector2(100, 100)
 target_scene_path = "res://scenes/levels/level_2.tscn"
 
 [node name="MapDoor_Next" parent="." instance=ExtResource("101_door")]
-position = Vector2(500, 300)
+position = Vector2(100, 100)
 target_scene_path = "res://scenes/levels/level_4.tscn"
