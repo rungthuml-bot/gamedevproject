@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://sandbox12345"]
+[gd_scene load_steps=5 format=3 uid="uid://sandbox12345"]
 
 [ext_resource type="PackedScene" uid="uid://dvj03a3fowopm" path="res://scenes/characters/Mordred.tscn" id="1_player"]
 [ext_resource type="PackedScene" uid="uid://renvrfx4w4so" path="res://scenes/enemies/Boss.tscn" id="2_boss"]
+[ext_resource type="PackedScene" path="res://scenes/systems/BossArena.tscn" id="3_arena"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_floor"]
 size = Vector2(2000, 100)
@@ -21,8 +22,12 @@ offset_right = 1000.0
 offset_bottom = 50.0
 color = Color(0.2, 0.2, 0.2, 1)
 
-[node name="Mordred" parent="." instance=ExtResource("1_player")]
-position = Vector2(-200, -50)
+[node name="BossArena" parent="." instance=ExtResource("3_arena")]
+position = Vector2(100, 0)
+boss_path = NodePath("../Boss")
 
 [node name="Boss" parent="." instance=ExtResource("2_boss")]
-position = Vector2(200, -50)
+position = Vector2(300, 0)
+
+[node name="Mordred" parent="." instance=ExtResource("1_player")]
+position = Vector2(-150, 0)
