@@ -26,10 +26,10 @@ const ATTACK_RANGE: float = 100.0     # ระยะโจมตีกว้า�
 # Combat Stats
 # =========================================================
 
-const MAX_HP: int = 500
+const MAX_HP: int = 250
 const KNOCKBACK_FORCE: float = 50.0   # บอสโดนผลักแทบจะไม่ถอย
 const KNOCKBACK_DURATION: float = 0.1
-const BOSS_DAMAGE: int = 30
+const BOSS_DAMAGE: int = 15
 const CONTACT_DAMAGE: int = 10
 
 var attack_cooldown: float = 2.0
