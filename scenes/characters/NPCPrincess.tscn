@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://do0cvqktdnlcq"]
+[gd_scene format=3 uid="uid://d2yymy3svprcg"]
 
 [ext_resource type="Script" path="res://scripts/characters/npc_princess.gd" id="1_npc"]
 [ext_resource type="Texture2D" uid="uid://bt5ai3vft2gkn" path="res://assets/Npc/FREE - Blacksmith 2D Pixel Art/Sprites/BLACKSMITH.png" id="2_hnoa0"]

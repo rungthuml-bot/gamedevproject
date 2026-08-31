@@ -49,7 +49,7 @@ func _process(delta: float) -> void:
 	position.y = start_position.y - (FLOAT_DISTANCE * progress)
 
 	# ค่อย ๆ จาง
-	modulate.a = 1.0 - progress
+	modulate.a = clamp(1.0 - progress, 0.0, 1.0)
 
 	# ครบเวลาแล้วลบตัวเอง
 	if elapsed >= DURATION:
