@@ -1,5 +1,5 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1788205996
+::res://::1788208642
 DEVELOPMENT_BASELINE.md::TextFile::-1::1788200798::0::1::::<><><>0<>0<><>::
 TRAP_INTEGRATION.md::TextFile::-1::1788200798::0::1::::<><><>0<>0<><>::
 ::res://assets/::1788205613
@@ -559,7 +559,8 @@ Skyx32.png::CompressedTexture2D::8298614508109707192::1788200798::1788205619::1:
 Spikes.png::CompressedTexture2D::4370214344149868657::1788200798::1788205619::1::::<><><>0<>0<>c91d5a4e9cb3472920f3f023634f45a7<>res://.godot/imported/Spikes.png-c33a02a50cbd7bb5eb550da86a0ab8bb.ctex::
 stalactites.png::CompressedTexture2D::2767415940096746626::1788200798::1788205619::1::::<><><>0<>0<>6cdae743bb261f7e8d40a4666954843d<>res://.godot/imported/stalactites.png-a9cf0db85e93a612a395402697956607.ctex::
 Tileset.png::CompressedTexture2D::3005153260808558643::1788200798::1788205619::1::::<><><>0<>0<>cdde51d8e3577f05b49933ad9d36dcf3<>res://.godot/imported/Tileset.png-3cd53714474d59c311c8a7be163d1f5e.ctex::
-::res://assets/game/::1788200798
+::res://assets/game/::1788209277
+ChatGPT_Image_1_ก.ย._2569_03_45_09-removebg-preview (1).png::CompressedTexture2D::2635665245768951948::1788209277::1788209277::1::::<><><>0<>0<>de94b921c8f10f201c5741476ce73785<>res://.godot/imported/ChatGPT_Image_1_ก.ย._2569_03_45_09-removebg-preview (1).png-a8e3cd3af819afcb30791e210cf7ff20.ctex::
 ::res://assets/game/traps/::1788200798
 ::res://assets/game/traps/lava_pit/::1788205619
 lava_tile11.png::CompressedTexture2D::5300905557204282143::1788200798::1788205618::1::::<><><>0<>0<>ba6fb62c0edbd0f89557f0359d98c512<>res://.godot/imported/lava_tile11.png-baf88c68624a74c007a2d41e2ad91043.ctex::
@@ -594,7 +595,7 @@ Slide.png::CompressedTexture2D::6338033666400512370::1788200798::1788205619::1::
 License.txt::TextFile::-1::1788200798::0::1::::<><><>0<>0<><>::
 ::res://assets/Npc/FREE - Blacksmith 2D Pixel Art/Sprites/::1788205619
 BLACKSMITH.png::CompressedTexture2D::4339432373333426807::1788200798::1788205619::1::::<><><>0<>0<>dce0b26fd535f12a49bf2318af5c3408<>res://.godot/imported/BLACKSMITH.png-0e1f5da107f47411cc830bac3684b209.ctex::
-::res://assets/Npc/idle/::1788208466
+::res://assets/Npc/idle/::1788208467
 Warrior_Idle_1.png::CompressedTexture2D::7778836951681955845::1788208466::1788208467::1::::<><><>0<>0<>ae6a5473313a307eac92b360c18cc18b<>res://.godot/imported/Warrior_Idle_1.png-ae28968ae1c66b63ee7a4a5c3d746b7c.ctex::
 Warrior_Idle_2.png::CompressedTexture2D::2085932750291155932::1788208466::1788208467::1::::<><><>0<>0<>607ec0b9d025b346aea01dc959350ea4<>res://.godot/imported/Warrior_Idle_2.png-a3e91e74cd23295ffbccb6cd9a41f6ba.ctex::
 Warrior_Idle_3.png::CompressedTexture2D::3192846597602350737::1788208466::1788208467::1::::<><><>0<>0<>39f0320806348acb333a9ea38bc222e9<>res://.godot/imported/Warrior_Idle_3.png-cdc54b4a8a63a7e1aa99f1271635d473.ctex::
@@ -1380,10 +1381,10 @@ tile35.png::CompressedTexture2D::2949679691875539851::1788200798::1788205613::1:
 tile36.png::CompressedTexture2D::2647141837626002150::1788200798::1788205613::1::::<><><>0<>0<>7b07f9b52c262f56a21c598bc1050463<>res://.godot/imported/tile36.png-61560adbd4af64a1a08a3bffc5716087.ctex::
 ::res://assets/source/craftpix/trap_stalactite/PSD/::1788200798
 ::res://scenes/::1788205339
-::res://scenes/characters/::1788207476
+::res://scenes/characters/::1788208615
 Mordred.tscn::PackedScene::8653375137814310770::1788205711::0::1::::<><><>0<>0<><>::uid://bjy4cgvjsqdqs::::res://assets/Mordred_Knight/Attacks.png<>uid://c4v4bh0oxkuet::::res://scripts/characters/mordred.gd<>uid://bphvxu8hmlmtc::::res://assets/Mordred_Knight/Death.png<>uid://rdfjeyqrr6ns::::res://assets/Mordred_Knight/Idle.png<>uid://dv72mdh3ehbha::::res://assets/Mordred_Knight/Jump.png<>uid://bot4dp3e4tkt8::::res://assets/Mordred_Knight/Run.png<>uid://ddtxbvxkni6tj::::res://assets/Mordred_Knight/Health.png<>uid://cwkgquxrf87q1::::res://assets/Mordred_Knight/Slide.png<>uid://dtotu4mvtlxru::::res://assets/audio/sfx/Heavy_Attack_Sound.mp3<>uid://bmbn4mmyf6lcq::::res://assets/audio/sfx/Light_Attack.mp3<>uid://bdcq45w5oktw1::::res://assets/audio/sfx/Health_Potion.mp3<>uid://cbroqqppdsasf::::res://assets/audio/sfx/Slide.mp3<>uid://d4cjefkho4mu3::::res://assets/audio/sfx/Charge.mp3<>uid://d1wdifvr1uff3::::res://assets/audio/sfx/Full_Charge.mp3<>res://scenes/ui/HUD.tscn<>res://scenes/ui/PauseMenu.tscn<>res://scenes/ui/EquipmentMenu.tscn<>res://scenes/ui/GameOverMenu.tscn
 NPC.tscn::PackedScene::8193675098210238968::1788207476::0::1::::<><><>0<>0<><>::uid://bydvchi2edji1::::res://scripts/characters/npc.gd<>uid://b23b21w3e6tox::::res://assets/Npc/FREE - Blacksmith 2D Pixel Art/Sprites/BLACKSMITH.png
-NPCPrincess.tscn::PackedScene::9105385837418303126::1788205711::0::1::::<><><>0<>0<><>::res://scripts/characters/npc_princess.gd<>uid://b23b21w3e6tox::::res://assets/Npc/FREE - Blacksmith 2D Pixel Art/Sprites/BLACKSMITH.png
+NPCPrincess.tscn::PackedScene::9105385837418303126::1788208615::0::1::::<><><>0<>0<><>::uid://bsfdp68em807t::::res://scripts/characters/npc_princess.gd<>uid://di3ekqfikdn38::::res://assets/Npc/idle/Warrior_Idle_1.png<>uid://4ypai3h44qlo::::res://assets/Npc/idle/Warrior_Idle_2.png<>uid://blqvym3itnl3v::::res://assets/Npc/idle/Warrior_Idle_3.png<>uid://ctrcrw8ykfoqb::::res://assets/Npc/idle/Warrior_Idle_4.png<>uid://c3kwfi78ustmu::::res://assets/Npc/idle/Warrior_Idle_5.png<>uid://cjsmbmj8xbt6u::::res://assets/Npc/idle/Warrior_Idle_6.png
 ::res://scenes/enemies/::1788207410
 Arrow.tscn::PackedScene::-1::1788200798::0::1::::<><><>0<>0<><>::res://scripts/enemies/arrow.gd
 Boss.tscn::PackedScene::1202295577146398342::1788207199::0::1::::<><><>0<>0<><>::uid://dmjuwhao3vq0m::::res://scripts/enemies/boss.gd<>uid://dsoh6bp2kxa7y::::res://assets/Enemy/Undead executioner puppet/png/attacking.png<>uid://bjdj42b4mf4me::::res://assets/Enemy/Undead executioner puppet/png/death.png<>uid://c2cmsgoqyjgqu::::res://assets/Enemy/Undead executioner puppet/png/idle.png<>uid://c1rudll4g6ro6::::res://assets/Enemy/Undead executioner puppet/png/idle2.png

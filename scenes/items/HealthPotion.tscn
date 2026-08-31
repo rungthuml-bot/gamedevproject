@@ -1,8 +1,24 @@
 [gd_scene format=3 uid="uid://ddkbjitso8s1x"]
 
 [ext_resource type="Script" uid="uid://cjjvcog3f5mmd" path="res://scripts/items/health_potion.gd" id="1_qn4rg"]
+[ext_resource type="Texture2D" uid="uid://bds0ay46a7y5q" path="res://assets/game/ChatGPT_Image_1_ก.ย._2569_03_45_09-removebg-preview (1).png" id="2_df3ce"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7n77a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jqors"]
+atlas = ExtResource("2_df3ce")
+region = Rect2(0, 0, 500, 500)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7n77a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jqors")
+}],
+"loop": 1,
+"name": &"item",
+"speed": 5.0
+}]
 
 [node name="HealthPotion" type="Area2D" unique_id=465158490]
 script = ExtResource("1_qn4rg")
@@ -10,6 +26,8 @@ script = ExtResource("1_qn4rg")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=418235364]
 shape = SubResource("CircleShape2D_7n77a")
 
-[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1702409554]
-scale = Vector2(10.107252, 10.235671)
-polygon = PackedVector2Array(1, 0, 0, -1, -1, 0, 0, 1)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2122367117]
+scale = Vector2(0.07, 0.07)
+sprite_frames = SubResource("SpriteFrames_7n77a")
+animation = &"item"
+frame_progress = 0.69743377

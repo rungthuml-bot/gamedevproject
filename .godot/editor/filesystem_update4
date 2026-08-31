@@ -4,3 +4,4 @@ res://scenes/enemies/EnemyAxe.tscn
 res://scenes/enemies/Boss.tscn
 res://scenes/characters/NPC.tscn
 res://scenes/characters/NPCPrincess.tscn
+res://scenes/items/HealthPotion.tscn
