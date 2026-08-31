@@ -6,3 +6,5 @@ res://scripts/enemies/boss.gd
 res://scripts/enemies/enemy_axe.gd
 res://scripts/enemies/enemy_sword.gd
 res://scenes/enemies/Dummy.tscn
+res://scripts/story/story_intro.gd
+res://scripts/systems/SaveManager.gd
