@@ -36,8 +36,8 @@ func _ready() -> void:
 	if spawn_node != null:
 		player.global_position = spawn_node.global_position
 		
-		# ชดเชยแกน Y ให้เท้าติดพื้นพอดี (ป้องกันตัวลอยตกลงมา)
-		player.global_position.y += 18
+		# ชดเชยแกน Y ให้เท้า (y=0 ของตัวละคร) ไปแตะที่ขอบล่างของประตูพอดี (ซึ่งตรงกับพื้น y=550)
+		player.global_position.y += 50
 		
 		if spawn_node.global_position.x < 600:
 			player.global_position.x += 40

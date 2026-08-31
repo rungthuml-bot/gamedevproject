@@ -6,3 +6,5 @@ res://scripts/enemies/boss.gd
 res://scenes/ui/EquipmentMenu.tscn
 res://scenes/ui/GameOverMenu.tscn
 res://scenes/ui/PauseMenu.tscn
+res://scripts/systems/map_door.gd
+res://scripts/systems/scene_transition.gd
