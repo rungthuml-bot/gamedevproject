@@ -1,5 +1,5 @@
 extends CharacterBody2D
-class_name EnemySword
+class_name EnemyBase
 
 # =========================================================
 # Gravity & Speed
