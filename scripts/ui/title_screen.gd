@@ -15,7 +15,7 @@ func _ready() -> void:
 # =========================================================
 # INPUT
 # =========================================================
-func _unhandled_input(event: InputEvent) -> void:
+func _input(event: InputEvent) -> void:
 	if transitioning:
 		return
 
