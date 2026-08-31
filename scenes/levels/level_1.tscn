@@ -509,5 +509,5 @@ scale = Vector2(1.5, 1.5)
 position = Vector2(100, 100)
 
 [node name="MapDoor_Next" parent="." instance=ExtResource("101_door")]
-position = Vector2(100, 100)
+position = Vector2(4200, 100)
 target_scene_path = "res://scenes/levels/level_2.tscn"
