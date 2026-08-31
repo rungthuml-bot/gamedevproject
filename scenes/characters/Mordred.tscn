@@ -14,6 +14,10 @@
 [ext_resource type="AudioStream" uid="uid://c0yh3sxnwtmee" path="res://assets/audio/sfx/Slide.mp3" id="12_4dnns"]
 [ext_resource type="AudioStream" uid="uid://bj244pytkklgc" path="res://assets/audio/sfx/Charge.mp3" id="13_4dnns"]
 [ext_resource type="AudioStream" uid="uid://c070a8vo6hjrs" path="res://assets/audio/sfx/Full_Charge.mp3" id="14_bp524"]
+[ext_resource type="PackedScene" path="res://scenes/ui/HUD.tscn" id="101_hud"]
+[ext_resource type="PackedScene" path="res://scenes/ui/PauseMenu.tscn" id="102_pause"]
+[ext_resource type="PackedScene" path="res://scenes/ui/EquipmentMenu.tscn" id="103_equip"]
+[ext_resource type="PackedScene" path="res://scenes/ui/GameOverMenu.tscn" id="104_gameover"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jo2ib"]
 atlas = ExtResource("1_0y7nr")
@@ -585,3 +589,8 @@ stream = ExtResource("14_bp524")
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
 [connection signal="area_entered" from="AttackArea" to="." method="_on_attack_area_area_entered"]
 [connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
+
+[node name="HUD" parent="." instance=ExtResource("101_hud")]
+[node name="PauseMenu" parent="." instance=ExtResource("102_pause")]
+[node name="EquipmentMenu" parent="." instance=ExtResource("103_equip")]
+[node name="GameOverMenu" parent="." instance=ExtResource("104_gameover")]
