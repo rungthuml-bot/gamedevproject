@@ -25,7 +25,7 @@ offset_left = -600.0
 offset_top = -50.0
 offset_right = 600.0
 offset_bottom = 50.0
-color = Color(0.2, 0.2, 0.8, 1)
+color = Color(0.2, 0.3, 0.45, 1)
 
 [node name="LeftWall" type="StaticBody2D" parent="."]
 position = Vector2(-50, 200)

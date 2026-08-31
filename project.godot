@@ -14,7 +14,6 @@ config/name="Game2DProject"
 run/main_scene="res://scenes/levels/test_map01.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 
-
 [autoload]
 
 SaveManager="*uid://dtnjfa2plofur"
