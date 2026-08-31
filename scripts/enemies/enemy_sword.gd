@@ -13,7 +13,7 @@ const CHASE_SPEED: float = 130.0
 # AI Detection & Range
 # =========================================================
 
-const DETECTION_RANGE: float = 200.0  # ระยะมองเห็น Player
+const DETECTION_RANGE: float = 400.0  # ระยะมองเห็น Player
 const PATROL_DISTANCE: float = 100.0  # ระยะเดินกลับไปกลับมา
 const ATTACK_RANGE: float = 60.0      # ระยะฟันดาบ
 
@@ -64,6 +64,8 @@ func _ready() -> void:
 		anim.play("Idle")
 		if not anim.animation_finished.is_connected(_on_anim_animation_finished):
 			anim.animation_finished.connect(_on_anim_animation_finished)
+		if not anim.animation_looped.is_connected(_on_anim_animation_finished):
+			anim.animation_looped.connect(_on_anim_animation_finished)
 		if not anim.frame_changed.is_connected(_on_anim_frame_changed):
 			anim.frame_changed.connect(_on_anim_frame_changed)
 
