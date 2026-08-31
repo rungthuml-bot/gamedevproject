@@ -21,7 +21,8 @@ func _apply_translation() -> void:
 	if not has_node("/root/LocaleManager"): return
 	var lm = get_node("/root/LocaleManager")
 	
-	if $PromptLabel: $PromptLabel.text = lm.t("PRESS_ANY_BUTTON")
+	if has_node("PressAnyKeyLabel"):
+		get_node("PressAnyKeyLabel").text = lm.t("PRESS_ANY_BUTTON")
 	if $VersionLabel: $VersionLabel.text = lm.t("PROTOTYPE_VERSION")
 
 func _on_language_changed(_lang: String) -> void:

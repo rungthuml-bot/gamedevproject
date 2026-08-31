@@ -37,7 +37,8 @@ func _apply_translation() -> void:
 	if not has_node("/root/LocaleManager"): return
 	var lm = get_node("/root/LocaleManager")
 	
-	$BossUI/Control/MarginContainer/VBoxContainer/BossNameLabel.text = lm.t("BOSS_NAME")
+	if has_node("BossUI/Control/MarginContainer/VBoxContainer/BossName"):
+		get_node("BossUI/Control/MarginContainer/VBoxContainer/BossName").text = lm.t("BOSS_NAME")
 
 func _on_language_changed(_lang: String) -> void:
 	_apply_translation()

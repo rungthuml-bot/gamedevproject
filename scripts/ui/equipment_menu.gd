@@ -8,7 +8,7 @@ extends CanvasLayer
 @onready var control: Control = $Control
 @onready var inventory_grid: GridContainer = $Control/Background/InventoryGrid
 @onready var charm_name_label: Label = $Control/Background/InfoPanel/CharmName
-@onready var charm_desc_label: Label = $Control/Background/InfoPanel/CharmDescription
+@onready var charm_desc_label: Label = $Control/Background/InfoPanel/DescMargin/CharmDescription
 
 
 # =========================================================
@@ -56,8 +56,10 @@ func _apply_translation() -> void:
 	if not has_node("/root/LocaleManager"): return
 	var lm = get_node("/root/LocaleManager")
 	
-	if $Control/Title: $Control/Title.text = lm.t("CHARMS")
-	if $Control/Background/EquippedTitle: $Control/Background/EquippedTitle.text = lm.t("EQUIPPED_CHARMS")
+	if get_node_or_null("Control/Background/TitleLabel"):
+		get_node("Control/Background/TitleLabel").text = lm.t("CHARMS")
+	if get_node_or_null("Control/Background/EquippedPanel/EquippedContainer/EquippedLabel"):
+		get_node("Control/Background/EquippedPanel/EquippedContainer/EquippedLabel").text = lm.t("EQUIPPED_CHARMS")
 	if $Control/Background/BackButton: $Control/Background/BackButton.text = lm.t("BACK")
 	
 	if charm_name_label.text == "Select a Charm" or charm_name_label.text == "เลือกเครื่องราง":

@@ -40,8 +40,26 @@ func _ready() -> void:
 	# Translation
 	if has_node("/root/LocaleManager"):
 		var lm = get_node("/root/LocaleManager")
-		lm.language_changed.connect(_on_language_changed)
+		if not lm.language_changed.is_connected(_on_language_changed):
+			lm.language_changed.connect(_on_language_changed)
 		_apply_translation()
+		
+	# Connect Profile buttons
+	if not slot1_button.pressed.is_connected(_on_slot_pressed):
+		slot1_button.pressed.connect(func(): _on_slot_pressed(1))
+		slot2_button.pressed.connect(func(): _on_slot_pressed(2))
+		slot3_button.pressed.connect(func(): _on_slot_pressed(3))
+		slot4_button.pressed.connect(func(): _on_slot_pressed(4))
+
+	# Connect Delete buttons
+	if delete1_button != null and not delete1_button.pressed.is_connected(_on_delete_pressed):
+		delete1_button.pressed.connect(func(): _on_delete_pressed(1))
+		delete2_button.pressed.connect(func(): _on_delete_pressed(2))
+		delete3_button.pressed.connect(func(): _on_delete_pressed(3))
+		delete4_button.pressed.connect(func(): _on_delete_pressed(4))
+
+	if back_button and not back_button.pressed.is_connected(_on_back_pressed):
+		back_button.pressed.connect(_on_back_pressed)
 
 func _apply_translation() -> void:
 	if not has_node("/root/LocaleManager"): return
@@ -62,20 +80,6 @@ func _apply_translation() -> void:
 
 func _on_language_changed(_lang: String) -> void:
 	_apply_translation()
-
-	# เชื่อมต่อปุ่มเลือก Profile
-	slot1_button.pressed.connect(func(): _on_slot_pressed(1))
-	slot2_button.pressed.connect(func(): _on_slot_pressed(2))
-	slot3_button.pressed.connect(func(): _on_slot_pressed(3))
-	slot4_button.pressed.connect(func(): _on_slot_pressed(4))
-
-	# เชื่อมต่อปุ่มลบ Delete
-	if delete1_button != null: delete1_button.pressed.connect(func(): _on_delete_pressed(1))
-	if delete2_button != null: delete2_button.pressed.connect(func(): _on_delete_pressed(2))
-	if delete3_button != null: delete3_button.pressed.connect(func(): _on_delete_pressed(3))
-	if delete4_button != null: delete4_button.pressed.connect(func(): _on_delete_pressed(4))
-
-	back_button.pressed.connect(_on_back_pressed)
 
 
 # =========================================================
