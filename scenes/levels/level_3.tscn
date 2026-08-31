@@ -33,6 +33,8 @@
 [ext_resource type="Texture2D" uid="uid://bgw5s0bnuoxew" path="res://Assets/Background/Lava/PNG/Tiles_rock/tile7.png" id="38_sbd6o"]
 [ext_resource type="Texture2D" uid="uid://b8bkboo4qbmdj" path="res://Assets/Background/Lava/PNG/Tiles_rock/tile8.png" id="39_0336b"]
 [ext_resource type="Texture2D" uid="uid://bms6iyt6oud62" path="res://Assets/Background/Lava/PNG/Tiles_rock/tile9.png" id="40_en1em"]
+[ext_resource type="PackedScene" uid="uid://dvj03a3fowopm" path="res://scenes/characters/Mordred.tscn" id="100_player"]
+[ext_resource type="PackedScene" path="res://scenes/systems/MapDoor.tscn" id="101_door"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1th6u"]
 texture = ExtResource("6_tkc4i")
@@ -554,3 +556,14 @@ position = Vector2(2463, 216)
 
 [node name="trap_spikes4" parent="." unique_id=2098016843 instance=ExtResource("31_wxfb4")]
 position = Vector2(2716, 220)
+
+[node name="Player" parent="." instance=ExtResource("100_player")]
+position = Vector2(100, 300)
+
+[node name="MapDoor_Prev" parent="." instance=ExtResource("101_door")]
+position = Vector2(0, 300)
+target_scene_path = "res://scenes/levels/level_2.tscn"
+
+[node name="MapDoor_Next" parent="." instance=ExtResource("101_door")]
+position = Vector2(500, 300)
+target_scene_path = "res://scenes/levels/level_4.tscn"

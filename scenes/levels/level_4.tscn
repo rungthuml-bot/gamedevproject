@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://bkjnm17l7sxj7" path="res://assets/Background/background1/PNG/background 4/Plan 3.png" id="1_xcfcc"]
 [ext_resource type="Texture2D" uid="uid://cbg20e6afl5rg" path="res://assets/Background/background1/PNG/background 4/Plan 2.png" id="2_48hld"]
 [ext_resource type="Texture2D" uid="uid://jfuki3f005nj" path="res://assets/Background/background1/PNG/background 4/Plan 1.png" id="3_l45re"]
+[ext_resource type="PackedScene" uid="uid://dvj03a3fowopm" path="res://scenes/characters/Mordred.tscn" id="100_player"]
+[ext_resource type="PackedScene" path="res://scenes/systems/MapDoor.tscn" id="101_door"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ad025"]
 texture = ExtResource("2_48hld")
@@ -389,3 +391,10 @@ texture = ExtResource("3_l45re")
 position = Vector2(5719, 321)
 scale = Vector2(2.172, 2.2)
 texture = ExtResource("3_l45re")
+
+[node name="Player" parent="." instance=ExtResource("100_player")]
+position = Vector2(100, 300)
+
+[node name="MapDoor_Prev" parent="." instance=ExtResource("101_door")]
+position = Vector2(0, 300)
+target_scene_path = "res://scenes/levels/level_3.tscn"
