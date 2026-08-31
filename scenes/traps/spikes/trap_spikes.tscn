@@ -57,7 +57,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"spikes",
-"speed": 5.0
+"speed": 6.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ras4n"]
@@ -68,11 +68,12 @@ height = 40.0
 script = ExtResource("1_lsp6c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1669475144]
+texture_filter = 1
 scale = Vector2(2.429392, 3.467987)
 sprite_frames = SubResource("SpriteFrames_j2vdu")
 animation = &"spikes"
-frame = 5
-frame_progress = 0.48771012
+autoplay = "spikes"
+frame_progress = 0.5929976
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1166086688]
 shape = SubResource("CapsuleShape2D_ras4n")

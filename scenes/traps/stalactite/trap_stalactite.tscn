@@ -36,6 +36,7 @@ script = ExtResource("1_o3xd5")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1077618387]
 sprite_frames = SubResource("SpriteFrames_j2vdu")
 animation = &"lava"
+autoplay = "lava"
 frame_progress = 0.86749357
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=508890426]

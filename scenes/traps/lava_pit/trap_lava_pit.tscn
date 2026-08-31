@@ -30,7 +30,8 @@ position = Vector2(-0.99999905, 1)
 scale = Vector2(1.4375, 0.96875)
 sprite_frames = SubResource("SpriteFrames_j2vdu")
 animation = &"lava_pit"
-frame_progress = 0.6830402
+autoplay = "lava_pit"
+frame_progress = 0.3548507
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=864728536]
 position = Vector2(-1, 1)
