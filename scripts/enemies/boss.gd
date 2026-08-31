@@ -1,6 +1,9 @@
 extends CharacterBody2D
 class_name Boss
 
+signal hp_changed(current_hp: int, max_hp: int)
+signal died()
+
 # =========================================================
 # Gravity & Speed
 # =========================================================
@@ -202,6 +205,7 @@ func take_damage(amount: int) -> void:
 	hp -= amount
 	hp = max(hp, 0)
 	hp_bar.value = hp
+	hp_changed.emit(hp, MAX_HP)
 
 	# Phase Check
 	if hp <= (MAX_HP * 0.5) and not is_enraged:
@@ -239,6 +243,7 @@ func apply_knockback() -> void:
 		knockback_timer = KNOCKBACK_DURATION
 
 func die() -> void:
+	died.emit()
 	is_dying = true
 	velocity = Vector2.ZERO
 
