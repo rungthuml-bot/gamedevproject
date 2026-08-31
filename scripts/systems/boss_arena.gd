@@ -15,7 +15,9 @@ var boss: Boss = null
 @onready var hp_bar: ProgressBar = get_node_or_null("BossUI/Control/MarginContainer/VBoxContainer/BossHPBar")
 
 var is_fight_active: bool = false
-
+var original_cam_left: int
+var original_cam_right: int
+var locked_camera: Camera2D = null
 func _ready() -> void:
 	_set_walls_active(false)
 	if boss_ui_layer != null:
@@ -119,3 +121,23 @@ func _on_boss_died() -> void:
 func _set_walls_active(active: bool) -> void:
 	left_wall.get_node("CollisionShape2D").set_deferred("disabled", not active)
 	right_wall.get_node("CollisionShape2D").set_deferred("disabled", not active)
+	if active:
+		_lock_camera()
+	else:
+		_unlock_camera()
+
+func _lock_camera() -> void:
+	var player = get_tree().get_first_node_in_group("player")
+	if player and player.has_node("Camera2D"):
+		locked_camera = player.get_node("Camera2D")
+		original_cam_left = locked_camera.limit_left
+		original_cam_right = locked_camera.limit_right
+		# Set limits strictly to the walls
+		locked_camera.limit_left = int(left_wall.global_position.x)
+		locked_camera.limit_right = int(right_wall.global_position.x)
+
+func _unlock_camera() -> void:
+	if locked_camera:
+		locked_camera.limit_left = original_cam_left
+		locked_camera.limit_right = original_cam_right
+		locked_camera = null

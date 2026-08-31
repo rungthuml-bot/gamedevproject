@@ -113,7 +113,7 @@ var shake_intensity := 0.0
 # ==================================================
 
 func _ready() -> void:
-
+	add_to_group("player")
 	attack_collision.disabled = true
 
 	if SaveManager.has_signal("equipped_charms_changed"):
