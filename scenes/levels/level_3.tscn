@@ -1,4 +1,5 @@
-[gd_scene format=4 uid="uid://ckcgtgcgkue2f"]
+﻿[gd_scene format=4 uid="uid://ckcgtgcgkue2f"]
+[ext_resource type="Script" uid="uid://cax2j7w5nxxxx" path="res://scripts/levels/base_level.gd" id="99_base"]
 
 [ext_resource type="Texture2D" uid="uid://ugk6uomnwiu" path="res://scenes/Level/Assets/Background/Lava/PNG/Background/Bright/rock5.png" id="2_6p2dc"]
 [ext_resource type="Texture2D" uid="uid://c14nvlsndhovr" path="res://scenes/Level/Assets/Background/Lava/PNG/Tiles_rock/tile1.png" id="6_tkc4i"]
@@ -352,7 +353,7 @@ sources/39 = SubResource("TileSetAtlasSource_ierlt")
 sources/40 = SubResource("TileSetAtlasSource_6h1g2")
 sources/46 = SubResource("TileSetAtlasSource_vyjyd")
 
-[node name="BaseLevel" type="Node2D" unique_id=1408927104]
+[node script=ExtResource("99_base") name="BaseLevel" type="Node2D" unique_id=1408927104]
 
 [node name="Level" type="Node2D" parent="." unique_id=337205476]
 
@@ -567,3 +568,5 @@ target_scene_path = "res://scenes/levels/level_2.tscn"
 [node name="MapDoor_Next" parent="." unique_id=1940405522 instance=ExtResource("101_door")]
 position = Vector2(5153, 346)
 target_scene_path = "res://scenes/levels/level_4.tscn"
+
+
