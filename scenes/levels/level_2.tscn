@@ -1,5 +1,4 @@
-﻿[gd_scene format=4 uid="uid://b3jd0nsb4hgts"]
-[ext_resource type="Script" uid="uid://cax2j7w5nxxxx" path="res://scripts/levels/base_level.gd" id="99_base"]
+[gd_scene format=4 uid="uid://b3jd0nsb4hgts"]
 
 [ext_resource type="Texture2D" uid="uid://b8r0k2ml2dihd" path="res://scenes/Level/Assets/Background/01/PNG/Battleground3/Bright/sky.png" id="1_7j8ne"]
 [ext_resource type="Texture2D" uid="uid://dt3dj17pxq5xh" path="res://scenes/Level/Assets/Background/01/PNG/Battleground3/Bright/jungle_bg.png" id="2_7dov7"]
@@ -267,7 +266,7 @@ tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/3 = SubResource("TileSetAtlasSource_4eusg")
 
-[node script=ExtResource("99_base") name="BaseLevel" type="Node2D" unique_id=1792520738]
+[node name="BaseLevel" type="Node2D" unique_id=1792520738]
 
 [node name="Level" type="Node2D" parent="." unique_id=1181617625]
 
@@ -551,7 +550,5 @@ position = Vector2(-200, 100)
 target_scene_path = "res://scenes/levels/level_1.tscn"
 
 [node name="MapDoor_Next" parent="." unique_id=1243345218 instance=ExtResource("101_door")]
-position = Vector2(4925, 268)
+position = Vector2(4918, 212)
 target_scene_path = "res://scenes/levels/level_3.tscn"
-
-
