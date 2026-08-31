@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ddkbjitso8s1x" path="res://scenes/items/HealthPotion.tscn" id="3_potion"]
 [ext_resource type="PackedScene" uid="uid://bpr3xb7q1kymd" path="res://scenes/systems/SavePoint.tscn" id="4_save"]
 [ext_resource type="PackedScene" uid="uid://csfin0y1x3riw" path="res://scenes/enemies/EnemySword.tscn" id="5_enemy"]
+[ext_resource type="PackedScene" path="res://scenes/characters/NPC.tscn" id="6_npc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ground"]
 size = Vector2(1200, 100)
@@ -72,3 +73,9 @@ position = Vector2(600, 500)
 
 [node name="EnemySword" parent="." instance=ExtResource("5_enemy")]
 position = Vector2(800, 480)
+
+[node name="NPC" parent="." instance=ExtResource("6_npc")]
+position = Vector2(350, 515)
+npc_name = "โจรค่ายฝึก"
+portrait_emoji = "🧙"
+dialog = [{"speaker": "NPC", "text": "หยุดก่อน นักเดินทาง! ผมชื่อโจร... เอ้ย ไม่ใช่ ผมเป็นแค่คนธรรมดาที่อยู่แถวนี้"}, {"speaker": "Player", "text": "แล้วทำไมถึงดูน่าสงสัยอย่างนี้?"}, {"speaker": "NPC", "text": "ฮ่าๆ ก็แค่ใบหน้าผมน่ะ เป็นแบบนี้มาตั้งแต่เกิดแล้ว โชคดีในการเดินทางนะ!"}]

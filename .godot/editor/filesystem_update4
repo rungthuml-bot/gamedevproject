@@ -12,3 +12,4 @@ res://scripts/systems/boss_arena.gd
 res://scripts/enemies/enemy_archer.gd
 res://scripts/enemies/enemy_axe.gd
 res://scripts/enemies/enemy_sword.gd
+res://scripts/characters/npc.gd

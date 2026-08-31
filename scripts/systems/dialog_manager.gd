@@ -20,6 +20,9 @@ var visible_chars: int = 0
 
 signal dialog_finished
 
+var npc_name: String = "NPC"
+var npc_portrait_emoji: String = "🧙"
+
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS # Run even when paused
 	dialog_box.visible = false
@@ -50,14 +53,16 @@ func _show_current_dialog() -> void:
 	# Configure UI based on speaker
 	if speaker == "Player":
 		left_portrait.modulate = Color.WHITE
-		right_portrait.modulate = Color.DIM_GRAY
+		right_portrait.modulate = Color(0.4, 0.4, 0.4, 1)
 		left_name_label.text = "Mordred"
-		right_name_label.text = ""
+		right_name_label.text = npc_name
+		right_portrait.get_node("PortraitChar").text = npc_portrait_emoji
 	else:
-		left_portrait.modulate = Color.DIM_GRAY
+		left_portrait.modulate = Color(0.4, 0.4, 0.4, 1)
 		right_portrait.modulate = Color.WHITE
-		left_name_label.text = ""
-		right_name_label.text = speaker
+		left_name_label.text = "Mordred"
+		right_name_label.text = npc_name
+		right_portrait.get_node("PortraitChar").text = npc_portrait_emoji
 		
 	# Start Typewriter Effect
 	text_label.visible_characters = 0
