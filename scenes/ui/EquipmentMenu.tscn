@@ -82,6 +82,7 @@ corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
 [node name="EquipmentMenu" type="CanvasLayer" unique_id=871650129]
+layer = 40
 script = ExtResource("1_qqnu4")
 
 [node name="Control" type="Control" parent="." unique_id=1820477199]

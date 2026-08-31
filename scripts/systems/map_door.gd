@@ -13,6 +13,9 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		print("[MapDoor] Player detected! target_scene: ", target_scene_path)
 		if target_scene_path != "":
+			# เก็บความเร็วผู้เล่นก่อนเปลี่ยนด่านเพื่อให้เดินต่อเนื่อง
+			SceneTransition.player_velocity = body.velocity
+			
 			# Call the autoload SceneTransition
 			SceneTransition.change_scene(target_scene_path, 0.5, target_spawn_id)
 		else:

@@ -30,13 +30,28 @@ func _ready() -> void:
 	var spawn_id = SceneTransition.target_spawn_id
 	var spawn_node = null
 	
-	if has_node("Spawns"):
-		if spawn_id != "" and has_node("Spawns/" + spawn_id):
-			spawn_node = get_node("Spawns/" + spawn_id)
-		elif has_node("Spawns/Default"):
-			spawn_node = get_node("Spawns/Default")
+	if spawn_id != "":
+		spawn_node = find_child(spawn_id, true, false)
+		
+	if spawn_node != null:
+		player.global_position = spawn_node.global_position
+		
+		# ชดเชยแกน Y ให้เท้าติดพื้นพอดี (ป้องกันตัวลอยตกลงมา)
+		player.global_position.y += 18
+		
+		if spawn_node.global_position.x < 600:
+			player.global_position.x += 40
+		else:
+			player.global_position.x -= 40
 			
-		if spawn_node:
-			player.global_position = spawn_node.global_position
-			
-	# Optional: Setup camera limits here if needed
+		# โหลดความเร็วและล้างค่าเพื่อให้เดินต่อเนื่อง
+		player.velocity = SceneTransition.player_velocity
+		SceneTransition.player_velocity = Vector2.ZERO
+	else:
+		# ถ้าไม่ระบุประตู ให้อ่านจากเซฟ (เช่น Load Game หรือ ตายแล้วเกิดใหม่)
+		if SaveManager.save_data.has("checkpoint_pos_x") and SaveManager.save_data.has("checkpoint_pos_y"):
+			player.global_position = Vector2(SaveManager.save_data["checkpoint_pos_x"], SaveManager.save_data["checkpoint_pos_y"])
+		elif SaveManager.save_data.has("pos_x") and SaveManager.save_data.has("pos_y"):
+			player.global_position = Vector2(SaveManager.save_data["pos_x"], SaveManager.save_data["pos_y"])
+		else:
+			player.global_position = Vector2(100, 480)

@@ -2,3 +2,7 @@ res://scripts/levels/base_level.gd
 res://scripts/story/story_intro.gd
 res://scripts/systems/SaveManager.gd
 res://scripts/characters/mordred.gd
+res://scripts/enemies/boss.gd
+res://scenes/ui/EquipmentMenu.tscn
+res://scenes/ui/GameOverMenu.tscn
+res://scenes/ui/PauseMenu.tscn

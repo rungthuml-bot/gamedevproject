@@ -4,6 +4,9 @@ extends CanvasLayer
 var is_transitioning: bool = false
 var target_spawn_id: String = ""
 
+# ข้อมูลตัวละครสำหรับส่งข้ามด่านเพื่อให้เดินต่อเนื่อง
+var player_velocity: Vector2 = Vector2.ZERO
+
 func _ready() -> void:
 	# ตั้งค่าเริ่มต้นให้จอมืดโปร่งแสงมองไม่เห็น และไม่ขัดขวางการกดปุ่ม
 	color_rect.modulate.a = 0.0
