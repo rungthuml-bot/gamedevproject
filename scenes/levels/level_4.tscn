@@ -1,5 +1,6 @@
 ﻿[gd_scene format=4 uid="uid://d5xh3gubycbr"]
 
+[ext_resource type="Script" path="res://scripts/levels/base_level.gd" id="99_base"]
 [ext_resource type="Texture2D" uid="uid://bkjnm17l7sxj7" path="res://assets/Background/background1/PNG/background 4/Plan 3.png" id="1_xcfcc"]
 [ext_resource type="Texture2D" uid="uid://cbg20e6afl5rg" path="res://assets/Background/background1/PNG/background 4/Plan 2.png" id="2_48hld"]
 [ext_resource type="Texture2D" uid="uid://jfuki3f005nj" path="res://assets/Background/background1/PNG/background 4/Plan 1.png" id="3_l45re"]
@@ -398,5 +399,6 @@ position = Vector2(100, 100)
 [node name="MapDoor_Prev" parent="." instance=ExtResource("101_door")]
 position = Vector2(-200, 100)
 target_scene_path = "res://scenes/levels/level_3.tscn"
+
 
 
