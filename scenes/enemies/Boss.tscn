@@ -363,10 +363,12 @@ collision_layer = 0
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackHitbox" unique_id=689944174]
-position = Vector2(20, 13)
+position = Vector2(21, 10)
 shape = SubResource("RectangleShape2D_attack")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1038334164]
+position = Vector2(6, -9)
+scale = Vector2(1.3, 1.3)
 sprite_frames = SubResource("SpriteFrames_7n77a")
 animation = &"Walk"
 frame_progress = 0.9819248
