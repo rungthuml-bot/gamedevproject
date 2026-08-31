@@ -5,7 +5,7 @@ extends CanvasLayer
 # Node References
 # =========================================================
 
-@onready var hp_bar: ProgressBar = $HPBar
+@onready var hp_bar: ProgressBar = get_node_or_null("HPBar")
 @onready var potion_label: Label = $PotionLabel
 
 

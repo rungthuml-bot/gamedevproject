@@ -1,11 +1,11 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1788204139
+::res://::1788205273
 DEVELOPMENT_BASELINE.md::TextFile::-1::1788200798::0::1::::<><><>0<>0<><>::
 TRAP_INTEGRATION.md::TextFile::-1::1788200798::0::1::::<><><>0<>0<><>::
-::res://assets/::1788204151
+::res://assets/::1788205001
 area_2d.gd::GDScript::5849509674596037594::1788200798::0::1::::<>Area2D<><>0<>0<><>::
 icon.svg::CompressedTexture2D::5323049116210601096::1788200798::1788204151::1::::<><><>0<>0<>0904beb1927dba3e257f44640e82dd61<>res://.godot/imported/icon.svg-56083ea2a1f1a4f1e49773bdc6d7826c.ctex::
-::res://assets/assets/::1788204159
+::res://assets/assets/::1788205001
 area_2d.gd::GDScript::5849509674596037594::1788200798::0::1::::<>Area2D<><>0<>0<><>::
 icon.svg::CompressedTexture2D::7770397439187974962::1788200798::1788204159::1::::<><><>0<>0<>3d96521f975dda007869aecef69dce7b<>res://.godot/imported/icon.svg-50d5354c2ddf3ad643edc773bc06789d.ctex::
 ::res://assets/assets/game/::1788200798
@@ -908,32 +908,32 @@ wall.png::CompressedTexture2D::8505174376955754377::1788200798::1788204158::1:::
 COUPON.png::CompressedTexture2D::2260669470281450672::1788200798::1788204160::1::::<><><>0<>0<>e7e8e2d41d7acd9dc30f33976faecefe<>res://.godot/imported/COUPON.png-9aef431ca0f229be3276ae1ac28657c8.ctex::
 License.txt::TextFile::-1::1788200798::0::1::::<><><>0<>0<><>::
 readme.txt::TextFile::-1::1788200798::0::1::::<><><>0<>0<><>::
-::res://assets/Background/background1/__MACOSX/::1788204140
+::res://assets/Background/background1/__MACOSX/::1788204201
 ._COUPON.png::CompressedTexture2D::6800994616759931775::1788200798::1788204201::0::::<><><>0<>0<>1571fb31841845d3406565e8e96996c3<>::
 ._License.txt::TextFile::-1::1788200798::0::1::::<><><>0<>0<><>::
 ._readme.txt::TextFile::-1::1788200798::0::1::::<><><>0<>0<><>::
 ::res://assets/Background/background1/__MACOSX/PNG/::1788200798
-::res://assets/Background/background1/__MACOSX/PNG/background 1/::1788204140
+::res://assets/Background/background1/__MACOSX/PNG/background 1/::1788204201
 ._background 1.png::CompressedTexture2D::3680607175556921048::1788200798::1788204201::0::::<><><>0<>0<>e893e23a2105a7ec4c893ac292a39fb6<>::
 ._Plan 1.png::CompressedTexture2D::4537006141240346059::1788200798::1788204201::0::::<><><>0<>0<>9d8aabd80f7bd85909a6aa8fc619058e<>::
 ._Plan 2.png::CompressedTexture2D::8948234356901164060::1788200798::1788204201::0::::<><><>0<>0<>e8989b9587e2e3ecd15c9f5f243d991c<>::
 ._Plan 3.png::CompressedTexture2D::803514884248612312::1788200798::1788204201::0::::<><><>0<>0<>8ad73214f62dd3fcc66f5f613e253135<>::
 ._Preview 1.png::CompressedTexture2D::7877037304964381646::1788200798::1788204201::0::::<><><>0<>0<>ff1db1e7d453461191bf92ecb2ace5c1<>::
-::res://assets/Background/background1/__MACOSX/PNG/background 2/::1788204140
+::res://assets/Background/background1/__MACOSX/PNG/background 2/::1788204201
 ._background 2.png::CompressedTexture2D::4065873943626447393::1788200798::1788204201::0::::<><><>0<>0<>25bc29cf7462c53caba81257cfd99285<>::
 ._Plan 1.png::CompressedTexture2D::7321647607080648781::1788200798::1788204201::0::::<><><>0<>0<>2a4c278bd11686c9ce9c25349b2e6f11<>::
 ._Plan 2.png::CompressedTexture2D::3615102957298739688::1788200798::1788204201::0::::<><><>0<>0<>c26d7f4995c3ca3df290d589deb4fb73<>::
 ._Plan 3.png::CompressedTexture2D::2267544667477155112::1788200798::1788204201::0::::<><><>0<>0<>7c6c6d368cc2bc85acb154d05f3f3387<>::
 ._Plan 4.png::CompressedTexture2D::5891479722059305710::1788200798::1788204201::0::::<><><>0<>0<>4ae1f814505134628cb8c55d0b767236<>::
 ._Preview 2.png::CompressedTexture2D::6055278244936950470::1788200798::1788204201::0::::<><><>0<>0<>1febc4e20e5253322b5237359f197097<>::
-::res://assets/Background/background1/__MACOSX/PNG/background 3/::1788204140
+::res://assets/Background/background1/__MACOSX/PNG/background 3/::1788204201
 ._background 3.png::CompressedTexture2D::7299376634868082000::1788200798::1788204201::0::::<><><>0<>0<>455a759f29785321eeafc512bd589b4e<>::
 ._Plan 1.png::CompressedTexture2D::8302797216539805089::1788200798::1788204201::0::::<><><>0<>0<>138e45877d6107bac0986756f2e71cf5<>::
 ._Plan 2.png::CompressedTexture2D::3045858884597991848::1788200798::1788204201::0::::<><><>0<>0<>d59c45b281945251f330c0813e2b1b3d<>::
 ._Plan 3.png::CompressedTexture2D::8463551651679550724::1788200798::1788204201::0::::<><><>0<>0<>3ca8e64d0498b922798eb4df3c5d0ce9<>::
 ._Plan 4.png::CompressedTexture2D::2014678309712053489::1788200798::1788204201::0::::<><><>0<>0<>103076c014cd077cb8c51ecc8309af8e<>::
 ._Preview 3.png::CompressedTexture2D::5776089275819835182::1788200798::1788204201::0::::<><><>0<>0<>3aedc854d2e206548c6053ab5fd09a64<>::
-::res://assets/Background/background1/__MACOSX/PNG/background 4/::1788204140
+::res://assets/Background/background1/__MACOSX/PNG/background 4/::1788204201
 ._background 4.png::CompressedTexture2D::9096352914768711977::1788200798::1788204201::0::::<><><>0<>0<>8d5144779bf546c49e444ec9c65f2a49<>::
 ._Plan 1.png::CompressedTexture2D::3747839694520063309::1788200798::1788204201::0::::<><><>0<>0<>0ffcc6d831301a10a3f82c6037185446<>::
 ._Plan 2.png::CompressedTexture2D::6239153767203672720::1788200798::1788204201::0::::<><><>0<>0<>8f36900fcd533de5952c76b4b59460e4<>::
@@ -1246,9 +1246,9 @@ summonIdle.png::CompressedTexture2D::315678356016933505::1788200798::1788204156:
 ::res://assets/Floor/map 9/::1788204145
 COUPON.png::CompressedTexture2D::2438651709558207564::1788200798::1788204145::1::::<><><>0<>0<>8d9aafd7667c923a6dc436537a1806c7<>res://.godot/imported/COUPON.png-57ff7fbf7ea86408202ee97cfc4d503c.ctex::
 license.txt::TextFile::-1::1788200798::0::1::::<><><>0<>0<><>::
-::res://assets/Floor/map 9/__MACOSX/::1788204140
+::res://assets/Floor/map 9/__MACOSX/::1788204201
 ._COUPON.png::CompressedTexture2D::6728739497837303637::1788200798::1788204201::0::::<><><>0<>0<>12ffa7bbf109f6d06028d14f3690754d<>::
-::res://assets/Floor/map 9/__MACOSX/PNG/::1788204140
+::res://assets/Floor/map 9/__MACOSX/PNG/::1788204201
 ._cave_entrance.png::CompressedTexture2D::1584089840978058412::1788200798::1788204201::0::::<><><>0<>0<>cee46b9d95ae9b68fe039d7508e6dd82<>::
 ._chest.png::CompressedTexture2D::3898805218979958309::1788200798::1788204201::0::::<><><>0<>0<>ec1444f30939ddde761617c5a5c90655<>::
 ._Clouds_in_tiles.png::CompressedTexture2D::2399259536258761187::1788200798::1788204201::0::::<><><>0<>0<>789ee79933628895bc5d142f2e948343<>::
@@ -1263,26 +1263,26 @@ license.txt::TextFile::-1::1788200798::0::1::::<><><>0<>0<><>::
 ._stalactites.png::CompressedTexture2D::1017990356659467524::1788200798::1788204201::0::::<><><>0<>0<>25db5135928ac0874ad3532756903e50<>::
 ._Tileset.png::CompressedTexture2D::6861049323786841122::1788200798::1788204201::0::::<><><>0<>0<>81ac730ef195bf56d2bf46e17f6a5ea1<>::
 ::res://assets/Floor/map 9/__MACOSX/PNG/Background/::1788200798
-::res://assets/Floor/map 9/__MACOSX/PNG/Background/1920x1080/::1788204140
+::res://assets/Floor/map 9/__MACOSX/PNG/Background/1920x1080/::1788204201
 ._Clouds_1920x1080.png::CompressedTexture2D::3096937485535640426::1788200798::1788204201::0::::<><><>0<>0<>192696eb146d39b92aa04bd970dc8585<>::
 ._Flora1_1920x1080.png::CompressedTexture2D::3031461466398354232::1788200798::1788204201::0::::<><><>0<>0<>3db1c48bb917a7836352dab92b8f5415<>::
 ._Flora2_1920x1080.png::CompressedTexture2D::7490081139536973401::1788200798::1788204201::0::::<><><>0<>0<>135c30034065dc16ba3a72a2f43bff9c<>::
 ._Full_bg_1920x1080.png::CompressedTexture2D::4218670056902563689::1788200798::1788204201::0::::<><><>0<>0<>2d9a9683afb8d047fe71304a3f50c083<>::
 ._Sky_1920x1080.png::CompressedTexture2D::5616433040330724027::1788200798::1788204201::0::::<><><>0<>0<>8522c8cbd8a68970a3683cbeecb0aa73<>::
-::res://assets/Floor/map 9/__MACOSX/PNG/Background/1920x1080/├╖2/::1788204140
+::res://assets/Floor/map 9/__MACOSX/PNG/Background/1920x1080/├╖2/::1788204201
 ._Clouds_1920x1080├╖2.png::CompressedTexture2D::268346003024088993::1788200798::1788204201::0::::<><><>0<>0<>15c1c3d766b52bd132dd2ad4dcf2aefd<>::
 ._Flora1_1920x1080├╖2.png::CompressedTexture2D::8312557699117488887::1788200798::1788204201::0::::<><><>0<>0<>8f976aa07a9ed4d9f0f5f78bbe80883b<>::
 ._Flora2_1920x1080├╖2.png::CompressedTexture2D::5354764192407258172::1788200798::1788204201::0::::<><><>0<>0<>263a1c298c432126e0274370950cd1f3<>::
 ._Full_bg_1920x1080├╖2.png::CompressedTexture2D::2496093244626922982::1788200798::1788204201::0::::<><><>0<>0<>88313e9d556160152925331020008c3b<>::
 ._Sky_1920x1080├╖2.png::CompressedTexture2D::906290266461688196::1788200798::1788204201::0::::<><><>0<>0<>78e0cb6dda03648615352546ed2eb696<>::
-::res://assets/Floor/map 9/__MACOSX/PNG/Background/x32/::1788204140
+::res://assets/Floor/map 9/__MACOSX/PNG/Background/x32/::1788204201
 ._Clouds_x32.png::CompressedTexture2D::6274735442418666849::1788200798::1788204201::0::::<><><>0<>0<>abfa93d237f9824b8c02b8325bfd6418<>::
 ._Flora1x32.png::CompressedTexture2D::6071092250836487783::1788200798::1788204201::0::::<><><>0<>0<>4939e38e79c29f6105c4323dbaf87cb2<>::
 ._Flora2x32.png::CompressedTexture2D::2445496203327585077::1788200798::1788204201::0::::<><><>0<>0<>c1392c9485728c659eee57eb2562d5bd<>::
 ._Full_bgx32.png::CompressedTexture2D::483292735343893957::1788200798::1788204201::0::::<><><>0<>0<>ae884cd0f800e03fd39c87bdbe1c5e25<>::
 ._Skyx32.png::CompressedTexture2D::4832738826950385566::1788200798::1788204201::0::::<><><>0<>0<>9ffd1acad4960614b651ff95c2fa6edc<>::
 ::res://assets/Floor/map 9/__MACOSX/PSD/::1788200798
-::res://assets/Floor/map 9/__MACOSX/TILED_files/::1788204140
+::res://assets/Floor/map 9/__MACOSX/TILED_files/::1788204201
 ._cave_entrance.png::CompressedTexture2D::7907759781404481285::1788200798::1788204201::0::::<><><>0<>0<>b6c61831d6d026aa0dee419d3e9bc4a7<>::
 ._chest.png::CompressedTexture2D::8916595026498875354::1788200798::1788204201::0::::<><><>0<>0<>0af14d636031895f5077f07c84dcae20<>::
 ._Clouds_in_tiles.png::CompressedTexture2D::8145612737013499110::1788200798::1788204201::0::::<><><>0<>0<>e6098c7d5d241b9c64617c57a50d6e04<>::
@@ -2167,10 +2167,8 @@ tile34.png::CompressedTexture2D::204122409385806998::1788200798::1788204151::1::
 tile35.png::CompressedTexture2D::2949679691875539851::1788200798::1788204151::1::::<><><>0<>0<>fe7ed2e63c624d74b1efae6b992d63fc<>res://.godot/imported/tile35.png-1cce25f73a3d7373fddef6aa18276a5a.ctex::
 tile36.png::CompressedTexture2D::2647141837626002150::1788200798::1788204151::1::::<><><>0<>0<>7b07f9b52c262f56a21c598bc1050463<>res://.godot/imported/tile36.png-61560adbd4af64a1a08a3bffc5716087.ctex::
 ::res://assets/source/craftpix/trap_stalactite/PSD/::1788200798
-::res://assets/TileSet_Test/::1788204151
-Tileset.png::CompressedTexture2D::6414886070601505705::1788200798::1788204151::1::::<><><>0<>0<>dcca0550764aecf4db19e7f454178521<>res://.godot/imported/Tileset.png-4d77c384945864bb973187cfd0f956bf.ctex::
 ::res://scenes/::1788200798
-::res://scenes/characters/::1788200798
+::res://scenes/characters/::1788205219
 Mordred.tscn::PackedScene::8653375137814310770::1788200798::0::1::::<><><>0<>0<><>::uid://b5jkovim4vmpm::::res://assets/Mordred_Knight/Attacks.png<>uid://c4v4bh0oxkuet::::res://scripts/characters/mordred.gd<>uid://c1ml7mgs0twnb::::res://assets/Mordred_Knight/Death.png<>uid://dvmfpgflawipx::::res://assets/Mordred_Knight/Idle.png<>uid://c0hvghmsph4pb::::res://assets/Mordred_Knight/Jump.png<>uid://bet8colukmhqt::::res://assets/Mordred_Knight/Run.png<>uid://cq42b7k0y5u61::::res://assets/Mordred_Knight/Health.png<>uid://bi4m8rbg5hg3d::::res://assets/Mordred_Knight/Slide.png<>uid://bb5i1oi618rsn::::res://assets/audio/sfx/Heavy_Attack_Sound.mp3<>uid://v5yiykynfxer::::res://assets/audio/sfx/Light_Attack.mp3<>uid://msm3mjqsoylm::::res://assets/audio/sfx/Health_Potion.mp3<>uid://c0yh3sxnwtmee::::res://assets/audio/sfx/Slide.mp3<>uid://bj244pytkklgc::::res://assets/audio/sfx/Charge.mp3<>uid://c070a8vo6hjrs::::res://assets/audio/sfx/Full_Charge.mp3<>res://scenes/ui/HUD.tscn<>res://scenes/ui/PauseMenu.tscn<>res://scenes/ui/EquipmentMenu.tscn<>res://scenes/ui/GameOverMenu.tscn
 NPC.tscn::PackedScene::8193675098210238968::1788200798::0::1::::<><><>0<>0<><>::uid://bydvchi2edji1::::res://scripts/characters/npc.gd<>uid://bt5ai3vft2gkn::::res://assets/Npc/FREE - Blacksmith 2D Pixel Art/Sprites/BLACKSMITH.png
 NPCPrincess.tscn::PackedScene::9105385837418303126::1788200798::0::1::::<><><>0<>0<><>::res://scripts/characters/npc_princess.gd<>uid://bt5ai3vft2gkn::::res://assets/Npc/FREE - Blacksmith 2D Pixel Art/Sprites/BLACKSMITH.png
@@ -2277,32 +2275,32 @@ wall.png::CompressedTexture2D::5807508883563351859::1788200798::1788204150::1:::
 COUPON.png::CompressedTexture2D::1179730813423474015::1788200798::1788204147::1::::<><><>0<>0<>d02f18fe0baa21a65da95e49eb6eb1f6<>res://.godot/imported/COUPON.png-60adf38b53921f0fb374934dca44249d.ctex::
 License.txt::TextFile::-1::1788200798::0::1::::<><><>0<>0<><>::
 readme.txt::TextFile::-1::1788200798::0::1::::<><><>0<>0<><>::
-::res://scenes/Level/Assets/Background/background1/__MACOSX/::1788204141
+::res://scenes/Level/Assets/Background/background1/__MACOSX/::1788204201
 ._COUPON.png::CompressedTexture2D::8912296017962412952::1788200798::1788204201::0::::<><><>0<>0<>091a1d79bd9caafb86c681c4033fbd31<>::
 ._License.txt::TextFile::-1::1788200798::0::1::::<><><>0<>0<><>::
 ._readme.txt::TextFile::-1::1788200798::0::1::::<><><>0<>0<><>::
 ::res://scenes/Level/Assets/Background/background1/__MACOSX/PNG/::1788200798
-::res://scenes/Level/Assets/Background/background1/__MACOSX/PNG/background 1/::1788204141
+::res://scenes/Level/Assets/Background/background1/__MACOSX/PNG/background 1/::1788204201
 ._background 1.png::CompressedTexture2D::7546865074488423571::1788200798::1788204201::0::::<><><>0<>0<>c36655c3b17251ba8b0f5197a4b5bef5<>::
 ._Plan 1.png::CompressedTexture2D::5070382623921508326::1788200798::1788204201::0::::<><><>0<>0<>638df8eb7d0b29eff77071a0c3b7d800<>::
 ._Plan 2.png::CompressedTexture2D::5518829263636405635::1788200798::1788204201::0::::<><><>0<>0<>41583e546d7ee987eebab3e0ce2da73a<>::
 ._Plan 3.png::CompressedTexture2D::8820662530033531016::1788200798::1788204201::0::::<><><>0<>0<>565c0a7f0e4599ffe74b6b5b386eeaea<>::
 ._Preview 1.png::CompressedTexture2D::5873247980344369010::1788200798::1788204201::0::::<><><>0<>0<>7ac5428b2f85c3bea0162a5c7cee9fa4<>::
-::res://scenes/Level/Assets/Background/background1/__MACOSX/PNG/background 2/::1788204141
+::res://scenes/Level/Assets/Background/background1/__MACOSX/PNG/background 2/::1788204201
 ._background 2.png::CompressedTexture2D::9134138752994530526::1788200798::1788204201::0::::<><><>0<>0<>cddff42dbb27d0f8cc19292f7ccf3a68<>::
 ._Plan 1.png::CompressedTexture2D::3529895799605950943::1788200798::1788204201::0::::<><><>0<>0<>fa7cfda7320c29a85a08c39184cd57d0<>::
 ._Plan 2.png::CompressedTexture2D::7175544172876809975::1788200798::1788204201::0::::<><><>0<>0<>a272e03c311b96fd6460321687eaa646<>::
 ._Plan 3.png::CompressedTexture2D::6182656360811196512::1788200798::1788204201::0::::<><><>0<>0<>be707601ff4fb60473d874ce4204bf0c<>::
 ._Plan 4.png::CompressedTexture2D::8249669074456285620::1788200798::1788204201::0::::<><><>0<>0<>762bbab7ab679d2ce4f1ec5f5074d59d<>::
 ._Preview 2.png::CompressedTexture2D::7105123941536876280::1788200798::1788204201::0::::<><><>0<>0<>e87ec8012bc590297eb36d49b84fb5f9<>::
-::res://scenes/Level/Assets/Background/background1/__MACOSX/PNG/background 3/::1788204141
+::res://scenes/Level/Assets/Background/background1/__MACOSX/PNG/background 3/::1788204201
 ._background 3.png::CompressedTexture2D::4686890897177241129::1788200798::1788204201::0::::<><><>0<>0<>0a1768b03f20419fcfc6fe962753ca9e<>::
 ._Plan 1.png::CompressedTexture2D::2994542481040481092::1788200798::1788204201::0::::<><><>0<>0<>9679fbf0073dcf0f7d5766ccd26f8d7c<>::
 ._Plan 2.png::CompressedTexture2D::5069922810625303370::1788200798::1788204201::0::::<><><>0<>0<>6b5eb62da7d4e85a785c4f143fca2d56<>::
 ._Plan 3.png::CompressedTexture2D::5223723503762155362::1788200798::1788204201::0::::<><><>0<>0<>87ef5f3ca91ea359fc51ac86b002f688<>::
 ._Plan 4.png::CompressedTexture2D::3888070632906279181::1788200798::1788204201::0::::<><><>0<>0<>640cf4651abc1ff4462ce4ff21cdfb67<>::
 ._Preview 3.png::CompressedTexture2D::879267149422520797::1788200798::1788204201::0::::<><><>0<>0<>265a6767197bf252ed8eb075b543740b<>::
-::res://scenes/Level/Assets/Background/background1/__MACOSX/PNG/background 4/::1788204141
+::res://scenes/Level/Assets/Background/background1/__MACOSX/PNG/background 4/::1788204201
 ._background 4.png::CompressedTexture2D::8565661874897982880::1788200798::1788204201::0::::<><><>0<>0<>9fa244db39a5847b67e960c3229457c1<>::
 ._Plan 1.png::CompressedTexture2D::2725755146187269259::1788200798::1788204201::0::::<><><>0<>0<>a0067f9ba85a5b712b7373c7a9062d32<>::
 ._Plan 2.png::CompressedTexture2D::1077580955210529490::1788200798::1788204201::0::::<><><>0<>0<>e7caff8a9b230c5421fda53610bfa5db<>::
@@ -2566,9 +2564,9 @@ tile36.png::CompressedTexture2D::1465052747748978246::1788200798::1788204147::1:
 ::res://scenes/Level/Assets/Floor/map 9/::1788204148
 COUPON.png::CompressedTexture2D::1168913701958160842::1788200798::1788204148::1::::<><><>0<>0<>f0dc964b459f25d48ebdc7b38db4bbfa<>res://.godot/imported/COUPON.png-af383edbfd1f0ceef69cd054998166aa.ctex::
 license.txt::TextFile::-1::1788200798::0::1::::<><><>0<>0<><>::
-::res://scenes/Level/Assets/Floor/map 9/__MACOSX/::1788204141
+::res://scenes/Level/Assets/Floor/map 9/__MACOSX/::1788204201
 ._COUPON.png::CompressedTexture2D::4397364922162166727::1788200798::1788204201::0::::<><><>0<>0<>548b932cd13e5bd23b93d146445d7841<>::
-::res://scenes/Level/Assets/Floor/map 9/__MACOSX/PNG/::1788204141
+::res://scenes/Level/Assets/Floor/map 9/__MACOSX/PNG/::1788204201
 ._cave_entrance.png::CompressedTexture2D::5282620107310553904::1788200798::1788204201::0::::<><><>0<>0<>a47d889136ce34a767cb9767423382c6<>::
 ._chest.png::CompressedTexture2D::5055273354285490403::1788200798::1788204201::0::::<><><>0<>0<>c26a980afa069dd555fadedc7d32b4bb<>::
 ._Clouds_in_tiles.png::CompressedTexture2D::131141667135536100::1788200798::1788204201::0::::<><><>0<>0<>6c39a19459d60a0d635c0f9fdc7031ff<>::
@@ -2583,26 +2581,26 @@ license.txt::TextFile::-1::1788200798::0::1::::<><><>0<>0<><>::
 ._stalactites.png::CompressedTexture2D::3195344853113027184::1788200798::1788204201::0::::<><><>0<>0<>6291b43d25eafd340a7c8565cfc02f05<>::
 ._Tileset.png::CompressedTexture2D::8331561912245787796::1788200798::1788204201::0::::<><><>0<>0<>3f3771255b8d476f10b0122b59e20743<>::
 ::res://scenes/Level/Assets/Floor/map 9/__MACOSX/PNG/Background/::1788200798
-::res://scenes/Level/Assets/Floor/map 9/__MACOSX/PNG/Background/1920x1080/::1788204141
+::res://scenes/Level/Assets/Floor/map 9/__MACOSX/PNG/Background/1920x1080/::1788204201
 ._Clouds_1920x1080.png::CompressedTexture2D::4528816906341708862::1788200798::1788204201::0::::<><><>0<>0<>e1930dd2e0038c590457be2fa66d76a1<>::
 ._Flora1_1920x1080.png::CompressedTexture2D::5570853648927426826::1788200798::1788204201::0::::<><><>0<>0<>b68f3655735484ba79f5cd374e333916<>::
 ._Flora2_1920x1080.png::CompressedTexture2D::2978874963621050613::1788200798::1788204201::0::::<><><>0<>0<>1594616dcd149c64c4d9da194cf5ddd3<>::
 ._Full_bg_1920x1080.png::CompressedTexture2D::7216135587146687416::1788200798::1788204201::0::::<><><>0<>0<>2960a28deb1fe9a2b959fee12c83d43c<>::
 ._Sky_1920x1080.png::CompressedTexture2D::6581703870828068718::1788200798::1788204201::0::::<><><>0<>0<>689039b6e9754ec5bb7c90961bb7126b<>::
-::res://scenes/Level/Assets/Floor/map 9/__MACOSX/PNG/Background/1920x1080/├╖2/::1788204142
+::res://scenes/Level/Assets/Floor/map 9/__MACOSX/PNG/Background/1920x1080/├╖2/::1788204201
 ._Clouds_1920x1080├╖2.png::CompressedTexture2D::8859024975637141629::1788200798::1788204201::0::::<><><>0<>0<>044d077911a407abaa65b4a11e787a75<>::
 ._Flora1_1920x1080├╖2.png::CompressedTexture2D::5968763903342003095::1788200798::1788204201::0::::<><><>0<>0<>166f8d67dfdbd6acf477c7933dd4fb0c<>::
 ._Flora2_1920x1080├╖2.png::CompressedTexture2D::6930296046572598020::1788200798::1788204201::0::::<><><>0<>0<>c5bce6523d0dbf78c46225e9611d53fe<>::
 ._Full_bg_1920x1080├╖2.png::CompressedTexture2D::4559629141122429171::1788200798::1788204201::0::::<><><>0<>0<>c76ab42135f37bd4549b0acfadb67311<>::
 ._Sky_1920x1080├╖2.png::CompressedTexture2D::5653334505093444988::1788200798::1788204201::0::::<><><>0<>0<>06462398ac7a0fe0e3b02ea2a86ead1b<>::
-::res://scenes/Level/Assets/Floor/map 9/__MACOSX/PNG/Background/x32/::1788204142
+::res://scenes/Level/Assets/Floor/map 9/__MACOSX/PNG/Background/x32/::1788204201
 ._Clouds_x32.png::CompressedTexture2D::9068387782418317446::1788200798::1788204201::0::::<><><>0<>0<>c11fb99824bc76191f25d867934b290b<>::
 ._Flora1x32.png::CompressedTexture2D::3471859135288572352::1788200798::1788204201::0::::<><><>0<>0<>7848ecdf9618127df1c5e0730a74ba6f<>::
 ._Flora2x32.png::CompressedTexture2D::1676638526571525977::1788200798::1788204201::0::::<><><>0<>0<>1b414a9a74eb990d70e09f6889392769<>::
 ._Full_bgx32.png::CompressedTexture2D::4508474000771095476::1788200798::1788204201::0::::<><><>0<>0<>e01c4e34f0d2671fd4957fffc4b28b7f<>::
 ._Skyx32.png::CompressedTexture2D::3625907725502914927::1788200798::1788204201::0::::<><><>0<>0<>e8753fd2ac8df3103b8ae6c94a6da581<>::
 ::res://scenes/Level/Assets/Floor/map 9/__MACOSX/PSD/::1788200798
-::res://scenes/Level/Assets/Floor/map 9/__MACOSX/TILED_files/::1788204142
+::res://scenes/Level/Assets/Floor/map 9/__MACOSX/TILED_files/::1788204201
 ._cave_entrance.png::CompressedTexture2D::7118052497122876138::1788200798::1788204201::0::::<><><>0<>0<>e840a4cbc20e004a5e304528b12b3e26<>::
 ._chest.png::CompressedTexture2D::7185712409500934731::1788200798::1788204201::0::::<><><>0<>0<>c88197719d56f51d2defa6f70bc56015<>::
 ._Clouds_in_tiles.png::CompressedTexture2D::199751300639013217::1788200798::1788204201::0::::<><><>0<>0<>14fc0ea6df9102758fea6cb84f125ada<>::
@@ -2693,13 +2691,13 @@ Slide.png::CompressedTexture2D::6978078640197926873::1788200798::1788204148::1::
 ::res://scenes/Level/Docs/::1788200798
 ::res://scenes/Level/Scenes/::1788200798
 ::res://scenes/Level/Scenes/Actors/::1788200798
-Character.tscn::PackedScene::8653375137814310770::1788200798::0::1::::<><><>0<>0<><>::uid://b5jkovim4vmpm::::res://Assets/Mordred_Knight/Attacks.png
+Character.tscn::PackedScene::8653375137814310770::1788204624::0::1::::<><><>0<>0<><>::uid://b5jkovim4vmpm::::res://assets/Mordred_Knight/Attacks.png
 ::res://scenes/levels/::1788200798
 level_1.tscn::PackedScene::-1::1788200798::0::1::::<><><>0<>0<><>::uid://cax2j7w5nxxxx::::res://scripts/levels/base_level.gd<>uid://b6bkrbx4m18d8::::res://scenes/Level/Assets/Background/01/PNG/Battleground1/Bright/sky.png<>uid://b1fb6khb0uf3f::::res://scenes/Level/Assets/Background/01/PNG/Battleground1/Bright/ruins_bg.png<>uid://cqe172n83axvy::::res://scenes/Level/Assets/Background/01/PNG/Battleground1/Bright/hills&trees.png<>uid://0tj4s64ffnwf::::res://scenes/Level/Assets/Background/01/PNG/Battleground1/Bright/ruins2.png<>uid://bhh0lk6yj4e0e::::res://assets/Background/01/PNG/Battleground1/Bright/ruins.png<>uid://6pixqy6qwwis::::res://scenes/Level/Assets/Background/01/PNG/Battleground1/Bright/stones&grass.png<>uid://ccxpgrg4qc84::::res://scenes/Level/Assets/Floor/map 9/PNG/Tileset.png<>uid://cx3gwn3y65861::::res://scenes/traps/lava_pit/trap_lava_pit.tscn<>uid://2ioynf1rq34::::res://scenes/traps/rail_saw/trap_rail_saw.tscn<>uid://c00hwfpaiksmp::::res://scenes/traps/spikes/trap_spikes.tscn<>uid://dvj03a3fowopm::::res://scenes/characters/Mordred.tscn<>res://scenes/systems/MapDoor.tscn
 level_2.tscn::PackedScene::4370515211864970840::1788200798::0::1::::<><><>0<>0<><>::uid://b8r0k2ml2dihd::::res://scenes/Level/Assets/Background/01/PNG/Battleground3/Bright/sky.png<>uid://dt3dj17pxq5xh::::res://scenes/Level/Assets/Background/01/PNG/Battleground3/Bright/jungle_bg.png<>uid://cx3gwn3y65861::::res://scenes/traps/lava_pit/trap_lava_pit.tscn<>uid://d225j5et22n52::::res://assets/Background/01/PNG/Battleground3/Bright/trees&bushes.png<>uid://b0gptoiae8hps::::res://scenes/Level/Assets/Background/01/PNG/Battleground3/Bright/lianas.png<>uid://bayyfxlwm40w0::::res://scenes/Level/Assets/Background/01/PNG/Battleground3/Bright/fireflys.png<>uid://bgk3wghx14sv::::res://assets/Background/01/PNG/Battleground3/Bright/grasses.png<>uid://e7h82f1d2b4a::::res://assets/Background/01/PNG/Battleground3/Bright/grass&road.png<>uid://ccxpgrg4qc84::::res://scenes/Level/Assets/Floor/map 9/PNG/Tileset.png<>uid://b4ofgwfoeyob0::::res://scenes/traps/stalactite/trap_stalactite.tscn<>uid://c00hwfpaiksmp::::res://scenes/traps/spikes/trap_spikes.tscn<>uid://2ioynf1rq34::::res://scenes/traps/rail_saw/trap_rail_saw.tscn<>uid://dvj03a3fowopm::::res://scenes/characters/Mordred.tscn<>res://scenes/systems/MapDoor.tscn
 level_3.tscn::PackedScene::-1::1788200798::0::1::::<><><>0<>0<><>::uid://cax2j7w5nxxxx::::res://scripts/levels/base_level.gd<>uid://ugk6uomnwiu::::res://scenes/Level/Assets/Background/Lava/PNG/Background/Bright/rock5.png<>uid://c14nvlsndhovr::::res://scenes/Level/Assets/Background/Lava/PNG/Tiles_rock/tile1.png<>uid://cwr34rjt84e0l::::res://scenes/Level/Assets/Background/Lava/PNG/Tiles_rock/tile2.png<>uid://boq2ky6wogxjd::::res://scenes/Level/Assets/Background/Lava/PNG/Tiles_rock/tile13.png<>uid://c3o81kebxnak5::::res://scenes/Level/Assets/Background/Lava/PNG/Tiles_rock/tile14.png<>uid://cgx6he7ch2peh::::res://scenes/Level/Assets/Background/Lava/PNG/Tiles_rock/tile15.png<>uid://dss70rkxqp2mf::::res://scenes/Level/Assets/Background/Lava/PNG/Tiles_rock/tile18.png<>uid://d27y70wsuevh1::::res://scenes/Level/Assets/Background/Lava/PNG/Tiles_rock/tile20.png<>uid://cjx2rid1mmqp3::::res://scenes/Level/Assets/Background/Lava/PNG/Tiles_rock/tile21.png<>uid://c6dt8cwnqhjlw::::res://scenes/Level/Assets/Background/Lava/PNG/Tiles_rock/tile22.png<>uid://s06wdmum1kbu::::res://assets/Background/Lava/PNG/Tiles_rock/tile3.png<>uid://gyj5oci4v5u6::::res://assets/Background/Lava/PNG/Tiles_rock/tile28.png<>uid://bfoau7pgoeq2a::::res://scenes/Level/Assets/Background/Lava/PNG/Tiles_rock/tile23.png<>uid://cxr74hfxa4ntw::::res://assets/Background/Lava/PNG/Tiles_rock/tile29.png<>uid://cm4jbljqs4hfj::::res://scenes/Level/Assets/Background/Lava/PNG/Tiles_rock/tile24.png<>uid://cqoqs6lgrqto4::::res://scenes/Level/Assets/Background/Lava/PNG/Tiles_rock/tile25.png<>uid://gi7qeq0obtyc::::res://assets/Background/Lava/PNG/Tiles_rock/tile30.png<>uid://x7e2osuhxhq0::::res://assets/source/craftpix/traps/5 GUI/Levels/1/1_14.png<>uid://b72w5gjsi7oqy::::res://scenes/Level/Assets/Background/Lava/PNG/Tiles_rock/tile27.png<>uid://ckn72uqqytt6u::::res://scenes/Level/Assets/Background/Lava/PNG/Tiles_rock/tile4.png<>uid://cx3gwn3y65861::::res://scenes/traps/lava_pit/trap_lava_pit.tscn<>uid://c2yvx0j1h051s::::res://scenes/Level/Assets/Background/Lava/PNG/Tiles_rock/tile31.png<>uid://cn232c454cby4::::res://scenes/Level/Assets/Background/Lava/PNG/Tiles_rock/tile32.png<>uid://c00hwfpaiksmp::::res://scenes/traps/spikes/trap_spikes.tscn<>uid://2ioynf1rq34::::res://scenes/traps/rail_saw/trap_rail_saw.tscn<>uid://c6pv06ckbyrfv::::res://scenes/Level/Assets/Background/Lava/PNG/Tiles_rock/tile33.png<>uid://cr8g5g1uynxj4::::res://scenes/Level/Assets/Background/Lava/PNG/Tiles_rock/tile34.png<>uid://b4ofgwfoeyob0::::res://scenes/traps/stalactite/trap_stalactite.tscn<>uid://daohjh66iaktn::::res://scenes/Level/Assets/Background/Lava/PNG/Tiles_rock/tile5.png<>uid://dj0lhlt52ksoh::::res://scenes/Level/Assets/Background/Lava/PNG/Tiles_rock/tile6.png<>uid://bgw5s0bnuoxew::::res://scenes/Level/Assets/Background/Lava/PNG/Tiles_rock/tile7.png<>uid://b8bkboo4qbmdj::::res://scenes/Level/Assets/Background/Lava/PNG/Tiles_rock/tile8.png<>uid://bms6iyt6oud62::::res://scenes/Level/Assets/Background/Lava/PNG/Tiles_rock/tile9.png<>uid://dvj03a3fowopm::::res://scenes/characters/Mordred.tscn<>res://scenes/systems/MapDoor.tscn
 level_4.tscn::PackedScene::-1::1788200798::0::1::::<><><>0<>0<><>::res://scripts/levels/base_level.gd<>uid://bkjnm17l7sxj7::::res://assets/Background/background1/PNG/background 4/Plan 3.png<>uid://cbg20e6afl5rg::::res://assets/Background/background1/PNG/background 4/Plan 2.png<>uid://jfuki3f005nj::::res://assets/Background/background1/PNG/background 4/Plan 1.png<>uid://dvj03a3fowopm::::res://scenes/characters/Mordred.tscn<>res://scenes/systems/MapDoor.tscn
-::res://scenes/player/::1788204142
+::res://scenes/player/::1788205001
 player.gd::GDScript::7485526077965926292::1788200798::0::1::::<>CharacterBody2D<><>0<>0<><>::
 player.tscn::PackedScene::899661341232863552::1788200798::0::1::::<><><>0<>0<><>::uid://dewbrydxmedtc::::res://scenes/player/player.gd
 ::res://scenes/story/::1788200798
@@ -2738,7 +2736,7 @@ audio_manager.gd::GDScript::8648163579040399584::1788200798::0::1::::<>Node<><>0
 mordred.gd::GDScript::6853432751259338283::1788200798::0::1::::<>CharacterBody2D<><>0<>0<><>::
 npc.gd::GDScript::4078425073958079878::1788200798::0::1::::<>StaticBody2D<><>0<>0<><>::
 npc_princess.gd::GDScript::3660352375236360639::1788200798::0::1::::<>StaticBody2D<><>0<>0<><>::
-::res://scripts/enemies/::1788200798
+::res://scripts/enemies/::1788204467
 arrow.gd::GDScript::7714495628947397066::1788200798::0::1::::Arrow<>Area2D<><>0<>0<><>::
 boss.gd::GDScript::8021361570181275846::1788200798::0::1::::Boss<>CharacterBody2D<><>0<>0<><>::
 dummy.gd::GDScript::7053008794691089911::1788200798::0::1::::<>CharacterBody2D<><>0<>0<><>::
@@ -2746,7 +2744,6 @@ enemy.gd::GDScript::5523995211902571990::1788200798::0::1::::EnemySword<>Charact
 enemy_archer.gd::GDScript::804527526260589622::1788200798::0::1::::EnemyArcher<>CharacterBody2D<><>0<>0<><>::
 enemy_axe.gd::GDScript::7670769703870871042::1788200798::0::1::::EnemyAxe<>CharacterBody2D<><>0<>0<><>::
 enemy_sword.gd::GDScript::7618580262156008338::1788200798::0::1::::EnemySword<>CharacterBody2D<><>0<>0<><>::
-enemy_test.gd::GDScript::4835534422679830936::1788200798::0::1::::<>CharacterBody2D<><>0<>0<><>::
 ::res://scripts/items/::1788200798
 health_potion.gd::GDScript::5424399734226732555::1788200798::0::1::::<>Area2D<><>0<>0<><>::
 ::res://scripts/levels/::1788200798
@@ -2773,7 +2770,7 @@ trap_rail_saw.gd::GDScript::876924954468228210::1788200798::0::1::::<>TrapBase<>
 trap_spikes.gd::GDScript::580965219316496479::1788200798::0::1::::<>TrapBase<><>0<>0<><>::
 ::res://scripts/traps/stalactite/::1788204128
 trap_stalactite.gd::GDScript::4931636488182909607::1788200798::0::1::::<>TrapBase<><>0<>0<><>::
-::res://scripts/ui/::1788200798
+::res://scripts/ui/::1788204467
 credits.gd::GDScript::3808313532639307280::1788200798::0::1::::<>Control<><>0<>0<><>::
 damage_number.gd::GDScript::6684276037240410385::1788200798::0::1::::<>Label<><>0<>0<><>::
 equipment_menu.gd::GDScript::3422779199128014432::1788200798::0::1::::<>CanvasLayer<><>0<>0<><>::
@@ -2784,5 +2781,3 @@ pause_menu.gd::GDScript::6558556078616572402::1788200798::0::1::::<>CanvasLayer<
 save_select_menu.gd::GDScript::5166487266659002625::1788200798::0::1::::<>Control<><>0<>0<><>::
 settings.gd::GDScript::1497029560440786659::1788200798::0::1::::<>Control<><>0<>0<><>::
 title_screen.gd::GDScript::6896259106894380788::1788200798::0::1::::<>Control<><>0<>0<><>::
-ui_test_main.gd::GDScript::7234923946447499066::1788200798::0::1::::<>Node2D<><>0<>0<><>::
-ui_test_player.gd::GDScript::7555617573175167731::1788200798::0::1::::<>CharacterBody2D<><>0<>0<><>::

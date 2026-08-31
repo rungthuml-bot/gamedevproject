@@ -58,7 +58,7 @@ const DAMAGE_NUMBER_SCENE: PackedScene = preload(
 # Node References
 # =========================================================
 
-@onready var hp_bar: ProgressBar = $HPBar
+@onready var hp_bar: ProgressBar = get_node_or_null("HPBar")
 
 @onready var polygon: Polygon2D = $Polygon2D
 
@@ -69,8 +69,9 @@ const DAMAGE_NUMBER_SCENE: PackedScene = preload(
 
 func _ready() -> void:
 
-	hp_bar.max_value = MAX_HP
-	hp_bar.value = hp
+	if hp_bar != null:
+		hp_bar.max_value = MAX_HP
+		hp_bar.value = hp
 
 	print("================================")
 	print("DUMMY READY")
@@ -173,7 +174,8 @@ func take_damage(amount: int) -> void:
 	# Update HP Bar
 	# -----------------------------------------------------
 
-	hp_bar.value = hp
+	if hp_bar != null:
+		hp_bar.value = hp
 
 
 	# -----------------------------------------------------
