@@ -1,4 +1,4 @@
-﻿[gd_scene format=4 uid="uid://d5xh3gubycbr"]
+[gd_scene format=4 uid="uid://d5xh3gubycbr"]
 
 [ext_resource type="Script" path="res://scripts/levels/base_level.gd" id="99_base"]
 [ext_resource type="Texture2D" uid="uid://8e83hlavtklv" path="res://assets/Background/background1/PNG/background 4/Plan 3.png" id="1_xcfcc"]

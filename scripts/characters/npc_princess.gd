@@ -1,4 +1,4 @@
-﻿extends "res://scripts/characters/npc.gd"
+extends "res://scripts/characters/npc.gd"
 
 func _ready() -> void:
     npc_name = "Princess"

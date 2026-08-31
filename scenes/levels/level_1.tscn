@@ -1,4 +1,4 @@
-﻿[gd_scene format=4 uid="uid://d2n7kseg0nnkt"]
+[gd_scene format=4 uid="uid://d2n7kseg0nnkt"]
 [ext_resource type="Script" uid="uid://prd7udnsqwjs" path="res://scripts/levels/base_level.gd" id="99_base"]
 
 [ext_resource type="Texture2D" uid="uid://btheij1ng2ud4" path="res://assets/Background/01/PNG/Battleground1/Bright/sky.png" id="1_5hph3"]

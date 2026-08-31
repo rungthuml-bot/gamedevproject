@@ -1,4 +1,4 @@
-﻿[gd_scene format=4 uid="uid://ckcgtgcgkue2f"]
+[gd_scene format=4 uid="uid://ckcgtgcgkue2f"]
 [ext_resource type="Script" uid="uid://prd7udnsqwjs" path="res://scripts/levels/base_level.gd" id="99_base"]
 
 [ext_resource type="Texture2D" uid="uid://dvkbjrnr4t4kq" path="res://assets/Background/Lava/PNG/Background/Bright/rock5.png" id="2_6p2dc"]
