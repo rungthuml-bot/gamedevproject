@@ -1,15 +1,15 @@
 [gd_scene format=4 uid="uid://d2n7kseg0nnkt"]
 
-[ext_resource type="Texture2D" uid="uid://b6bkrbx4m18d8" path="res://Scenes/Level/Assets/Background/01/PNG/Battleground1/Bright/sky.png" id="1_5hph3"]
-[ext_resource type="Texture2D" uid="uid://b1fb6khb0uf3f" path="res://Scenes/Level/Assets/Background/01/PNG/Battleground1/Bright/ruins_bg.png" id="2_j7kpp"]
-[ext_resource type="Texture2D" uid="uid://cqe172n83axvy" path="res://Scenes/Level/Assets/Background/01/PNG/Battleground1/Bright/hills&trees.png" id="3_bjebc"]
-[ext_resource type="Texture2D" uid="uid://0tj4s64ffnwf" path="res://Scenes/Level/Assets/Background/01/PNG/Battleground1/Bright/ruins2.png" id="4_5rr72"]
-[ext_resource type="Texture2D" uid="uid://bhh0lk6yj4e0e" path="res://Scenes/Level/Assets/Background/01/PNG/Battleground1/Bright/ruins.png" id="5_gyffv"]
-[ext_resource type="Texture2D" uid="uid://6pixqy6qwwis" path="res://Scenes/Level/Assets/Background/01/PNG/Battleground1/Bright/stones&grass.png" id="6_1pe0h"]
-[ext_resource type="Texture2D" uid="uid://ccxpgrg4qc84" path="res://Scenes/Level/Assets/Floor/map 9/PNG/Tileset.png" id="7_j7kpp"]
-[ext_resource type="PackedScene" uid="uid://cx3gwn3y65861" path="res://Scenes/traps/lava_pit/trap_lava_pit.tscn" id="8_pvlc2"]
-[ext_resource type="PackedScene" uid="uid://2ioynf1rq34" path="res://Scenes/traps/rail_saw/trap_rail_saw.tscn" id="9_q2tg5"]
-[ext_resource type="PackedScene" uid="uid://c00hwfpaiksmp" path="res://Scenes/traps/spikes/trap_spikes.tscn" id="10_mt3j2"]
+[ext_resource type="Texture2D" uid="uid://b6bkrbx4m18d8" path="res://scenes/Level/Assets/Background/01/PNG/Battleground1/Bright/sky.png" id="1_5hph3"]
+[ext_resource type="Texture2D" uid="uid://b1fb6khb0uf3f" path="res://scenes/Level/Assets/Background/01/PNG/Battleground1/Bright/ruins_bg.png" id="2_j7kpp"]
+[ext_resource type="Texture2D" uid="uid://cqe172n83axvy" path="res://scenes/Level/Assets/Background/01/PNG/Battleground1/Bright/hills&trees.png" id="3_bjebc"]
+[ext_resource type="Texture2D" uid="uid://0tj4s64ffnwf" path="res://scenes/Level/Assets/Background/01/PNG/Battleground1/Bright/ruins2.png" id="4_5rr72"]
+[ext_resource type="Texture2D" uid="uid://bhh0lk6yj4e0e" path="res://assets/Background/01/PNG/Battleground1/Bright/ruins.png" id="5_gyffv"]
+[ext_resource type="Texture2D" uid="uid://6pixqy6qwwis" path="res://scenes/Level/Assets/Background/01/PNG/Battleground1/Bright/stones&grass.png" id="6_1pe0h"]
+[ext_resource type="Texture2D" uid="uid://ccxpgrg4qc84" path="res://scenes/Level/Assets/Floor/map 9/PNG/Tileset.png" id="7_j7kpp"]
+[ext_resource type="PackedScene" uid="uid://cx3gwn3y65861" path="res://scenes/traps/lava_pit/trap_lava_pit.tscn" id="8_pvlc2"]
+[ext_resource type="PackedScene" uid="uid://2ioynf1rq34" path="res://scenes/traps/rail_saw/trap_rail_saw.tscn" id="9_q2tg5"]
+[ext_resource type="PackedScene" uid="uid://c00hwfpaiksmp" path="res://scenes/traps/spikes/trap_spikes.tscn" id="10_mt3j2"]
 [ext_resource type="PackedScene" uid="uid://dvj03a3fowopm" path="res://scenes/characters/Mordred.tscn" id="100_player"]
 [ext_resource type="PackedScene" path="res://scenes/systems/MapDoor.tscn" id="101_door"]
 
@@ -505,9 +505,9 @@ position = Vector2(3609, 355)
 position = Vector2(1934, 381.00003)
 scale = Vector2(1.5, 1.5)
 
-[node name="Player" parent="." instance=ExtResource("100_player")]
+[node name="Player" parent="." unique_id=181765701 instance=ExtResource("100_player")]
 position = Vector2(100, 100)
 
-[node name="MapDoor_Next" parent="." instance=ExtResource("101_door")]
-position = Vector2(4200, 100)
+[node name="MapDoor_Next" parent="." unique_id=1939086373 instance=ExtResource("101_door")]
+position = Vector2(4839, 376)
 target_scene_path = "res://scenes/levels/level_2.tscn"

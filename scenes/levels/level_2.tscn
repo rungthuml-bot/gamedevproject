@@ -1,17 +1,17 @@
 [gd_scene format=4 uid="uid://b3jd0nsb4hgts"]
 
-[ext_resource type="Texture2D" uid="uid://b8r0k2ml2dihd" path="res://Scenes/Level/Assets/Background/01/PNG/Battleground3/Bright/sky.png" id="1_7j8ne"]
-[ext_resource type="Texture2D" uid="uid://dt3dj17pxq5xh" path="res://Scenes/Level/Assets/Background/01/PNG/Battleground3/Bright/jungle_bg.png" id="2_7dov7"]
-[ext_resource type="PackedScene" uid="uid://cx3gwn3y65861" path="res://Scenes/traps/lava_pit/trap_lava_pit.tscn" id="3_71ffg"]
-[ext_resource type="Texture2D" uid="uid://d225j5et22n52" path="res://Scenes/Level/Assets/Background/01/PNG/Battleground3/Bright/trees&bushes.png" id="3_ehv2h"]
-[ext_resource type="Texture2D" uid="uid://b0gptoiae8hps" path="res://Scenes/Level/Assets/Background/01/PNG/Battleground3/Bright/lianas.png" id="4_15wb7"]
-[ext_resource type="Texture2D" uid="uid://bayyfxlwm40w0" path="res://Scenes/Level/Assets/Background/01/PNG/Battleground3/Bright/fireflys.png" id="5_eoq84"]
-[ext_resource type="Texture2D" uid="uid://bgk3wghx14sv" path="res://Scenes/Level/Assets/Background/01/PNG/Battleground3/Bright/grasses.png" id="6_yl73a"]
-[ext_resource type="Texture2D" uid="uid://e7h82f1d2b4a" path="res://Scenes/Level/Assets/Background/01/PNG/Battleground3/Bright/grass&road.png" id="7_xbcdb"]
-[ext_resource type="Texture2D" uid="uid://ccxpgrg4qc84" path="res://Scenes/Level/Assets/Floor/map 9/PNG/Tileset.png" id="8_n0bsh"]
-[ext_resource type="PackedScene" uid="uid://b4ofgwfoeyob0" path="res://Scenes/traps/stalactite/trap_stalactite.tscn" id="9_4eusg"]
-[ext_resource type="PackedScene" uid="uid://c00hwfpaiksmp" path="res://Scenes/traps/spikes/trap_spikes.tscn" id="11_8b42i"]
-[ext_resource type="PackedScene" uid="uid://2ioynf1rq34" path="res://Scenes/traps/rail_saw/trap_rail_saw.tscn" id="12_d8j35"]
+[ext_resource type="Texture2D" uid="uid://b8r0k2ml2dihd" path="res://scenes/Level/Assets/Background/01/PNG/Battleground3/Bright/sky.png" id="1_7j8ne"]
+[ext_resource type="Texture2D" uid="uid://dt3dj17pxq5xh" path="res://scenes/Level/Assets/Background/01/PNG/Battleground3/Bright/jungle_bg.png" id="2_7dov7"]
+[ext_resource type="PackedScene" uid="uid://cx3gwn3y65861" path="res://scenes/traps/lava_pit/trap_lava_pit.tscn" id="3_71ffg"]
+[ext_resource type="Texture2D" uid="uid://d225j5et22n52" path="res://assets/Background/01/PNG/Battleground3/Bright/trees&bushes.png" id="3_ehv2h"]
+[ext_resource type="Texture2D" uid="uid://b0gptoiae8hps" path="res://scenes/Level/Assets/Background/01/PNG/Battleground3/Bright/lianas.png" id="4_15wb7"]
+[ext_resource type="Texture2D" uid="uid://bayyfxlwm40w0" path="res://scenes/Level/Assets/Background/01/PNG/Battleground3/Bright/fireflys.png" id="5_eoq84"]
+[ext_resource type="Texture2D" uid="uid://bgk3wghx14sv" path="res://assets/Background/01/PNG/Battleground3/Bright/grasses.png" id="6_yl73a"]
+[ext_resource type="Texture2D" uid="uid://e7h82f1d2b4a" path="res://assets/Background/01/PNG/Battleground3/Bright/grass&road.png" id="7_xbcdb"]
+[ext_resource type="Texture2D" uid="uid://ccxpgrg4qc84" path="res://scenes/Level/Assets/Floor/map 9/PNG/Tileset.png" id="8_n0bsh"]
+[ext_resource type="PackedScene" uid="uid://b4ofgwfoeyob0" path="res://scenes/traps/stalactite/trap_stalactite.tscn" id="9_4eusg"]
+[ext_resource type="PackedScene" uid="uid://c00hwfpaiksmp" path="res://scenes/traps/spikes/trap_spikes.tscn" id="11_8b42i"]
+[ext_resource type="PackedScene" uid="uid://2ioynf1rq34" path="res://scenes/traps/rail_saw/trap_rail_saw.tscn" id="12_d8j35"]
 [ext_resource type="PackedScene" uid="uid://dvj03a3fowopm" path="res://scenes/characters/Mordred.tscn" id="100_player"]
 [ext_resource type="PackedScene" path="res://scenes/systems/MapDoor.tscn" id="101_door"]
 
@@ -542,13 +542,13 @@ scale = Vector2(2, 2)
 position = Vector2(4784, 541)
 scale = Vector2(7, 6)
 
-[node name="Player" parent="." instance=ExtResource("100_player")]
+[node name="Player" parent="." unique_id=642560762 instance=ExtResource("100_player")]
 position = Vector2(100, 100)
 
-[node name="MapDoor_Prev" parent="." instance=ExtResource("101_door")]
+[node name="MapDoor_Prev" parent="." unique_id=1832355046 instance=ExtResource("101_door")]
 position = Vector2(-200, 100)
 target_scene_path = "res://scenes/levels/level_1.tscn"
 
-[node name="MapDoor_Next" parent="." instance=ExtResource("101_door")]
-position = Vector2(4900, 100)
+[node name="MapDoor_Next" parent="." unique_id=1243345218 instance=ExtResource("101_door")]
+position = Vector2(4925, 268)
 target_scene_path = "res://scenes/levels/level_3.tscn"
