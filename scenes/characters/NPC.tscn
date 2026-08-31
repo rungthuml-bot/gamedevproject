@@ -63,7 +63,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"Idle",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [node name="NPC" type="StaticBody2D" unique_id=1809865605]
@@ -92,4 +92,4 @@ shape = SubResource("RectangleShape2D_interact")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=538230948]
 sprite_frames = SubResource("SpriteFrames_7n77a")
 animation = &"Idle"
-frame_progress = 0.42571038
+frame_progress = 0.9402894
