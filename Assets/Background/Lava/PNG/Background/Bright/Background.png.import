@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Background/Bright/Background.png.import
 uid="uid://btn7nyhodectw"
 path="res://.godot/imported/Background.png-5c7fc1a909afe3df5bdc3bcb9c80907c.ctex"
+=======
+uid="uid://s4of77llviq4"
+path="res://.godot/imported/Tile_20.png-c2a6c8320d38334c58a583659043fc34.ctex"
+>>>>>>> Stashed changes:assets/source/craftpix/traps/5 GUI/Interface/Tile_20.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Background/Bright/Background.png.import
 source_file="res://Assets/Background/Lava/PNG/Background/Bright/Background.png"
 dest_files=["res://.godot/imported/Background.png-5c7fc1a909afe3df5bdc3bcb9c80907c.ctex"]
+=======
+source_file="res://Assets/source/craftpix/traps/5 GUI/Interface/Tile_20.png"
+dest_files=["res://.godot/imported/Tile_20.png-c2a6c8320d38334c58a583659043fc34.ctex"]
+>>>>>>> Stashed changes:assets/source/craftpix/traps/5 GUI/Interface/Tile_20.png.import
 
 [params]
 

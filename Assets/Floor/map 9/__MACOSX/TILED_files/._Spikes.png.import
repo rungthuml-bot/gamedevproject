@@ -2,12 +2,25 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/Floor/map 9/__MACOSX/TILED_files/._Spikes.png.import
 uid="uid://bflw0wp1v7ydf"
 valid=false
 
 [deps]
 
 source_file="res://Floor/map 9/__MACOSX/TILED_files/._Spikes.png"
+=======
+uid="uid://bp255bk3g73gy"
+path="res://.godot/imported/1_01.png-1bf5ac3292bc6b4554538da13d5a8913.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/source/craftpix/traps/5 GUI/Levels/1/1_01.png"
+dest_files=["res://.godot/imported/1_01.png-1bf5ac3292bc6b4554538da13d5a8913.ctex"]
+>>>>>>> Stashed changes:assets/source/craftpix/traps/5 GUI/Levels/1/1_01.png.import
 
 [params]
 

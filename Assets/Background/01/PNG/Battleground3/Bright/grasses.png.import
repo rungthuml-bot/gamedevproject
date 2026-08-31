@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/Background/01/PNG/Battleground3/Bright/grasses.png.import
 uid="uid://bgk3wghx14sv"
 path="res://.godot/imported/grasses.png-a14328d140728ed0012cb4995d20981a.ctex"
+=======
+uid="uid://b5pvojs38fuqg"
+path="res://.godot/imported/Tile_16.png-2213b56c4882595d40d57e3959870139.ctex"
+>>>>>>> Stashed changes:assets/source/craftpix/traps/2 Locations/Tiles/Tile_16.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< Updated upstream:Assets/Background/01/PNG/Battleground3/Bright/grasses.png.import
 source_file="res://Assets/Background/01/PNG/Battleground3/Bright/grasses.png"
 dest_files=["res://.godot/imported/grasses.png-a14328d140728ed0012cb4995d20981a.ctex"]
+=======
+source_file="res://Assets/source/craftpix/traps/2 Locations/Tiles/Tile_16.png"
+dest_files=["res://.godot/imported/Tile_16.png-2213b56c4882595d40d57e3959870139.ctex"]
+>>>>>>> Stashed changes:assets/source/craftpix/traps/2 Locations/Tiles/Tile_16.png.import
 
 [params]
 

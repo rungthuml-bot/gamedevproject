@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Tiles_rock/tile16.png.import
 uid="uid://umx44q1uodu0"
 path="res://.godot/imported/tile16.png-b77fd4870ee1a4c665ab7e06f1519d1e.ctex"
+=======
+uid="uid://d2u8e1qfa77ie"
+path="res://.godot/imported/Tile_55.png-e1b3c94851a76056f9ad3fa0256e3fb6.ctex"
+>>>>>>> Stashed changes:assets/source/craftpix/traps/2 Locations/Tiles/Tile_55.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Tiles_rock/tile16.png.import
 source_file="res://Assets/Background/Lava/PNG/Tiles_rock/tile16.png"
 dest_files=["res://.godot/imported/tile16.png-b77fd4870ee1a4c665ab7e06f1519d1e.ctex"]
+=======
+source_file="res://Assets/source/craftpix/traps/2 Locations/Tiles/Tile_55.png"
+dest_files=["res://.godot/imported/Tile_55.png-e1b3c94851a76056f9ad3fa0256e3fb6.ctex"]
+>>>>>>> Stashed changes:assets/source/craftpix/traps/2 Locations/Tiles/Tile_55.png.import
 
 [params]
 

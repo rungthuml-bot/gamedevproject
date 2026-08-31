@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://b4ofgwfoeyob0"]
+
+[ext_resource type="Script" uid="uid://b7vb7c1mfqfs" path="res://scenes/traps/stalactite/trap_stalactite.gd" id="1_o3xd5"]
+[ext_resource type="Texture2D" uid="uid://ccj8r6m6nwe1r" path="res://assets/game/traps/stalactite/lava_drop1_1.png" id="2_o3xd5"]
+[ext_resource type="Texture2D" uid="uid://dhh124uyrpv0e" path="res://assets/game/traps/stalactite/lava_drop1_2.png" id="3_nsm64"]
+[ext_resource type="Texture2D" uid="uid://cjkc1ssogrpte" path="res://assets/game/traps/stalactite/lava_drop1_3.png" id="4_pvvdr"]
+[ext_resource type="Texture2D" uid="uid://7p4k337gs702" path="res://assets/game/traps/stalactite/lava_drop1_4.png" id="5_ylqt8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j2vdu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_o3xd5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nsm64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pvvdr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ylqt8")
+}],
+"loop": 1,
+"name": &"lava",
+"speed": 3.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j2vdu"]
+radius = 19.0
+height = 80.0
+
+[node name="trap_stalactite" type="Area2D" unique_id=444609197]
+script = ExtResource("1_o3xd5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1077618387]
+sprite_frames = SubResource("SpriteFrames_j2vdu")
+animation = &"lava"
+frame_progress = 0.86749357
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=508890426]
+shape = SubResource("CapsuleShape2D_j2vdu")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

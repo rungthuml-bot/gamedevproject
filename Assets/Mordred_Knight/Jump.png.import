@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/Mordred_Knight/Jump.png.import
 uid="uid://c0hvghmsph4pb"
 path="res://.godot/imported/Jump.png-f3a006e1732a389fe537dcca03e1023e.ctex"
+=======
+uid="uid://d22n6olo78f2s"
+path="res://.godot/imported/Tile_71.png-3332adcb523fb00c382271976c5c4169.ctex"
+>>>>>>> Stashed changes:assets/source/craftpix/traps/5 GUI/Interface/Tile_71.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< Updated upstream:Assets/Mordred_Knight/Jump.png.import
 source_file="res://Assets/Mordred_Knight/Jump.png"
 dest_files=["res://.godot/imported/Jump.png-f3a006e1732a389fe537dcca03e1023e.ctex"]
+=======
+source_file="res://Assets/source/craftpix/traps/5 GUI/Interface/Tile_71.png"
+dest_files=["res://.godot/imported/Tile_71.png-3332adcb523fb00c382271976c5c4169.ctex"]
+>>>>>>> Stashed changes:assets/source/craftpix/traps/5 GUI/Interface/Tile_71.png.import
 
 [params]
 

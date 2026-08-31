@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/Background/01/PNG/Battleground4/Bright/bones.png.import
 uid="uid://xlhusx65j7ge"
 path="res://.godot/imported/bones.png-6a73f27b40364dcc286754f0b99b674e.ctex"
+=======
+uid="uid://545b6ppjvo4p"
+path="res://.godot/imported/torch2_1.png-cd480cfe76e89e31d6a6a95fae90c807.ctex"
+>>>>>>> Stashed changes:assets/source/craftpix/trap_stalactite/PNG/Details/torch2_1.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< Updated upstream:Assets/Background/01/PNG/Battleground4/Bright/bones.png.import
 source_file="res://Assets/Background/01/PNG/Battleground4/Bright/bones.png"
 dest_files=["res://.godot/imported/bones.png-6a73f27b40364dcc286754f0b99b674e.ctex"]
+=======
+source_file="res://Assets/source/craftpix/trap_stalactite/PNG/Details/torch2_1.png"
+dest_files=["res://.godot/imported/torch2_1.png-cd480cfe76e89e31d6a6a95fae90c807.ctex"]
+>>>>>>> Stashed changes:assets/source/craftpix/trap_stalactite/PNG/Details/torch2_1.png.import
 
 [params]
 

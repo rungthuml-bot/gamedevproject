@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/Mordred_Knight/Idle.png.import
 uid="uid://dvmfpgflawipx"
 path="res://.godot/imported/Idle.png-1f201fb39d11a06f8aa1f3dc296eafdd.ctex"
+=======
+uid="uid://cix76d38yyo5g"
+path="res://.godot/imported/Tile_70.png-6913f08fcbb90f011e7d18cb2c0bc019.ctex"
+>>>>>>> Stashed changes:assets/source/craftpix/traps/2 Locations/Tiles/Tile_70.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< Updated upstream:Assets/Mordred_Knight/Idle.png.import
 source_file="res://Assets/Mordred_Knight/Idle.png"
 dest_files=["res://.godot/imported/Idle.png-1f201fb39d11a06f8aa1f3dc296eafdd.ctex"]
+=======
+source_file="res://Assets/source/craftpix/traps/2 Locations/Tiles/Tile_70.png"
+dest_files=["res://.godot/imported/Tile_70.png-6913f08fcbb90f011e7d18cb2c0bc019.ctex"]
+>>>>>>> Stashed changes:assets/source/craftpix/traps/2 Locations/Tiles/Tile_70.png.import
 
 [params]
 

@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/Background/01/PNG/Battleground3/Bright/grass&road.png.import
 uid="uid://e7h82f1d2b4a"
 path="res://.godot/imported/grass&road.png-20944b84068ad328e58c1e6bc23da0a2.ctex"
+=======
+uid="uid://c080iwmyywld"
+path="res://.godot/imported/2_05.png-44b3db953cbd02b9a914c42f9bcc40ad.ctex"
+>>>>>>> Stashed changes:assets/source/craftpix/traps/5 GUI/Levels/2/2_05.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< Updated upstream:Assets/Background/01/PNG/Battleground3/Bright/grass&road.png.import
 source_file="res://Assets/Background/01/PNG/Battleground3/Bright/grass&road.png"
 dest_files=["res://.godot/imported/grass&road.png-20944b84068ad328e58c1e6bc23da0a2.ctex"]
+=======
+source_file="res://Assets/source/craftpix/traps/5 GUI/Levels/2/2_05.png"
+dest_files=["res://.godot/imported/2_05.png-44b3db953cbd02b9a914c42f9bcc40ad.ctex"]
+>>>>>>> Stashed changes:assets/source/craftpix/traps/5 GUI/Levels/2/2_05.png.import
 
 [params]
 

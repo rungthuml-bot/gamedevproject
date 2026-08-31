@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/Floor/map 9/PNG/Background/x32/Flora2x32.png.import
 uid="uid://cvf6oks5f6tx8"
 path="res://.godot/imported/Flora2x32.png-0383d4789918e526f3a8895276eb0046.ctex"
+=======
+uid="uid://ba8ok5rcg2lks"
+path="res://.godot/imported/Idle.png-5823066701caac645490fc38ae9ab589.ctex"
+>>>>>>> Stashed changes:assets/source/craftpix/traps/4 Enemies/5/Idle.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< Updated upstream:Assets/Floor/map 9/PNG/Background/x32/Flora2x32.png.import
 source_file="res://Assets/Floor/map 9/PNG/Background/x32/Flora2x32.png"
 dest_files=["res://.godot/imported/Flora2x32.png-0383d4789918e526f3a8895276eb0046.ctex"]
+=======
+source_file="res://Assets/source/craftpix/traps/4 Enemies/5/Idle.png"
+dest_files=["res://.godot/imported/Idle.png-5823066701caac645490fc38ae9ab589.ctex"]
+>>>>>>> Stashed changes:assets/source/craftpix/traps/4 Enemies/5/Idle.png.import
 
 [params]
 

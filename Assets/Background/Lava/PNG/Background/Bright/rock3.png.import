@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Background/Bright/rock3.png.import
 uid="uid://c1o85fdm7vjh7"
 path="res://.godot/imported/rock3.png-b732e65ea4259aeb478faeb525319ade.ctex"
+=======
+uid="uid://bafc25s7qb60j"
+path="res://.godot/imported/Fall.png-cb53e0a625d55e54f666fc83fbd44fb7.ctex"
+>>>>>>> Stashed changes:assets/source/craftpix/traps/4 Enemies/1/Fall.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Background/Bright/rock3.png.import
 source_file="res://Assets/Background/Lava/PNG/Background/Bright/rock3.png"
 dest_files=["res://.godot/imported/rock3.png-b732e65ea4259aeb478faeb525319ade.ctex"]
+=======
+source_file="res://Assets/source/craftpix/traps/4 Enemies/1/Fall.png"
+dest_files=["res://.godot/imported/Fall.png-cb53e0a625d55e54f666fc83fbd44fb7.ctex"]
+>>>>>>> Stashed changes:assets/source/craftpix/traps/4 Enemies/1/Fall.png.import
 
 [params]
 

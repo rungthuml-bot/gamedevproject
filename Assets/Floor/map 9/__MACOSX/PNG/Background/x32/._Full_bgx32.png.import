@@ -2,12 +2,25 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/Floor/map 9/__MACOSX/PNG/Background/x32/._Full_bgx32.png.import
 uid="uid://cy854tm6mhoiy"
 valid=false
 
 [deps]
 
 source_file="res://Floor/map 9/__MACOSX/PNG/Background/x32/._Full_bgx32.png"
+=======
+uid="uid://bu1evtrfx3kdi"
+path="res://.godot/imported/tile12.png-8a3bad93c0943d54e019109d43f6499f.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/source/craftpix/trap_stalactite/PNG/Tiles_rock/tile12.png"
+dest_files=["res://.godot/imported/tile12.png-8a3bad93c0943d54e019109d43f6499f.ctex"]
+>>>>>>> Stashed changes:assets/source/craftpix/trap_stalactite/PNG/Tiles_rock/tile12.png.import
 
 [params]
 

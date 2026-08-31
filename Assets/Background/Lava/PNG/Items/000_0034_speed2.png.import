@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Items/000_0034_speed2.png.import
 uid="uid://chbkv3loohwuy"
 path="res://.godot/imported/000_0034_speed2.png-32c4f8dc6f4f607a9c8731c51d1b93fb.ctex"
+=======
+uid="uid://bxoc3qs3ifuo6"
+path="res://.godot/imported/supplies_objects.png-1e98b7ed938bee8d36c03ddc285f6688.ctex"
+>>>>>>> Stashed changes:assets/source/craftpix/PNG/supplies_objects.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Items/000_0034_speed2.png.import
 source_file="res://Assets/Background/Lava/PNG/Items/000_0034_speed2.png"
 dest_files=["res://.godot/imported/000_0034_speed2.png-32c4f8dc6f4f607a9c8731c51d1b93fb.ctex"]
+=======
+source_file="res://Assets/source/craftpix/PNG/supplies_objects.png"
+dest_files=["res://.godot/imported/supplies_objects.png-1e98b7ed938bee8d36c03ddc285f6688.ctex"]
+>>>>>>> Stashed changes:assets/source/craftpix/PNG/supplies_objects.png.import
 
 [params]
 

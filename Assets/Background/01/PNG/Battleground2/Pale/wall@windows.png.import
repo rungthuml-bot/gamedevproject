@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/Background/01/PNG/Battleground2/Pale/wall@windows.png.import
 uid="uid://cxyy2dun5p3mr"
 path="res://.godot/imported/wall@windows.png-b7ff816dda52dc4c68d5e47129022d9d.ctex"
+=======
+uid="uid://c56hexr4pob25"
+path="res://.godot/imported/Tile_99.png-5e100a9fb7706db9bb723f0cf8f57cb3.ctex"
+>>>>>>> Stashed changes:assets/source/craftpix/traps/2 Locations/Tiles/Tile_99.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< Updated upstream:Assets/Background/01/PNG/Battleground2/Pale/wall@windows.png.import
 source_file="res://Assets/Background/01/PNG/Battleground2/Pale/wall@windows.png"
 dest_files=["res://.godot/imported/wall@windows.png-b7ff816dda52dc4c68d5e47129022d9d.ctex"]
+=======
+source_file="res://Assets/source/craftpix/traps/2 Locations/Tiles/Tile_99.png"
+dest_files=["res://.godot/imported/Tile_99.png-5e100a9fb7706db9bb723f0cf8f57cb3.ctex"]
+>>>>>>> Stashed changes:assets/source/craftpix/traps/2 Locations/Tiles/Tile_99.png.import
 
 [params]
 

@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Details/lava_drop1_1.png.import
 uid="uid://b4ghgbgvcfxl1"
 path="res://.godot/imported/lava_drop1_1.png-7f3224581d921d9bca0d83cb1df11c79.ctex"
+=======
+uid="uid://dfbe1oxmis3pb"
+path="res://.godot/imported/1lvl.jpg-a089bd87290a0c8239d6b99330c43658.ctex"
+>>>>>>> Stashed changes:assets/source/craftpix/traps/7 Levels/Preview/1lvl.jpg.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Details/lava_drop1_1.png.import
 source_file="res://Assets/Background/Lava/PNG/Details/lava_drop1_1.png"
 dest_files=["res://.godot/imported/lava_drop1_1.png-7f3224581d921d9bca0d83cb1df11c79.ctex"]
+=======
+source_file="res://Assets/source/craftpix/traps/7 Levels/Preview/1lvl.jpg"
+dest_files=["res://.godot/imported/1lvl.jpg-a089bd87290a0c8239d6b99330c43658.ctex"]
+>>>>>>> Stashed changes:assets/source/craftpix/traps/7 Levels/Preview/1lvl.jpg.import
 
 [params]
 

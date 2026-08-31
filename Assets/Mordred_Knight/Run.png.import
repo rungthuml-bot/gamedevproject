@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/Mordred_Knight/Run.png.import
 uid="uid://bet8colukmhqt"
 path="res://.godot/imported/Run.png-51b7510e42a6e79fc43c6be83ba899e4.ctex"
+=======
+uid="uid://65hif66qu3pa"
+path="res://.godot/imported/4.png-5cf72260b7e4e5db6c557a14f13ccb30.ctex"
+>>>>>>> Stashed changes:assets/game/traps/spikes/4.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< Updated upstream:Assets/Mordred_Knight/Run.png.import
 source_file="res://Assets/Mordred_Knight/Run.png"
 dest_files=["res://.godot/imported/Run.png-51b7510e42a6e79fc43c6be83ba899e4.ctex"]
+=======
+source_file="res://Assets/game/traps/spikes/4.png"
+dest_files=["res://.godot/imported/4.png-5cf72260b7e4e5db6c557a14f13ccb30.ctex"]
+>>>>>>> Stashed changes:assets/game/traps/spikes/4.png.import
 
 [params]
 

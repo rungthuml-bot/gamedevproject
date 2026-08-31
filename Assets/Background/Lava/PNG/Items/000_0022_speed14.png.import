@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Items/000_0022_speed14.png.import
 uid="uid://ln7xghfw4qay"
 path="res://.godot/imported/000_0022_speed14.png-92ee6d5ecdd561bda06a8e64b8c3a288.ctex"
+=======
+uid="uid://bp48avvhwgrfp"
+path="res://.godot/imported/000_0003_crystal7.png-6c69a3baed5afad73a016c16574a3a61.ctex"
+>>>>>>> Stashed changes:assets/source/craftpix/trap_stalactite/PNG/Items/000_0003_crystal7.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Items/000_0022_speed14.png.import
 source_file="res://Assets/Background/Lava/PNG/Items/000_0022_speed14.png"
 dest_files=["res://.godot/imported/000_0022_speed14.png-92ee6d5ecdd561bda06a8e64b8c3a288.ctex"]
+=======
+source_file="res://Assets/source/craftpix/trap_stalactite/PNG/Items/000_0003_crystal7.png"
+dest_files=["res://.godot/imported/000_0003_crystal7.png-6c69a3baed5afad73a016c16574a3a61.ctex"]
+>>>>>>> Stashed changes:assets/source/craftpix/trap_stalactite/PNG/Items/000_0003_crystal7.png.import
 
 [params]
 

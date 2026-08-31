@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Details/lava_drop2_5.png.import
 uid="uid://dlfwmr5bquhc3"
 path="res://.godot/imported/lava_drop2_5.png-e30152d5e260862bbe4ea70cb4a9ab7d.ctex"
+=======
+uid="uid://cfcxr8kogue1d"
+path="res://.godot/imported/Hit.png-d60ab05736df1297214352ae98d26481.ctex"
+>>>>>>> Stashed changes:assets/source/craftpix/traps/4 Enemies/5/Hit.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< Updated upstream:Assets/Background/Lava/PNG/Details/lava_drop2_5.png.import
 source_file="res://Assets/Background/Lava/PNG/Details/lava_drop2_5.png"
 dest_files=["res://.godot/imported/lava_drop2_5.png-e30152d5e260862bbe4ea70cb4a9ab7d.ctex"]
+=======
+source_file="res://Assets/source/craftpix/traps/4 Enemies/5/Hit.png"
+dest_files=["res://.godot/imported/Hit.png-d60ab05736df1297214352ae98d26481.ctex"]
+>>>>>>> Stashed changes:assets/source/craftpix/traps/4 Enemies/5/Hit.png.import
 
 [params]
 

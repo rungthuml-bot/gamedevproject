@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:Assets/Background/01/PNG/Battleground4/Pale/back_trees.png.import
 uid="uid://cvnlj03hhd1il"
 path="res://.godot/imported/back_trees.png-d9fd7dd516d6cfb08759c4c48ecdc188.ctex"
+=======
+uid="uid://he7skc6it07e"
+path="res://.godot/imported/Other_objects.png-27a2ffa73bd5a38aedcaf2a9d2ccd3e7.ctex"
+>>>>>>> Stashed changes:assets/source/craftpix/Tiled_files/Other_objects.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< Updated upstream:Assets/Background/01/PNG/Battleground4/Pale/back_trees.png.import
 source_file="res://Assets/Background/01/PNG/Battleground4/Pale/back_trees.png"
 dest_files=["res://.godot/imported/back_trees.png-d9fd7dd516d6cfb08759c4c48ecdc188.ctex"]
+=======
+source_file="res://Assets/source/craftpix/Tiled_files/Other_objects.png"
+dest_files=["res://.godot/imported/Other_objects.png-27a2ffa73bd5a38aedcaf2a9d2ccd3e7.ctex"]
+>>>>>>> Stashed changes:assets/source/craftpix/Tiled_files/Other_objects.png.import
 
 [params]
 
