@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://2ioynf1rq34" path="res://scenes/traps/rail_saw/trap_rail_saw.tscn" id="9_q2tg5"]
 [ext_resource type="PackedScene" uid="uid://c00hwfpaiksmp" path="res://scenes/traps/spikes/trap_spikes.tscn" id="10_mt3j2"]
 [ext_resource type="AudioStream" uid="uid://dr36ovpdsy5yi" path="res://assets/audio/bgm/Level_1_theme.wav" id="13_dnkej"]
+[ext_resource type="PackedScene" uid="uid://csfin0y1x3riw" path="res://scenes/enemies/EnemySword.tscn" id="15_wtwp4"]
 [ext_resource type="PackedScene" uid="uid://do0cvqktdnlcq" path="res://scenes/characters/NPC.tscn" id="17_np2pn"]
 [ext_resource type="PackedScene" uid="uid://dvj03a3fowopm" path="res://scenes/characters/Mordred.tscn" id="100_player"]
 [ext_resource type="PackedScene" uid="uid://dxi5uqbfavosh" path="res://scenes/systems/MapDoor.tscn" id="101_door"]
@@ -523,3 +524,6 @@ autoplay = true
 
 [node name="NPC_Tutorial" parent="." unique_id=1809865605 instance=ExtResource("17_np2pn")]
 position = Vector2(505, 332)
+
+[node name="EnemySword" parent="." unique_id=1230997985 instance=ExtResource("15_wtwp4")]
+position = Vector2(3111, 233)
