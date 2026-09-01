@@ -8,7 +8,7 @@ var bodies_inside: Array[Node2D] = []
 func _ready() -> void:
 	pass
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if bodies_inside.size() > 0:
 		for body in bodies_inside:
 			if is_instance_valid(body):
