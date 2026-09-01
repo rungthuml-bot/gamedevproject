@@ -539,18 +539,7 @@ volume_db = -15.0
 autoplay = true
 
 [node name="NPC_Tutorial" type="StaticBody2D" parent="." unique_id=1809865605 instance=ExtResource("17_np2pn")]
-position = Vector2(393, 363)
+position = Vector2(150, 363)
 collision_mask = 0
 script = ExtResource("18_v6ha0")
 
-[connection signal="body_entered" from="Level/trap_lava_pit" to="Level/trap_lava_pit" method="_on_body_entered"]
-[connection signal="body_entered" from="Level/trap_rail_saw" to="Level/trap_rail_saw" method="_on_body_entered"]
-[connection signal="body_entered" from="Level/trap_spikes" to="Level/trap_spikes" method="_on_body_entered"]
-[connection signal="body_entered" from="Level/trap_spikes2" to="Level/trap_spikes2" method="_on_body_entered"]
-[connection signal="body_entered" from="Level/trap_spikes3" to="Level/trap_spikes3" method="_on_body_entered"]
-[connection signal="body_entered" from="Level/trap_spikes4" to="Level/trap_spikes4" method="_on_body_entered"]
-[connection signal="body_entered" from="Level/trap_spikes5" to="Level/trap_spikes5" method="_on_body_entered"]
-[connection signal="body_entered" from="Level/trap_spikes6" to="Level/trap_spikes6" method="_on_body_entered"]
-[connection signal="body_entered" from="trap_rail_saw" to="trap_rail_saw" method="_on_body_entered"]
-[connection signal="body_entered" from="trap_spikes" to="trap_spikes" method="_on_body_entered"]
-[connection signal="body_entered" from="trap_lava_pit" to="trap_lava_pit" method="_on_body_entered"]
