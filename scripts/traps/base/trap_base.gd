@@ -6,13 +6,19 @@ extends Area2D
 var bodies_inside: Array[Node2D] = []
 
 func _ready() -> void:
-	pass
+	if not body_entered.is_connected(_on_body_entered):
+		body_entered.connect(_on_body_entered)
+	if not body_exited.is_connected(_on_body_exited):
+		body_exited.connect(_on_body_exited)
 
 func _process(_delta: float) -> void:
 	if bodies_inside.size() > 0:
-		for body in bodies_inside:
+		for i in range(bodies_inside.size() - 1, -1, -1):
+			var body = bodies_inside[i]
 			if is_instance_valid(body):
 				_apply_trap_effect(body)
+			else:
+				bodies_inside.remove_at(i)
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
