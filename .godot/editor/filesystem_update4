@@ -1,0 +1,14 @@
+res://scenes/levels/level_1.tscn
+res://scenes/levels/level_2.tscn
+res://scenes/levels/level_3.tscn
+res://scenes/levels/level_4.tscn
+res://scripts/characters/mordred.gd
+res://scripts/characters/npc.gd
+res://scripts/characters/npc_princess.gd
+res://scripts/enemies/boss.gd
+res://scripts/enemies/enemy_axe.gd
+res://scripts/enemies/enemy_sword.gd
+res://scripts/systems/boss_arena.gd
+res://scripts/systems/locale_manager.gd
+res://scripts/systems/save_manager.gd
+res://scripts/traps/base/trap_base.gd
