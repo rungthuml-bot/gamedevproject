@@ -163,7 +163,7 @@ func process_chase(player_x: float) -> void:
 		move_direction = dir
 
 		if is_facing_hazard():
-		velocity.x = 0
+			velocity.x = 0
 	else:
 		velocity.x = move_direction * CHASE_SPEED
 	update_facing_direction()

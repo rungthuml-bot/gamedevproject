@@ -6,10 +6,7 @@ extends Area2D
 var bodies_inside: Array[Node2D] = []
 
 func _ready() -> void:
-	if not body_entered.is_connected(_on_body_entered):
-		body_entered.connect(_on_body_entered)
-	if not body_exited.is_connected(_on_body_exited):
-		body_exited.connect(_on_body_exited)
+	pass
 
 func _process(delta: float) -> void:
 	if bodies_inside.size() > 0:

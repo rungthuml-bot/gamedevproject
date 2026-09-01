@@ -581,15 +581,3 @@ collision_mask = 3
 stream = ExtResource("15_1yj8c")
 autoplay = true
 
-[connection signal="body_entered" from="Level/Background/trap_lava_pit" to="Level/Background/trap_lava_pit" method="_on_body_entered"]
-[connection signal="body_entered" from="Level/trap_stalactite" to="Level/trap_stalactite" method="_on_body_entered"]
-[connection signal="body_entered" from="Level/trap_stalactite2" to="Level/trap_stalactite2" method="_on_body_entered"]
-[connection signal="body_entered" from="Level/trap_lava_pit" to="Level/trap_lava_pit" method="_on_body_entered"]
-[connection signal="body_entered" from="Level/trap_lava_pit2" to="Level/trap_lava_pit2" method="_on_body_entered"]
-[connection signal="body_entered" from="Level/trap_lava_pit3" to="Level/trap_lava_pit3" method="_on_body_entered"]
-[connection signal="body_entered" from="Level/trap_lava_pit4" to="Level/trap_lava_pit4" method="_on_body_entered"]
-[connection signal="body_entered" from="Level/trap_spikes" to="Level/trap_spikes" method="_on_body_entered"]
-[connection signal="body_entered" from="Level/trap_spikes2" to="Level/trap_spikes2" method="_on_body_entered"]
-[connection signal="body_entered" from="Level/trap_rail_saw" to="Level/trap_rail_saw" method="_on_body_entered"]
-[connection signal="body_entered" from="Level/trap_lava_pit5" to="Level/trap_lava_pit5" method="_on_body_entered"]
-[connection signal="body_entered" from="Level/trap_rail_saw2" to="Level/trap_rail_saw2" method="_on_body_entered"]
