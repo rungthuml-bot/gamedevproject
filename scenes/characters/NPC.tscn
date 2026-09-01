@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://do0cvqktdnlcq"]
+[gd_scene format=3]
 
-[ext_resource type="Script" uid="uid://bydvchi2edji1" path="res://scripts/characters/npc.gd" id="1_npc"]
-[ext_resource type="Texture2D" uid="uid://b23b21w3e6tox" path="res://assets/Npc/FREE - Blacksmith 2D Pixel Art/Sprites/BLACKSMITH.png" id="2_hnoa0"]
+[ext_resource type="Script" path="res://scripts/characters/npc.gd" id="1_npc"]
+[ext_resource type="Texture2D" path="res://assets/Npc/FREE - Blacksmith 2D Pixel Art/Sprites/BLACKSMITH.png" id="2_hnoa0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_body"]
 size = Vector2(32, 70)
@@ -67,6 +67,7 @@ animations = [{
 }]
 
 [node name="NPC" type="StaticBody2D" unique_id=1809865605]
+collision_layer = 0
 collision_mask = 0
 script = ExtResource("1_npc")
 

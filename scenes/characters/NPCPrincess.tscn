@@ -1,12 +1,12 @@
-[gd_scene format=3 uid="uid://d2yymy3svprcg"]
+[gd_scene format=3]
 
-[ext_resource type="Script" uid="uid://bsfdp68em807t" path="res://scripts/characters/npc_princess.gd" id="1_npc"]
-[ext_resource type="Texture2D" uid="uid://di3ekqfikdn38" path="res://assets/Npc/idle/Warrior_Idle_1.png" id="2_45hi6"]
-[ext_resource type="Texture2D" uid="uid://4ypai3h44qlo" path="res://assets/Npc/idle/Warrior_Idle_2.png" id="3_byejr"]
-[ext_resource type="Texture2D" uid="uid://blqvym3itnl3v" path="res://assets/Npc/idle/Warrior_Idle_3.png" id="4_03bdf"]
-[ext_resource type="Texture2D" uid="uid://ctrcrw8ykfoqb" path="res://assets/Npc/idle/Warrior_Idle_4.png" id="5_j0j4c"]
-[ext_resource type="Texture2D" uid="uid://c3kwfi78ustmu" path="res://assets/Npc/idle/Warrior_Idle_5.png" id="6_q4itw"]
-[ext_resource type="Texture2D" uid="uid://cjsmbmj8xbt6u" path="res://assets/Npc/idle/Warrior_Idle_6.png" id="7_dvdso"]
+[ext_resource type="Script" path="res://scripts/characters/npc_princess.gd" id="1_npc"]
+[ext_resource type="Texture2D" path="res://assets/Npc/idle/Warrior_Idle_1.png" id="2_45hi6"]
+[ext_resource type="Texture2D" path="res://assets/Npc/idle/Warrior_Idle_2.png" id="3_byejr"]
+[ext_resource type="Texture2D" path="res://assets/Npc/idle/Warrior_Idle_3.png" id="4_03bdf"]
+[ext_resource type="Texture2D" path="res://assets/Npc/idle/Warrior_Idle_4.png" id="5_j0j4c"]
+[ext_resource type="Texture2D" path="res://assets/Npc/idle/Warrior_Idle_5.png" id="6_q4itw"]
+[ext_resource type="Texture2D" path="res://assets/Npc/idle/Warrior_Idle_6.png" id="7_dvdso"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_body"]
 size = Vector2(32, 70)
@@ -65,6 +65,7 @@ animations = [{
 }]
 
 [node name="NPC" type="StaticBody2D" unique_id=1809865605]
+collision_layer = 0
 collision_mask = 0
 script = ExtResource("1_npc")
 
