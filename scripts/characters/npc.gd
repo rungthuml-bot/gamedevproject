@@ -5,6 +5,7 @@ extends StaticBody2D
 	{"speaker": "Player", "text": "That's fine, thanks."},
 	{"speaker": "NPC", "text": "Good luck on your journey!"}
 ]
+@export var dialog_key: String = "npc_greeting"
 @export var npc_name: String = "Stranger"
 @export var portrait_emoji: String = "🧙"
 
@@ -50,11 +51,12 @@ func _talk() -> void:
 	# Pass NPC name and portrait into DialogManager
 	if has_node("/root/LocaleManager"):
 		var lm = get_node("/root/LocaleManager")
-		var greeting = lm.get_dynamic_text("npc_greeting")
-		if greeting:
-			dialog = [
-				{"speaker": "NPC", "text": greeting},
-			]
+		var greeting = lm.get_dynamic_text(dialog_key)
+		if greeting != null:
+			if typeof(greeting) == TYPE_ARRAY:
+				dialog = greeting
+			else:
+				dialog = [{"speaker": npc_name, "text": str(greeting)}]
 			
 	dm.npc_name = npc_name
 	dm.npc_portrait_emoji = portrait_emoji

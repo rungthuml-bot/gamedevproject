@@ -168,7 +168,19 @@ var dynamic_text: Dictionary = {
 			"Only one knight remains to stand against the tide...",
 			"Mordred, the Tolerant."
 		],
-		"npc_greeting": "Greetings, traveler. Be careful out there.",
+		"npc_greeting": [
+			{"speaker": "Stranger", "text": "Whoa there! You look a bit lost."},
+			{"speaker": "Player", "text": "Where am I? What is this place?"},
+			{"speaker": "Stranger", "text": "This is the edge of the forgotten ruins. Danger lies ahead."},
+			{"speaker": "Stranger", "text": "Use [A]/[D] or Left/Right arrows to move. Press [Space] to jump."},
+			{"speaker": "Stranger", "text": "Press [J] for a light attack and [K] for a heavy attack."},
+			{"speaker": "Stranger", "text": "And don't forget to use [Shift] to dash through enemies!"},
+			{"speaker": "Player", "text": "Got it. Thanks."}
+		],
+		"princess_greeting": [
+			{"speaker": "Princess", "text": "Oh, brave knight! You saved me!"},
+			{"speaker": "Player", "text": "It was my duty, your highness."}
+		],
 		"boss_intro_1": "You dare challenge me, weakling?",
 		"boss_intro_2": "I will crush you to dust!"
 	},
@@ -179,7 +191,19 @@ var dynamic_text: Dictionary = {
 			"มีเพียงอัศวินคนเดียวที่ยังคงยืนหยัดต้านทาน...",
 			"มอร์เดรด ผู้มีความอดทน"
 		],
-		"npc_greeting": "สวัสดีนักเดินทาง ระวังตัวด้วยล่ะ",
+		"npc_greeting": [
+			{"speaker": "ชายแปลกหน้า", "text": "ช้าก่อน! ดูเหมือนเจ้าจะหลงทางนะ"},
+			{"speaker": "Player", "text": "ข้าอยู่ที่ไหน? ที่นี่คือที่ไหนกัน?"},
+			{"speaker": "ชายแปลกหน้า", "text": "ที่นี่คือขอบเขตรอยต่อของซากปรักหักพังที่ถูกลืม ข้างหน้ามีแต่อันตราย"},
+			{"speaker": "ชายแปลกหน้า", "text": "ใช้ปุ่ม [A]/[D] หรือลูกศร ซ้าย/ขวา เพื่อเดิน และกด [Space] เพื่อกระโดด"},
+			{"speaker": "ชายแปลกหน้า", "text": "กด [J] เพื่อโจมตีเบา และ [K] เพื่อโจมตีหนัก"},
+			{"speaker": "ชายแปลกหน้า", "text": "อ้อ... อย่าลืมกด [Shift] เพื่อพุ่งตัว (Dash) หลบหลีกศัตรูล่ะ!"},
+			{"speaker": "Player", "text": "เข้าใจล่ะ ขอบใจมาก"}
+		],
+		"princess_greeting": [
+			{"speaker": "เจ้าหญิง", "text": "โอ้ อัศวินผู้กล้า! ท่านช่วยข้าไว้แท้ๆ!"},
+			{"speaker": "Player", "text": "มันเป็นหน้าที่ของข้าพะยะค่ะองค์หญิง"}
+		],
 		"boss_intro_1": "เจ้ากล้าท้าทายข้ารึ เจ้าพวกอ่อนหัด?",
 		"boss_intro_2": "ข้าจะบดขยี้เจ้าให้เป็นผุยผง!"
 	}

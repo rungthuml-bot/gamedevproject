@@ -3,6 +3,7 @@ extends "res://scripts/characters/npc.gd"
 func _ready() -> void:
     npc_name = "Princess"
     portrait_emoji = "👸"
+    dialog_key = "princess_greeting"
     dialog = [
         {"speaker": "Princess", "text": "Oh, brave knight! You saved me!"},
         {"speaker": "Player", "text": "It was my duty, your highness."}
