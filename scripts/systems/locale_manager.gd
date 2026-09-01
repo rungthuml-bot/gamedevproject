@@ -178,8 +178,11 @@ var dynamic_text: Dictionary = {
 			{"speaker": "Player", "text": "Got it. Thanks."}
 		],
 		"princess_greeting": [
-			{"speaker": "Princess", "text": "Oh, brave knight! You saved me!"},
-			{"speaker": "Player", "text": "It was my duty, your highness."}
+			{"speaker": "Princess", "text": "You... you actually defeated that monstrosity. I thought I would perish in this abyss."},
+			{"speaker": "Mordred", "text": "It is finally over. You are safe now, Your Highness."},
+			{"speaker": "Princess", "text": "Your armor is battered, and you bleed for my sake... Who are you, brave knight?"},
+			{"speaker": "Mordred", "text": "I am Mordred. And I have merely fulfilled my oath."},
+			{"speaker": "Princess", "text": "Mordred... I shall never forget that name. Let us return home."}
 		],
 		"boss_intro_1": "You dare challenge me, weakling?",
 		"boss_intro_2": "I will crush you to dust!"
@@ -201,8 +204,11 @@ var dynamic_text: Dictionary = {
 			{"speaker": "Player", "text": "เข้าใจล่ะ ขอบใจมาก"}
 		],
 		"princess_greeting": [
-			{"speaker": "เจ้าหญิง", "text": "โอ้ อัศวินผู้กล้า! ท่านช่วยข้าไว้แท้ๆ!"},
-			{"speaker": "Player", "text": "มันเป็นหน้าที่ของข้าพะยะค่ะองค์หญิง"}
+			{"speaker": "เจ้าหญิง", "text": "ท่าน... ท่านปราบเจ้าอสูรกายนั่นได้จริงๆ ข้าคิดว่าชีวิตข้าคงต้องจบสิ้นในขุมนรกนี้เสียแล้ว"},
+			{"speaker": "Mordred", "text": "ทุกอย่างจบลงแล้วพะยะค่ะองค์หญิง บัดนี้ท่านปลอดภัยแล้ว"},
+			{"speaker": "เจ้าหญิง", "text": "ชุดเกราะของท่านเต็มไปด้วยรอยแตกร้าว ท่านหลั่งเลือดเพื่อข้า... ท่านคือใครกัน อัศวินผู้กล้า?"},
+			{"speaker": "Mordred", "text": "ข้าคือ มอร์เดรด... และข้าเพียงแค่ทำตามคำสัตย์สาบานเท่านั้น"},
+			{"speaker": "เจ้าหญิง", "text": "มอร์เดรด... ข้าจะไม่มีวันลืมชื่อนี้เลย เรากลับบ้านกันเถอะ"}
 		],
 		"boss_intro_1": "เจ้ากล้าท้าทายข้ารึ เจ้าพวกอ่อนหัด?",
 		"boss_intro_2": "ข้าจะบดขยี้เจ้าให้เป็นผุยผง!"
