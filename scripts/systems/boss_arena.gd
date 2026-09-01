@@ -132,9 +132,19 @@ func _lock_camera() -> void:
 		locked_camera = player.get_node("Camera2D")
 		original_cam_left = locked_camera.limit_left
 		original_cam_right = locked_camera.limit_right
-		# Set limits strictly to the walls
-		locked_camera.limit_left = int(left_wall.global_position.x)
-		locked_camera.limit_right = int(right_wall.global_position.x)
+		
+		# Set limits safely to avoid negative Rect2i size errors
+		var left_x = left_wall.global_position.x
+		var right_x = right_wall.global_position.x
+		var min_width = get_viewport_rect().size.x / locked_camera.zoom.x
+		
+		if right_x - left_x < min_width:
+			var center_x = (left_x + right_x) / 2.0
+			locked_camera.limit_left = int(center_x - (min_width / 2.0))
+			locked_camera.limit_right = int(center_x + (min_width / 2.0))
+		else:
+			locked_camera.limit_left = int(left_x)
+			locked_camera.limit_right = int(right_x)
 
 func _unlock_camera() -> void:
 	if locked_camera:
