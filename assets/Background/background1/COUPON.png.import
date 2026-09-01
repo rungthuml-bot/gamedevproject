@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://7hc5pv73u4tw"
-path="res://.godot/imported/COUPON.png-9aef431ca0f229be3276ae1ac28657c8.ctex"
+path="res://.godot/imported/COUPON.png-dc1b65928ee5589fcf3eea4144dd97ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Background/background1/COUPON.png"
-dest_files=["res://.godot/imported/COUPON.png-9aef431ca0f229be3276ae1ac28657c8.ctex"]
+source_file="res://Assets/Background/background1/COUPON.png"
+dest_files=["res://.godot/imported/COUPON.png-dc1b65928ee5589fcf3eea4144dd97ae.ctex"]
 
 [params]
 

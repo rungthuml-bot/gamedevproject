@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://jylg51yoycso"
-path="res://.godot/imported/Clouds_x32.png-b9db0a3d04ab0fe78280bad59b6b9848.ctex"
+path="res://.godot/imported/Clouds_x32.png-e9dc18841abca37dcdb166a7fd21e652.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Floor/map 9/PNG/Background/x32/Clouds_x32.png"
-dest_files=["res://.godot/imported/Clouds_x32.png-b9db0a3d04ab0fe78280bad59b6b9848.ctex"]
+source_file="res://Assets/Floor/map 9/PNG/Background/x32/Clouds_x32.png"
+dest_files=["res://.godot/imported/Clouds_x32.png-e9dc18841abca37dcdb166a7fd21e652.ctex"]
 
 [params]
 

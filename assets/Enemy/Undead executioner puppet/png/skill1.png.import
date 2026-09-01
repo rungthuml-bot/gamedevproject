@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://vndsd5t6tory"
-path="res://.godot/imported/skill1.png-fb94a20ef391a4fca67dce95df6a1232.ctex"
+path="res://.godot/imported/skill1.png-a39481ce795e37f4608c41be8c45f5cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Enemy/Undead executioner puppet/png/skill1.png"
-dest_files=["res://.godot/imported/skill1.png-fb94a20ef391a4fca67dce95df6a1232.ctex"]
+source_file="res://Assets/Enemy/Undead executioner puppet/png/skill1.png"
+dest_files=["res://.godot/imported/skill1.png-a39481ce795e37f4608c41be8c45f5cd.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3kwfi78ustmu"
-path="res://.godot/imported/Warrior_Idle_5.png-b93cfd6efdad57b5537a147347d16577.ctex"
+path="res://.godot/imported/Warrior_Idle_5.png-20c733886dda9f89e421e0a945bf533c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Npc/idle/Warrior_Idle_5.png"
-dest_files=["res://.godot/imported/Warrior_Idle_5.png-b93cfd6efdad57b5537a147347d16577.ctex"]
+source_file="res://Assets/Npc/idle/Warrior_Idle_5.png"
+dest_files=["res://.godot/imported/Warrior_Idle_5.png-20c733886dda9f89e421e0a945bf533c.ctex"]
 
 [params]
 

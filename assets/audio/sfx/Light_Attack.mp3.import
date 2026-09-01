@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bmbn4mmyf6lcq"
-path="res://.godot/imported/Light_Attack.mp3-ea5284d6705d402a4767a1d9e66a36d4.mp3str"
+path="res://.godot/imported/Light_Attack.mp3-267e8fe8115e2712f1057d670d5158ce.mp3str"
 
 [deps]
 
-source_file="res://assets/audio/sfx/Light_Attack.mp3"
-dest_files=["res://.godot/imported/Light_Attack.mp3-ea5284d6705d402a4767a1d9e66a36d4.mp3str"]
+source_file="res://Assets/audio/sfx/Light_Attack.mp3"
+dest_files=["res://.godot/imported/Light_Attack.mp3-267e8fe8115e2712f1057d670d5158ce.mp3str"]
 
 [params]
 

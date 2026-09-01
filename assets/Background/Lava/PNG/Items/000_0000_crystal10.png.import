@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgumg3funcmm3"
-path="res://.godot/imported/000_0000_crystal10.png-4ffff8a61e52ce011ceb91cfc9edae5c.ctex"
+path="res://.godot/imported/000_0000_crystal10.png-2aa7878845fcf7768392df280a4c7ec1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Background/Lava/PNG/Items/000_0000_crystal10.png"
-dest_files=["res://.godot/imported/000_0000_crystal10.png-4ffff8a61e52ce011ceb91cfc9edae5c.ctex"]
+source_file="res://Assets/Background/Lava/PNG/Items/000_0000_crystal10.png"
+dest_files=["res://.godot/imported/000_0000_crystal10.png-2aa7878845fcf7768392df280a4c7ec1.ctex"]
 
 [params]
 

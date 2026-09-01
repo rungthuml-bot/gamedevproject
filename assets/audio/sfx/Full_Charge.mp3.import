@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://d1wdifvr1uff3"
-path="res://.godot/imported/Full_Charge.mp3-200610efefb6bfc7b19a764f190b0b7b.mp3str"
+path="res://.godot/imported/Full_Charge.mp3-510b7dc9d790a771508817516a34554d.mp3str"
 
 [deps]
 
-source_file="res://assets/audio/sfx/Full_Charge.mp3"
-dest_files=["res://.godot/imported/Full_Charge.mp3-200610efefb6bfc7b19a764f190b0b7b.mp3str"]
+source_file="res://Assets/audio/sfx/Full_Charge.mp3"
+dest_files=["res://.godot/imported/Full_Charge.mp3-510b7dc9d790a771508817516a34554d.mp3str"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cnpf58u6xhvuh"
-path="res://.godot/imported/Desappearing.png-69cbc7e3c1c65beae5dac39226da817b.ctex"
+path="res://.godot/imported/Desappearing.png-d8d01bec85c0b9b5ba56ecec3ad916de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/source/craftpix/traps/1 Main Characters/Desappearing.png"
-dest_files=["res://.godot/imported/Desappearing.png-69cbc7e3c1c65beae5dac39226da817b.ctex"]
+source_file="res://Assets/source/craftpix/traps/1 Main Characters/Desappearing.png"
+dest_files=["res://.godot/imported/Desappearing.png-d8d01bec85c0b9b5ba56ecec3ad916de.ctex"]
 
 [params]
 

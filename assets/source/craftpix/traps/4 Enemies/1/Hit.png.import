@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://sv1lcs3dduo1"
-path="res://.godot/imported/Hit.png-73d7d99a3487168a3564d6e03be97aba.ctex"
+path="res://.godot/imported/Hit.png-af829c4c16c76123f7e744c313c674ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/source/craftpix/traps/4 Enemies/1/Hit.png"
-dest_files=["res://.godot/imported/Hit.png-73d7d99a3487168a3564d6e03be97aba.ctex"]
+source_file="res://Assets/source/craftpix/traps/4 Enemies/1/Hit.png"
+dest_files=["res://.godot/imported/Hit.png-af829c4c16c76123f7e744c313c674ad.ctex"]
 
 [params]
 

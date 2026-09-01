@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b23b21w3e6tox"
-path="res://.godot/imported/BLACKSMITH.png-0e1f5da107f47411cc830bac3684b209.ctex"
+path="res://.godot/imported/BLACKSMITH.png-2a959d7d9bba1c68f2b7928444a80405.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Npc/FREE - Blacksmith 2D Pixel Art/Sprites/BLACKSMITH.png"
-dest_files=["res://.godot/imported/BLACKSMITH.png-0e1f5da107f47411cc830bac3684b209.ctex"]
+source_file="res://Assets/Npc/FREE - Blacksmith 2D Pixel Art/Sprites/BLACKSMITH.png"
+dest_files=["res://.godot/imported/BLACKSMITH.png-2a959d7d9bba1c68f2b7928444a80405.ctex"]
 
 [params]
 

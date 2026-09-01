@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dsoh6bp2kxa7y"
-path="res://.godot/imported/attacking.png-db1e3f11edf631e44eb009bc1ff176d7.ctex"
+path="res://.godot/imported/attacking.png-2940e4a4e06967387f1790fd27754d57.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Enemy/Undead executioner puppet/png/attacking.png"
-dest_files=["res://.godot/imported/attacking.png-db1e3f11edf631e44eb009bc1ff176d7.ctex"]
+source_file="res://Assets/Enemy/Undead executioner puppet/png/attacking.png"
+dest_files=["res://.godot/imported/attacking.png-2940e4a4e06967387f1790fd27754d57.ctex"]
 
 [params]
 

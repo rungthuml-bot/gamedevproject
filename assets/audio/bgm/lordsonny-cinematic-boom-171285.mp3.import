@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cb4kl2pcp8nl3"
-path="res://.godot/imported/lordsonny-cinematic-boom-171285.mp3-856c373b688e0153cb84bf35b6d53e6f.mp3str"
+path="res://.godot/imported/lordsonny-cinematic-boom-171285.mp3-225a7d7e704c1534c82755d6c8e3e8b1.mp3str"
 
 [deps]
 
-source_file="res://assets/audio/bgm/lordsonny-cinematic-boom-171285.mp3"
-dest_files=["res://.godot/imported/lordsonny-cinematic-boom-171285.mp3-856c373b688e0153cb84bf35b6d53e6f.mp3str"]
+source_file="res://Assets/audio/bgm/lordsonny-cinematic-boom-171285.mp3"
+dest_files=["res://.godot/imported/lordsonny-cinematic-boom-171285.mp3-225a7d7e704c1534c82755d6c8e3e8b1.mp3str"]
 
 [params]
 

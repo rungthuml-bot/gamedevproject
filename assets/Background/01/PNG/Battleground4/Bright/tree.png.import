@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cl0gjt5544eoy"
-path="res://.godot/imported/tree.png-c1a677cf0f71e59c99c9548092da613c.ctex"
+path="res://.godot/imported/tree.png-168c9181d98164ca75a0b125f02ce402.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Background/01/PNG/Battleground4/Bright/tree.png"
-dest_files=["res://.godot/imported/tree.png-c1a677cf0f71e59c99c9548092da613c.ctex"]
+source_file="res://Assets/Background/01/PNG/Battleground4/Bright/tree.png"
+dest_files=["res://.godot/imported/tree.png-168c9181d98164ca75a0b125f02ce402.ctex"]
 
 [params]
 

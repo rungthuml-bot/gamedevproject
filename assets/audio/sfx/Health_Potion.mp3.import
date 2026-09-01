@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bdcq45w5oktw1"
-path="res://.godot/imported/Health_Potion.mp3-a6ccc7241651fb841483482825a273ab.mp3str"
+path="res://.godot/imported/Health_Potion.mp3-61c122f70df953deee39b623111c461f.mp3str"
 
 [deps]
 
-source_file="res://assets/audio/sfx/Health_Potion.mp3"
-dest_files=["res://.godot/imported/Health_Potion.mp3-a6ccc7241651fb841483482825a273ab.mp3str"]
+source_file="res://Assets/audio/sfx/Health_Potion.mp3"
+dest_files=["res://.godot/imported/Health_Potion.mp3-61c122f70df953deee39b623111c461f.mp3str"]
 
 [params]
 

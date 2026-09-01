@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://5equg3oprxpd"
-path="res://.godot/imported/666herohero-click-21156.mp3-e315512407303f29f52f8f2041da7694.mp3str"
+path="res://.godot/imported/666herohero-click-21156.mp3-9a375fb75fb76e4b213381b213d46f65.mp3str"
 
 [deps]
 
-source_file="res://assets/audio/bgm/666herohero-click-21156.mp3"
-dest_files=["res://.godot/imported/666herohero-click-21156.mp3-e315512407303f29f52f8f2041da7694.mp3str"]
+source_file="res://Assets/audio/bgm/666herohero-click-21156.mp3"
+dest_files=["res://.godot/imported/666herohero-click-21156.mp3-9a375fb75fb76e4b213381b213d46f65.mp3str"]
 
 [params]
 

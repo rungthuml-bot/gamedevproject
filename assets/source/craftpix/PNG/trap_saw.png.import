@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ds8t5rvuyu47r"
-path="res://.godot/imported/trap_saw.png-94b305f08d8038a666021b5d799826f5.ctex"
+path="res://.godot/imported/trap_saw.png-0c37a2a4992ef6a6f9a4f56961a1a502.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/source/craftpix/PNG/trap_saw.png"
-dest_files=["res://.godot/imported/trap_saw.png-94b305f08d8038a666021b5d799826f5.ctex"]
+source_file="res://Assets/source/craftpix/PNG/trap_saw.png"
+dest_files=["res://.godot/imported/trap_saw.png-0c37a2a4992ef6a6f9a4f56961a1a502.ctex"]
 
 [params]
 

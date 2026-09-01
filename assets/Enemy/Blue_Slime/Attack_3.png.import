@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmpyn1f7sua6r"
-path="res://.godot/imported/Attack_3.png-f46e61642627eccec83c2f01a2f53a2a.ctex"
+path="res://.godot/imported/Attack_3.png-bf20355f6dd7aeb705dcdfed4b98d058.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Enemy/Blue_Slime/Attack_3.png"
-dest_files=["res://.godot/imported/Attack_3.png-f46e61642627eccec83c2f01a2f53a2a.ctex"]
+source_file="res://Assets/Enemy/Blue_Slime/Attack_3.png"
+dest_files=["res://.godot/imported/Attack_3.png-bf20355f6dd7aeb705dcdfed4b98d058.ctex"]
 
 [params]
 

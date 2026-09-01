@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://deaxcoy3id8bo"
-path="res://.godot/imported/summonAppear.png-ba4efb88c38d79e71465f9e4932215de.ctex"
+path="res://.godot/imported/summonAppear.png-7ea7788506372571a4c41543be135fb0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Enemy/Undead executioner puppet/png/summonAppear.png"
-dest_files=["res://.godot/imported/summonAppear.png-ba4efb88c38d79e71465f9e4932215de.ctex"]
+source_file="res://Assets/Enemy/Undead executioner puppet/png/summonAppear.png"
+dest_files=["res://.godot/imported/summonAppear.png-7ea7788506372571a4c41543be135fb0.ctex"]
 
 [params]
 

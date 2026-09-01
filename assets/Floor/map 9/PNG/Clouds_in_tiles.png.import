@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://613h1al2kgi8"
-path="res://.godot/imported/Clouds_in_tiles.png-a0e2cf01e7d9cbaa9fee1744617d9c2b.ctex"
+path="res://.godot/imported/Clouds_in_tiles.png-814642f17cab189a63ee163290489cea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Floor/map 9/PNG/Clouds_in_tiles.png"
-dest_files=["res://.godot/imported/Clouds_in_tiles.png-a0e2cf01e7d9cbaa9fee1744617d9c2b.ctex"]
+source_file="res://Assets/Floor/map 9/PNG/Clouds_in_tiles.png"
+dest_files=["res://.godot/imported/Clouds_in_tiles.png-814642f17cab189a63ee163290489cea.ctex"]
 
 [params]
 

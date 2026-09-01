@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dfah3cdu747jx"
-path="res://.godot/imported/trap1.png-7aa877a3c80e7e6da34c0fff78f24851.ctex"
+path="res://.godot/imported/trap1.png-5f5af8bc82eabd0f41790d53e30e1156.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/source/craftpix/trap_stalactite/PNG/Details/trap1.png"
-dest_files=["res://.godot/imported/trap1.png-7aa877a3c80e7e6da34c0fff78f24851.ctex"]
+source_file="res://Assets/source/craftpix/trap_stalactite/PNG/Details/trap1.png"
+dest_files=["res://.godot/imported/trap1.png-5f5af8bc82eabd0f41790d53e30e1156.ctex"]
 
 [params]
 
