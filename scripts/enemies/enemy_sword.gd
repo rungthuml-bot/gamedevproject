@@ -22,7 +22,7 @@ const ATTACK_RANGE: float = 60.0      # ระยะฟันดาบ
 # =========================================================
 
 const MAX_HP: int = 80
-const KNOCKBACK_FORCE: float = 400.0
+const KNOCKBACK_FORCE: float = 100.0
 const KNOCKBACK_DURATION: float = 0.20
 const ATTACK_COOLDOWN: float = 1.5
 const SWORD_DAMAGE: int = 20

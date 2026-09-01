@@ -22,7 +22,7 @@ const ATTACK_RANGE: float = 80.0      # ระยะฟันขวาน
 # =========================================================
 
 const MAX_HP: int = 120
-const KNOCKBACK_FORCE: float = 400.0
+const KNOCKBACK_FORCE: float = 80.0
 const KNOCKBACK_DURATION: float = 0.20
 const ATTACK_COOLDOWN: float = 2.5
 const AXE_DAMAGE: int = 35

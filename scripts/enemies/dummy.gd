@@ -21,7 +21,7 @@ var hp: int = MAX_HP
 # Knockback
 # =========================================================
 
-const KNOCKBACK_FORCE: float = 500.0
+const KNOCKBACK_FORCE: float = 100.0
 const KNOCKBACK_DURATION: float = 0.25
 
 var knockback_timer: float = 0.0
