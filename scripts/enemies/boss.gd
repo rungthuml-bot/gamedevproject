@@ -69,6 +69,9 @@ var jump_timer: float = 0.0
 # =========================================================
 
 @onready var anim: AnimatedSprite2D = get_node_or_null("AnimatedSprite2D")
+# Smart AI Sensors
+var ledge_raycast: RayCast2D
+var trap_raycast: RayCast2D
 @onready var attack_hitbox: Area2D = $AttackHitbox
 
 # =========================================================
@@ -77,6 +80,16 @@ var jump_timer: float = 0.0
 
 func _ready() -> void:
 	start_position_x = global_position.x
+	# Initialize Smart AI Sensors
+	ledge_raycast = RayCast2D.new()
+	add_child(ledge_raycast)
+	ledge_raycast.target_position = Vector2(25, 40)
+	
+	trap_raycast = RayCast2D.new()
+	add_child(trap_raycast)
+	trap_raycast.target_position = Vector2(30, 0)
+	trap_raycast.collide_with_areas = true
+
 	scale = Vector2(2.0, 2.0) # ทำให้ตัวใหญ่เป็น 2 เท่า
 	if anim:
 		anim.play("Idle")
@@ -157,8 +170,21 @@ func update_ai_behavior() -> void:
 		State.JUMP:
 			process_jump()
 
+
+func is_facing_hazard() -> bool:
+	if is_on_wall(): return true
+	if is_on_floor() and ledge_raycast and not ledge_raycast.is_colliding(): return true
+	if trap_raycast and trap_raycast.is_colliding():
+		var collider = trap_raycast.get_collider()
+		if collider is Area2D and collider.has_method("_apply_trap_effect"):
+			return true
+	return false
+
 func process_patrol() -> void:
-	if global_position.x >= start_position_x + PATROL_DISTANCE:
+	if is_facing_hazard():
+		move_direction = -1.0 if move_direction > 0.0 else 1.0
+		start_position_x = global_position.x - (move_direction * PATROL_DISTANCE / 2.0)
+	elif global_position.x >= start_position_x + PATROL_DISTANCE:
 		move_direction = -1.0
 	elif global_position.x <= start_position_x - PATROL_DISTANCE:
 		move_direction = 1.0
@@ -171,7 +197,10 @@ func process_chase(player_x: float) -> void:
 	if dir != 0.0:
 		move_direction = dir
 
-	velocity.x = move_direction * chase_speed
+		if is_facing_hazard():
+		velocity.x = 0
+	else:
+		velocity.x = move_direction * chase_speed
 	update_facing_direction()
 
 func _start_jump(player: Node2D) -> void:
@@ -215,6 +244,10 @@ func update_facing_direction() -> void:
 			
 		attack_hitbox.position.x = 16 * move_direction
 		attack_hitbox.scale.x = move_direction
+		
+		# Flip Smart AI Sensors
+		if ledge_raycast: ledge_raycast.target_position.x = 25 * move_direction
+		if trap_raycast: trap_raycast.target_position.x = 30 * move_direction
 
 func update_animation() -> void:
 	if is_dying or is_attacking or not anim:
