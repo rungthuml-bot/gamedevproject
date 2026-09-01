@@ -102,7 +102,7 @@ Button/colors/font_color = Color(0.85, 0.82, 0.76, 1)
 Button/colors/font_focus_color = Color(1, 0.96, 0.85, 1)
 Button/colors/font_hover_color = Color(1, 0.96, 0.85, 1)
 Button/colors/font_pressed_color = Color(0.7, 0.65, 0.55, 1)
-Button/font_sizes/font_size = 14
+Button/font_sizes/font_size = 22
 Button/styles/focus = SubResource("StyleBoxEmpty_focus")
 Button/styles/hover = SubResource("StyleBoxFlat_keybtn_hover")
 Button/styles/normal = SubResource("StyleBoxFlat_keybtn_normal")
@@ -163,7 +163,7 @@ Button/colors/font_color = Color(0.88, 0.85, 0.8, 1)
 Button/colors/font_focus_color = Color(1, 0.96, 0.85, 1)
 Button/colors/font_hover_color = Color(1, 0.96, 0.85, 1)
 Button/colors/font_pressed_color = Color(0.7, 0.65, 0.55, 1)
-Button/font_sizes/font_size = 18
+Button/font_sizes/font_size = 28
 Button/styles/focus = SubResource("StyleBoxEmpty_focus")
 Button/styles/hover = SubResource("StyleBoxFlat_btn_hover")
 Button/styles/normal = SubResource("StyleBoxFlat_btn_normal")
@@ -204,10 +204,10 @@ anchor_left = 0.53
 anchor_top = 0.5
 anchor_right = 0.53
 anchor_bottom = 0.5
-offset_left = -300.0
-offset_top = -300.0
-offset_right = 300.0
-offset_bottom = 300.0
+offset_left = -450.0
+offset_top = -400.0
+offset_right = 450.0
+offset_bottom = 400.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -243,7 +243,7 @@ theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_offset_y = 3
 theme_override_constants/outline_size = 2
 theme_override_constants/shadow_outline_size = 5
-theme_override_font_sizes/font_size = 38
+theme_override_font_sizes/font_size = 48
 text = "SETTINGS"
 horizontal_alignment = 1
 letter_spacing = 6
@@ -259,12 +259,12 @@ layout_mode = 2
 
 [node name="GeneralSection" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 5
+theme_override_constants/separation = 10
 
 [node name="GeneralTitle" type="Label" parent="MarginContainer/VBoxContainer/GeneralSection"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.62, 0.55, 0.3, 1)
-theme_override_font_sizes/font_size = 13
+theme_override_font_sizes/font_size = 22
 text = "GENERAL"
 horizontal_alignment = 1
 letter_spacing = 4
@@ -281,12 +281,12 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.75, 0.73, 0.68, 1)
-theme_override_font_sizes/font_size = 15
+theme_override_font_sizes/font_size = 24
 text = "Language"
 vertical_alignment = 1
 
 [node name="LangKey" type="Button" parent="MarginContainer/VBoxContainer/GeneralSection/LangRow"]
-custom_minimum_size = Vector2(90, 28)
+custom_minimum_size = Vector2(140, 42)
 layout_mode = 2
 size_flags_horizontal = 0
 theme = SubResource("Theme_keybtn")
@@ -299,12 +299,12 @@ layout_mode = 2
 
 [node name="AudioSection" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 8
+theme_override_constants/separation = 15
 
 [node name="AudioSectionTitle" type="Label" parent="MarginContainer/VBoxContainer/AudioSection"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.62, 0.55, 0.3, 1)
-theme_override_font_sizes/font_size = 13
+theme_override_font_sizes/font_size = 22
 text = "AUDIO"
 horizontal_alignment = 1
 letter_spacing = 4
@@ -317,7 +317,7 @@ layout_mode = 2
 [node name="MasterVolumeLabel" type="Label" parent="MarginContainer/VBoxContainer/AudioSection"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.78, 0.76, 0.72, 1)
-theme_override_font_sizes/font_size = 15
+theme_override_font_sizes/font_size = 24
 text = "Master Volume: 100%"
 horizontal_alignment = 1
 
@@ -356,12 +356,12 @@ layout_mode = 2
 
 [node name="ControlsSection" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 5
+theme_override_constants/separation = 10
 
 [node name="ControlsTitle" type="Label" parent="MarginContainer/VBoxContainer/ControlsSection"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.62, 0.55, 0.3, 1)
-theme_override_font_sizes/font_size = 13
+theme_override_font_sizes/font_size = 22
 text = "CONTROLS (Click to rebind)"
 horizontal_alignment = 1
 letter_spacing = 4
@@ -378,12 +378,12 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.75, 0.73, 0.68, 1)
-theme_override_font_sizes/font_size = 15
+theme_override_font_sizes/font_size = 24
 text = "Move Left"
 vertical_alignment = 1
 
 [node name="MoveLeftKey" type="Button" parent="MarginContainer/VBoxContainer/ControlsSection/MoveLeftRow"]
-custom_minimum_size = Vector2(90, 28)
+custom_minimum_size = Vector2(140, 42)
 layout_mode = 2
 size_flags_horizontal = 0
 theme = SubResource("Theme_keybtn")
@@ -397,12 +397,12 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.75, 0.73, 0.68, 1)
-theme_override_font_sizes/font_size = 15
+theme_override_font_sizes/font_size = 24
 text = "Move Right"
 vertical_alignment = 1
 
 [node name="MoveRightKey" type="Button" parent="MarginContainer/VBoxContainer/ControlsSection/MoveRightRow"]
-custom_minimum_size = Vector2(90, 28)
+custom_minimum_size = Vector2(140, 42)
 layout_mode = 2
 size_flags_horizontal = 0
 theme = SubResource("Theme_keybtn")
@@ -416,12 +416,12 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.75, 0.73, 0.68, 1)
-theme_override_font_sizes/font_size = 15
+theme_override_font_sizes/font_size = 24
 text = "Jump"
 vertical_alignment = 1
 
 [node name="JumpKey" type="Button" parent="MarginContainer/VBoxContainer/ControlsSection/JumpRow"]
-custom_minimum_size = Vector2(90, 28)
+custom_minimum_size = Vector2(140, 42)
 layout_mode = 2
 size_flags_horizontal = 0
 theme = SubResource("Theme_keybtn")
@@ -435,12 +435,12 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.75, 0.73, 0.68, 1)
-theme_override_font_sizes/font_size = 15
+theme_override_font_sizes/font_size = 24
 text = "Light Attack"
 vertical_alignment = 1
 
 [node name="AttackKey" type="Button" parent="MarginContainer/VBoxContainer/ControlsSection/AttackRow"]
-custom_minimum_size = Vector2(90, 28)
+custom_minimum_size = Vector2(140, 42)
 layout_mode = 2
 size_flags_horizontal = 0
 theme = SubResource("Theme_keybtn")
@@ -454,12 +454,12 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.75, 0.73, 0.68, 1)
-theme_override_font_sizes/font_size = 15
+theme_override_font_sizes/font_size = 24
 text = "Heavy Attack"
 vertical_alignment = 1
 
 [node name="HeavyAttackKey" type="Button" parent="MarginContainer/VBoxContainer/ControlsSection/HeavyAttackRow"]
-custom_minimum_size = Vector2(90, 28)
+custom_minimum_size = Vector2(140, 42)
 layout_mode = 2
 size_flags_horizontal = 0
 theme = SubResource("Theme_keybtn")
@@ -473,12 +473,12 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.75, 0.73, 0.68, 1)
-theme_override_font_sizes/font_size = 15
+theme_override_font_sizes/font_size = 24
 text = "Dash"
 vertical_alignment = 1
 
 [node name="DashKey" type="Button" parent="MarginContainer/VBoxContainer/ControlsSection/DashRow"]
-custom_minimum_size = Vector2(90, 28)
+custom_minimum_size = Vector2(140, 42)
 layout_mode = 2
 size_flags_horizontal = 0
 theme = SubResource("Theme_keybtn")
@@ -490,7 +490,7 @@ custom_minimum_size = Vector2(0, 16)
 layout_mode = 2
 
 [node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(140, 36)
+custom_minimum_size = Vector2(220, 50)
 layout_mode = 2
 size_flags_horizontal = 4
 theme = SubResource("Theme_btn")
