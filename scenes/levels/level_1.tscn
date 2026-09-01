@@ -526,4 +526,4 @@ autoplay = true
 position = Vector2(505, 332)
 
 [node name="EnemySword" parent="." unique_id=1230997985 instance=ExtResource("15_wtwp4")]
-position = Vector2(3111, 233)
+position = Vector2(3089, 232)

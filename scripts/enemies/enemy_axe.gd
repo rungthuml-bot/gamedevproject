@@ -175,8 +175,11 @@ func update_facing_direction() -> void:
 		# Flip visuals and hitboxes depending on direction
 		if anim:
 			anim.flip_h = (move_direction < 0)
-		
+			
 		attack_hitbox.position.x = 16 * move_direction
+		var col_shape = attack_hitbox.get_node_or_null("CollisionShape2D")
+		if col_shape:
+			col_shape.position.x = abs(col_shape.position.x) * move_direction
 		
 		# Flip Smart AI Sensors
 		if ledge_raycast: ledge_raycast.target_position.x = 25 * move_direction
