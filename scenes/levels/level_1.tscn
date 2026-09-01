@@ -14,6 +14,8 @@
 [ext_resource type="AudioStream" path="res://assets/audio/bgm/Level_1_theme.wav" id="13_dnkej"]
 [ext_resource type="Script" path="res://scripts/traps/rail_saw/trap_rail_saw.gd" id="13_v6ha0"]
 [ext_resource type="Script" path="res://scripts/traps/spikes/trap_spikes.gd" id="15_gmpev"]
+[ext_resource type="PackedScene" path="res://scenes/characters/NPC.tscn" id="17_np2pn"]
+[ext_resource type="Script" path="res://scripts/characters/npc.gd" id="18_v6ha0"]
 [ext_resource type="PackedScene" path="res://scenes/characters/Mordred.tscn" id="100_player"]
 [ext_resource type="PackedScene" path="res://scenes/systems/MapDoor.tscn" id="101_door"]
 
@@ -474,7 +476,6 @@ position = Vector2(4857, 308)
 scale = Vector2(0.72, 2.505)
 collision_layer = 0
 collision_mask = 3
-target_scene_path = "res://scenes/levels/level_2.tscn"
 
 [node name="Ground" type="TileMapLayer" parent="Level" unique_id=1444003642]
 position = Vector2(188, 73)
@@ -537,3 +538,19 @@ stream = ExtResource("13_dnkej")
 volume_db = -15.0
 autoplay = true
 
+[node name="NPC_Tutorial" type="StaticBody2D" parent="." unique_id=1809865605 instance=ExtResource("17_np2pn")]
+position = Vector2(393, 363)
+collision_mask = 0
+script = ExtResource("18_v6ha0")
+
+[connection signal="body_entered" from="Level/trap_lava_pit" to="Level/trap_lava_pit" method="_on_body_entered"]
+[connection signal="body_entered" from="Level/trap_rail_saw" to="Level/trap_rail_saw" method="_on_body_entered"]
+[connection signal="body_entered" from="Level/trap_spikes" to="Level/trap_spikes" method="_on_body_entered"]
+[connection signal="body_entered" from="Level/trap_spikes2" to="Level/trap_spikes2" method="_on_body_entered"]
+[connection signal="body_entered" from="Level/trap_spikes3" to="Level/trap_spikes3" method="_on_body_entered"]
+[connection signal="body_entered" from="Level/trap_spikes4" to="Level/trap_spikes4" method="_on_body_entered"]
+[connection signal="body_entered" from="Level/trap_spikes5" to="Level/trap_spikes5" method="_on_body_entered"]
+[connection signal="body_entered" from="Level/trap_spikes6" to="Level/trap_spikes6" method="_on_body_entered"]
+[connection signal="body_entered" from="trap_rail_saw" to="trap_rail_saw" method="_on_body_entered"]
+[connection signal="body_entered" from="trap_spikes" to="trap_spikes" method="_on_body_entered"]
+[connection signal="body_entered" from="trap_lava_pit" to="trap_lava_pit" method="_on_body_entered"]
