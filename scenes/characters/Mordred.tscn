@@ -14,10 +14,10 @@
 [ext_resource type="AudioStream" uid="uid://cbroqqppdsasf" path="res://assets/audio/sfx/Slide.mp3" id="12_4dnns"]
 [ext_resource type="AudioStream" uid="uid://d4cjefkho4mu3" path="res://assets/audio/sfx/Charge.mp3" id="13_4dnns"]
 [ext_resource type="AudioStream" uid="uid://d1wdifvr1uff3" path="res://assets/audio/sfx/Full_Charge.mp3" id="14_bp524"]
-[ext_resource type="PackedScene" path="res://scenes/ui/HUD.tscn" id="101_hud"]
-[ext_resource type="PackedScene" path="res://scenes/ui/PauseMenu.tscn" id="102_pause"]
-[ext_resource type="PackedScene" path="res://scenes/ui/EquipmentMenu.tscn" id="103_equip"]
-[ext_resource type="PackedScene" path="res://scenes/ui/GameOverMenu.tscn" id="104_gameover"]
+[ext_resource type="PackedScene" uid="uid://x2frsprdyi68" path="res://scenes/ui/HUD.tscn" id="101_hud"]
+[ext_resource type="PackedScene" uid="uid://br6ifcy60qp5n" path="res://scenes/ui/PauseMenu.tscn" id="102_pause"]
+[ext_resource type="PackedScene" uid="uid://c6tlpu722uftu" path="res://scenes/ui/EquipmentMenu.tscn" id="103_equip"]
+[ext_resource type="PackedScene" uid="uid://bxqwlxm7xh1w6" path="res://scenes/ui/GameOverMenu.tscn" id="104_gameover"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jo2ib"]
 atlas = ExtResource("1_0y7nr")
@@ -585,12 +585,15 @@ stream = ExtResource("13_4dnns")
 [node name="Full_Charge" type="AudioStreamPlayer2D" parent="." unique_id=647535222]
 stream = ExtResource("14_bp524")
 
+[node name="HUD" parent="." unique_id=1121514233 instance=ExtResource("101_hud")]
+
+[node name="PauseMenu" parent="." unique_id=325616939 instance=ExtResource("102_pause")]
+
+[node name="EquipmentMenu" parent="." unique_id=876001155 instance=ExtResource("103_equip")]
+
+[node name="GameOverMenu" parent="." unique_id=1874371706 instance=ExtResource("104_gameover")]
+
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
 [connection signal="area_entered" from="AttackArea" to="." method="_on_attack_area_area_entered"]
 [connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
-
-[node name="HUD" parent="." instance=ExtResource("101_hud")]
-[node name="PauseMenu" parent="." instance=ExtResource("102_pause")]
-[node name="EquipmentMenu" parent="." instance=ExtResource("103_equip")]
-[node name="GameOverMenu" parent="." instance=ExtResource("104_gameover")]

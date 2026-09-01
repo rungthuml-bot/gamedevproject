@@ -1,23 +1,19 @@
-[gd_scene format=4]
+[gd_scene format=4 uid="uid://chi4fcyrna5b5"]
 
-[ext_resource type="Texture2D" path="res://assets/Background/01/PNG/Battleground1/Bright/sky.png" id="1_5hph3"]
-[ext_resource type="Texture2D" path="res://assets/Background/01/PNG/Battleground1/Bright/ruins_bg.png" id="2_j7kpp"]
-[ext_resource type="Texture2D" path="res://assets/Background/01/PNG/Battleground1/Bright/hills&trees.png" id="3_bjebc"]
-[ext_resource type="Texture2D" path="res://assets/Background/01/PNG/Battleground1/Bright/ruins2.png" id="4_5rr72"]
-[ext_resource type="Texture2D" path="res://assets/Background/01/PNG/Battleground1/Bright/ruins.png" id="5_gyffv"]
-[ext_resource type="Texture2D" path="res://assets/Background/01/PNG/Battleground1/Bright/stones&grass.png" id="6_1pe0h"]
-[ext_resource type="Texture2D" path="res://assets/Floor/map 9/PNG/Tileset.png" id="7_j7kpp"]
-[ext_resource type="PackedScene" path="res://scenes/traps/lava_pit/trap_lava_pit.tscn" id="8_pvlc2"]
-[ext_resource type="PackedScene" path="res://scenes/traps/rail_saw/trap_rail_saw.tscn" id="9_q2tg5"]
-[ext_resource type="PackedScene" path="res://scenes/traps/spikes/trap_spikes.tscn" id="10_mt3j2"]
-[ext_resource type="Script" path="res://scripts/traps/lava_pit/trap_lava_pit.gd" id="11_np2pn"]
-[ext_resource type="AudioStream" path="res://assets/audio/bgm/Level_1_theme.wav" id="13_dnkej"]
-[ext_resource type="Script" path="res://scripts/traps/rail_saw/trap_rail_saw.gd" id="13_v6ha0"]
-[ext_resource type="Script" path="res://scripts/traps/spikes/trap_spikes.gd" id="15_gmpev"]
-[ext_resource type="PackedScene" path="res://scenes/characters/NPC.tscn" id="17_np2pn"]
-[ext_resource type="Script" path="res://scripts/characters/npc.gd" id="18_v6ha0"]
-[ext_resource type="PackedScene" path="res://scenes/characters/Mordred.tscn" id="100_player"]
-[ext_resource type="PackedScene" path="res://scenes/systems/MapDoor.tscn" id="101_door"]
+[ext_resource type="Texture2D" uid="uid://btheij1ng2ud4" path="res://assets/Background/01/PNG/Battleground1/Bright/sky.png" id="1_5hph3"]
+[ext_resource type="Texture2D" uid="uid://caa3k0r54wvpa" path="res://assets/Background/01/PNG/Battleground1/Bright/ruins_bg.png" id="2_j7kpp"]
+[ext_resource type="Texture2D" uid="uid://c4ts6lu5hstsu" path="res://assets/Background/01/PNG/Battleground1/Bright/hills&trees.png" id="3_bjebc"]
+[ext_resource type="Texture2D" uid="uid://v2bxhalu7njq" path="res://assets/Background/01/PNG/Battleground1/Bright/ruins2.png" id="4_5rr72"]
+[ext_resource type="Texture2D" uid="uid://sxsm3g4s25o0" path="res://assets/Background/01/PNG/Battleground1/Bright/ruins.png" id="5_gyffv"]
+[ext_resource type="Texture2D" uid="uid://b8bm06nr31bre" path="res://assets/Background/01/PNG/Battleground1/Bright/stones&grass.png" id="6_1pe0h"]
+[ext_resource type="Texture2D" uid="uid://hepsd0ce5fvp" path="res://assets/Floor/map 9/PNG/Tileset.png" id="7_j7kpp"]
+[ext_resource type="PackedScene" uid="uid://cx3gwn3y65861" path="res://scenes/traps/lava_pit/trap_lava_pit.tscn" id="8_pvlc2"]
+[ext_resource type="PackedScene" uid="uid://2ioynf1rq34" path="res://scenes/traps/rail_saw/trap_rail_saw.tscn" id="9_q2tg5"]
+[ext_resource type="PackedScene" uid="uid://c00hwfpaiksmp" path="res://scenes/traps/spikes/trap_spikes.tscn" id="10_mt3j2"]
+[ext_resource type="AudioStream" uid="uid://dr36ovpdsy5yi" path="res://assets/audio/bgm/Level_1_theme.wav" id="13_dnkej"]
+[ext_resource type="PackedScene" uid="uid://do0cvqktdnlcq" path="res://scenes/characters/NPC.tscn" id="17_np2pn"]
+[ext_resource type="PackedScene" uid="uid://dvj03a3fowopm" path="res://scenes/characters/Mordred.tscn" id="100_player"]
+[ext_resource type="PackedScene" uid="uid://dxi5uqbfavosh" path="res://scenes/systems/MapDoor.tscn" id="101_door"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bjebc"]
 texture = ExtResource("7_j7kpp")
@@ -471,11 +467,10 @@ position = Vector2(5188.9995, 326)
 scale = Vector2(0.601, 0.601)
 texture = ExtResource("6_1pe0h")
 
-[node name="MapDoor_Next" type="Area2D" parent="Level/Background" unique_id=1939086373 instance=ExtResource("101_door")]
+[node name="MapDoor_Next" parent="Level/Background" unique_id=1939086373 instance=ExtResource("101_door")]
 position = Vector2(4857, 308)
 scale = Vector2(0.72, 2.505)
-collision_layer = 0
-collision_mask = 3
+target_scene_path = "res://scenes/levels/level_2.tscn"
 
 [node name="Ground" type="TileMapLayer" parent="Level" unique_id=1444003642]
 position = Vector2(188, 73)
@@ -483,63 +478,48 @@ tile_map_data = PackedByteArray("AAD//wQAAwAJAAUAAAD//wUAAwAJAAUAAAD//wYAAwAJAAU
 tile_set = SubResource("TileSet_3o3ib")
 navigation_enabled = false
 
-[node name="trap_lava_pit" type="Area2D" parent="Level" unique_id=1801767826 instance=ExtResource("8_pvlc2")]
+[node name="trap_lava_pit" parent="Level" unique_id=1801767826 instance=ExtResource("8_pvlc2")]
 position = Vector2(2800, 506.00006)
 scale = Vector2(7, 7)
-script = ExtResource("11_np2pn")
 
-[node name="trap_rail_saw" type="Area2D" parent="Level" unique_id=900145889 instance=ExtResource("9_q2tg5")]
+[node name="trap_rail_saw" parent="Level" unique_id=900145889 instance=ExtResource("9_q2tg5")]
 position = Vector2(1448, 358)
-script = ExtResource("13_v6ha0")
 
-[node name="trap_spikes" type="Area2D" parent="Level" unique_id=2137479968 instance=ExtResource("10_mt3j2")]
+[node name="trap_spikes" parent="Level" unique_id=2137479968 instance=ExtResource("10_mt3j2")]
 position = Vector2(824, 421)
-script = ExtResource("15_gmpev")
 
-[node name="trap_spikes2" type="Area2D" parent="Level" unique_id=189607051 instance=ExtResource("10_mt3j2")]
+[node name="trap_spikes2" parent="Level" unique_id=189607051 instance=ExtResource("10_mt3j2")]
 position = Vector2(976, 420)
-script = ExtResource("15_gmpev")
 
-[node name="trap_spikes3" type="Area2D" parent="Level" unique_id=512754592 instance=ExtResource("10_mt3j2")]
+[node name="trap_spikes3" parent="Level" unique_id=512754592 instance=ExtResource("10_mt3j2")]
 position = Vector2(1154, 414)
-script = ExtResource("15_gmpev")
 
-[node name="trap_spikes4" type="Area2D" parent="Level" unique_id=1870386346 instance=ExtResource("10_mt3j2")]
+[node name="trap_spikes4" parent="Level" unique_id=1870386346 instance=ExtResource("10_mt3j2")]
 position = Vector2(1023, 423)
-script = ExtResource("15_gmpev")
 
-[node name="trap_spikes5" type="Area2D" parent="Level" unique_id=1838543212 instance=ExtResource("10_mt3j2")]
+[node name="trap_spikes5" parent="Level" unique_id=1838543212 instance=ExtResource("10_mt3j2")]
 position = Vector2(1204, 415)
-script = ExtResource("15_gmpev")
 
-[node name="trap_spikes6" type="Area2D" parent="Level" unique_id=1591003664 instance=ExtResource("10_mt3j2")]
+[node name="trap_spikes6" parent="Level" unique_id=1591003664 instance=ExtResource("10_mt3j2")]
 position = Vector2(2294, 350)
-script = ExtResource("15_gmpev")
 
-[node name="trap_rail_saw" type="Area2D" parent="." unique_id=1166603760 instance=ExtResource("9_q2tg5")]
+[node name="trap_rail_saw" parent="." unique_id=1166603760 instance=ExtResource("9_q2tg5")]
 position = Vector2(3997, 434)
-script = ExtResource("13_v6ha0")
 
-[node name="trap_spikes" type="Area2D" parent="." unique_id=131206236 instance=ExtResource("10_mt3j2")]
+[node name="trap_spikes" parent="." unique_id=131206236 instance=ExtResource("10_mt3j2")]
 position = Vector2(3609, 355)
-script = ExtResource("15_gmpev")
 
-[node name="trap_lava_pit" type="Area2D" parent="." unique_id=74799728 instance=ExtResource("8_pvlc2")]
+[node name="trap_lava_pit" parent="." unique_id=74799728 instance=ExtResource("8_pvlc2")]
 position = Vector2(1934, 381.00003)
 scale = Vector2(1.5, 1.5)
-script = ExtResource("11_np2pn")
 
-[node name="Player" type="CharacterBody2D" parent="." unique_id=181765701 groups=["player"] instance=ExtResource("100_player")]
+[node name="Player" parent="." unique_id=181765701 instance=ExtResource("100_player")]
 position = Vector2(243, 363)
-scale = Vector2(1.5, 1.5)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1840708057]
 stream = ExtResource("13_dnkej")
 volume_db = -15.0
 autoplay = true
 
-[node name="NPC_Tutorial" type="StaticBody2D" parent="." unique_id=1809865605 instance=ExtResource("17_np2pn")]
-position = Vector2(150, 363)
-collision_mask = 0
-script = ExtResource("18_v6ha0")
-
+[node name="NPC_Tutorial" parent="." unique_id=1809865605 instance=ExtResource("17_np2pn")]
+position = Vector2(505, 332)
