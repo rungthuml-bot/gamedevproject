@@ -1,6 +1,5 @@
 [gd_scene format=4]
 
-[ext_resource type="Script" path="res://scripts/levels/level_camera_bounds.gd" id="1_fk6jg"]
 [ext_resource type="Texture2D" path="res://assets/Background/Lava/PNG/Background/Bright/rock5.png" id="2_6p2dc"]
 [ext_resource type="Texture2D" path="res://assets/Background/Lava/PNG/Tiles_rock/tile1.png" id="6_tkc4i"]
 [ext_resource type="Texture2D" path="res://assets/Background/Lava/PNG/Tiles_rock/tile2.png" id="7_8v7yw"]
@@ -358,7 +357,6 @@ sources/40 = SubResource("TileSetAtlasSource_6h1g2")
 sources/46 = SubResource("TileSetAtlasSource_vyjyd")
 
 [node name="BaseLevel" type="Node2D" unique_id=1408927104]
-script = ExtResource("1_fk6jg")
 
 [node name="Level" type="Node2D" parent="." unique_id=337205476]
 
