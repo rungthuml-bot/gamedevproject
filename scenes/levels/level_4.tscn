@@ -3,7 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://8e83hlavtklv" path="res://assets/Background/background1/PNG/background 4/Plan 3.png" id="1_xcfcc"]
 [ext_resource type="Texture2D" uid="uid://c5g2opxo23ecp" path="res://assets/Background/background1/PNG/background 4/Plan 2.png" id="2_48hld"]
 [ext_resource type="Texture2D" uid="uid://df266ftkhgmdn" path="res://assets/Background/background1/PNG/background 4/Plan 1.png" id="3_l45re"]
-[ext_resource type="PackedScene" uid="uid://d2yymy3svprcg" path="res://scenes/characters/NPCPrincess.tscn" id="5_anwe6"]
+[ext_resource type="PackedScene" path="res://scenes/characters/NPCPrincess.tscn" id="5_anwe6"]
+[ext_resource type="PackedScene" uid="uid://renvrfx4w4so" path="res://scenes/enemies/Boss.tscn" id="6_rej77"]
 [ext_resource type="PackedScene" uid="uid://dvj03a3fowopm" path="res://scenes/characters/Mordred.tscn" id="100_player"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ad025"]
@@ -392,3 +393,6 @@ texture = ExtResource("3_l45re")
 
 [node name="NPC" parent="." unique_id=1809865605 instance=ExtResource("5_anwe6")]
 position = Vector2(5685, 602)
+
+[node name="Boss" parent="." unique_id=530231933 instance=ExtResource("6_rej77")]
+position = Vector2(4332, 603)

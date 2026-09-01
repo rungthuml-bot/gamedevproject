@@ -12,7 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://c00hwfpaiksmp" path="res://scenes/traps/spikes/trap_spikes.tscn" id="10_mt3j2"]
 [ext_resource type="AudioStream" uid="uid://dr36ovpdsy5yi" path="res://assets/audio/bgm/Level_1_theme.wav" id="13_dnkej"]
 [ext_resource type="PackedScene" uid="uid://csfin0y1x3riw" path="res://scenes/enemies/EnemySword.tscn" id="15_wtwp4"]
-[ext_resource type="PackedScene" uid="uid://do0cvqktdnlcq" path="res://scenes/characters/NPC.tscn" id="17_np2pn"]
+[ext_resource type="PackedScene" uid="uid://o86gt0h6457t" path="res://scenes/enemies/EnemyAxe.tscn" id="16_iwr0g"]
+[ext_resource type="PackedScene" path="res://scenes/characters/NPC.tscn" id="17_np2pn"]
 [ext_resource type="PackedScene" uid="uid://dvj03a3fowopm" path="res://scenes/characters/Mordred.tscn" id="100_player"]
 [ext_resource type="PackedScene" uid="uid://dxi5uqbfavosh" path="res://scenes/systems/MapDoor.tscn" id="101_door"]
 
@@ -527,3 +528,6 @@ position = Vector2(505, 332)
 
 [node name="EnemySword" parent="." unique_id=1230997985 instance=ExtResource("15_wtwp4")]
 position = Vector2(3089, 232)
+
+[node name="EnemyAxe" parent="." unique_id=1974538133 instance=ExtResource("16_iwr0g")]
+position = Vector2(4084, 392)

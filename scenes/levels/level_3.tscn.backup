@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://bdglv0hm35vry"]
+[gd_scene format=4 uid="uid://ckcgtgcgkue2f"]
 
 [ext_resource type="Texture2D" uid="uid://dvkbjrnr4t4kq" path="res://assets/Background/Lava/PNG/Background/Bright/rock5.png" id="2_6p2dc"]
 [ext_resource type="Texture2D" uid="uid://cnyk5cdveukvv" path="res://assets/Background/Lava/PNG/Tiles_rock/tile1.png" id="6_tkc4i"]
@@ -31,10 +31,7 @@
 [ext_resource type="AudioStream" uid="uid://ewyt8ejp7ik3" path="res://assets/audio/bgm/Level_3_theme.ogg" id="36_ju8vr"]
 [ext_resource type="Texture2D" uid="uid://bqsxh30rdy06d" path="res://assets/Background/Lava/PNG/Tiles_rock/tile5.png" id="36_o8oj2"]
 [ext_resource type="Texture2D" uid="uid://fefr6qdyd3u5" path="res://assets/Background/Lava/PNG/Tiles_rock/tile6.png" id="37_6khpl"]
-[ext_resource type="PackedScene" uid="uid://o86gt0h6457t" path="res://scenes/enemies/EnemyAxe.tscn" id="37_tio2m"]
-[ext_resource type="PackedScene" uid="uid://ddkbjitso8s1x" path="res://scenes/items/HealthPotion.tscn" id="38_jnyl3"]
 [ext_resource type="Texture2D" uid="uid://5kims8j7d06t" path="res://assets/Background/Lava/PNG/Tiles_rock/tile7.png" id="38_sbd6o"]
-[ext_resource type="PackedScene" uid="uid://csfin0y1x3riw" path="res://scenes/enemies/EnemySword.tscn" id="39_2gq65"]
 [ext_resource type="Texture2D" uid="uid://bxjcrnat62dgv" path="res://assets/Background/Lava/PNG/Tiles_rock/tile8.png" id="39_0336b"]
 [ext_resource type="Texture2D" uid="uid://d1xi1gqwvatip" path="res://assets/Background/Lava/PNG/Tiles_rock/tile9.png" id="40_en1em"]
 [ext_resource type="PackedScene" uid="uid://dvj03a3fowopm" path="res://scenes/characters/Mordred.tscn" id="100_player"]
@@ -277,6 +274,7 @@ texture_region_size = Vector2i(32, 32)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vyjyd"]
 texture = ExtResource("25_kd8eh")
+texture_region_size = Vector2i(16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wm8w4"]
 texture = ExtResource("37_6khpl")
@@ -577,15 +575,3 @@ position = Vector2(121.00001, 492)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=898438351]
 stream = ExtResource("36_ju8vr")
 autoplay = true
-
-[node name="EnemyAxe" parent="." unique_id=1974538133 instance=ExtResource("37_tio2m")]
-position = Vector2(3687, 397)
-
-[node name="HealthPotion" parent="." unique_id=465158490 instance=ExtResource("38_jnyl3")]
-position = Vector2(5145, 366)
-
-[node name="HealthPotion2" parent="." unique_id=174871325 instance=ExtResource("38_jnyl3")]
-position = Vector2(5114, 367)
-
-[node name="EnemySword" parent="." unique_id=1230997985 instance=ExtResource("39_2gq65")]
-position = Vector2(4492, 364)
