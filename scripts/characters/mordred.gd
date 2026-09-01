@@ -1158,6 +1158,8 @@ func die() -> void:
 
 func update_stats_from_charms() -> void:
 
+	var hp_percent := float(hp) / float(max_hp) if max_hp > 0 else 0.0
+
 	max_hp = base_max_hp
 	attack_multiplier = 1.0
 	walk_speed = 250.0
@@ -1169,7 +1171,7 @@ func update_stats_from_charms() -> void:
 		"health_charm"
 	):
 
-		max_hp += 50
+		max_hp += 100
 
 
 	if SaveManager.is_charm_equipped(
@@ -1188,17 +1190,14 @@ func update_stats_from_charms() -> void:
 		dash_speed *= 1.2
 
 
-	hp = min(
-		hp,
-		max_hp
-	)
+	hp = int(round(hp_percent * max_hp))
+	hp = clamp(hp, 0, max_hp)
 
 
 	hp_changed.emit(
 		hp,
 		max_hp
 	)
-
 
 func _input(
 	event: InputEvent

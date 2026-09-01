@@ -132,6 +132,7 @@ func toggle_charm(charm_id: String) -> void:
 	if charms.has(charm_id):
 		charms.erase(charm_id)
 	else:
+		charms.clear()
 		charms.append(charm_id)
 		
 	save_game()
