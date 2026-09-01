@@ -134,9 +134,9 @@ func _lock_camera() -> void:
 		original_cam_right = locked_camera.limit_right
 		
 		# Set limits safely to avoid negative Rect2i size errors
-		var left_x = left_wall.global_position.x
-		var right_x = right_wall.global_position.x
-		var min_width = get_viewport_rect().size.x / locked_camera.zoom.x
+		var left_x = min(left_wall.global_position.x, right_wall.global_position.x)
+		var right_x = max(left_wall.global_position.x, right_wall.global_position.x)
+		var min_width = abs(get_viewport_rect().size.x / locked_camera.zoom.x)
 		
 		if right_x - left_x < min_width:
 			var center_x = (left_x + right_x) / 2.0
@@ -145,6 +145,12 @@ func _lock_camera() -> void:
 		else:
 			locked_camera.limit_left = int(left_x)
 			locked_camera.limit_right = int(right_x)
+			
+		# Safety check to absolutely prevent Godot Rect2i error
+		if locked_camera.limit_left > locked_camera.limit_right:
+			var temp = locked_camera.limit_left
+			locked_camera.limit_left = locked_camera.limit_right
+			locked_camera.limit_right = temp
 
 func _unlock_camera() -> void:
 	if locked_camera:
