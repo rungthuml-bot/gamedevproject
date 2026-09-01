@@ -177,7 +177,6 @@ func update_facing_direction() -> void:
 			anim.flip_h = (move_direction < 0)
 		
 		attack_hitbox.position.x = 16 * move_direction
-		attack_hitbox.scale.x = move_direction
 		
 		# Flip Smart AI Sensors
 		if ledge_raycast: ledge_raycast.target_position.x = 25 * move_direction
