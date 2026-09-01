@@ -474,6 +474,7 @@ position = Vector2(4857, 308)
 scale = Vector2(0.72, 2.505)
 collision_layer = 0
 collision_mask = 3
+target_scene_path = "res://scenes/levels/level_2.tscn"
 
 [node name="Ground" type="TileMapLayer" parent="Level" unique_id=1444003642]
 position = Vector2(188, 73)
